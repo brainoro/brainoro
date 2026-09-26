@@ -52,6 +52,7 @@ import {
 } from '@/components/navigation/StudentLearningHub';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { HandwrittenCheatSheetView } from '@/components/views/HandwrittenCheatSheetView';
+import { AccountModal } from '@/components/account/AccountModal';
 import {
   BookOpen,
   BrainCircuit,
@@ -67,6 +68,9 @@ import {
   Shield,
   User as UserIcon,
   Lock,
+  Clock,
+  Zap,
+  CheckCircle2,
 } from 'lucide-react';
 
 export default function Home() {
@@ -78,8 +82,11 @@ export default function Home() {
     isCustomerAdmin,
     isSuperAdmin,
     isTrialExpired,
+    daysLeftInTrial,
     signOut,
   } = useAuth();
+
+  const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
 
   // Curriculum Context Parameters (Default: CBSE Class 6 Mathematics Ganita Prakash)
   const [selectedBoardId, setSelectedBoardId] = useState<BoardId>('CBSE');
@@ -727,11 +734,29 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col justify-between font-sans">
       {/* Top User Session Header */}
       <header className="bg-slate-900 border-b border-slate-800 px-6 py-2.5 text-xs text-slate-300 flex items-center justify-between print:hidden">
-        <div className="flex items-center gap-2">
-          <UserIcon className="w-3.5 h-3.5 text-sky-400" />
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-800 text-sky-300 border border-sky-500/30">
-            {profile?.role || 'STUDENT'}
-          </span>
+        <div className="flex items-center gap-2.5">
+          <button
+            onClick={() => setIsAccountModalOpen(true)}
+            className="flex items-center gap-2 px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700/90 border border-slate-700 text-slate-200 transition cursor-pointer group shadow-xs"
+            title="View Account & Subscription Details"
+          >
+            <UserIcon className="w-3.5 h-3.5 text-sky-400 group-hover:text-sky-300" />
+            <span className="font-bold text-xs text-slate-200">Account</span>
+            <span className="px-1.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-slate-900 text-sky-300 border border-sky-500/30">
+              {profile?.role || 'STUDENT'}
+            </span>
+            {profile?.subscription_status === 'active' ? (
+              <span className="px-1.5 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
+                <CheckCircle2 className="w-2.5 h-2.5" /> PRO
+              </span>
+            ) : (
+              <span className="px-1.5 py-0.5 rounded-md text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
+                <Clock className="w-2.5 h-2.5" />
+                {daysLeftInTrial !== null ? `${daysLeftInTrial}d left` : 'Trial'}
+              </span>
+            )}
+          </button>
+
           {profile?.institution_name && (
             <span className="text-slate-400 hidden sm:inline">
               • {profile.institution_name}
@@ -739,6 +764,16 @@ export default function Home() {
           )}
         </div>
         <div className="flex items-center gap-3">
+          {profile?.subscription_status !== 'active' && (
+            <button
+              onClick={() => setIsAccountModalOpen(true)}
+              className="flex items-center gap-1 px-3 py-1 rounded-xl bg-gradient-to-r from-amber-500/20 to-amber-600/20 hover:from-amber-500/30 hover:to-amber-600/30 border border-amber-500/40 text-amber-300 font-bold text-xs transition cursor-pointer shadow-xs"
+              title="Subscribe to Pro Plan"
+            >
+              <Zap className="w-3.5 h-3.5 text-amber-400" />
+              <span>Subscribe (₹999/mo)</span>
+            </button>
+          )}
           <button
             onClick={() => setActiveTab('parent')}
             className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-medium transition cursor-pointer"
@@ -1246,6 +1281,12 @@ export default function Home() {
         onClose={() => setIsIngestionOpen(false)}
         activeBoardId={selectedBoardId}
         onIngestionSuccess={handleConceptIngested}
+      />
+
+      {/* User Account & Subscription Checkout Modal */}
+      <AccountModal
+        isOpen={isAccountModalOpen}
+        onClose={() => setIsAccountModalOpen(false)}
       />
     </div>
   );
