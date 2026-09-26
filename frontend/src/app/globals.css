@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 241, 245, 249;
+  --background-start-rgb: 2, 6, 23;
+  --background-end-rgb: 15, 23, 42;
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+.dark {
+  --foreground-rgb: 241, 245, 249;
+  --background-start-rgb: 2, 6, 23;
+  --background-end-rgb: 15, 23, 42;
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #020617;
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    )
+    no-repeat fixed;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom Sleek Scrollbar for Formula Containers */
+.formula-container,
+.katex-display-container {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+.formula-container::-webkit-scrollbar,
+.katex-display-container::-webkit-scrollbar {
+  height: 6px; /* Scrollbar ki height patli karne ke liye */
+  width: 6px;
+}
+.formula-container::-webkit-scrollbar-thumb,
+.katex-display-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1; /* Light gray color jo yellow theme par accha lagega */
+  border-radius: 10px; /* Edges ko round karne ke liye */
+}
+.formula-container::-webkit-scrollbar-thumb:hover,
+.katex-display-container::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+.formula-container::-webkit-scrollbar-track,
+.katex-display-container::-webkit-scrollbar-track {
+  background: transparent; /* Track ko invisible rakhne ke liye */
+}
+
+/* Print & Export Guardrail Rules (Brainoro & OcaVerse Watermark & PDF Layout Isolation) */
+@page {
+  size: A4 portrait;
+  margin: 12mm 12mm 14mm 12mm;
+}
+
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Universal print isolation: Hide all navigation, headers, guide, and non-cheatsheet chrome */
+  header,
+  nav,
+  footer,
+  aside,
+  .print\:hidden,
+  [data-testid="board-switch-header"],
+  [data-testid="cbse-curriculum-system"],
+  [data-testid="cbse-curriculum-navigator"],
+  [data-testid="chapter-hypnotic-hero"],
+  [data-testid="student-learning-hub"],
+  [data-testid="welcome-guide"],
+  .welcome-banner,
+  .watermark-grid {
+    display: none !important;
+  }
+
+  /* Main container & page layout reset for print */
+  main,
+  div[class*="max-w-7xl"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #cheatsheet-section,
+  [data-testid="cheatsheet-view"] {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Prevent awkward page breaks inside cards & content blocks */
+  .cheatsheet-card,
+  div[class*="rounded-3xl"],
+  div[class*="rounded-2xl"],
+  .board-exam-trap,
+  .cambridge-mark-scheme,
+  .myp-inquiry-box,
+  .curriculum-trap-box {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Prevent content clipping across page breaks */
+  *, *:before, *:after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Global printable container overflow rule: remove overflow:hidden on printable areas */
+  html, body, main, #__next, #print-mount, .print-container, [data-print-container], .cornell-container {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+
+  /* Universal print guardrail: eliminate overflow:hidden on all printable wrappers */
+  .overflow-hidden,
+  div[class*="overflow-hidden"],
+  .ocaverse-watermark-overlay,
+  .watermark-overlay {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  /* Board-specific container elements: retain visibility, background, borders, and auto-expand height */
+  .board-exam-trap,
+  .cambridge-mark-scheme,
+  .myp-inquiry-box,
+  .curriculum-trap-box {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 100px !important;
+    overflow: visible !important;
+    background-color: #fff1f2 !important; /* Soft rose tint */
+    border: 1.5px solid #f43f5e !important; /* Vivid rose border */
+    color: #0f172a !important;
+    padding: 1.25rem !important;
+    margin-bottom: 1rem !important;
+    border-radius: 1rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Ensure text inside board trap boxes is dark and high-contrast in print */
+  .board-exam-trap *,
+  .cambridge-mark-scheme *,
+  .myp-inquiry-box *,
+  .curriculum-trap-box * {
+    color: #0f172a !important;
+    visibility: visible !important;
+  }
+
+  .board-exam-trap .trap-header,
+  .cambridge-mark-scheme .trap-header,
+  .myp-inquiry-box .trap-header,
+  .curriculum-trap-box .trap-header {
+    color: #9f1239 !important; /* Deep crimson for header */
+    font-weight: 700 !important;
+  }
+
+  /* KaTeX Math Equations in Print: high-contrast, scalable, no clipping */
+  .katex {
+    font-size: 1.02em !important;
+    color: #0f172a !important;
+    text-rendering: auto !important;
+  }
+  .katex-display {
+    overflow: visible !important;
+    margin: 0.4em 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  .katex-display > .katex {
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
+
+/* Handwritten & Visual Cheat Sheet Font Utilities */
+.font-kalam {
+  font-family: var(--font-kalam), 'Comic Sans MS', cursive, sans-serif;
+}
+
+.font-caveat {
+  font-family: var(--font-caveat), 'Segoe Print', cursive, sans-serif;
+}
+
+.font-handwriting {
+  font-family: var(--font-kalam), var(--font-caveat), 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Cheat Sheet Visual Accents */
+.cheatsheet-grid-bg {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.cheatsheet-dot-bg {
+  background-size: 16px 16px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+.cheatsheet-tape {
+  position: relative;
+}
+.cheatsheet-tape::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 90px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}

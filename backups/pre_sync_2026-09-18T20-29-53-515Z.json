@@ -1,0 +1,416 @@
+[
+  {
+    "id": "CAMBRIDGE-G7-PHYSICS-HEAT-COND",
+    "board_id": "CAMBRIDGE",
+    "subject_id": "PHYSICS",
+    "grade_level": 7,
+    "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+    "title": "Conduction in Solids & Lattice Vibrations",
+    "core_logic_essence": "Direct kinetic transfer through molecular collision and free electron migration. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.",
+    "parent_node_id": "CAMBRIDGE-G7-PHYSICS-HEAT-THERM",
+    "prerequisites": [
+      "CAMBRIDGE-G7-PHYSICS-HEAT-THERM"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:43:58.817Z",
+      "diagram_type": "energy_transfer",
+      "cornell_notes": {
+        "title": "Conduction in Solids & Lattice Vibrations",
+        "summary": "[CAMBRIDGE-G7-PHYSICS-HEAT-COND] Conduction in Solids & Lattice Vibrations: Work is force times distance; kinetic energy is energy of motion and potential energy is stored energy. Total energy is always conserved.",
+        "conceptId": "CAMBRIDGE-G7-PHYSICS-HEAT-COND",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Conduction in Solids & Lattice Vibrations\n**Core Principle**: Direct kinetic transfer through molecular collision and free electron migration. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.\n\n**1. Scientific Work**:\n• In science, **Work** is done only when an applied force causes an object to move in the direction of the force:\n  $$\\text{Work} = \\text{Force} \\times \\text{Distance moved}$$\n• SI unit: **Joule (J)**. One Joule is the work done when a force of 1 Newton moves an object by 1 meter.\n• If there is no movement, Work done = 0 (e.g. pushing a heavy stationary wall).\n\n**2. Forms of Energy**:\n• **Kinetic Energy**: Energy possessed by an object due to its motion (e.g. rolling ball, speeding car, flowing river).\n• **Potential Energy**: Energy stored in an object due to its position or state (e.g. water held high in a reservoir, stretched catapult elastic).\n\n**3. Law of Conservation of Energy**:\n• Energy can neither be created nor destroyed; it can only be converted from one form to another.\n• In a swinging pendulum: at highest positions, all energy is potential; at lowest position, potential converts completely into kinetic energy.\n\n**4. Power**:\n• The rate of doing work or transferring energy: $\\text{Power} = \\frac{\\text{Work}}{\\text{Time}}$ (Watts = Joules/second).",
+        "gradeLevel": 7,
+        "coreAnalogy": "Intuition for Conduction in Solids & Lattice Vibrations: Think of energy like cash in a piggy bank: spending it (work) converts money from stored bills (potential energy) into active goods (kinetic energy), but total account value stays unchanged.",
+        "diagramType": "energy_transfer",
+        "cueQuestions": [
+          "What is the scientific definition of work and its SI unit?",
+          "Distinguish between kinetic energy and potential energy with everyday examples.",
+          "State the Law of Conservation of Energy and describe how energy transforms in a roller coaster or pendulum.",
+          "Explain why pushing against a stationary brick wall does zero scientific work.",
+          "Calculate the expected system response when the primary parameter of Conduction in Solids & Lattice Vibrations is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "A porter standing completely still with luggage on his head",
+              "A horse pulling a cart along a road",
+              "A cyclist pedaling up a hill",
+              "An apple falling from a branch"
+            ],
+            "question": "In which scenario is scientific work strictly zero?",
+            "answerIndex": 0,
+            "explanation": "Because displacement is zero, Work = Force × 0 = 0."
+          }
+        ],
+        "realWorldUse": "Hydroelectric power plants, automotive regenerative brakes, amusement roller coasters, and mechanical engines.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Calculate weight force: F = mass × g = 10 kg × 10 m/s² = 100 N.",
+            "Step 2: Identify distance lifted: d = 2 meters.",
+            "Step 3: Apply work formula: Work = Force × Distance = 100 N × 2 m = 200 Joules."
+          ],
+          "result": "Work done = 200 Joules.",
+          "problem": "[CAMBRIDGE-G7-PHYSICS-HEAT-COND] Apply principles of Conduction in Solids & Lattice Vibrations: A student lifts a 10 kg box vertically by 2 meters. How much work is done against gravity? (Use g = 10 m/s²)."
+        },
+        "curriculumTrap": "Key exam trap for Conduction in Solids & Lattice Vibrations: Cambridge Mark Scheme Guidance:\nA) Common Mark-Loss Pitfalls:\n• Misapplying the order of operations (BIDMAS/PEMDAS) in multi-step calculations.\n• Sign slips when adding, subtracting, or multiplying negative numbers.\n• Omitting units of measurement in spatial, perimeter, and area questions.\n\nB) Command Word Precision:\n• CALCULATE: Show clear working steps and calculate the final numerical value.\n• EXPLAIN: Give concise mathematical reasons using basic properties or angle facts.\n• SOLVE: Use inverse operations systematically to isolate the unknown variable.\n• STATE: Write down the definition, perimeter formula, or angle fact directly.\n\nC) Mark Tier Allocation Guidance:\n• 1 Mark: Direct recall of an arithmetic fact or single-step calculation.\n• 2–3 Marks: Multi-step calculation showing method marks for inverse operations and working out.\n• 4 Marks: Solving structured word problems with full algebraic working and units.\n\nD) Calculation Tips:\n• Always write down every intermediate step so method marks can be awarded even if an arithmetic slip occurs.\n• Check answers by estimating or substituting the answer back into the original problem.",
+        "structuralRule": "$$\\text{Work} = \\text{Force} \\times \\text{Distance} \\quad | \\quad \\text{Kinetic Energy: Energy of Motion} \\quad | \\quad \\text{Conservation of Energy: Total Invariant}$$",
+        "payloadFingerprint": "FPT-CAMBRIDGE-G7-PHYSICS-HEAT-COND-770fedf8",
+        "verificationProblem": "Verify Conduction in Solids & Lattice Vibrations: A boy pushes a box with 40 N force through 5 meters. Calculate work done. (Answer: 40 × 5 = 200 Joules)."
+      },
+      "pedagogical_focus": "Cambridge Lower Secondary / IGCSE Command Words & Empirical Precision",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CAMBRIDGE-G7-PHYSICS-HEAT-COND-770fedf8",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:51.838924+00:00",
+    "updated_at": "2026-09-18T18:43:59.158877+00:00"
+  },
+  {
+    "id": "CAMBRIDGE-G7-PHYSICS-HEAT-THERM",
+    "board_id": "CAMBRIDGE",
+    "subject_id": "PHYSICS",
+    "grade_level": 7,
+    "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+    "title": "Temperature vs Heat Energy",
+    "core_logic_essence": "Temperature measuring average kinetic energy; heat measuring net thermodynamic energy transfer. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.",
+    "parent_node_id": null,
+    "prerequisites": [],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:43:58.808Z",
+      "diagram_type": "energy_transfer",
+      "cornell_notes": {
+        "title": "Temperature vs Heat Energy",
+        "summary": "[CAMBRIDGE-G7-PHYSICS-HEAT-THERM] Temperature vs Heat Energy: Work is force times distance; kinetic energy is energy of motion and potential energy is stored energy. Total energy is always conserved.",
+        "conceptId": "CAMBRIDGE-G7-PHYSICS-HEAT-THERM",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Temperature vs Heat Energy\n**Core Principle**: Temperature measuring average kinetic energy; heat measuring net thermodynamic energy transfer. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.\n\n**1. Scientific Work**:\n• In science, **Work** is done only when an applied force causes an object to move in the direction of the force:\n  $$\\text{Work} = \\text{Force} \\times \\text{Distance moved}$$\n• SI unit: **Joule (J)**. One Joule is the work done when a force of 1 Newton moves an object by 1 meter.\n• If there is no movement, Work done = 0 (e.g. pushing a heavy stationary wall).\n\n**2. Forms of Energy**:\n• **Kinetic Energy**: Energy possessed by an object due to its motion (e.g. rolling ball, speeding car, flowing river).\n• **Potential Energy**: Energy stored in an object due to its position or state (e.g. water held high in a reservoir, stretched catapult elastic).\n\n**3. Law of Conservation of Energy**:\n• Energy can neither be created nor destroyed; it can only be converted from one form to another.\n• In a swinging pendulum: at highest positions, all energy is potential; at lowest position, potential converts completely into kinetic energy.\n\n**4. Power**:\n• The rate of doing work or transferring energy: $\\text{Power} = \\frac{\\text{Work}}{\\text{Time}}$ (Watts = Joules/second).",
+        "gradeLevel": 7,
+        "coreAnalogy": "Intuition for Temperature vs Heat Energy: Think of energy like cash in a piggy bank: spending it (work) converts money from stored bills (potential energy) into active goods (kinetic energy), but total account value stays unchanged.",
+        "diagramType": "energy_transfer",
+        "cueQuestions": [
+          "What is the scientific definition of work and its SI unit?",
+          "Distinguish between kinetic energy and potential energy with everyday examples.",
+          "State the Law of Conservation of Energy and describe how energy transforms in a roller coaster or pendulum.",
+          "Explain why pushing against a stationary brick wall does zero scientific work.",
+          "Calculate the expected system response when the primary parameter of Temperature vs Heat Energy is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "A porter standing completely still with luggage on his head",
+              "A horse pulling a cart along a road",
+              "A cyclist pedaling up a hill",
+              "An apple falling from a branch"
+            ],
+            "question": "In which scenario is scientific work strictly zero?",
+            "answerIndex": 0,
+            "explanation": "Because displacement is zero, Work = Force × 0 = 0."
+          }
+        ],
+        "realWorldUse": "Hydroelectric power plants, automotive regenerative brakes, amusement roller coasters, and mechanical engines.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Calculate weight force: F = mass × g = 10 kg × 10 m/s² = 100 N.",
+            "Step 2: Identify distance lifted: d = 2 meters.",
+            "Step 3: Apply work formula: Work = Force × Distance = 100 N × 2 m = 200 Joules."
+          ],
+          "result": "Work done = 200 Joules.",
+          "problem": "[CAMBRIDGE-G7-PHYSICS-HEAT-THERM] Apply principles of Temperature vs Heat Energy: A student lifts a 10 kg box vertically by 2 meters. How much work is done against gravity? (Use g = 10 m/s²)."
+        },
+        "curriculumTrap": "Key exam trap for Temperature vs Heat Energy: Cambridge Mark Scheme Guidance:\nA) Common Mark-Loss Pitfalls:\n• Forgetting that scientific work done requires an object to move in the direction of the force.\n• Confusing energy stores (kinetic, gravitational, chemical) with energy transfers (work, heat).\n• Forgetting to convert units to base metric SI units (grams to kg, cm to meters).\n\nB) Command Word Precision:\n• STATE: State the Law of Conservation of Energy clearly.\n• DESCRIBE: Detail observable energy transformations in everyday machines.\n• CALCULATE: Use Work = Force × Distance with working steps and Joules (J).\n• EXPLAIN: Explain why frictional forces degrade useful kinetic energy into surrounding thermal energy.\n\nC) Mark Tier Allocation Guidance:\n• 1 Mark: Direct recall of unit or definition of work.\n• 2–3 Marks: Calculation of work done or energy transfer with formula and substitution.\n• 4 Marks: Structured analysis of energy conservation in multi-stage transfers.\n\nD) Calculation Tips:\n• State SI units clearly: Work in Joules (J), Force in Newtons (N), Distance in meters (m).",
+        "structuralRule": "$$\\text{Work} = \\text{Force} \\times \\text{Distance} \\quad | \\quad \\text{Kinetic Energy: Energy of Motion} \\quad | \\quad \\text{Conservation of Energy: Total Invariant}$$",
+        "payloadFingerprint": "FPT-CAMBRIDGE-G7-PHYSICS-HEAT-THERM-3abe6e36",
+        "verificationProblem": "Verify Temperature vs Heat Energy: A boy pushes a box with 40 N force through 5 meters. Calculate work done. (Answer: 40 × 5 = 200 Joules)."
+      },
+      "pedagogical_focus": "Cambridge Lower Secondary / IGCSE Command Words & Empirical Precision",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CAMBRIDGE-G7-PHYSICS-HEAT-THERM-3abe6e36",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:51.838924+00:00",
+    "updated_at": "2026-09-18T18:43:59.149724+00:00"
+  },
+  {
+    "id": "CBSE-G7-PHYSICS-HEAT-COND",
+    "board_id": "CBSE",
+    "subject_id": "PHYSICS",
+    "grade_level": 7,
+    "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+    "title": "Conduction in Solids & Lattice Vibrations",
+    "core_logic_essence": "Direct kinetic transfer through molecular collision and free electron migration. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.",
+    "parent_node_id": "CBSE-G7-PHYSICS-HEAT-THERM",
+    "prerequisites": [
+      "CBSE-G7-PHYSICS-HEAT-THERM"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:43:49.288Z",
+      "diagram_type": "energy_transfer",
+      "cornell_notes": {
+        "title": "Conduction in Solids & Lattice Vibrations",
+        "summary": "[CBSE-G7-PHYSICS-HEAT-COND] Conduction in Solids & Lattice Vibrations: Work is force times distance; kinetic energy is energy of motion and potential energy is stored energy. Total energy is always conserved.",
+        "conceptId": "CBSE-G7-PHYSICS-HEAT-COND",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Conduction in Solids & Lattice Vibrations\n**Core Principle**: Direct kinetic transfer through molecular collision and free electron migration. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.\n\n**1. Scientific Work**:\n• In science, **Work** is done only when an applied force causes an object to move in the direction of the force:\n  $$\\text{Work} = \\text{Force} \\times \\text{Distance moved}$$\n• SI unit: **Joule (J)**. One Joule is the work done when a force of 1 Newton moves an object by 1 meter.\n• If there is no movement, Work done = 0 (e.g. pushing a heavy stationary wall).\n\n**2. Forms of Energy**:\n• **Kinetic Energy**: Energy possessed by an object due to its motion (e.g. rolling ball, speeding car, flowing river).\n• **Potential Energy**: Energy stored in an object due to its position or state (e.g. water held high in a reservoir, stretched catapult elastic).\n\n**3. Law of Conservation of Energy**:\n• Energy can neither be created nor destroyed; it can only be converted from one form to another.\n• In a swinging pendulum: at highest positions, all energy is potential; at lowest position, potential converts completely into kinetic energy.\n\n**4. Power**:\n• The rate of doing work or transferring energy: $\\text{Power} = \\frac{\\text{Work}}{\\text{Time}}$ (Watts = Joules/second).",
+        "gradeLevel": 7,
+        "coreAnalogy": "Intuition for Conduction in Solids & Lattice Vibrations: Think of energy like cash in a piggy bank: spending it (work) converts money from stored bills (potential energy) into active goods (kinetic energy), but total account value stays unchanged.",
+        "diagramType": "energy_transfer",
+        "cueQuestions": [
+          "What is the scientific definition of work and its SI unit?",
+          "Distinguish between kinetic energy and potential energy with everyday examples.",
+          "State the Law of Conservation of Energy and describe how energy transforms in a roller coaster or pendulum.",
+          "Explain why pushing against a stationary brick wall does zero scientific work.",
+          "Calculate the expected system response when the primary parameter of Conduction in Solids & Lattice Vibrations is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "A porter standing completely still with luggage on his head",
+              "A horse pulling a cart along a road",
+              "A cyclist pedaling up a hill",
+              "An apple falling from a branch"
+            ],
+            "question": "In which scenario is scientific work strictly zero?",
+            "answerIndex": 0,
+            "explanation": "Because displacement is zero, Work = Force × 0 = 0."
+          }
+        ],
+        "realWorldUse": "Hydroelectric power plants, automotive regenerative brakes, amusement roller coasters, and mechanical engines.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Calculate weight force: F = mass × g = 10 kg × 10 m/s² = 100 N.",
+            "Step 2: Identify distance lifted: d = 2 meters.",
+            "Step 3: Apply work formula: Work = Force × Distance = 100 N × 2 m = 200 Joules."
+          ],
+          "result": "Work done = 200 Joules.",
+          "problem": "[CBSE-G7-PHYSICS-HEAT-COND] Apply principles of Conduction in Solids & Lattice Vibrations: A student lifts a 10 kg box vertically by 2 meters. How much work is done against gravity? (Use g = 10 m/s²)."
+        },
+        "curriculumTrap": "Key exam trap for Conduction in Solids & Lattice Vibrations: CBSE Board Exam Traps & Marking Patterns:\n1. Common Pitfalls & Mark-Loss Patterns:\n1. Arithmetic Sign & Order of Operations (BODMAS/PEMDAS) Traps: Mixing up multiplication/division before addition/subtraction, or errors in subtracting negative numbers: a - (-b) = a + b.\n2. Algebraic Equation Balance Errors: Forgetting to perform the identical inverse operation on both sides of the balance equation when isolating an unknown variable.\n3. Omitting Units of Mensuration: Calculating perimeter without linear units (cm, m) or area without square units (cm², m²).\n\n2. Explanation Depth Requirements:\n• 2-3 Mark Question (Step-by-Step Solving):\n  - State the governing arithmetic rule or algebraic equation before substituting values.\n  - Show intermediate calculation steps clearly without skipping stages.\n  - State the final value with appropriate metric units.\n• 4-5 Mark Question (Word Problems & Geometric Properties):\n  - In algebraic word problems: declare the variable unknown ('Let the required number be x'), set up the balanced equation, solve step-by-step, and state the final answer in words with units.\n  - In geometric problems: state the property used in brackets (e.g., 'Angle Sum Property of a Triangle = 180°').\n\n3. High-Yield Study & Revision Tips:\n• Always substitute your answer back into the original equation to verify that LHS = RHS.\n• Use a ruler and sharp pencil for all geometric figures, labeling vertices and side measurements.\n• Clearly box the final answer and underline important intermediate steps.",
+        "structuralRule": "$$\\text{Work} = \\text{Force} \\times \\text{Distance} \\quad | \\quad \\text{Kinetic Energy: Energy of Motion} \\quad | \\quad \\text{Conservation of Energy: Total Invariant}$$",
+        "payloadFingerprint": "FPT-CBSE-G7-PHYSICS-HEAT-COND-6e6b179f",
+        "verificationProblem": "Verify Conduction in Solids & Lattice Vibrations: A boy pushes a box with 40 N force through 5 meters. Calculate work done. (Answer: 40 × 5 = 200 Joules)."
+      },
+      "pedagogical_focus": "NCERT / OER Standard Proofs & Analytical Deduction",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CBSE-G7-PHYSICS-HEAT-COND-6e6b179f",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:47.336804+00:00",
+    "updated_at": "2026-09-18T18:43:49.583882+00:00"
+  },
+  {
+    "id": "CBSE-G7-PHYSICS-HEAT-THERM",
+    "board_id": "CBSE",
+    "subject_id": "PHYSICS",
+    "grade_level": 7,
+    "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+    "title": "Temperature vs Heat Energy",
+    "core_logic_essence": "Temperature measuring average kinetic energy; heat measuring net thermodynamic energy transfer. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.",
+    "parent_node_id": null,
+    "prerequisites": [],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:43:49.327Z",
+      "diagram_type": "energy_transfer",
+      "cornell_notes": {
+        "title": "Temperature vs Heat Energy",
+        "summary": "[CBSE-G7-PHYSICS-HEAT-THERM] Temperature vs Heat Energy: Work is force times distance; kinetic energy is energy of motion and potential energy is stored energy. Total energy is always conserved.",
+        "conceptId": "CBSE-G7-PHYSICS-HEAT-THERM",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Temperature vs Heat Energy\n**Core Principle**: Temperature measuring average kinetic energy; heat measuring net thermodynamic energy transfer. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.\n\n**1. Scientific Work**:\n• In science, **Work** is done only when an applied force causes an object to move in the direction of the force:\n  $$\\text{Work} = \\text{Force} \\times \\text{Distance moved}$$\n• SI unit: **Joule (J)**. One Joule is the work done when a force of 1 Newton moves an object by 1 meter.\n• If there is no movement, Work done = 0 (e.g. pushing a heavy stationary wall).\n\n**2. Forms of Energy**:\n• **Kinetic Energy**: Energy possessed by an object due to its motion (e.g. rolling ball, speeding car, flowing river).\n• **Potential Energy**: Energy stored in an object due to its position or state (e.g. water held high in a reservoir, stretched catapult elastic).\n\n**3. Law of Conservation of Energy**:\n• Energy can neither be created nor destroyed; it can only be converted from one form to another.\n• In a swinging pendulum: at highest positions, all energy is potential; at lowest position, potential converts completely into kinetic energy.\n\n**4. Power**:\n• The rate of doing work or transferring energy: $\\text{Power} = \\frac{\\text{Work}}{\\text{Time}}$ (Watts = Joules/second).",
+        "gradeLevel": 7,
+        "coreAnalogy": "Intuition for Temperature vs Heat Energy: Think of energy like cash in a piggy bank: spending it (work) converts money from stored bills (potential energy) into active goods (kinetic energy), but total account value stays unchanged.",
+        "diagramType": "energy_transfer",
+        "cueQuestions": [
+          "What is the scientific definition of work and its SI unit?",
+          "Distinguish between kinetic energy and potential energy with everyday examples.",
+          "State the Law of Conservation of Energy and describe how energy transforms in a roller coaster or pendulum.",
+          "Explain why pushing against a stationary brick wall does zero scientific work.",
+          "Calculate the expected system response when the primary parameter of Temperature vs Heat Energy is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "A porter standing completely still with luggage on his head",
+              "A horse pulling a cart along a road",
+              "A cyclist pedaling up a hill",
+              "An apple falling from a branch"
+            ],
+            "question": "In which scenario is scientific work strictly zero?",
+            "answerIndex": 0,
+            "explanation": "Because displacement is zero, Work = Force × 0 = 0."
+          }
+        ],
+        "realWorldUse": "Hydroelectric power plants, automotive regenerative brakes, amusement roller coasters, and mechanical engines.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Calculate weight force: F = mass × g = 10 kg × 10 m/s² = 100 N.",
+            "Step 2: Identify distance lifted: d = 2 meters.",
+            "Step 3: Apply work formula: Work = Force × Distance = 100 N × 2 m = 200 Joules."
+          ],
+          "result": "Work done = 200 Joules.",
+          "problem": "[CBSE-G7-PHYSICS-HEAT-THERM] Apply principles of Temperature vs Heat Energy: A student lifts a 10 kg box vertically by 2 meters. How much work is done against gravity? (Use g = 10 m/s²)."
+        },
+        "curriculumTrap": "Key exam trap for Temperature vs Heat Energy: CBSE Board Exam Traps & Marking Patterns:\n1. Common Pitfalls & Mark-Loss Patterns:\n1. Confusing Work with Everyday Effort: Assuming holding a heavy school bag stationary counts as scientific work done. In science, Work = Force × Distance; if distance moved is zero, work done is strictly ZERO.\n2. Energy Conversion vs Loss: Falsely believing energy 'disappears' when a moving ball stops, instead of recognizing it transforms into thermal heat and sound via friction.\n3. Unit Confusion: Omitting standard metric units of Work and Energy (Joules, J) or Force (Newtons, N).\n\n2. Explanation Depth Requirements:\n• 2-3 Mark Question (Forms of Energy & Work Formula):\n  - State definition: Work is done only when an applied force causes displacement in the direction of the force (W = F × d).\n  - Give everyday examples of kinetic energy (speeding vehicle, flowing water) and potential energy (stretched bow, water stored in a dam).\n• 4-5 Mark Question (Law of Conservation of Energy):\n  - State the Law of Conservation of Energy: Energy cannot be created or destroyed, only transformed from one form to another.\n  - Describe the energy transformations in a simple pendulum swinging between extreme and mean positions.\n\n3. High-Yield Study & Revision Tips:\n• State the SI unit of Work and Energy: 1 Joule (J) = 1 Newton-meter (N·m).\n• Check that distance is always in meters (m) and mass is in kilograms (kg) before multiplying.\n• Box final numerical calculations with correct units.",
+        "structuralRule": "$$\\text{Work} = \\text{Force} \\times \\text{Distance} \\quad | \\quad \\text{Kinetic Energy: Energy of Motion} \\quad | \\quad \\text{Conservation of Energy: Total Invariant}$$",
+        "payloadFingerprint": "FPT-CBSE-G7-PHYSICS-HEAT-THERM-761f87e3",
+        "verificationProblem": "Verify Temperature vs Heat Energy: A boy pushes a box with 40 N force through 5 meters. Calculate work done. (Answer: 40 × 5 = 200 Joules)."
+      },
+      "pedagogical_focus": "NCERT / OER Standard Proofs & Analytical Deduction",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CBSE-G7-PHYSICS-HEAT-THERM-761f87e3",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:47.336804+00:00",
+    "updated_at": "2026-09-18T18:43:49.625512+00:00"
+  },
+  {
+    "id": "IB_MYP-G7-PHYSICS-HEAT-COND",
+    "board_id": "IB_MYP",
+    "subject_id": "PHYSICS",
+    "grade_level": 7,
+    "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+    "title": "Conduction in Solids & Lattice Vibrations",
+    "core_logic_essence": "Direct kinetic transfer through molecular collision and free electron migration. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.",
+    "parent_node_id": "IB_MYP-G7-PHYSICS-HEAT-THERM",
+    "prerequisites": [
+      "IB_MYP-G7-PHYSICS-HEAT-THERM"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:44:07.821Z",
+      "diagram_type": "energy_transfer",
+      "cornell_notes": {
+        "title": "Conduction in Solids & Lattice Vibrations",
+        "summary": "[IB_MYP-G7-PHYSICS-HEAT-COND] Conduction in Solids & Lattice Vibrations: Work is force times distance; kinetic energy is energy of motion and potential energy is stored energy. Total energy is always conserved.",
+        "conceptId": "IB_MYP-G7-PHYSICS-HEAT-COND",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Conduction in Solids & Lattice Vibrations\n**Core Principle**: Direct kinetic transfer through molecular collision and free electron migration. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.\n\n**1. Scientific Work**:\n• In science, **Work** is done only when an applied force causes an object to move in the direction of the force:\n  $$\\text{Work} = \\text{Force} \\times \\text{Distance moved}$$\n• SI unit: **Joule (J)**. One Joule is the work done when a force of 1 Newton moves an object by 1 meter.\n• If there is no movement, Work done = 0 (e.g. pushing a heavy stationary wall).\n\n**2. Forms of Energy**:\n• **Kinetic Energy**: Energy possessed by an object due to its motion (e.g. rolling ball, speeding car, flowing river).\n• **Potential Energy**: Energy stored in an object due to its position or state (e.g. water held high in a reservoir, stretched catapult elastic).\n\n**3. Law of Conservation of Energy**:\n• Energy can neither be created nor destroyed; it can only be converted from one form to another.\n• In a swinging pendulum: at highest positions, all energy is potential; at lowest position, potential converts completely into kinetic energy.\n\n**4. Power**:\n• The rate of doing work or transferring energy: $\\text{Power} = \\frac{\\text{Work}}{\\text{Time}}$ (Watts = Joules/second).",
+        "gradeLevel": 7,
+        "coreAnalogy": "Intuition for Conduction in Solids & Lattice Vibrations: Think of energy like cash in a piggy bank: spending it (work) converts money from stored bills (potential energy) into active goods (kinetic energy), but total account value stays unchanged.",
+        "diagramType": "energy_transfer",
+        "cueQuestions": [
+          "Factual Inquiry: What is the scientific definition of work and its SI unit?",
+          "Conceptual Inquiry: Distinguish between kinetic energy and potential energy with everyday examples.",
+          "Debatable Inquiry: State the Law of Conservation of Energy and describe how energy transforms in a roller coaster or pendulum.",
+          "Criterion D Reflection: Explain why pushing against a stationary brick wall does zero scientific work.",
+          "Calculate the expected system response when the primary parameter of Conduction in Solids & Lattice Vibrations is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "A porter standing completely still with luggage on his head",
+              "A horse pulling a cart along a road",
+              "A cyclist pedaling up a hill",
+              "An apple falling from a branch"
+            ],
+            "question": "In which scenario is scientific work strictly zero?",
+            "answerIndex": 0,
+            "explanation": "Because displacement is zero, Work = Force × 0 = 0."
+          }
+        ],
+        "realWorldUse": "Hydroelectric power plants, automotive regenerative brakes, amusement roller coasters, and mechanical engines.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Calculate weight force: F = mass × g = 10 kg × 10 m/s² = 100 N.",
+            "Step 2: Identify distance lifted: d = 2 meters.",
+            "Step 3: Apply work formula: Work = Force × Distance = 100 N × 2 m = 200 Joules."
+          ],
+          "result": "Work done = 200 Joules.",
+          "problem": "[IB_MYP-G7-PHYSICS-HEAT-COND] Apply principles of Conduction in Solids & Lattice Vibrations: A student lifts a 10 kg box vertically by 2 meters. How much work is done against gravity? (Use g = 10 m/s²)."
+        },
+        "curriculumTrap": "Key exam trap for Conduction in Solids & Lattice Vibrations: IB MYP Inquiry & Criterion Framework:\nA) Factual-Level Misconceptions (Criterion A: Knowing and Understanding):\n• Criterion A (Knowing and Understanding): Treating mathematical equations as rote calculation routines rather than expressions of balance and relationships.\n\nB) Conceptual-Level Misconceptions (Criteria B & C: Inquiring & Designing / Processing & Evaluating):\n• Criteria B & C (Inquiring & Designing / Processing & Evaluating): Identifying mathematical patterns, creating models, and evaluating boundary limitations.\n\nC) Debatable Inquiry Prompt (Criterion D: Reflecting on the Impacts of Science):\n• Criterion D (Debatable Inquiry Prompt): 'Does the predictive power of quantitative mathematical models justify their widespread use in public decision-making?'\n\nD) Criterion D Reflection Guide (Global Context & Societal Impact):\n• Criterion D (Global Context & Societal Impact): Global Context: Scientific and Technical Innovation. Evaluate how mathematical modeling informs economic planning and scientific innovation.",
+        "structuralRule": "$$\\text{Work} = \\text{Force} \\times \\text{Distance} \\quad | \\quad \\text{Kinetic Energy: Energy of Motion} \\quad | \\quad \\text{Conservation of Energy: Total Invariant}$$",
+        "payloadFingerprint": "FPT-IB_MYP-G7-PHYSICS-HEAT-COND-170fc3b2",
+        "verificationProblem": "Verify Conduction in Solids & Lattice Vibrations: A boy pushes a box with 40 N force through 5 meters. Calculate work done. (Answer: 40 × 5 = 200 Joules)."
+      },
+      "pedagogical_focus": "IB MYP Criteria & Global Contexts Conceptual Framework",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-IB_MYP-G7-PHYSICS-HEAT-COND-170fc3b2",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:56.155369+00:00",
+    "updated_at": "2026-09-18T18:44:08.147026+00:00"
+  },
+  {
+    "id": "IB_MYP-G7-PHYSICS-HEAT-THERM",
+    "board_id": "IB_MYP",
+    "subject_id": "PHYSICS",
+    "grade_level": 7,
+    "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+    "title": "Temperature vs Heat Energy",
+    "core_logic_essence": "Temperature measuring average kinetic energy; heat measuring net thermodynamic energy transfer. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.",
+    "parent_node_id": null,
+    "prerequisites": [],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:44:08.012Z",
+      "diagram_type": "energy_transfer",
+      "cornell_notes": {
+        "title": "Temperature vs Heat Energy",
+        "summary": "[IB_MYP-G7-PHYSICS-HEAT-THERM] Temperature vs Heat Energy: Work is force times distance; kinetic energy is energy of motion and potential energy is stored energy. Total energy is always conserved.",
+        "conceptId": "IB_MYP-G7-PHYSICS-HEAT-THERM",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Temperature vs Heat Energy\n**Core Principle**: Temperature measuring average kinetic energy; heat measuring net thermodynamic energy transfer. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.\n\n**1. Scientific Work**:\n• In science, **Work** is done only when an applied force causes an object to move in the direction of the force:\n  $$\\text{Work} = \\text{Force} \\times \\text{Distance moved}$$\n• SI unit: **Joule (J)**. One Joule is the work done when a force of 1 Newton moves an object by 1 meter.\n• If there is no movement, Work done = 0 (e.g. pushing a heavy stationary wall).\n\n**2. Forms of Energy**:\n• **Kinetic Energy**: Energy possessed by an object due to its motion (e.g. rolling ball, speeding car, flowing river).\n• **Potential Energy**: Energy stored in an object due to its position or state (e.g. water held high in a reservoir, stretched catapult elastic).\n\n**3. Law of Conservation of Energy**:\n• Energy can neither be created nor destroyed; it can only be converted from one form to another.\n• In a swinging pendulum: at highest positions, all energy is potential; at lowest position, potential converts completely into kinetic energy.\n\n**4. Power**:\n• The rate of doing work or transferring energy: $\\text{Power} = \\frac{\\text{Work}}{\\text{Time}}$ (Watts = Joules/second).",
+        "gradeLevel": 7,
+        "coreAnalogy": "Intuition for Temperature vs Heat Energy: Think of energy like cash in a piggy bank: spending it (work) converts money from stored bills (potential energy) into active goods (kinetic energy), but total account value stays unchanged.",
+        "diagramType": "energy_transfer",
+        "cueQuestions": [
+          "Factual Inquiry: What is the scientific definition of work and its SI unit?",
+          "Conceptual Inquiry: Distinguish between kinetic energy and potential energy with everyday examples.",
+          "Debatable Inquiry: State the Law of Conservation of Energy and describe how energy transforms in a roller coaster or pendulum.",
+          "Criterion D Reflection: Explain why pushing against a stationary brick wall does zero scientific work.",
+          "Calculate the expected system response when the primary parameter of Temperature vs Heat Energy is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "A porter standing completely still with luggage on his head",
+              "A horse pulling a cart along a road",
+              "A cyclist pedaling up a hill",
+              "An apple falling from a branch"
+            ],
+            "question": "In which scenario is scientific work strictly zero?",
+            "answerIndex": 0,
+            "explanation": "Because displacement is zero, Work = Force × 0 = 0."
+          }
+        ],
+        "realWorldUse": "Hydroelectric power plants, automotive regenerative brakes, amusement roller coasters, and mechanical engines.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Calculate weight force: F = mass × g = 10 kg × 10 m/s² = 100 N.",
+            "Step 2: Identify distance lifted: d = 2 meters.",
+            "Step 3: Apply work formula: Work = Force × Distance = 100 N × 2 m = 200 Joules."
+          ],
+          "result": "Work done = 200 Joules.",
+          "problem": "[IB_MYP-G7-PHYSICS-HEAT-THERM] Apply principles of Temperature vs Heat Energy: A student lifts a 10 kg box vertically by 2 meters. How much work is done against gravity? (Use g = 10 m/s²)."
+        },
+        "curriculumTrap": "Key exam trap for Temperature vs Heat Energy: IB MYP Inquiry & Criterion Framework:\nA) Factual-Level Misconceptions (Criterion A: Knowing and Understanding):\n• Criterion A (Knowing and Understanding): Misconception that energy is 'consumed' or 'lost' from existence during mechanical processes. Energy is strictly conserved; macroscopic mechanical work transforms into microscopic thermal energy.\n\nB) Conceptual-Level Misconceptions (Criteria B & C: Inquiring & Designing / Processing & Evaluating):\n• Criteria B & C (Inquiring & Designing / Processing & Evaluating): Assuming 100% mechanical efficiency in experimental ramps or pendulums without accounting for frictional dissipation.\n\nC) Debatable Inquiry Prompt (Criterion D: Reflecting on the Impacts of Science):\n• Criterion D (Debatable Inquiry Prompt): 'To what extent should societies prioritize kinetic renewable generation (wind, hydro) over continuous dispatchable thermal energy?'\n\nD) Criterion D Reflection Guide (Global Context & Societal Impact):\n• Criterion D (Global Context & Societal Impact): Global Context: Scientific and Technical Innovation / Sustainability. Evaluate how energy conservation principles guide renewable transportation and industrial design.",
+        "structuralRule": "$$\\text{Work} = \\text{Force} \\times \\text{Distance} \\quad | \\quad \\text{Kinetic Energy: Energy of Motion} \\quad | \\quad \\text{Conservation of Energy: Total Invariant}$$",
+        "payloadFingerprint": "FPT-IB_MYP-G7-PHYSICS-HEAT-THERM-73f68e90",
+        "verificationProblem": "Verify Temperature vs Heat Energy: A boy pushes a box with 40 N force through 5 meters. Calculate work done. (Answer: 40 × 5 = 200 Joules)."
+      },
+      "pedagogical_focus": "IB MYP Criteria & Global Contexts Conceptual Framework",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-IB_MYP-G7-PHYSICS-HEAT-THERM-73f68e90",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:56.155369+00:00",
+    "updated_at": "2026-09-18T18:44:08.324298+00:00"
+  }
+]

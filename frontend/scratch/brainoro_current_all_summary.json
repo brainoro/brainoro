@@ -1,0 +1,1087 @@
+[
+  {
+    "grade": 6,
+    "subject": "Mathematics",
+    "stream": "GENERAL",
+    "textbookTitle": "Ganita Prakash",
+    "code": "femh1",
+    "chapters": [
+      "Patterns in Mathematics",
+      "Lines and Angles",
+      "Number Play",
+      "Data Handling and Presentation",
+      "Prime Time",
+      "Perimeter and Area",
+      "Fractions",
+      "Playing with Constructions",
+      "Symmetry",
+      "The Other Side of Zero"
+    ]
+  },
+  {
+    "grade": 6,
+    "subject": "Science",
+    "stream": "GENERAL",
+    "textbookTitle": "Curiosity",
+    "code": "fecu1",
+    "chapters": [
+      "The Wonderful World of Science",
+      "Diversity in the Living World",
+      "Mindful Eating: A Path to a Healthy Body",
+      "Exploring Magnets",
+      "Measurement of Length and Motion",
+      "Materials Around Us",
+      "Temperature and its Measurement",
+      "A Journey through States of Water",
+      "Methods of Separation in Everyday Life",
+      "Living Creatures: Exploring their Characteristics",
+      "Nature's Treasures",
+      "Beyond Earth"
+    ]
+  },
+  {
+    "grade": 6,
+    "subject": "English",
+    "stream": "GENERAL",
+    "textbookTitle": "Poorvi",
+    "code": "feen1",
+    "chapters": [
+      "Fables and Folk Tales",
+      "Friendship",
+      "Nurturing Nature",
+      "Sports and Games",
+      "Culture and Tradition"
+    ]
+  },
+  {
+    "grade": 6,
+    "subject": "Social Science",
+    "stream": "GENERAL",
+    "textbookTitle": "Exploring Society: India and Beyond",
+    "code": "fess1",
+    "chapters": [
+      "Locating Places on the Earth",
+      "Oceans and Continents",
+      "Landforms and Life",
+      "Timeline and Sources of History",
+      "India, That Is Bharat",
+      "The Beginnings of Indian Civilisation",
+      "India's Cultural Roots"
+    ]
+  },
+  {
+    "grade": 6,
+    "subject": "Hindi",
+    "stream": "GENERAL",
+    "textbookTitle": "Malhar",
+    "code": "fehn1",
+    "chapters": [
+      "Baras Raha Hai Jal",
+      "Har Ki Jeet",
+      "Bansi Ki Dhun",
+      "Meri Maa"
+    ]
+  },
+  {
+    "grade": 6,
+    "subject": "Sanskrit",
+    "stream": "GENERAL",
+    "textbookTitle": "Deepakam",
+    "code": "fsk1",
+    "chapters": [
+      "Prathama Patha: Mangalacharanam",
+      "Dvitiya Patha: Parichaya",
+      "Tritiya Patha: Subhashitani",
+      "Chaturtha Patha: Vidyalaya"
+    ]
+  },
+  {
+    "grade": 7,
+    "subject": "Mathematics",
+    "stream": "GENERAL",
+    "textbookTitle": "Mathematics - Textbook for Class VII",
+    "code": "gemh1",
+    "chapters": [
+      "Integers",
+      "Fractions and Decimals",
+      "Data Handling",
+      "Simple Equations",
+      "Lines and Angles",
+      "The Triangle and its Properties",
+      "Comparing Quantities",
+      "Rational Numbers",
+      "Perimeter and Area",
+      "Algebraic Expressions",
+      "Exponents and Powers",
+      "Symmetry",
+      "Visualising Solid Shapes"
+    ]
+  },
+  {
+    "grade": 7,
+    "subject": "Science",
+    "stream": "GENERAL",
+    "textbookTitle": "Science - Textbook for Class VII",
+    "code": "gesc1",
+    "chapters": [
+      "The Ever-Evolving World of Science",
+      "Exploring Substances: Acidic, Basic, and Neutral",
+      "Electricity: Circuits and their Components",
+      "The World of Metals and Non-metals",
+      "Changes Around Us: Physical and Chemical",
+      "Adolescence: A Stage of Growth and Change",
+      "Heat Transfer in Nature",
+      "Measurement of Time and Motion",
+      "Life Processes in Animals",
+      "Life Processes in Plants",
+      "Light: Shadows and Reflections",
+      "Earth, Moon, and the Sun"
+    ]
+  },
+  {
+    "grade": 7,
+    "subject": "English",
+    "stream": "GENERAL",
+    "textbookTitle": "Honeycomb",
+    "code": "geen1",
+    "chapters": [
+      "Three Questions",
+      "A Gift of Chappals",
+      "Gopal and the Hilsa Fish",
+      "The Ashes That Made Trees Bloom",
+      "Quality",
+      "Expert Detectives",
+      "The Invention of Vita-Wonk",
+      "A Bicycle in Good Repair"
+    ]
+  },
+  {
+    "grade": 7,
+    "subject": "Social Science",
+    "stream": "GENERAL",
+    "textbookTitle": "Our Pasts - II",
+    "code": "gess1",
+    "chapters": [
+      "Tracing Changes Through a Thousand Years",
+      "New Kings and Kingdoms",
+      "The Delhi Sultans",
+      "The Mughal Empire",
+      "Rulers and Buildings",
+      "Towns, Traders and Craftspersons",
+      "Tribes, Nomads and Settled Communities"
+    ]
+  },
+  {
+    "grade": 8,
+    "subject": "Mathematics",
+    "stream": "GENERAL",
+    "textbookTitle": "Ganita Prakash Part-I",
+    "code": "hegp1",
+    "chapters": [
+      "A Square and A Cube",
+      "Power Play",
+      "A Story of Numbers",
+      "Quadrilaterals",
+      "Number Play",
+      "We Distribute, Yet Things Multiply",
+      "Proportional Reasoning-1"
+    ]
+  },
+  {
+    "grade": 8,
+    "subject": "Mathematics",
+    "stream": "GENERAL",
+    "textbookTitle": "Ganita Prakash Part-II",
+    "code": "hegp2",
+    "chapters": [
+      "Fractions in Disguise",
+      "The Baudhayana-Pythagoras Theorem",
+      "Proportional Reasoning-2",
+      "Exploring Some Geometric Themes",
+      "Tales by Dots and Lines",
+      "Algebra Play",
+      "Area"
+    ]
+  },
+  {
+    "grade": 8,
+    "subject": "Science",
+    "stream": "GENERAL",
+    "textbookTitle": "Curiosity",
+    "code": "hecu1",
+    "chapters": [
+      "Exploring the Investigative World of Science",
+      "The Invisible Living World: Beyond Our Naked Eye",
+      "Health: The Ultimate Treasure",
+      "Electricity: Magnetic and Heating Effects",
+      "Exploring Forces",
+      "Pressure, Winds, Storms, and Cyclones",
+      "Particulate Nature of Matter",
+      "Nature of Matter: Elements, Compounds, and Mixtures",
+      "The Amazing World of Solutes, Solvents, and Solutions",
+      "Light: Mirrors and Lenses",
+      "Keeping Time with the Skies",
+      "How Nature Works in Harmony",
+      "Our Home: Earth, a Unique Life-Sustaining Planet"
+    ]
+  },
+  {
+    "grade": 8,
+    "subject": "English",
+    "stream": "GENERAL",
+    "textbookTitle": "Honeydew",
+    "code": "heen1",
+    "chapters": [
+      "The Best Christmas Present in the World",
+      "The Tsunami",
+      "Glimpses of the Past",
+      "Bepin Choudhury's Lapse of Memory",
+      "The Summit Within",
+      "This is Jody's Fawn",
+      "A Visit to Cambridge",
+      "A Short Monsoon Diary"
+    ]
+  },
+  {
+    "grade": 8,
+    "subject": "Social Science",
+    "stream": "GENERAL",
+    "textbookTitle": "Our Pasts - III",
+    "code": "hess1",
+    "chapters": [
+      "How, When and Where",
+      "From Trade to Territory",
+      "Ruling the Countryside",
+      "Tribals, Dikus and the Vision of a Golden Age",
+      "When People Rebel: 1857 and After",
+      "Civilising the \"Native\", Educating the Nation"
+    ]
+  },
+  {
+    "grade": 9,
+    "subject": "Mathematics",
+    "stream": "GENERAL",
+    "textbookTitle": "Ganita Manjari (Mathematics IX)",
+    "code": "iemh1",
+    "chapters": [
+      "Number Systems",
+      "Polynomials",
+      "Coordinate Geometry",
+      "Linear Equations in Two Variables",
+      "Introduction to Euclid's Geometry",
+      "Lines and Angles",
+      "Triangles",
+      "Quadrilaterals",
+      "Circles",
+      "Heron's Formula",
+      "Surface Areas and Volumes",
+      "Statistics"
+    ]
+  },
+  {
+    "grade": 9,
+    "subject": "Science",
+    "stream": "GENERAL",
+    "textbookTitle": "Exploration (Science IX)",
+    "code": "iesc1",
+    "chapters": [
+      "Matter in Our Surroundings",
+      "Is Matter Around Us Pure",
+      "Atoms and Molecules",
+      "Structure of the Atom",
+      "The Fundamental Unit of Life",
+      "Tissues",
+      "Motion",
+      "Force and Laws of Motion",
+      "Gravitation",
+      "Work and Energy",
+      "Sound",
+      "Improvement in Food Resources"
+    ]
+  },
+  {
+    "grade": 9,
+    "subject": "English Language & Literature",
+    "stream": "GENERAL",
+    "textbookTitle": "Kaveri",
+    "code": "iebe1",
+    "chapters": [
+      "How I Taught My Grandmother to Read",
+      "The Pot Maker",
+      "Winds of Change",
+      "Vitamin-M",
+      "The World of Limitless Possibilities",
+      "Twin Melodies",
+      "Carrier of Words",
+      "Follow That Dream"
+    ]
+  },
+  {
+    "grade": 9,
+    "subject": "Social Science",
+    "stream": "GENERAL",
+    "textbookTitle": "India and the Contemporary World - I",
+    "code": "iess1",
+    "chapters": [
+      "The French Revolution",
+      "Socialism in Europe and the Russian Revolution",
+      "Nazism and the Rise of Hitler",
+      "Forest Society and Colonialism",
+      "Pastoralists in the Modern World",
+      "India - Size and Location",
+      "Physical Features of India",
+      "Drainage",
+      "Climate",
+      "Natural Vegetation and Wild Life"
+    ]
+  },
+  {
+    "grade": 9,
+    "subject": "Hindi (Course A & B)",
+    "stream": "GENERAL",
+    "textbookTitle": "Kshitij Part 1",
+    "code": "ieks1",
+    "chapters": [
+      "Do Bailon Ki Katha",
+      "Lhasa Ki Aur",
+      "Upbhoktavad Ki Sanskriti",
+      "Sawle Sapno Ki Yaad"
+    ]
+  },
+  {
+    "grade": 10,
+    "subject": "Mathematics",
+    "stream": "GENERAL",
+    "textbookTitle": "Mathematics - Textbook for Class X",
+    "code": "jemh1",
+    "chapters": [
+      "Real Numbers",
+      "Polynomials",
+      "Pair of Linear Equations in Two Variables",
+      "Quadratic Equations",
+      "Arithmetic Progressions",
+      "Triangles",
+      "Coordinate Geometry",
+      "Introduction to Trigonometry",
+      "Some Applications of Trigonometry",
+      "Circles",
+      "Areas Related to Circles",
+      "Surface Areas and Volumes",
+      "Statistics",
+      "Probability"
+    ]
+  },
+  {
+    "grade": 10,
+    "subject": "Science",
+    "stream": "GENERAL",
+    "textbookTitle": "Science - Textbook for Class X",
+    "code": "jesc1",
+    "chapters": [
+      "Chemical Reactions and Equations",
+      "Acids, Bases and Salts",
+      "Metals and Non-metals",
+      "Carbon and its Compounds",
+      "Life Processes",
+      "Control and Coordination",
+      "How do Organisms Reproduce?",
+      "Heredity",
+      "Light - Reflection and Refraction",
+      "The Human Eye and the Colorful World",
+      "Electricity",
+      "Magnetic Effects of Electric Current",
+      "Our Environment"
+    ]
+  },
+  {
+    "grade": 10,
+    "subject": "Social Science",
+    "stream": "GENERAL",
+    "textbookTitle": "India and the Contemporary World - II",
+    "code": "jess1",
+    "chapters": [
+      "The Rise of Nationalism in Europe",
+      "Nationalism in India",
+      "The Making of a Global World",
+      "The Age of Industrialisation",
+      "Print Culture and the Modern World",
+      "Resources and Development",
+      "Forest and Wildlife Resources",
+      "Water Resources",
+      "Agriculture",
+      "Minerals and Energy Resources"
+    ]
+  },
+  {
+    "grade": 10,
+    "subject": "English Language & Literature",
+    "stream": "GENERAL",
+    "textbookTitle": "First Flight",
+    "code": "jeff1",
+    "chapters": [
+      "A Letter to God",
+      "Nelson Mandela: Long Walk to Freedom",
+      "Two Stories about Flying",
+      "From the Diary of Anne Frank",
+      "Glimpses of India",
+      "Mijbil the Otter",
+      "Madam Rides the Bus",
+      "The Sermon at Benares",
+      "The Proposal"
+    ]
+  },
+  {
+    "grade": 10,
+    "subject": "Hindi (Course A & B)",
+    "stream": "GENERAL",
+    "textbookTitle": "Kshitij Part 2",
+    "code": "jeks1",
+    "chapters": [
+      "Netaji Ka Chashma",
+      "Balgobin Bhagat",
+      "Lakhnavi Andaz",
+      "Ek Kahani Yeh Bhi"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Physics",
+    "stream": "SCIENCE",
+    "textbookTitle": "Physics - Textbook for Class XI (Parts I & II)",
+    "code": "keph1",
+    "chapters": [
+      "Units and Measurements",
+      "Motion in a Straight Line",
+      "Motion in a Plane",
+      "Laws of Motion",
+      "Work, Energy and Power",
+      "System of Particles and Rotational Motion",
+      "Gravitation",
+      "Mechanical Properties of Solids",
+      "Mechanical Properties of Fluids",
+      "Thermal Properties of Matter",
+      "Thermodynamics",
+      "Kinetic Theory",
+      "Oscillations",
+      "Waves"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Chemistry",
+    "stream": "SCIENCE",
+    "textbookTitle": "Chemistry - Textbook for Class XI (Parts I & II)",
+    "code": "kech1",
+    "chapters": [
+      "Some Basic Concepts of Chemistry",
+      "Structure of Atom",
+      "Classification of Elements and Periodicity in Properties",
+      "Chemical Bonding and Molecular Structure",
+      "Chemical Thermodynamics",
+      "Equilibrium",
+      "Redox Reactions",
+      "Organic Chemistry: Some Basic Principles and Techniques",
+      "Hydrocarbons"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Mathematics",
+    "stream": "SCIENCE",
+    "textbookTitle": "Mathematics - Textbook for Class XI",
+    "code": "kemh1",
+    "chapters": [
+      "Sets",
+      "Relations and Functions",
+      "Trigonometric Functions",
+      "Complex Numbers and Quadratic Equations",
+      "Linear Inequalities",
+      "Permutations and Combinations",
+      "Binomial Theorem",
+      "Sequences and Series",
+      "Straight Lines",
+      "Conic Sections",
+      "Introduction to Three Dimensional Geometry",
+      "Limits and Derivatives",
+      "Statistics",
+      "Probability"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Biology",
+    "stream": "SCIENCE",
+    "textbookTitle": "Biology - Textbook for Class XI",
+    "code": "kebo1",
+    "chapters": [
+      "The Living World",
+      "Biological Classification",
+      "Plant Kingdom",
+      "Animal Kingdom",
+      "Morphology of Flowering Plants",
+      "Anatomy of Flowering Plants",
+      "Structural Organisation in Animals",
+      "Cell: The Unit of Life",
+      "Biomolecules",
+      "Cell Cycle and Cell Division",
+      "Photosynthesis in Higher Plants",
+      "Respiration in Plants",
+      "Plant Growth and Development",
+      "Breathing and Exchange of Gases",
+      "Body Fluids and Circulation",
+      "Excretory Products and their Elimination",
+      "Locomotion and Movement",
+      "Neural Control and Coordination",
+      "Chemical Coordination and Integration"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Computer Science",
+    "stream": "SCIENCE",
+    "textbookTitle": "Computer Science with Python - Class XI",
+    "code": "kecs1",
+    "chapters": [
+      "Computer System Overview",
+      "Data Representation",
+      "Boolean Logic",
+      "Introduction to Problem Solving",
+      "Getting Started with Python",
+      "Python Fundamentals",
+      "Data Handling",
+      "Flow of Control"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "English Core",
+    "stream": "SCIENCE",
+    "textbookTitle": "Hornbill",
+    "code": "kehb1",
+    "chapters": [
+      "The Portrait of a Lady",
+      "We're Not Afraid to Die... if We Can All Be Together",
+      "Discovering Tut: the Saga Continues",
+      "The Laburnum Top",
+      "The Voice of the Rain",
+      "Childhood",
+      "The Adventure",
+      "Silk Road"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Accountancy",
+    "stream": "COMMERCE",
+    "textbookTitle": "Financial Accounting - Class XI",
+    "code": "keac1",
+    "chapters": [
+      "Introduction to Accounting",
+      "Theory Base of Accounting",
+      "Recording of Transactions - I",
+      "Recording of Transactions - II",
+      "Bank Reconciliation Statement",
+      "Trial Balance and Rectification of Errors",
+      "Depreciation, Provisions and Reserves",
+      "Financial Statements - I"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Business Studies",
+    "stream": "COMMERCE",
+    "textbookTitle": "Business Studies - Class XI",
+    "code": "kebs1",
+    "chapters": [
+      "Business, Trade and Commerce",
+      "Forms of Business Organisation",
+      "Private, Public and Global Enterprises",
+      "Business Services",
+      "Emerging Modes of Business",
+      "Social Responsibilities of Business and Business Ethics"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Economics",
+    "stream": "COMMERCE",
+    "textbookTitle": "Introductory Microeconomics & Statistics",
+    "code": "keec1",
+    "chapters": [
+      "Introduction to Economics",
+      "Collection of Data",
+      "Organisation of Data",
+      "Presentation of Data",
+      "Measures of Central Tendency",
+      "Correlation"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "History",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Themes in World History",
+    "code": "kest1",
+    "chapters": [
+      "Writing and City Life",
+      "An Empire Across Three Continents",
+      "Nomadic Empires",
+      "The Three Orders",
+      "Changing Cultural Traditions"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Political Science",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Indian Constitution at Work",
+    "code": "keps1",
+    "chapters": [
+      "Constitution: Why and How?",
+      "Rights in the Indian Constitution",
+      "Election and Representation",
+      "Executive",
+      "Legislature",
+      "Judiciary"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Geography",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Fundamentals of Physical Geography",
+    "code": "kegy1",
+    "chapters": [
+      "Geography as a Discipline",
+      "The Origin and Evolution of the Earth",
+      "Interior of the Earth",
+      "Distribution of Oceans and Continents",
+      "Geomorphic Processes"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "English Core",
+    "stream": "COMMERCE",
+    "textbookTitle": "Hornbill",
+    "code": "kehb1",
+    "chapters": [
+      "The Portrait of a Lady",
+      "We're Not Afraid to Die... if We Can All Be Together",
+      "Discovering Tut: the Saga Continues",
+      "The Laburnum Top",
+      "The Voice of the Rain",
+      "Childhood",
+      "The Adventure",
+      "Silk Road"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "English Core",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Hornbill",
+    "code": "kehb1",
+    "chapters": [
+      "The Portrait of a Lady",
+      "We're Not Afraid to Die... if We Can All Be Together",
+      "Discovering Tut: the Saga Continues",
+      "The Laburnum Top",
+      "The Voice of the Rain",
+      "Childhood",
+      "The Adventure",
+      "Silk Road"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Mathematics / Applied Math",
+    "stream": "COMMERCE",
+    "textbookTitle": "Mathematics - Textbook for Class XI",
+    "code": "kemh1",
+    "chapters": [
+      "Sets",
+      "Relations and Functions",
+      "Trigonometric Functions",
+      "Complex Numbers and Quadratic Equations",
+      "Linear Inequalities",
+      "Permutations and Combinations",
+      "Binomial Theorem",
+      "Sequences and Series",
+      "Straight Lines",
+      "Conic Sections",
+      "Introduction to Three Dimensional Geometry",
+      "Limits and Derivatives",
+      "Statistics",
+      "Probability"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Sociology",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Introducing Sociology",
+    "code": "keso1",
+    "chapters": [
+      "Sociology and Society",
+      "Terms, Concepts and their use in Sociology",
+      "Understanding Social Institutions",
+      "Culture and Socialisation",
+      "Doing Sociology: Research Methods"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Psychology",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Introduction to Psychology",
+    "code": "kepy1",
+    "chapters": [
+      "What is Psychology?",
+      "Methods of Enquiry in Psychology",
+      "The Bases of Human Behaviour",
+      "Human Development",
+      "Sensory, Attentional and Perceptual Processes",
+      "Learning",
+      "Human Memory"
+    ]
+  },
+  {
+    "grade": 11,
+    "subject": "Economics",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Introductory Microeconomics & Statistics",
+    "code": "keec1",
+    "chapters": [
+      "Introduction to Economics",
+      "Collection of Data",
+      "Organisation of Data",
+      "Presentation of Data",
+      "Measures of Central Tendency",
+      "Correlation"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Physics",
+    "stream": "SCIENCE",
+    "textbookTitle": "Physics - Textbook for Class XII (Parts I & II)",
+    "code": "leph1",
+    "chapters": [
+      "Electric Charges and Fields",
+      "Electrostatic Potential and Capacitance",
+      "Current Electricity",
+      "Moving Charges and Magnetism",
+      "Magnetism and Matter",
+      "Electromagnetic Induction",
+      "Alternating Current",
+      "Electromagnetic Waves",
+      "Ray Optics and Optical Instruments",
+      "Wave Optics",
+      "Dual Nature of Radiation and Matter",
+      "Atoms",
+      "Nuclei",
+      "Semiconductor Electronics: Materials, Devices and Simple Circuits"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Chemistry",
+    "stream": "SCIENCE",
+    "textbookTitle": "Chemistry - Textbook for Class XII (Parts I & II)",
+    "code": "lech1",
+    "chapters": [
+      "Solutions",
+      "Electrochemistry",
+      "Chemical Kinetics",
+      "The d- and f- Block Elements",
+      "Coordination Compounds",
+      "Haloalkanes and Haloarenes",
+      "Alcohols, Phenols and Ethers",
+      "Aldehydes, Ketones and Carboxylic Acids",
+      "Amines",
+      "Biomolecules"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Mathematics",
+    "stream": "SCIENCE",
+    "textbookTitle": "Mathematics - Textbook for Class XII",
+    "code": "lemh1",
+    "chapters": [
+      "Relations and Functions",
+      "Inverse Trigonometric Functions",
+      "Matrices",
+      "Determinants",
+      "Continuity and Differentiability",
+      "Application of Derivatives",
+      "Integrals",
+      "Application of Integrals",
+      "Differential Equations",
+      "Vector Algebra",
+      "Three Dimensional Geometry",
+      "Linear Programming",
+      "Probability"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Biology",
+    "stream": "SCIENCE",
+    "textbookTitle": "Biology - Textbook for Class XII",
+    "code": "lebo1",
+    "chapters": [
+      "Sexual Reproduction in Flowering Plants",
+      "Human Reproduction",
+      "Reproductive Health",
+      "Principles of Inheritance and Variation",
+      "Molecular Basis of Inheritance",
+      "Evolution",
+      "Human Health and Disease",
+      "Microbes in Human Welfare",
+      "Biotechnology: Principles and Processes",
+      "Biotechnology and its Applications",
+      "Organisms and Populations",
+      "Ecosystem",
+      "Biodiversity and Conservation"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Computer Science",
+    "stream": "SCIENCE",
+    "textbookTitle": "Computer Science with Python - Class XII",
+    "code": "lecs1",
+    "chapters": [
+      "Python Revision Tour",
+      "Functions",
+      "Using Python Libraries",
+      "File Handling",
+      "Recursion",
+      "Data Structures",
+      "Computer Networks"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "English Core",
+    "stream": "SCIENCE",
+    "textbookTitle": "Flamingo",
+    "code": "lefl1",
+    "chapters": [
+      "The Last Lesson",
+      "Lost Spring",
+      "Deep Water",
+      "The Rattrap",
+      "Indigo",
+      "Poets and Pancakes",
+      "The Interview",
+      "Going Places"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Accountancy",
+    "stream": "COMMERCE",
+    "textbookTitle": "Accounting for Partnership Firms & Analysis",
+    "code": "leac1",
+    "chapters": [
+      "Accounting for Partnership: Basic Concepts",
+      "Reconstitution of a Partnership Firm - Admission of a Partner",
+      "Reconstitution of a Partnership Firm - Retirement/Death of a Partner",
+      "Dissolution of Partnership Firm",
+      "Accounting for Share Capital",
+      "Issue and Redemption of Debentures",
+      "Financial Statements of a Company",
+      "Analysis of Financial Statements"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Business Studies",
+    "stream": "COMMERCE",
+    "textbookTitle": "Principles and Functions of Management",
+    "code": "lebs1",
+    "chapters": [
+      "Nature and Significance of Management",
+      "Principles of Management",
+      "Business Environment",
+      "Planning",
+      "Organising",
+      "Staffing",
+      "Directing",
+      "Controlling",
+      "Financial Management",
+      "Financial Markets",
+      "Marketing Management",
+      "Consumer Protection"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Economics",
+    "stream": "COMMERCE",
+    "textbookTitle": "Introductory Macroeconomics & Development",
+    "code": "leec1",
+    "chapters": [
+      "Introduction to Macroeconomics",
+      "National Income Accounting",
+      "Money and Banking",
+      "Determination of Income and Employment",
+      "Government Budget and the Economy",
+      "Open Economy Macroeconomics",
+      "Development Experience (1947-90) and Economic Reforms since 1991",
+      "Current Challenges facing the Indian Economy"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "History",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Themes in Indian History",
+    "code": "lest1",
+    "chapters": [
+      "Bricks, Beads and Bones",
+      "Kings, Farmers and Towns",
+      "Kinship, Caste and Class",
+      "Thinkers, Beliefs and Buildings",
+      "Through the Eyes of Travellers",
+      "Bhakti-Sufi Traditions"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Political Science",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Contemporary World Politics",
+    "code": "leps1",
+    "chapters": [
+      "The End of Bipolarity",
+      "Contemporary Centres of Power",
+      "Contemporary South Asia",
+      "International Organisations",
+      "Security in the Contemporary World",
+      "Environment and Natural Resources"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Geography",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Fundamentals of Human Geography",
+    "code": "legy1",
+    "chapters": [
+      "Human Geography: Nature and Scope",
+      "The World Population: Distribution, Density and Growth",
+      "Human Development",
+      "Primary Activities",
+      "Secondary Activities",
+      "Tertiary and Quaternary Activities"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "English Core",
+    "stream": "COMMERCE",
+    "textbookTitle": "Flamingo",
+    "code": "lefl1",
+    "chapters": [
+      "The Last Lesson",
+      "Lost Spring",
+      "Deep Water",
+      "The Rattrap",
+      "Indigo",
+      "Poets and Pancakes",
+      "The Interview",
+      "Going Places"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "English Core",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Flamingo",
+    "code": "lefl1",
+    "chapters": [
+      "The Last Lesson",
+      "Lost Spring",
+      "Deep Water",
+      "The Rattrap",
+      "Indigo",
+      "Poets and Pancakes",
+      "The Interview",
+      "Going Places"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Mathematics / Applied Math",
+    "stream": "COMMERCE",
+    "textbookTitle": "Mathematics - Textbook for Class XII",
+    "code": "lemh1",
+    "chapters": [
+      "Relations and Functions",
+      "Inverse Trigonometric Functions",
+      "Matrices",
+      "Determinants",
+      "Continuity and Differentiability",
+      "Application of Derivatives",
+      "Integrals",
+      "Application of Integrals",
+      "Differential Equations",
+      "Vector Algebra",
+      "Three Dimensional Geometry",
+      "Linear Programming",
+      "Probability"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Sociology",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Indian Society",
+    "code": "leso1",
+    "chapters": [
+      "Introducing Indian Society",
+      "The Demographic Structure of the Indian Society",
+      "Social Institutions: Continuity and Change",
+      "The Market as a Social Institution",
+      "Patterns of Social Inequality and Exclusion",
+      "The Challenges of Cultural Diversity"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Psychology",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Psychology Class XII",
+    "code": "lepy1",
+    "chapters": [
+      "Variations in Psychological Attributes",
+      "Self and Personality",
+      "Meeting Life Challenges",
+      "Psychological Disorders",
+      "Therapeutic Approaches",
+      "Attitude and Social Cognition",
+      "Social Influence and Group Processes"
+    ]
+  },
+  {
+    "grade": 12,
+    "subject": "Economics",
+    "stream": "HUMANITIES",
+    "textbookTitle": "Introductory Macroeconomics & Development",
+    "code": "leec1",
+    "chapters": [
+      "Introduction to Macroeconomics",
+      "National Income Accounting",
+      "Money and Banking",
+      "Determination of Income and Employment",
+      "Government Budget and the Economy",
+      "Open Economy Macroeconomics",
+      "Development Experience (1947-90) and Economic Reforms since 1991",
+      "Current Challenges facing the Indian Economy"
+    ]
+  }
+]

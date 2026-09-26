@@ -1,0 +1,632 @@
+[
+  {
+    "id": "CAMBRIDGE-G10-CHEMISTRY-REAC-TYPES",
+    "board_id": "CAMBRIDGE",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 10,
+    "unit": "Unit 1: Chemical Reactions & Equations",
+    "title": "Combination, Decomposition & Displacement",
+    "core_logic_essence": "Synthesis (A+B->AB), thermal/electrolytic breakdown, and single/double metathesis. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.",
+    "parent_node_id": "CAMBRIDGE-G10-CHEMISTRY-REAC-BAL",
+    "prerequisites": [
+      "CAMBRIDGE-G10-CHEMISTRY-REAC-BAL"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:44:04.642Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "Combination, Decomposition & Displacement",
+        "summary": "[CAMBRIDGE-G10-CHEMISTRY-REAC-TYPES] Combination, Decomposition & Displacement: Chemical reactions conserve mass while redistributing bonds; pH quantifies proton activity across acidic and basic domains.",
+        "conceptId": "CAMBRIDGE-G10-CHEMISTRY-REAC-TYPES",
+        "gradeTier": "SECONDARY",
+        "mainNotes": "### Combination, Decomposition & Displacement\n**Core Principle**: Synthesis (A+B->AB), thermal/electrolytic breakdown, and single/double metathesis. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.\n\n**1. Chemical Reaction Types**:\n• Combination, Decomposition, Displacement, Double Displacement, Redox.\n\n**2. The pH Scale (0 to 14)**:\n$$\\text{pH} = -log_{10}[\\text{H}^+]$$\n• $\\text{pH} < 7$: Acidic ($[\\text{H}^+] > [\\text{OH}^-]$)\n• $\\text{pH} = 7$: Neutral ($[\\text{H}^+] = [\\text{OH}^-] = 10^{-7}\\text{ M}$)\n• $\\text{pH} > 7$: Basic ($[\\text{H}^+] < [\\text{OH}^-]$)",
+        "gradeLevel": 10,
+        "coreAnalogy": "Intuition for Combination, Decomposition & Displacement: Think of the pH scale like a see-saw balancing H+ ions on the left and OH- ions on the right.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "Define acids and bases according to Arrhenius and Brønsted-Lowry theories.",
+          "Define the pH scale mathematically in terms of hydronium ion concentration.",
+          "Write balanced equations for the four primary types of chemical reactions.",
+          "Explain the role of common salts (baking soda, bleaching powder, Plaster of Paris).",
+          "Calculate the energy available at the 5th trophic level if primary producers capture 100,000 J of solar energy, and explain why food chains rarely sustain beyond 4–5 links."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "7.0",
+              "0.0",
+              "14.0",
+              "1.0"
+            ],
+            "question": "What is the pH of pure water at 25°C?",
+            "answerIndex": 0,
+            "explanation": "At 25°C, [H+] = 10⁻⁷ M, giving pH = -log(10⁻⁷) = 7.0 (neutral)."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Identify reactants: H₂SO₄ (aq) and NaOH (aq).",
+            "Step 2: Identify products: Salt (Na₂SO₄) and Water (H₂O).",
+            "Step 3: Balance equation: H₂SO₄ (aq) + 2NaOH (aq) ➔ Na₂SO₄ (aq) + 2H₂O (l)."
+          ],
+          "result": "H₂SO₄ + 2NaOH ➔ Na₂SO₄ + 2H₂O.",
+          "problem": "[CAMBRIDGE-G10-CHEMISTRY-REAC-TYPES] Apply principles of Combination, Decomposition & Displacement: Write the balanced chemical equation for the neutralization of aqueous sulfuric acid with aqueous sodium hydroxide."
+        },
+        "curriculumTrap": "Key exam trap for Combination, Decomposition & Displacement: Cambridge Mark Scheme Guidance:\nA) Common Mark-Loss Pitfalls:\n• Forgetting state symbols (s), (l), (g), (aq) in balanced equations.\n• Confusing physical changes with chemical reactions.\n\nB) Command Word Precision:\n• STATE: Quote chemical rule, substance name, or balanced equation.\n    • EXPLAIN: Detail particulate interactions or reaction mechanisms.\n    • CALCULATE: State proportions or formula masses with correct units.\n    • DESCRIBE: Detail visible observations (effervescence, color changes, precipitate).\n\nC) Mark Tier Allocation Guidance:\n• 1–2 Marks: Identify chemical substances or name reaction types.\n• 2–4 Marks: Explain chemical observations or balance reactions.\n• 4–6 Marks: Experimental analysis and quantitative investigation.\n\nD) Calculation Tips:\n• Maintain 3 significant figures and show all working steps.",
+        "structuralRule": "$$\\text{pH} = -log_{10}[\\text{H}^+] \\quad | \\quad \\text{Acid} + \\text{Base} \\to \\text{Salt} + \\text{H}_2\\text{O} \\quad | \\quad [\\text{H}^+][\\text{OH}^-] = 10^{-14}$$",
+        "payloadFingerprint": "FPT-CAMBRIDGE-G10-CHEMISTRY-REAC-TYPES-4229166c",
+        "verificationProblem": "Verify Combination, Decomposition & Displacement: Calculate pH of a 0.01 M HCl solution. (Answer: [H+] = 10⁻² M ➔ pH = -log(10⁻²) = 2.0)."
+      },
+      "pedagogical_focus": "Cambridge Lower Secondary / IGCSE Command Words & Empirical Precision",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CAMBRIDGE-G10-CHEMISTRY-REAC-TYPES-4229166c",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:55.48766+00:00",
+    "updated_at": "2026-09-18T18:44:04.951074+00:00"
+  },
+  {
+    "id": "CAMBRIDGE-G8-CHEMISTRY-MET-OXY",
+    "board_id": "CAMBRIDGE",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 8,
+    "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+    "title": "Metal Reactions with Oxygen, Water & Acids",
+    "core_logic_essence": "Formation of basic metal oxides; displacement of hydrogen gas from dilute mineral acids. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.",
+    "parent_node_id": "CAMBRIDGE-G8-CHEMISTRY-MET-PHYS",
+    "prerequisites": [
+      "CAMBRIDGE-G8-CHEMISTRY-MET-PHYS"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:44:01.241Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "Metal Reactions with Oxygen, Water & Acids",
+        "summary": "[CAMBRIDGE-G8-CHEMISTRY-MET-OXY] Metal Reactions with Oxygen, Water & Acids: Chemical changes create new substances. Acids turn blue litmus red; bases turn red litmus blue. Acid plus base yields salt and water.",
+        "conceptId": "CAMBRIDGE-G8-CHEMISTRY-MET-OXY",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Metal Reactions with Oxygen, Water & Acids\n**Core Principle**: Formation of basic metal oxides; displacement of hydrogen gas from dilute mineral acids. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.\n\n**1. Physical vs Chemical Changes**:\n• **Physical Change**: Only physical properties (shape, size, state) change; no new substance is formed (e.g. melting ice, boiling water).\n• **Chemical Change**: One or more new substances with completely different chemical properties are formed (e.g. rusting of iron, burning wood).\n\n**2. Acids and Bases**:\n• **Acids**: Sour in taste; turn blue litmus paper red (e.g. lemon juice, vinegar, curd).\n• **Bases**: Bitter in taste and feel soapy to the touch; turn red litmus paper blue (e.g. baking soda, soap, lime water).\n\n**3. Neutralization**:\n• The reaction between an acid and a base is called **neutralization**, forming salt, water, and releasing heat:\n  $$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} + \\text{Heat}$$\n• Everyday examples: Taking antacid tablets (mild base) for stomach acidity; treating ant stings (formic acid) with calamine (zinc carbonate).",
+        "gradeLevel": 8,
+        "coreAnalogy": "Intuition for Metal Reactions with Oxygen, Water & Acids: Think of chemical change like baking a cake: once flour, sugar, and eggs react in the oven, you have a completely new substance that cannot be separated back.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "What are physical changes and chemical changes, and how do they differ?",
+          "State the observable properties of acids and bases.",
+          "How do natural indicators like litmus and turmeric test for acids and bases?",
+          "What is neutralization and give an everyday practical example.",
+          "Calculate the expected system response when the primary parameter of Metal Reactions with Oxygen, Water & Acids is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "They neutralize each other to produce sodium chloride salt and water",
+              "They produce pure hydrogen gas explosively",
+              "They form a stronger acid",
+              "Nothing happens"
+            ],
+            "question": "What happens when hydrochloric acid reacts with sodium hydroxide?",
+            "answerIndex": 0,
+            "explanation": "Acid + Base forms Salt + Water via neutralization: HCl + NaOH ➔ NaCl + H₂O."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Excessive use of chemical fertilizers often makes agricultural soil too acidic for crops.",
+            "Step 2: Quicklime and slaked lime are basic substances.",
+            "Step 3: When added to the soil, the base neutralizes the excess acid, restoring ideal soil pH for plant growth."
+          ],
+          "result": "Neutralization restores balanced soil pH.",
+          "problem": "[CAMBRIDGE-G8-CHEMISTRY-MET-OXY] Apply principles of Metal Reactions with Oxygen, Water & Acids: Explain why farmers treat acidic soil with quicklime (calcium oxide) or slaked lime."
+        },
+        "curriculumTrap": "Key exam trap for Metal Reactions with Oxygen, Water & Acids: Cambridge Mark Scheme Guidance:\nA) Common Mark-Loss Pitfalls:\n• Forgetting state symbols (s), (l), (g), (aq) in balanced equations.\n• Confusing physical changes with chemical reactions.\n\nB) Command Word Precision:\n• STATE: Quote chemical rule, substance name, or balanced equation.\n    • EXPLAIN: Detail particulate interactions or reaction mechanisms.\n    • CALCULATE: State proportions or formula masses with correct units.\n    • DESCRIBE: Detail visible observations (effervescence, color changes, precipitate).\n\nC) Mark Tier Allocation Guidance:\n• 1–2 Marks: Identify chemical substances or name reaction types.\n• 2–4 Marks: Explain chemical observations or balance reactions.\n• 4–6 Marks: Experimental analysis and quantitative investigation.\n\nD) Calculation Tips:\n• Maintain 3 significant figures and show all working steps.",
+        "structuralRule": "$$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} \\quad | \\quad \\text{Litmus: Acid (Red), Base (Blue)}$$",
+        "payloadFingerprint": "FPT-CAMBRIDGE-G8-CHEMISTRY-MET-OXY-17af91f7",
+        "verificationProblem": "Verify Metal Reactions with Oxygen, Water & Acids: What color does blue litmus paper turn when dipped into lemon juice? (Answer: Red, because lemon juice is acidic)."
+      },
+      "pedagogical_focus": "Cambridge Lower Secondary / IGCSE Command Words & Empirical Precision",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CAMBRIDGE-G8-CHEMISTRY-MET-OXY-17af91f7",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:53.974948+00:00",
+    "updated_at": "2026-09-18T18:44:01.578289+00:00"
+  },
+  {
+    "id": "CBSE-G10-CHEMISTRY-REAC-TYPES",
+    "board_id": "CBSE",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 10,
+    "unit": "Unit 1: Chemical Reactions & Equations",
+    "title": "Combination, Decomposition & Displacement",
+    "core_logic_essence": "Synthesis (A+B->AB), thermal/electrolytic breakdown, and single/double metathesis. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.",
+    "parent_node_id": "CBSE-G10-CHEMISTRY-REAC-BAL",
+    "prerequisites": [
+      "CBSE-G10-CHEMISTRY-REAC-BAL"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:43:55.855Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "Combination, Decomposition & Displacement",
+        "summary": "[CBSE-G10-CHEMISTRY-REAC-TYPES] Combination, Decomposition & Displacement: Chemical reactions conserve mass while redistributing bonds; pH quantifies proton activity across acidic and basic domains.",
+        "conceptId": "CBSE-G10-CHEMISTRY-REAC-TYPES",
+        "gradeTier": "SECONDARY",
+        "mainNotes": "### Combination, Decomposition & Displacement\n**Core Principle**: Synthesis (A+B->AB), thermal/electrolytic breakdown, and single/double metathesis. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.\n\n**1. Chemical Reaction Types**:\n• Combination, Decomposition, Displacement, Double Displacement, Redox.\n\n**2. The pH Scale (0 to 14)**:\n$$\\text{pH} = -log_{10}[\\text{H}^+]$$\n• $\\text{pH} < 7$: Acidic ($[\\text{H}^+] > [\\text{OH}^-]$)\n• $\\text{pH} = 7$: Neutral ($[\\text{H}^+] = [\\text{OH}^-] = 10^{-7}\\text{ M}$)\n• $\\text{pH} > 7$: Basic ($[\\text{H}^+] < [\\text{OH}^-]$)",
+        "gradeLevel": 10,
+        "coreAnalogy": "Intuition for Combination, Decomposition & Displacement: Think of the pH scale like a see-saw balancing H+ ions on the left and OH- ions on the right.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "Define acids and bases according to Arrhenius and Brønsted-Lowry theories.",
+          "Define the pH scale mathematically in terms of hydronium ion concentration.",
+          "Write balanced equations for the four primary types of chemical reactions.",
+          "Explain the role of common salts (baking soda, bleaching powder, Plaster of Paris).",
+          "Calculate the energy available at the 5th trophic level if primary producers capture 100,000 J of solar energy, and explain why food chains rarely sustain beyond 4–5 links."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "7.0",
+              "0.0",
+              "14.0",
+              "1.0"
+            ],
+            "question": "What is the pH of pure water at 25°C?",
+            "answerIndex": 0,
+            "explanation": "At 25°C, [H+] = 10⁻⁷ M, giving pH = -log(10⁻⁷) = 7.0 (neutral)."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Identify reactants: H₂SO₄ (aq) and NaOH (aq).",
+            "Step 2: Identify products: Salt (Na₂SO₄) and Water (H₂O).",
+            "Step 3: Balance equation: H₂SO₄ (aq) + 2NaOH (aq) ➔ Na₂SO₄ (aq) + 2H₂O (l)."
+          ],
+          "result": "H₂SO₄ + 2NaOH ➔ Na₂SO₄ + 2H₂O.",
+          "problem": "[CBSE-G10-CHEMISTRY-REAC-TYPES] Apply principles of Combination, Decomposition & Displacement: Write the balanced chemical equation for the neutralization of aqueous sulfuric acid with aqueous sodium hydroxide."
+        },
+        "curriculumTrap": "Key exam trap for Combination, Decomposition & Displacement: CBSE Board Exam Traps & Marking Patterns:\n1. Common Pitfalls & Mark-Loss Patterns:\n1. Missing State Symbols: Writing chemical equations without (s), (l), (g), (aq) states when specifically prompted (CBSE keys deduct 1/2 mark per missing state).\n2. Unbalanced Chemical Equations: Guessing stoichiometry without checking atom balance on both sides.\n3. Chemical vs Common Name Mix-up: Confusing Quicklime (CaO), Slaked lime (Ca(OH)₂), and Limestone (CaCO₃).\n\n2. Explanation Depth Requirements:\n• 3-Mark Question (Types of Chemical Reactions):\n  - Balanced equation with state symbols.\n  - Visual observations: precipitate color, gas evolution effervescence, or beaker temperature change.\n• 5-Mark Question (Acids, Bases, Salts & Redox):\n  - Define oxidation (gain of O / loss of electrons) and reduction (loss of O / gain of electrons) with identifying oxidizing/reducing agents.\n  - Preparation of bleaching powder, baking soda, washing soda, and Plaster of Paris with exact molecular formulas and crystal water.\n\n3. High-Yield Study & Revision Tips:\n• Count atoms on both sides of every equation before proceeding.\n• Memorize the reactivity series mnemonic to correctly predict displacement reactions.\n• State indicator color transitions accurately: Phenolphthalein is colorless in acidic/neutral solutions and pink in basic solutions.",
+        "structuralRule": "$$\\text{pH} = -log_{10}[\\text{H}^+] \\quad | \\quad \\text{Acid} + \\text{Base} \\to \\text{Salt} + \\text{H}_2\\text{O} \\quad | \\quad [\\text{H}^+][\\text{OH}^-] = 10^{-14}$$",
+        "payloadFingerprint": "FPT-CBSE-G10-CHEMISTRY-REAC-TYPES-363321a5",
+        "verificationProblem": "Verify Combination, Decomposition & Displacement: Calculate pH of a 0.01 M HCl solution. (Answer: [H+] = 10⁻² M ➔ pH = -log(10⁻²) = 2.0)."
+      },
+      "pedagogical_focus": "NCERT / OER Standard Proofs & Analytical Deduction",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CBSE-G10-CHEMISTRY-REAC-TYPES-363321a5",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:50.932576+00:00",
+    "updated_at": "2026-09-18T18:43:56.156688+00:00"
+  },
+  {
+    "id": "CBSE-G8-CHEMISTRY-MET-DISP",
+    "board_id": "CBSE",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 8,
+    "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+    "title": "The Reactivity Series & Single Displacement Reactions",
+    "core_logic_essence": "More electropositive metals displacing less electropositive cations from aqueous salt solutions. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.",
+    "parent_node_id": "CBSE-G8-CHEMISTRY-MET-OXY",
+    "prerequisites": [
+      "CBSE-G8-CHEMISTRY-MET-OXY"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:43:51.963Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "The Reactivity Series & Single Displacement Reactions",
+        "summary": "[CBSE-G8-CHEMISTRY-MET-DISP] The Reactivity Series & Single Displacement Reactions: Chemical changes create new substances. Acids turn blue litmus red; bases turn red litmus blue. Acid plus base yields salt and water.",
+        "conceptId": "CBSE-G8-CHEMISTRY-MET-DISP",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### The Reactivity Series & Single Displacement Reactions\n**Core Principle**: More electropositive metals displacing less electropositive cations from aqueous salt solutions. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.\n\n**1. Physical vs Chemical Changes**:\n• **Physical Change**: Only physical properties (shape, size, state) change; no new substance is formed (e.g. melting ice, boiling water).\n• **Chemical Change**: One or more new substances with completely different chemical properties are formed (e.g. rusting of iron, burning wood).\n\n**2. Acids and Bases**:\n• **Acids**: Sour in taste; turn blue litmus paper red (e.g. lemon juice, vinegar, curd).\n• **Bases**: Bitter in taste and feel soapy to the touch; turn red litmus paper blue (e.g. baking soda, soap, lime water).\n\n**3. Neutralization**:\n• The reaction between an acid and a base is called **neutralization**, forming salt, water, and releasing heat:\n  $$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} + \\text{Heat}$$\n• Everyday examples: Taking antacid tablets (mild base) for stomach acidity; treating ant stings (formic acid) with calamine (zinc carbonate).",
+        "gradeLevel": 8,
+        "coreAnalogy": "Intuition for The Reactivity Series & Single Displacement Reactions: Think of chemical change like baking a cake: once flour, sugar, and eggs react in the oven, you have a completely new substance that cannot be separated back.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "What are physical changes and chemical changes, and how do they differ?",
+          "State the observable properties of acids and bases.",
+          "How do natural indicators like litmus and turmeric test for acids and bases?",
+          "What is neutralization and give an everyday practical example.",
+          "Calculate the expected system response when the primary parameter of The Reactivity Series & Single Displacement Reactions is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "They neutralize each other to produce sodium chloride salt and water",
+              "They produce pure hydrogen gas explosively",
+              "They form a stronger acid",
+              "Nothing happens"
+            ],
+            "question": "What happens when hydrochloric acid reacts with sodium hydroxide?",
+            "answerIndex": 0,
+            "explanation": "Acid + Base forms Salt + Water via neutralization: HCl + NaOH ➔ NaCl + H₂O."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Excessive use of chemical fertilizers often makes agricultural soil too acidic for crops.",
+            "Step 2: Quicklime and slaked lime are basic substances.",
+            "Step 3: When added to the soil, the base neutralizes the excess acid, restoring ideal soil pH for plant growth."
+          ],
+          "result": "Neutralization restores balanced soil pH.",
+          "problem": "[CBSE-G8-CHEMISTRY-MET-DISP] Apply principles of The Reactivity Series & Single Displacement Reactions: Explain why farmers treat acidic soil with quicklime (calcium oxide) or slaked lime."
+        },
+        "curriculumTrap": "Key exam trap for The Reactivity Series & Single Displacement Reactions: CBSE Board Exam Traps & Marking Patterns:\n1. Common Pitfalls & Mark-Loss Patterns:\n1. Missing State Symbols: Writing chemical equations without (s), (l), (g), (aq) states when specifically prompted (CBSE keys deduct 1/2 mark per missing state).\n2. Unbalanced Chemical Equations: Guessing stoichiometry without checking atom balance on both sides.\n3. Chemical vs Common Name Mix-up: Confusing Quicklime (CaO), Slaked lime (Ca(OH)₂), and Limestone (CaCO₃).\n\n2. Explanation Depth Requirements:\n• 2-3 Mark Question (Physical vs Chemical Changes):\n  - Distinguish between reversible physical changes (melting, boiling) and irreversible chemical reactions (rusting, burning).\n  - State the test for acids and bases using natural indicators (litmus paper, turmeric).\n• 4-5 Mark Question (Acids, Bases & Neutralization):\n  - Define neutralization: Acid + Base → Salt + Water with heat evolution.\n  - Describe practical daily life examples of neutralization (antacid remedies, soil treatment with slaked lime).\n\n3. High-Yield Study & Revision Tips:\n• Count atoms on both sides of every equation before proceeding.\n• Memorize the reactivity series mnemonic to correctly predict displacement reactions.\n• State indicator color transitions accurately: Phenolphthalein is colorless in acidic/neutral solutions and pink in basic solutions.",
+        "structuralRule": "$$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} \\quad | \\quad \\text{Litmus: Acid (Red), Base (Blue)}$$",
+        "payloadFingerprint": "FPT-CBSE-G8-CHEMISTRY-MET-DISP-36053c7b",
+        "verificationProblem": "Verify The Reactivity Series & Single Displacement Reactions: What color does blue litmus paper turn when dipped into lemon juice? (Answer: Red, because lemon juice is acidic)."
+      },
+      "pedagogical_focus": "NCERT / OER Standard Proofs & Analytical Deduction",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CBSE-G8-CHEMISTRY-MET-DISP-36053c7b",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:48.930088+00:00",
+    "updated_at": "2026-09-18T18:43:52.269326+00:00"
+  },
+  {
+    "id": "CBSE-G8-CHEMISTRY-MET-OXY",
+    "board_id": "CBSE",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 8,
+    "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+    "title": "Metal Reactions with Oxygen, Water & Acids",
+    "core_logic_essence": "Formation of basic metal oxides; displacement of hydrogen gas from dilute mineral acids. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.",
+    "parent_node_id": "CBSE-G8-CHEMISTRY-MET-PHYS",
+    "prerequisites": [
+      "CBSE-G8-CHEMISTRY-MET-PHYS"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:43:51.993Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "Metal Reactions with Oxygen, Water & Acids",
+        "summary": "[CBSE-G8-CHEMISTRY-MET-OXY] Metal Reactions with Oxygen, Water & Acids: Chemical changes create new substances. Acids turn blue litmus red; bases turn red litmus blue. Acid plus base yields salt and water.",
+        "conceptId": "CBSE-G8-CHEMISTRY-MET-OXY",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Metal Reactions with Oxygen, Water & Acids\n**Core Principle**: Formation of basic metal oxides; displacement of hydrogen gas from dilute mineral acids. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.\n\n**1. Physical vs Chemical Changes**:\n• **Physical Change**: Only physical properties (shape, size, state) change; no new substance is formed (e.g. melting ice, boiling water).\n• **Chemical Change**: One or more new substances with completely different chemical properties are formed (e.g. rusting of iron, burning wood).\n\n**2. Acids and Bases**:\n• **Acids**: Sour in taste; turn blue litmus paper red (e.g. lemon juice, vinegar, curd).\n• **Bases**: Bitter in taste and feel soapy to the touch; turn red litmus paper blue (e.g. baking soda, soap, lime water).\n\n**3. Neutralization**:\n• The reaction between an acid and a base is called **neutralization**, forming salt, water, and releasing heat:\n  $$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} + \\text{Heat}$$\n• Everyday examples: Taking antacid tablets (mild base) for stomach acidity; treating ant stings (formic acid) with calamine (zinc carbonate).",
+        "gradeLevel": 8,
+        "coreAnalogy": "Intuition for Metal Reactions with Oxygen, Water & Acids: Think of chemical change like baking a cake: once flour, sugar, and eggs react in the oven, you have a completely new substance that cannot be separated back.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "What are physical changes and chemical changes, and how do they differ?",
+          "State the observable properties of acids and bases.",
+          "How do natural indicators like litmus and turmeric test for acids and bases?",
+          "What is neutralization and give an everyday practical example.",
+          "Calculate the expected system response when the primary parameter of Metal Reactions with Oxygen, Water & Acids is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "They neutralize each other to produce sodium chloride salt and water",
+              "They produce pure hydrogen gas explosively",
+              "They form a stronger acid",
+              "Nothing happens"
+            ],
+            "question": "What happens when hydrochloric acid reacts with sodium hydroxide?",
+            "answerIndex": 0,
+            "explanation": "Acid + Base forms Salt + Water via neutralization: HCl + NaOH ➔ NaCl + H₂O."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Excessive use of chemical fertilizers often makes agricultural soil too acidic for crops.",
+            "Step 2: Quicklime and slaked lime are basic substances.",
+            "Step 3: When added to the soil, the base neutralizes the excess acid, restoring ideal soil pH for plant growth."
+          ],
+          "result": "Neutralization restores balanced soil pH.",
+          "problem": "[CBSE-G8-CHEMISTRY-MET-OXY] Apply principles of Metal Reactions with Oxygen, Water & Acids: Explain why farmers treat acidic soil with quicklime (calcium oxide) or slaked lime."
+        },
+        "curriculumTrap": "Key exam trap for Metal Reactions with Oxygen, Water & Acids: CBSE Board Exam Traps & Marking Patterns:\n1. Common Pitfalls & Mark-Loss Patterns:\n1. Missing State Symbols: Writing chemical equations without (s), (l), (g), (aq) states when specifically prompted (CBSE keys deduct 1/2 mark per missing state).\n2. Unbalanced Chemical Equations: Guessing stoichiometry without checking atom balance on both sides.\n3. Chemical vs Common Name Mix-up: Confusing Quicklime (CaO), Slaked lime (Ca(OH)₂), and Limestone (CaCO₃).\n\n2. Explanation Depth Requirements:\n• 2-3 Mark Question (Physical vs Chemical Changes):\n  - Distinguish between reversible physical changes (melting, boiling) and irreversible chemical reactions (rusting, burning).\n  - State the test for acids and bases using natural indicators (litmus paper, turmeric).\n• 4-5 Mark Question (Acids, Bases & Neutralization):\n  - Define neutralization: Acid + Base → Salt + Water with heat evolution.\n  - Describe practical daily life examples of neutralization (antacid remedies, soil treatment with slaked lime).\n\n3. High-Yield Study & Revision Tips:\n• Count atoms on both sides of every equation before proceeding.\n• Memorize the reactivity series mnemonic to correctly predict displacement reactions.\n• State indicator color transitions accurately: Phenolphthalein is colorless in acidic/neutral solutions and pink in basic solutions.",
+        "structuralRule": "$$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} \\quad | \\quad \\text{Litmus: Acid (Red), Base (Blue)}$$",
+        "payloadFingerprint": "FPT-CBSE-G8-CHEMISTRY-MET-OXY-2677ac5e",
+        "verificationProblem": "Verify Metal Reactions with Oxygen, Water & Acids: What color does blue litmus paper turn when dipped into lemon juice? (Answer: Red, because lemon juice is acidic)."
+      },
+      "pedagogical_focus": "NCERT / OER Standard Proofs & Analytical Deduction",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CBSE-G8-CHEMISTRY-MET-OXY-2677ac5e",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:48.930088+00:00",
+    "updated_at": "2026-09-18T18:43:52.310669+00:00"
+  },
+  {
+    "id": "CBSE-G8-CHEMISTRY-MET-PHYS",
+    "board_id": "CBSE",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 8,
+    "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+    "title": "Malleability, Ductility & Thermal Conductivity",
+    "core_logic_essence": "Delocalized metallic sea of electrons enabling dislocation slip without brittle fracture. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.",
+    "parent_node_id": "CBSE-G8-CHEMISTRY-POLY-ENV",
+    "prerequisites": [
+      "CBSE-G8-CHEMISTRY-POLY-ENV"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:43:51.959Z",
+      "diagram_type": "bohr_atom",
+      "cornell_notes": {
+        "title": "Malleability, Ductility & Thermal Conductivity",
+        "summary": "[CBSE-G8-CHEMISTRY-MET-PHYS] Malleability, Ductility & Thermal Conductivity: Atoms consist of a nucleus with positive protons and neutral neutrons, surrounded by negative electrons. Protons equal electrons in neutral atoms.",
+        "conceptId": "CBSE-G8-CHEMISTRY-MET-PHYS",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Malleability, Ductility & Thermal Conductivity\n**Core Principle**: Delocalized metallic sea of electrons enabling dislocation slip without brittle fracture. Emphasizes step-by-step mathematical deduction and rigorous procedural derivation under CBSE standards.\n\n**1. Building Blocks of Matter**:\n• **Atom**: The smallest particle of an element that can take part in chemical reactions.\n• **Molecule**: A group of two or more atoms chemically bonded together.\n\n**2. Subatomic Particles**:\n• **Protons**: Positively charged particles ($+1$) located in the central nucleus.\n• **Neutrons**: Neutral particles with zero electrical charge located in the nucleus.\n• **Electrons**: Negatively charged particles ($-1$) revolving around the nucleus.\n• In a neutral atom, number of protons equals number of electrons.\n\n**3. Elements and Compounds**:\n• **Element**: Made of only one type of atom (e.g. Iron, Oxygen, Carbon).\n• **Compound**: Formed when two or more different elements chemically combine in a fixed ratio (e.g. Water $\\text{H}_2\\text{O}$, Salt $\\text{NaCl}$).",
+        "gradeLevel": 8,
+        "coreAnalogy": "Intuition for Malleability, Ductility & Thermal Conductivity: Think of an atom like a miniature solar system: the heavy nucleus is the Sun at the center, and electrons are planets orbiting around it.",
+        "diagramType": "bohr_atom",
+        "cueQuestions": [
+          "What are atoms and molecules, and how do they differ?",
+          "Name the three subatomic particles and state their electrical charges.",
+          "Why is an isolated atom electrically neutral?",
+          "What is the difference between an element and a compound?",
+          "Calculate the expected system response when the primary parameter of Malleability, Ductility & Thermal Conductivity is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "Zero (neutral)",
+              "Positive (+1)",
+              "Negative (-1)",
+              "Double positive (+2)"
+            ],
+            "question": "What electrical charge is carried by a neutron?",
+            "answerIndex": 0,
+            "explanation": "Neutrons reside in the nucleus and carry no net electrical charge."
+          }
+        ],
+        "realWorldUse": "Nuclear power generation, radiocarbon dating, semiconductor doping, and spectroscopy.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Place 8 protons (+) and 8 neutrons (0) inside the central nucleus.",
+            "Step 2: Arrange 8 electrons (-) in orbits surrounding the nucleus.",
+            "Step 3: Total charge = +8 + (-8) = 0 (electrically neutral atom)."
+          ],
+          "result": "8 protons and 8 neutrons in nucleus, 8 electrons in orbits.",
+          "problem": "[CBSE-G8-CHEMISTRY-MET-PHYS] Apply principles of Malleability, Ductility & Thermal Conductivity: An oxygen atom has 8 protons, 8 neutrons, and 8 electrons. Sketch its subatomic structure."
+        },
+        "curriculumTrap": "Key exam trap for Malleability, Ductility & Thermal Conductivity: CBSE Board Exam Traps & Marking Patterns:\n1. Common Pitfalls & Mark-Loss Patterns:\n1. Missing State Symbols: Writing chemical equations without (s), (l), (g), (aq) states when specifically prompted (CBSE keys deduct 1/2 mark per missing state).\n2. Unbalanced Chemical Equations: Guessing stoichiometry without checking atom balance on both sides.\n3. Chemical vs Common Name Mix-up: Confusing Quicklime (CaO), Slaked lime (Ca(OH)₂), and Limestone (CaCO₃).\n\n2. Explanation Depth Requirements:\n• 2-3 Mark Question (Physical vs Chemical Changes):\n  - Distinguish between reversible physical changes (melting, boiling) and irreversible chemical reactions (rusting, burning).\n  - State the test for acids and bases using natural indicators (litmus paper, turmeric).\n• 4-5 Mark Question (Acids, Bases & Neutralization):\n  - Define neutralization: Acid + Base → Salt + Water with heat evolution.\n  - Describe practical daily life examples of neutralization (antacid remedies, soil treatment with slaked lime).\n\n3. High-Yield Study & Revision Tips:\n• Count atoms on both sides of every equation before proceeding.\n• Memorize the reactivity series mnemonic to correctly predict displacement reactions.\n• State indicator color transitions accurately: Phenolphthalein is colorless in acidic/neutral solutions and pink in basic solutions.",
+        "structuralRule": "$$\\text{Atoms: Protons (+) \\& Neutrons \\in Nucleus} \\quad | \\quad \\text{Electrons (-) \\in Orbit} \\quad | \\quad \\text{Neutral Atom: Protons} = \\text{Electrons}$$",
+        "payloadFingerprint": "FPT-CBSE-G8-CHEMISTRY-MET-PHYS-2edd3812",
+        "verificationProblem": "Verify Malleability, Ductility & Thermal Conductivity: If an atom has 6 protons, how many electrons does it have when electrically neutral? (Answer: 6 electrons)."
+      },
+      "pedagogical_focus": "NCERT / OER Standard Proofs & Analytical Deduction",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CBSE-G8-CHEMISTRY-MET-PHYS-2edd3812",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:48.930088+00:00",
+    "updated_at": "2026-09-18T18:43:52.260925+00:00"
+  },
+  {
+    "id": "IB_MYP-G10-CHEMISTRY-REAC-TYPES",
+    "board_id": "IB_MYP",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 10,
+    "unit": "Unit 1: Chemical Reactions & Equations",
+    "title": "Combination, Decomposition & Displacement",
+    "core_logic_essence": "Synthesis (A+B->AB), thermal/electrolytic breakdown, and single/double metathesis. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.",
+    "parent_node_id": "IB_MYP-G10-CHEMISTRY-REAC-BAL",
+    "prerequisites": [
+      "IB_MYP-G10-CHEMISTRY-REAC-BAL"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:44:14.471Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "Combination, Decomposition & Displacement",
+        "summary": "[IB_MYP-G10-CHEMISTRY-REAC-TYPES] Combination, Decomposition & Displacement: Chemical reactions conserve mass while redistributing bonds; pH quantifies proton activity across acidic and basic domains.",
+        "conceptId": "IB_MYP-G10-CHEMISTRY-REAC-TYPES",
+        "gradeTier": "SECONDARY",
+        "mainNotes": "### Combination, Decomposition & Displacement\n**Core Principle**: Synthesis (A+B->AB), thermal/electrolytic breakdown, and single/double metathesis. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.\n\n**1. Chemical Reaction Types**:\n• Combination, Decomposition, Displacement, Double Displacement, Redox.\n\n**2. The pH Scale (0 to 14)**:\n$$\\text{pH} = -log_{10}[\\text{H}^+]$$\n• $\\text{pH} < 7$: Acidic ($[\\text{H}^+] > [\\text{OH}^-]$)\n• $\\text{pH} = 7$: Neutral ($[\\text{H}^+] = [\\text{OH}^-] = 10^{-7}\\text{ M}$)\n• $\\text{pH} > 7$: Basic ($[\\text{H}^+] < [\\text{OH}^-]$)",
+        "gradeLevel": 10,
+        "coreAnalogy": "Intuition for Combination, Decomposition & Displacement: Think of the pH scale like a see-saw balancing H+ ions on the left and OH- ions on the right.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "Factual Inquiry: Define acids and bases according to Arrhenius and Brønsted-Lowry theories.",
+          "Conceptual Inquiry: Define the pH scale mathematically in terms of hydronium ion concentration.",
+          "Debatable Inquiry: Write balanced equations for the four primary types of chemical reactions.",
+          "Criterion D Reflection: Explain the role of common salts (baking soda, bleaching powder, Plaster of Paris).",
+          "Calculate the energy available at the 5th trophic level if primary producers capture 100,000 J of solar energy, and explain why food chains rarely sustain beyond 4–5 links."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "7.0",
+              "0.0",
+              "14.0",
+              "1.0"
+            ],
+            "question": "What is the pH of pure water at 25°C?",
+            "answerIndex": 0,
+            "explanation": "At 25°C, [H+] = 10⁻⁷ M, giving pH = -log(10⁻⁷) = 7.0 (neutral)."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Identify reactants: H₂SO₄ (aq) and NaOH (aq).",
+            "Step 2: Identify products: Salt (Na₂SO₄) and Water (H₂O).",
+            "Step 3: Balance equation: H₂SO₄ (aq) + 2NaOH (aq) ➔ Na₂SO₄ (aq) + 2H₂O (l)."
+          ],
+          "result": "H₂SO₄ + 2NaOH ➔ Na₂SO₄ + 2H₂O.",
+          "problem": "[IB_MYP-G10-CHEMISTRY-REAC-TYPES] Apply principles of Combination, Decomposition & Displacement: Write the balanced chemical equation for the neutralization of aqueous sulfuric acid with aqueous sodium hydroxide."
+        },
+        "curriculumTrap": "Key exam trap for Combination, Decomposition & Displacement: IB MYP Inquiry & Criterion Framework:\nA) Factual-Level Misconceptions (Criterion A: Knowing and Understanding):\n• Criterion A (Knowing and Understanding): Confusing physical phase changes with chemical transformations and bond rearrangement.\n\nB) Conceptual-Level Misconceptions (Criteria B & C: Inquiring & Designing / Processing & Evaluating):\n• Criteria B & C (Inquiring & Designing / Processing & Evaluating): Measuring reaction rates and product yields with precision while accounting for environmental variables.\n\nC) Debatable Inquiry Prompt (Criterion D: Reflecting on the Impacts of Science):\n• Criterion D (Debatable Inquiry Prompt): 'To what extent does industrial reliance on synthetic chemicals impact ecological sustainability?'\n\nD) Criterion D Reflection Guide (Global Context & Societal Impact):\n• Criterion D (Global Context & Societal Impact): Global Context: Globalization and Sustainability. Analyze how green chemistry principles reduce toxic waste and environmental degradation.",
+        "structuralRule": "$$\\text{pH} = -log_{10}[\\text{H}^+] \\quad | \\quad \\text{Acid} + \\text{Base} \\to \\text{Salt} + \\text{H}_2\\text{O} \\quad | \\quad [\\text{H}^+][\\text{OH}^-] = 10^{-14}$$",
+        "payloadFingerprint": "FPT-IB_MYP-G10-CHEMISTRY-REAC-TYPES-5ddc080e",
+        "verificationProblem": "Verify Combination, Decomposition & Displacement: Calculate pH of a 0.01 M HCl solution. (Answer: [H+] = 10⁻² M ➔ pH = -log(10⁻²) = 2.0)."
+      },
+      "pedagogical_focus": "IB MYP Criteria & Global Contexts Conceptual Framework",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-IB_MYP-G10-CHEMISTRY-REAC-TYPES-5ddc080e",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:57.944938+00:00",
+    "updated_at": "2026-09-18T18:44:14.773415+00:00"
+  },
+  {
+    "id": "IB_MYP-G8-CHEMISTRY-MET-DISP",
+    "board_id": "IB_MYP",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 8,
+    "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+    "title": "The Reactivity Series & Single Displacement Reactions",
+    "core_logic_essence": "More electropositive metals displacing less electropositive cations from aqueous salt solutions. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.",
+    "parent_node_id": "IB_MYP-G8-CHEMISTRY-MET-OXY",
+    "prerequisites": [
+      "IB_MYP-G8-CHEMISTRY-MET-OXY"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:44:11.211Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "The Reactivity Series & Single Displacement Reactions",
+        "summary": "[IB_MYP-G8-CHEMISTRY-MET-DISP] The Reactivity Series & Single Displacement Reactions: Chemical changes create new substances. Acids turn blue litmus red; bases turn red litmus blue. Acid plus base yields salt and water.",
+        "conceptId": "IB_MYP-G8-CHEMISTRY-MET-DISP",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### The Reactivity Series & Single Displacement Reactions\n**Core Principle**: More electropositive metals displacing less electropositive cations from aqueous salt solutions. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.\n\n**1. Physical vs Chemical Changes**:\n• **Physical Change**: Only physical properties (shape, size, state) change; no new substance is formed (e.g. melting ice, boiling water).\n• **Chemical Change**: One or more new substances with completely different chemical properties are formed (e.g. rusting of iron, burning wood).\n\n**2. Acids and Bases**:\n• **Acids**: Sour in taste; turn blue litmus paper red (e.g. lemon juice, vinegar, curd).\n• **Bases**: Bitter in taste and feel soapy to the touch; turn red litmus paper blue (e.g. baking soda, soap, lime water).\n\n**3. Neutralization**:\n• The reaction between an acid and a base is called **neutralization**, forming salt, water, and releasing heat:\n  $$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} + \\text{Heat}$$\n• Everyday examples: Taking antacid tablets (mild base) for stomach acidity; treating ant stings (formic acid) with calamine (zinc carbonate).",
+        "gradeLevel": 8,
+        "coreAnalogy": "Intuition for The Reactivity Series & Single Displacement Reactions: Think of chemical change like baking a cake: once flour, sugar, and eggs react in the oven, you have a completely new substance that cannot be separated back.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "Factual Inquiry: What are physical changes and chemical changes, and how do they differ?",
+          "Conceptual Inquiry: State the observable properties of acids and bases.",
+          "Debatable Inquiry: How do natural indicators like litmus and turmeric test for acids and bases?",
+          "Criterion D Reflection: What is neutralization and give an everyday practical example.",
+          "Calculate the expected system response when the primary parameter of The Reactivity Series & Single Displacement Reactions is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "They neutralize each other to produce sodium chloride salt and water",
+              "They produce pure hydrogen gas explosively",
+              "They form a stronger acid",
+              "Nothing happens"
+            ],
+            "question": "What happens when hydrochloric acid reacts with sodium hydroxide?",
+            "answerIndex": 0,
+            "explanation": "Acid + Base forms Salt + Water via neutralization: HCl + NaOH ➔ NaCl + H₂O."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Excessive use of chemical fertilizers often makes agricultural soil too acidic for crops.",
+            "Step 2: Quicklime and slaked lime are basic substances.",
+            "Step 3: When added to the soil, the base neutralizes the excess acid, restoring ideal soil pH for plant growth."
+          ],
+          "result": "Neutralization restores balanced soil pH.",
+          "problem": "[IB_MYP-G8-CHEMISTRY-MET-DISP] Apply principles of The Reactivity Series & Single Displacement Reactions: Explain why farmers treat acidic soil with quicklime (calcium oxide) or slaked lime."
+        },
+        "curriculumTrap": "Key exam trap for The Reactivity Series & Single Displacement Reactions: IB MYP Inquiry & Criterion Framework:\nA) Factual-Level Misconceptions (Criterion A: Knowing and Understanding):\n• Criterion A (Knowing and Understanding): Confusing physical phase changes with chemical transformations and bond rearrangement.\n\nB) Conceptual-Level Misconceptions (Criteria B & C: Inquiring & Designing / Processing & Evaluating):\n• Criteria B & C (Inquiring & Designing / Processing & Evaluating): Measuring reaction rates and product yields with precision while accounting for environmental variables.\n\nC) Debatable Inquiry Prompt (Criterion D: Reflecting on the Impacts of Science):\n• Criterion D (Debatable Inquiry Prompt): 'To what extent does industrial reliance on synthetic chemicals impact ecological sustainability?'\n\nD) Criterion D Reflection Guide (Global Context & Societal Impact):\n• Criterion D (Global Context & Societal Impact): Global Context: Globalization and Sustainability. Analyze how green chemistry principles reduce toxic waste and environmental degradation.",
+        "structuralRule": "$$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} \\quad | \\quad \\text{Litmus: Acid (Red), Base (Blue)}$$",
+        "payloadFingerprint": "FPT-IB_MYP-G8-CHEMISTRY-MET-DISP-22f93bce",
+        "verificationProblem": "Verify The Reactivity Series & Single Displacement Reactions: What color does blue litmus paper turn when dipped into lemon juice? (Answer: Red, because lemon juice is acidic)."
+      },
+      "pedagogical_focus": "IB MYP Criteria & Global Contexts Conceptual Framework",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-IB_MYP-G8-CHEMISTRY-MET-DISP-22f93bce",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:56.853265+00:00",
+    "updated_at": "2026-09-18T18:44:11.529629+00:00"
+  },
+  {
+    "id": "IB_MYP-G8-CHEMISTRY-MET-OXY",
+    "board_id": "IB_MYP",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 8,
+    "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+    "title": "Metal Reactions with Oxygen, Water & Acids",
+    "core_logic_essence": "Formation of basic metal oxides; displacement of hydrogen gas from dilute mineral acids. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.",
+    "parent_node_id": "IB_MYP-G8-CHEMISTRY-MET-PHYS",
+    "prerequisites": [
+      "IB_MYP-G8-CHEMISTRY-MET-PHYS"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T18:44:11.229Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "Metal Reactions with Oxygen, Water & Acids",
+        "summary": "[IB_MYP-G8-CHEMISTRY-MET-OXY] Metal Reactions with Oxygen, Water & Acids: Chemical changes create new substances. Acids turn blue litmus red; bases turn red litmus blue. Acid plus base yields salt and water.",
+        "conceptId": "IB_MYP-G8-CHEMISTRY-MET-OXY",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### Metal Reactions with Oxygen, Water & Acids\n**Core Principle**: Formation of basic metal oxides; displacement of hydrogen gas from dilute mineral acids. Evaluated through IB MYP Criteria A-D holistic inquiry, exploring real-world global contexts and systems interactions.\n\n**1. Physical vs Chemical Changes**:\n• **Physical Change**: Only physical properties (shape, size, state) change; no new substance is formed (e.g. melting ice, boiling water).\n• **Chemical Change**: One or more new substances with completely different chemical properties are formed (e.g. rusting of iron, burning wood).\n\n**2. Acids and Bases**:\n• **Acids**: Sour in taste; turn blue litmus paper red (e.g. lemon juice, vinegar, curd).\n• **Bases**: Bitter in taste and feel soapy to the touch; turn red litmus paper blue (e.g. baking soda, soap, lime water).\n\n**3. Neutralization**:\n• The reaction between an acid and a base is called **neutralization**, forming salt, water, and releasing heat:\n  $$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} + \\text{Heat}$$\n• Everyday examples: Taking antacid tablets (mild base) for stomach acidity; treating ant stings (formic acid) with calamine (zinc carbonate).",
+        "gradeLevel": 8,
+        "coreAnalogy": "Intuition for Metal Reactions with Oxygen, Water & Acids: Think of chemical change like baking a cake: once flour, sugar, and eggs react in the oven, you have a completely new substance that cannot be separated back.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "Factual Inquiry: What are physical changes and chemical changes, and how do they differ?",
+          "Conceptual Inquiry: State the observable properties of acids and bases.",
+          "Debatable Inquiry: How do natural indicators like litmus and turmeric test for acids and bases?",
+          "Criterion D Reflection: What is neutralization and give an everyday practical example.",
+          "Calculate the expected system response when the primary parameter of Metal Reactions with Oxygen, Water & Acids is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "They neutralize each other to produce sodium chloride salt and water",
+              "They produce pure hydrogen gas explosively",
+              "They form a stronger acid",
+              "Nothing happens"
+            ],
+            "question": "What happens when hydrochloric acid reacts with sodium hydroxide?",
+            "answerIndex": 0,
+            "explanation": "Acid + Base forms Salt + Water via neutralization: HCl + NaOH ➔ NaCl + H₂O."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Excessive use of chemical fertilizers often makes agricultural soil too acidic for crops.",
+            "Step 2: Quicklime and slaked lime are basic substances.",
+            "Step 3: When added to the soil, the base neutralizes the excess acid, restoring ideal soil pH for plant growth."
+          ],
+          "result": "Neutralization restores balanced soil pH.",
+          "problem": "[IB_MYP-G8-CHEMISTRY-MET-OXY] Apply principles of Metal Reactions with Oxygen, Water & Acids: Explain why farmers treat acidic soil with quicklime (calcium oxide) or slaked lime."
+        },
+        "curriculumTrap": "Key exam trap for Metal Reactions with Oxygen, Water & Acids: IB MYP Inquiry & Criterion Framework:\nA) Factual-Level Misconceptions (Criterion A: Knowing and Understanding):\n• Criterion A (Knowing and Understanding): Confusing physical phase changes with chemical transformations and bond rearrangement.\n\nB) Conceptual-Level Misconceptions (Criteria B & C: Inquiring & Designing / Processing & Evaluating):\n• Criteria B & C (Inquiring & Designing / Processing & Evaluating): Measuring reaction rates and product yields with precision while accounting for environmental variables.\n\nC) Debatable Inquiry Prompt (Criterion D: Reflecting on the Impacts of Science):\n• Criterion D (Debatable Inquiry Prompt): 'To what extent does industrial reliance on synthetic chemicals impact ecological sustainability?'\n\nD) Criterion D Reflection Guide (Global Context & Societal Impact):\n• Criterion D (Global Context & Societal Impact): Global Context: Globalization and Sustainability. Analyze how green chemistry principles reduce toxic waste and environmental degradation.",
+        "structuralRule": "$$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} \\quad | \\quad \\text{Litmus: Acid (Red), Base (Blue)}$$",
+        "payloadFingerprint": "FPT-IB_MYP-G8-CHEMISTRY-MET-OXY-1e89d031",
+        "verificationProblem": "Verify Metal Reactions with Oxygen, Water & Acids: What color does blue litmus paper turn when dipped into lemon juice? (Answer: Red, because lemon juice is acidic)."
+      },
+      "pedagogical_focus": "IB MYP Criteria & Global Contexts Conceptual Framework",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-IB_MYP-G8-CHEMISTRY-MET-OXY-1e89d031",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:56.853265+00:00",
+    "updated_at": "2026-09-18T18:44:11.523632+00:00"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "brainoro-os-root",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "sync": "npx tsx --env-file=.env.local scripts/sync_all_notes_to_supabase.ts",
+    "audit": "npx tsx --env-file=.env.local scripts/audit_all_blueprints.ts",
+    "remediate": "npx tsx --env-file=.env.local scripts/fix_all_blueprints.ts",
+    "audit-new": "npx tsx --env-file=.env.local scripts/audit_and_fix_brainoro.ts",
+    "sync-scoped": "npx tsx --env-file=.env.local scripts/sync_scoped.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
+    "@cloudflare/workers-types": "^5.20260926.1",
+    "wrangler": "^4.141.0"
+  }
+}

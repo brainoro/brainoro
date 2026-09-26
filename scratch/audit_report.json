@@ -1,0 +1,4875 @@
+{
+  "generated_at": "2026-09-18T20:26:32.507Z",
+  "total_scanned": 846,
+  "data_source": "supabase:curriculum_concepts",
+  "summary": {
+    "total_flagged": 213,
+    "content_id_mismatches": 132,
+    "visual_fallback_issues": 57,
+    "templated_text_issues": 37,
+    "by_board": {
+      "IB_MYP": {
+        "total": 282,
+        "flagged": 55
+      },
+      "CBSE": {
+        "total": 282,
+        "flagged": 79
+      },
+      "CAMBRIDGE": {
+        "total": 282,
+        "flagged": 79
+      }
+    },
+    "by_subject": {
+      "BIOLOGY": {
+        "total": 198,
+        "flagged": 65
+      },
+      "MATH": {
+        "total": 252,
+        "flagged": 17
+      },
+      "CHEMISTRY": {
+        "total": 189,
+        "flagged": 97
+      },
+      "PHYSICS": {
+        "total": 207,
+        "flagged": 34
+      }
+    }
+  },
+  "flagged_records": [
+    {
+      "concept_id": "IB_MYP-G6-BIOLOGY-FOOD-VIT",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Vitamins, Minerals & Deficiency Diseases",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Vitamins, Minerals & Deficiency Diseases\" [IB_MYP-G6-BIOLOGY-FOOD-VIT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-FOOD-VIT",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Vitamins, Minerals & Deficiency Diseases",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Vitamins, Minerals & Deficiency Diseases\" [CAMBRIDGE-G6-BIOLOGY-FOOD-VIT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Vitamins, Minerals & Deficiency Diseases\" [CAMBRIDGE-G6-BIOLOGY-FOOD-VIT]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-CHEMISTRY-MAT-SOLUBLE",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: States & Properties of Matter",
+      "title": "Solubility, Solutes & Saturated Solutions",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Solubility, Solutes & Saturated Solutions\" [CAMBRIDGE-G6-CHEMISTRY-MAT-SOLUBLE]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-MATH-NUMSYS-FRAC",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 1: Number Systems & Arithmetic Continuity",
+      "title": "Fractions, Decimals & Equivalence",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Fractions, Decimals & Equivalence\" [CBSE-G6-MATH-NUMSYS-FRAC]",
+          "details": {
+            "taxonomyKey": "FRACTIONS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "angle sum"
+            ],
+            "hint": "Text contains forbidden keywords: [angle sum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-PLANT-MORPH",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant Structure & Physiological Adaptation",
+      "title": "Root, Stem & Leaf Morphological Roles",
+      "resolved_diagram": "photosynthesis_cycle",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Root, Stem & Leaf Morphological Roles\" [CAMBRIDGE-G6-BIOLOGY-PLANT-MORPH]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-PHYSICS-ELEC-CELL",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Simple Circuits",
+      "title": "Electric Cells & Chemical Potential",
+      "resolved_diagram": "circuit_diagram",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Electric Cells & Chemical Potential\" [CBSE-G6-PHYSICS-ELEC-CELL]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-MAT-SOLUBLE",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: States & Properties of Matter",
+      "title": "Solubility, Solutes & Saturated Solutions",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Solubility, Solutes & Saturated Solutions\" [CBSE-G6-CHEMISTRY-MAT-SOLUBLE]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity",
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity, acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-MAT-DENSITY",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: States & Properties of Matter",
+      "title": "Mass, Volume & Density Floatation",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Mass, Volume & Density Floatation\" [CBSE-G6-CHEMISTRY-MAT-DENSITY]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity",
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity, acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-MAT-STATES",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: States & Properties of Matter",
+      "title": "Solids, Liquids & Gases: Particle Packing",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Solids, Liquids & Gases: Particle Packing\" [CBSE-G6-CHEMISTRY-MAT-STATES]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity",
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity, acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-CHG-EVID",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Physical & Chemical Changes",
+      "title": "Indicators of Chemical Change",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Indicators of Chemical Change\" [CBSE-G6-CHEMISTRY-CHG-EVID]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-BIOLOGY-FOOD-DIET",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Balanced Diets & Calorific Equilibrium",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Balanced Diets & Calorific Equilibrium\" [CBSE-G6-BIOLOGY-FOOD-DIET]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-AIR-COMP",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Air, Water & Atmospheric Cycles",
+      "title": "Atmospheric Gas Composition",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Atmospheric Gas Composition\" [CBSE-G6-CHEMISTRY-AIR-COMP]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-AIR-OXY",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Air, Water & Atmospheric Cycles",
+      "title": "Oxygen & Combustion Reactions",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Oxygen & Combustion Reactions\" [CBSE-G6-CHEMISTRY-AIR-OXY]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-CHG-CHEM",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Physical & Chemical Changes",
+      "title": "Irreversible Chemical Reactions",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Irreversible Chemical Reactions\" [CBSE-G6-CHEMISTRY-CHG-CHEM]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-BIOLOGY-FOOD-VIT",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Vitamins, Minerals & Deficiency Diseases",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Vitamins, Minerals & Deficiency Diseases\" [CBSE-G6-BIOLOGY-FOOD-VIT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-BIOLOGY-FOOD-NUTRI",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Carbohydrates, Lipids & Proteins",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Carbohydrates, Lipids & Proteins\" [CBSE-G6-BIOLOGY-FOOD-NUTRI]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-CHG-PHYS",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Physical & Chemical Changes",
+      "title": "Reversible Physical Transformations",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Reversible Physical Transformations\" [CBSE-G6-CHEMISTRY-CHG-PHYS]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-BIOLOGY-PLANT-VEN",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant Structure & Physiological Adaptation",
+      "title": "Venation Patterns & Root System Types",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Venation Patterns & Root System Types\" [CBSE-G6-BIOLOGY-PLANT-VEN]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-BIOLOGY-SKELET-BONES",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Bones, Cartilage & Muscular Antagonism",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Bones, Cartilage & Muscular Antagonism\" [CBSE-G6-BIOLOGY-SKELET-BONES]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-MATH-FRAC-MULT",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "MATH",
+      "unit": "Unit 2: Fractions, Decimals & Scientific Form",
+      "title": "Multiplication & Division of Rational Fractions",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Multiplication & Division of Rational Fractions\" [CBSE-G7-MATH-FRAC-MULT]",
+          "details": {
+            "taxonomyKey": "FRACTIONS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "angle sum"
+            ],
+            "hint": "Text contains forbidden keywords: [angle sum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-BIOLOGY-PLANT-FLOWER",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant Structure & Physiological Adaptation",
+      "title": "Floral Anatomy & Reproductive Parts",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Floral Anatomy & Reproductive Parts\" [CBSE-G6-BIOLOGY-PLANT-FLOWER]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-BIOLOGY-SKELET-JOINTS",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Synovial Joints & Skeletal Articulation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Synovial Joints & Skeletal Articulation\" [CBSE-G6-BIOLOGY-SKELET-JOINTS]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-MATH-DEC-OPER",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "MATH",
+      "unit": "Unit 2: Fractions, Decimals & Scientific Form",
+      "title": "Operations on Multi-Digit Decimals",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Operations on Multi-Digit Decimals\" [CBSE-G7-MATH-DEC-OPER]",
+          "details": {
+            "taxonomyKey": "FRACTIONS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "angle sum"
+            ],
+            "hint": "Text contains forbidden keywords: [angle sum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-MATH-DEC-PERIOD",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "MATH",
+      "unit": "Unit 2: Fractions, Decimals & Scientific Form",
+      "title": "Terminating vs Non-Terminating Decimals",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Terminating vs Non-Terminating Decimals\" [CBSE-G7-MATH-DEC-PERIOD]",
+          "details": {
+            "taxonomyKey": "FRACTIONS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "angle sum"
+            ],
+            "hint": "Text contains forbidden keywords: [angle sum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-PHYSICS-HEAT-THERM",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+      "title": "Temperature vs Heat Energy",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Temperature vs Heat Energy\" [CBSE-G7-PHYSICS-HEAT-THERM]",
+          "details": {
+            "taxonomyKey": "TEMPERATURE_HEAT",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "pendulum"
+            ],
+            "hint": "Text contains forbidden keywords: [pendulum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-PHYSICS-HEAT-COND",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+      "title": "Conduction in Solids & Lattice Vibrations",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Conduction in Solids & Lattice Vibrations\" [CBSE-G7-PHYSICS-HEAT-COND]",
+          "details": {
+            "taxonomyKey": "TEMPERATURE_HEAT",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "pendulum"
+            ],
+            "hint": "Text contains forbidden keywords: [pendulum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-CHEMISTRY-IND-NEUT",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Acids, Bases & Chemical Indicators",
+      "title": "Indicators & Neutralization Reactions",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Indicators & Neutralization Reactions\" [CBSE-G7-CHEMISTRY-IND-NEUT]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-CHEMISTRY-ACID-PROP",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Acids, Bases & Chemical Indicators",
+      "title": "Arrhenius Acids & Hydrogen Ion Liberation",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Arrhenius Acids & Hydrogen Ion Liberation\" [CBSE-G7-CHEMISTRY-ACID-PROP]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-CHEMISTRY-RUST-MECH",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Physical & Chemical Transformations",
+      "title": "Corrosion & Rusting of Iron",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Corrosion & Rusting of Iron\" [CBSE-G7-CHEMISTRY-RUST-MECH]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-CHEMISTRY-CRYST-SEP",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Physical & Chemical Transformations",
+      "title": "Crystallization & Solid Purification",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Crystallization & Solid Purification\" [CBSE-G7-CHEMISTRY-CRYST-SEP]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-CHEMISTRY-COMB-MAG",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Physical & Chemical Transformations",
+      "title": "Magnesium Combustion & Basic Oxide Formation",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Magnesium Combustion & Basic Oxide Formation\" [CBSE-G7-CHEMISTRY-COMB-MAG]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-BIOLOGY-PHOTO-EQ",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Autotrophic & Heterotrophic Plant Nutrition",
+      "title": "Photosynthetic Chemistry & Chloroplasts",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Photosynthetic Chemistry & Chloroplasts\" [CBSE-G7-BIOLOGY-PHOTO-EQ]",
+          "details": {
+            "taxonomyKey": "PHOTOSYNTHESIS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "blood",
+              "digestive"
+            ],
+            "hint": "Text contains forbidden keywords: [blood, digestive] - wrong topic content stored."
+          }
+        },
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Photosynthetic Chemistry & Chloroplasts\" [CBSE-G7-BIOLOGY-PHOTO-EQ]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-BIOLOGY-PLANT-PARASIT",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Autotrophic & Heterotrophic Plant Nutrition",
+      "title": "Parasitic, Saprophytic & Symbiotic Plants",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Parasitic, Saprophytic & Symbiotic Plants\" [CBSE-G7-BIOLOGY-PLANT-PARASIT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-BIOLOGY-PLANT-STOMATA",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Autotrophic & Heterotrophic Plant Nutrition",
+      "title": "Stomatal Guard Cells & Gas Exchange",
+      "resolved_diagram": "plant_transport",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Stomatal Guard Cells & Gas Exchange\" [CBSE-G7-BIOLOGY-PLANT-STOMATA]",
+          "details": {
+            "taxonomyKey": "PHOTOSYNTHESIS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "blood",
+              "digestive"
+            ],
+            "hint": "Text contains forbidden keywords: [blood, digestive] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-BIOLOGY-CIRC-BLOOD",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 4: Circulation & Transportation Systems",
+      "title": "Blood Composition: Plasma, Erythrocytes & Leukocytes",
+      "resolved_diagram": "heart_circulation",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Blood Composition: Plasma, Erythrocytes & Leukocytes\" [CBSE-G7-BIOLOGY-CIRC-BLOOD]",
+          "details": {
+            "taxonomyKey": "HEART_CIRCULATION",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "xylem",
+              "phloem"
+            ],
+            "hint": "Text contains forbidden keywords: [xylem, phloem] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-MATH-LINEQ-FRAC",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "MATH",
+      "unit": "Unit 2: Linear Equations with Variables on Both Sides",
+      "title": "Equations with Fractional Denominators",
+      "resolved_diagram": "coordinate_grid",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Equations with Fractional Denominators\" [CBSE-G8-MATH-LINEQ-FRAC]",
+          "details": {
+            "taxonomyKey": "FRACTIONS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "angle sum"
+            ],
+            "hint": "Text contains forbidden keywords: [angle sum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-CHEMISTRY-MET-PHYS",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+      "title": "Malleability, Ductility & Thermal Conductivity",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Malleability, Ductility & Thermal Conductivity\" [CBSE-G8-CHEMISTRY-MET-PHYS]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "litmus",
+              "neutrali",
+              "antacid"
+            ],
+            "hint": "Text contains forbidden keywords: [litmus, neutrali, antacid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-CHEMISTRY-MET-DISP",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+      "title": "The Reactivity Series & Single Displacement Reactions",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Reactivity Series & Single Displacement Reactions\" [CBSE-G8-CHEMISTRY-MET-DISP]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "litmus",
+              "neutrali",
+              "antacid"
+            ],
+            "hint": "Text contains forbidden keywords: [litmus, neutrali, antacid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-CHEMISTRY-MET-OXY",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+      "title": "Metal Reactions with Oxygen, Water & Acids",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Metal Reactions with Oxygen, Water & Acids\" [CBSE-G8-CHEMISTRY-MET-OXY]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "litmus",
+              "neutrali",
+              "antacid"
+            ],
+            "hint": "Text contains forbidden keywords: [litmus, neutrali, antacid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-BIOLOGY-AGRI-NUTRI",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Agricultural Management & Crop Production",
+      "title": "Manure vs Chemical Fertilizers & Crop Rotation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Manure vs Chemical Fertilizers & Crop Rotation\" [CBSE-G8-BIOLOGY-AGRI-NUTRI]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-CHEMISTRY-COMB-COND",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Ignition Temperature & Fire Triangle",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Ignition Temperature & Fire Triangle\" [CBSE-G8-CHEMISTRY-COMB-COND]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-BIOLOGY-AGRI-SOW",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Agricultural Management & Crop Production",
+      "title": "Seed Selection & Sowing Techniques",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Seed Selection & Sowing Techniques\" [CBSE-G8-BIOLOGY-AGRI-SOW]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-CHEMISTRY-FLAME-ZONES",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Flame Structure: Outer, Middle & Innermost Zones",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Flame Structure: Outer, Middle & Innermost Zones\" [CBSE-G8-CHEMISTRY-FLAME-ZONES]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-BIOLOGY-MICRO-PATH",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Microorganisms: Mutualists & Pathogens",
+      "title": "Pathogenic Transmission & Vaccine Immunology",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Pathogenic Transmission & Vaccine Immunology\" [CBSE-G8-BIOLOGY-MICRO-PATH]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G8-CHEMISTRY-COMB-CALOR",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Calorific Value & Enthalpy of Fuels",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Calorific Value & Enthalpy of Fuels\" [CBSE-G8-CHEMISTRY-COMB-CALOR]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-PHYSICS-NEWT-LAW3",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 2: Forces & Newton's Laws of Motion",
+      "title": "Newton's Third Law & Momentum Conservation",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Newton's Third Law & Momentum Conservation\" [CBSE-G9-PHYSICS-NEWT-LAW3]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-PHYSICS-ENG-CONSERV",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Gravitational Potential Energy & Energy Conservation",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Gravitational Potential Energy & Energy Conservation\" [CBSE-G9-PHYSICS-ENG-CONSERV]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-PHYSICS-WORK-DEF",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Scientific Work Done (W = F * d * cos θ)",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Scientific Work Done (W = F * d * cos θ)\" [CBSE-G9-PHYSICS-WORK-DEF]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-PHYSICS-SOUND-ULTRASON",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 5: Sound Waves & Acoustic Propagation",
+      "title": "Echoes, Reverberation & SONAR Applications",
+      "resolved_diagram": "ray_optics",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Echoes, Reverberation & SONAR Applications\" [CBSE-G9-PHYSICS-SOUND-ULTRASON]",
+          "details": {
+            "taxonomyKey": "SOUND_WAVES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "optics",
+              "lens"
+            ],
+            "hint": "Text contains forbidden keywords: [optics, lens] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-MAT-KINETIC",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Matter & Kinetic Particle Theory",
+      "title": "Kinetic Molecular Theory of Matter",
+      "resolved_diagram": "states_of_matter",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Kinetic Molecular Theory of Matter\" [CBSE-G9-CHEMISTRY-MAT-KINETIC]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-PHYSICS-GRAV-MASS",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Gravitation & Orbital Motion",
+      "title": "Mass vs Weight & Gravitational Potential",
+      "resolved_diagram": "physics_vector",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Mass vs Weight & Gravitational Potential\" [CBSE-G9-PHYSICS-GRAV-MASS]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-PHYSICS-ENG-KINETIC",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Kinetic Energy Derivation (KE = 1/2 m v²)",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Kinetic Energy Derivation (KE = 1/2 m v²)\" [CBSE-G9-PHYSICS-ENG-KINETIC]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-MAT-LATENT",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Matter & Kinetic Particle Theory",
+      "title": "Latent Heat of Fusion & Vaporization",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Latent Heat of Fusion & Vaporization\" [CBSE-G9-CHEMISTRY-MAT-LATENT]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": false,
+            "forbiddenKeywordsFound": [
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-ATOM-ISOTOPE",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Atomic Number, Mass Number, Isotopes & Isobars",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Atomic Number, Mass Number, Isotopes & Isobars\" [CBSE-G9-CHEMISTRY-ATOM-ISOTOPE]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-ATOM-RUTH",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Rutherford Gold Foil Experiment & Nucleus",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Rutherford Gold Foil Experiment & Nucleus\" [CBSE-G9-CHEMISTRY-ATOM-RUTH]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-ATOM-MOLE",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "The Mole Concept & Avogadro's Number (N_A = 6.022e23)",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Mole Concept & Avogadro's Number (N_A = 6.022e23)\" [CBSE-G9-CHEMISTRY-ATOM-MOLE]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-ATOM-BOHR",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Bohr Atomic Model & Quantized Energy Shells",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Bohr Atomic Model & Quantized Energy Shells\" [CBSE-G9-CHEMISTRY-ATOM-BOHR]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-ATOM-LAWS",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "Laws of Chemical Combination (Mass & Proportions)",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Laws of Chemical Combination (Mass & Proportions)\" [CBSE-G9-CHEMISTRY-ATOM-LAWS]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-ATOM-DALTON",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "Dalton's Atomic Postulates & Modern Revisions",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Dalton's Atomic Postulates & Modern Revisions\" [CBSE-G9-CHEMISTRY-ATOM-DALTON]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-BIOLOGY-TISS-PLANT",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant & Animal Tissues",
+      "title": "Meristematic vs Permanent Plant Tissues",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Meristematic vs Permanent Plant Tissues\" [CBSE-G9-BIOLOGY-TISS-PLANT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-BIOLOGY-CYCLE-NITRO",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 4: Biogeochemical Cycles & Sustainability",
+      "title": "The Nitrogen Cycle & Biological Fixation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"The Nitrogen Cycle & Biological Fixation\" [CBSE-G9-BIOLOGY-CYCLE-NITRO]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-PHYSICS-ELEC-JOULE",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Circuit Analysis",
+      "title": "Electric Power & Joule Dissipation (P = V*I = I²*R)",
+      "resolved_diagram": "ray_optics",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Electric Power & Joule Dissipation (P = V*I = I²*R)\" [CBSE-G10-PHYSICS-ELEC-JOULE]",
+          "details": {
+            "taxonomyKey": "ELECTRICITY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "lens"
+            ],
+            "hint": "Text contains forbidden keywords: [lens] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-PHYSICS-ELEC-SERIES",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Circuit Analysis",
+      "title": "Resistors in Series & Parallel Networks",
+      "resolved_diagram": "circuit_diagram",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Resistors in Series & Parallel Networks\" [CBSE-G10-PHYSICS-ELEC-SERIES]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "temperature",
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [temperature, ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-MET-IONIC",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Metals, Non-Metals & Extractive Metallurgy",
+      "title": "Ionic Bonding & Lattice Enthalpy",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Ionic Bonding & Lattice Enthalpy\" [CBSE-G10-CHEMISTRY-MET-IONIC]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-ACID-BUFFER",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "Water of Crystallization & Hydrate Salts",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Water of Crystallization & Hydrate Salts\" [CBSE-G10-CHEMISTRY-ACID-BUFFER]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-ACID-PH",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "The Logarithmic pH Scale & Hydronium Concentration",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Logarithmic pH Scale & Hydronium Concentration\" [CBSE-G10-CHEMISTRY-ACID-PH]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-ACID-SALTS",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "Common Salts: NaCl, NaHCO3, Na2CO3 & CaSO4",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Common Salts: NaCl, NaHCO3, Na2CO3 & CaSO4\" [CBSE-G10-CHEMISTRY-ACID-SALTS]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-CARB-HOMOL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Carbon & Its Covalent Compounds",
+      "title": "Homologous Series & Functional Groups",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Homologous Series & Functional Groups\" [CBSE-G10-CHEMISTRY-CARB-HOMOL]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-CARB-TETRA",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Carbon & Its Covalent Compounds",
+      "title": "Tetravalency, Catenation & Allotropy",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Tetravalency, Catenation & Allotropy\" [CBSE-G10-CHEMISTRY-CARB-TETRA]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-BIOLOGY-LIFE-EXCR",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Life Processes: Metabolic Physiology",
+      "title": "Renal Excretion & Nephron Ultrafiltration",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Renal Excretion & Nephron Ultrafiltration\" [CBSE-G10-BIOLOGY-LIFE-EXCR]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-PER-TRENDS",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 5: Periodic Classification of Elements",
+      "title": "Periodic Trends: Atomic Radii, Electronegativity & Ionization",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Periodic Trends: Atomic Radii, Electronegativity & Ionization\" [CBSE-G10-CHEMISTRY-PER-TRENDS]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-PER-MODERN",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 5: Periodic Classification of Elements",
+      "title": "Modern Periodic Law & Atomic Numbers",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Modern Periodic Law & Atomic Numbers\" [CBSE-G10-CHEMISTRY-PER-MODERN]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "acid",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, acid, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-CARB-REAC",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Carbon & Its Covalent Compounds",
+      "title": "Esterification, Saponification & Combustion",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Esterification, Saponification & Combustion\" [CBSE-G10-CHEMISTRY-CARB-REAC]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-MATH-NUMSYS-INT",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 1: Number Systems & Arithmetic Continuity",
+      "title": "Integers & The Number Line",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Integers & The Number Line\" [CAMBRIDGE-G6-MATH-NUMSYS-INT]",
+          "details": {
+            "taxonomyKey": "INTEGERS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "angle"
+            ],
+            "hint": "Text contains forbidden keywords: [angle] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-BIOLOGY-REPRO-HEALTH",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Reproductive Biology & Development",
+      "title": "Contraception, Barrier Methods & Reproductive Health",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Contraception, Barrier Methods & Reproductive Health\" [CBSE-G10-BIOLOGY-REPRO-HEALTH]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-MATH-NUMSYS-INT",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 1: Number Systems & Arithmetic Continuity",
+      "title": "Integers & The Number Line",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Integers & The Number Line\" [CBSE-G6-MATH-NUMSYS-INT]",
+          "details": {
+            "taxonomyKey": "INTEGERS",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "angle"
+            ],
+            "hint": "Text contains forbidden keywords: [angle] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-MATH-GEO-CIRC",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 3: Basic Geometry & Spatial Structures",
+      "title": "Circles: Radius, Diameter & Circumference",
+      "resolved_diagram": "circle_geometry",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Circles: Radius, Diameter & Circumference\" [CAMBRIDGE-G6-MATH-GEO-CIRC]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-MATH-GEO-POINTS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 3: Basic Geometry & Spatial Structures",
+      "title": "Points, Lines, Rays & Angles",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Points, Lines, Rays & Angles\" [CAMBRIDGE-G6-MATH-GEO-POINTS]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-CHEMISTRY-WATER-CYCLE",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Air, Water & Atmospheric Cycles",
+      "title": "The Hydrological Cycle & Phase Dynamics",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Hydrological Cycle & Phase Dynamics\" [CBSE-G6-CHEMISTRY-WATER-CYCLE]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-MATH-DATA-TABLES",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 5: Data Handling & Basic Probability",
+      "title": "Tally Marks & Frequency Tables",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Tally Marks & Frequency Tables\" [CAMBRIDGE-G6-MATH-DATA-TABLES]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-MATH-DATA-BAR",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 5: Data Handling & Basic Probability",
+      "title": "Bar Graphs & Visual Representation",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Bar Graphs & Visual Representation\" [CAMBRIDGE-G6-MATH-DATA-BAR]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-PHYSICS-ELEC-CELL",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Simple Circuits",
+      "title": "Electric Cells & Chemical Potential",
+      "resolved_diagram": "circuit_diagram",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Electric Cells & Chemical Potential\" [CAMBRIDGE-G6-PHYSICS-ELEC-CELL]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-MATH-DATA-PROB",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 5: Data Handling & Basic Probability",
+      "title": "Likelihood & Elementary Chance",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Likelihood & Elementary Chance\" [CAMBRIDGE-G6-MATH-DATA-PROB]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-CHEMISTRY-MAT-STATES",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: States & Properties of Matter",
+      "title": "Solids, Liquids & Gases: Particle Packing",
+      "resolved_diagram": "states_of_matter",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Solids, Liquids & Gases: Particle Packing\" [CAMBRIDGE-G6-CHEMISTRY-MAT-STATES]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G6-BIOLOGY-SKELET-INVERT",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Invertebrate Locomotion Mechanisms",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Invertebrate Locomotion Mechanisms\" [CBSE-G6-BIOLOGY-SKELET-INVERT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-CHEMISTRY-SEP-FILTER",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Separation of Substances",
+      "title": "Filtration & Decantation Mechanics",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Filtration & Decantation Mechanics\" [CAMBRIDGE-G6-CHEMISTRY-SEP-FILTER]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-CHEMISTRY-MAT-DENSITY",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: States & Properties of Matter",
+      "title": "Mass, Volume & Density Floatation",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Mass, Volume & Density Floatation\" [CAMBRIDGE-G6-CHEMISTRY-MAT-DENSITY]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": false,
+            "forbiddenKeywordsFound": [],
+            "hint": "None of expected keywords [solid, liquid, gas...] found in content."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Mass, Volume & Density Floatation\" [CAMBRIDGE-G6-CHEMISTRY-MAT-DENSITY]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-FOOD-NUTRI",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Carbohydrates, Lipids & Proteins",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Carbohydrates, Lipids & Proteins\" [CAMBRIDGE-G6-BIOLOGY-FOOD-NUTRI]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Carbohydrates, Lipids & Proteins\" [CAMBRIDGE-G6-BIOLOGY-FOOD-NUTRI]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-FOOD-DIET",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Balanced Diets & Calorific Equilibrium",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Balanced Diets & Calorific Equilibrium\" [CAMBRIDGE-G6-BIOLOGY-FOOD-DIET]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Balanced Diets & Calorific Equilibrium\" [CAMBRIDGE-G6-BIOLOGY-FOOD-DIET]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-SKELET-INVERT",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Invertebrate Locomotion Mechanisms",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Invertebrate Locomotion Mechanisms\" [CAMBRIDGE-G6-BIOLOGY-SKELET-INVERT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Invertebrate Locomotion Mechanisms\" [CAMBRIDGE-G6-BIOLOGY-SKELET-INVERT]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-PLANT-FLOWER",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant Structure & Physiological Adaptation",
+      "title": "Floral Anatomy & Reproductive Parts",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Floral Anatomy & Reproductive Parts\" [CAMBRIDGE-G6-BIOLOGY-PLANT-FLOWER]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Floral Anatomy & Reproductive Parts\" [CAMBRIDGE-G6-BIOLOGY-PLANT-FLOWER]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-PLANT-VEN",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant Structure & Physiological Adaptation",
+      "title": "Venation Patterns & Root System Types",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Venation Patterns & Root System Types\" [CAMBRIDGE-G6-BIOLOGY-PLANT-VEN]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Venation Patterns & Root System Types\" [CAMBRIDGE-G6-BIOLOGY-PLANT-VEN]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-SKELET-JOINTS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Synovial Joints & Skeletal Articulation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Synovial Joints & Skeletal Articulation\" [CAMBRIDGE-G6-BIOLOGY-SKELET-JOINTS]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Synovial Joints & Skeletal Articulation\" [CAMBRIDGE-G6-BIOLOGY-SKELET-JOINTS]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-BIOLOGY-SKELET-BONES",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Bones, Cartilage & Muscular Antagonism",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Bones, Cartilage & Muscular Antagonism\" [CAMBRIDGE-G6-BIOLOGY-SKELET-BONES]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Bones, Cartilage & Muscular Antagonism\" [CAMBRIDGE-G6-BIOLOGY-SKELET-BONES]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G7-PHYSICS-HEAT-THERM",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 7,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+      "title": "Temperature vs Heat Energy",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Temperature vs Heat Energy\" [CAMBRIDGE-G7-PHYSICS-HEAT-THERM]",
+          "details": {
+            "taxonomyKey": "TEMPERATURE_HEAT",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "pendulum"
+            ],
+            "hint": "Text contains forbidden keywords: [pendulum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G7-PHYSICS-HEAT-COND",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 7,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+      "title": "Conduction in Solids & Lattice Vibrations",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Conduction in Solids & Lattice Vibrations\" [CAMBRIDGE-G7-PHYSICS-HEAT-COND]",
+          "details": {
+            "taxonomyKey": "TEMPERATURE_HEAT",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "pendulum"
+            ],
+            "hint": "Text contains forbidden keywords: [pendulum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-CHEMISTRY-BASE-PROP",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Acids, Bases & Chemical Indicators",
+      "title": "Bases, Alkalis & Hydroxide Ions",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Bases, Alkalis & Hydroxide Ions\" [CBSE-G7-CHEMISTRY-BASE-PROP]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity series",
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity series, displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G7-CHEMISTRY-WATER-DEP",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Water: Hydrological Depletion & Conservation",
+      "title": "Industrial Depletion & Recharge Techniques",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Industrial Depletion & Recharge Techniques\" [CAMBRIDGE-G7-CHEMISTRY-WATER-DEP]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G7-CHEMISTRY-SEW-COMP",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Wastewater Clarification & Ecology",
+      "title": "Domestic & Industrial Effluent Composition",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Domestic & Industrial Effluent Composition\" [CAMBRIDGE-G7-CHEMISTRY-SEW-COMP]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G7-BIOLOGY-PHOTO-EQ",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Autotrophic & Heterotrophic Plant Nutrition",
+      "title": "Photosynthetic Chemistry & Chloroplasts",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Photosynthetic Chemistry & Chloroplasts\" [CAMBRIDGE-G7-BIOLOGY-PHOTO-EQ]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G7-CHEMISTRY-WATER-AQUIF",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Water: Hydrological Depletion & Conservation",
+      "title": "Aquifers & Water Table Dynamics",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Aquifers & Water Table Dynamics\" [CAMBRIDGE-G7-CHEMISTRY-WATER-AQUIF]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-MATH-SQR-PROPS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "MATH",
+      "unit": "Unit 4: Squares, Square Roots, Cubes & Cube Roots",
+      "title": "Properties of Perfect Squares & Units Digits",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Properties of Perfect Squares & Units Digits\" [CAMBRIDGE-G8-MATH-SQR-PROPS]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G7-BIOLOGY-CIRC-HEART",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 4: Circulation & Transportation Systems",
+      "title": "The Human Heart & Double Circulation",
+      "resolved_diagram": "heart_circulation",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Human Heart & Double Circulation\" [CBSE-G7-BIOLOGY-CIRC-HEART]",
+          "details": {
+            "taxonomyKey": "HEART_CIRCULATION",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "xylem",
+              "phloem"
+            ],
+            "hint": "Text contains forbidden keywords: [xylem, phloem] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-MATH-POLY-MULT",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "MATH",
+      "unit": "Unit 5: Algebraic Expressions & Polynomial Identities",
+      "title": "Monomial, Binomial & Polynomial Multiplication",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Monomial, Binomial & Polynomial Multiplication\" [CAMBRIDGE-G8-MATH-POLY-MULT]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-MATH-CUBE-ROOTS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "MATH",
+      "unit": "Unit 4: Squares, Square Roots, Cubes & Cube Roots",
+      "title": "Cubes, Prime Factorization & Estimation",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Cubes, Prime Factorization & Estimation\" [CAMBRIDGE-G8-MATH-CUBE-ROOTS]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-MET-OXY",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+      "title": "Metal Reactions with Oxygen, Water & Acids",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Metal Reactions with Oxygen, Water & Acids\" [CAMBRIDGE-G8-CHEMISTRY-MET-OXY]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "litmus",
+              "neutrali",
+              "antacid"
+            ],
+            "hint": "Text contains forbidden keywords: [litmus, neutrali, antacid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-POLY-ENV",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Synthetic Polymers & Plastics",
+      "title": "Plastic Biodegradation & Environmental Microplastics",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Plastic Biodegradation & Environmental Microplastics\" [CAMBRIDGE-G8-CHEMISTRY-POLY-ENV]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-MET-DISP",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+      "title": "The Reactivity Series & Single Displacement Reactions",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Reactivity Series & Single Displacement Reactions\" [CAMBRIDGE-G8-CHEMISTRY-MET-DISP]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "litmus",
+              "neutrali",
+              "antacid"
+            ],
+            "hint": "Text contains forbidden keywords: [litmus, neutrali, antacid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-FOSS-COAL",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Fossil Fuels, Coal & Petroleum",
+      "title": "Carboniferous Fossilization & Destructive Distillation",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Carboniferous Fossilization & Destructive Distillation\" [CAMBRIDGE-G8-CHEMISTRY-FOSS-COAL]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-BIOLOGY-AGRI-NUTRI",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Agricultural Management & Crop Production",
+      "title": "Manure vs Chemical Fertilizers & Crop Rotation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Manure vs Chemical Fertilizers & Crop Rotation\" [CAMBRIDGE-G8-BIOLOGY-AGRI-NUTRI]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Manure vs Chemical Fertilizers & Crop Rotation\" [CAMBRIDGE-G8-BIOLOGY-AGRI-NUTRI]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-FOSS-GAS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Fossil Fuels, Coal & Petroleum",
+      "title": "Compressed Natural Gas (CNG) & Petrochemical Feedstocks",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Compressed Natural Gas (CNG) & Petrochemical Feedstocks\" [CAMBRIDGE-G8-CHEMISTRY-FOSS-GAS]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-FLAME-ZONES",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Flame Structure: Outer, Middle & Innermost Zones",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Flame Structure: Outer, Middle & Innermost Zones\" [CAMBRIDGE-G8-CHEMISTRY-FLAME-ZONES]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-COMB-CALOR",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Calorific Value & Enthalpy of Fuels",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Calorific Value & Enthalpy of Fuels\" [CAMBRIDGE-G8-CHEMISTRY-COMB-CALOR]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-COMB-COND",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Ignition Temperature & Fire Triangle",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Ignition Temperature & Fire Triangle\" [CAMBRIDGE-G8-CHEMISTRY-COMB-COND]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-BIOLOGY-AGRI-SOW",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Agricultural Management & Crop Production",
+      "title": "Seed Selection & Sowing Techniques",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Seed Selection & Sowing Techniques\" [CAMBRIDGE-G8-BIOLOGY-AGRI-SOW]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Seed Selection & Sowing Techniques\" [CAMBRIDGE-G8-BIOLOGY-AGRI-SOW]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-BIOLOGY-AGRI-PREP",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Agricultural Management & Crop Production",
+      "title": "Soil Preparation, Ploughing & Levelling",
+      "resolved_diagram": "trophic_pyramid",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Soil Preparation, Ploughing & Levelling\" [CAMBRIDGE-G8-BIOLOGY-AGRI-PREP]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-BIOLOGY-REPRO-SEX",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 5: Reproduction in Animal Species",
+      "title": "Sexual Reproduction: Gametogenesis & Zygotes",
+      "resolved_diagram": "dna_helix",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Sexual Reproduction: Gametogenesis & Zygotes\" [CAMBRIDGE-G8-BIOLOGY-REPRO-SEX]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-BIOLOGY-REPRO-FERT",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 5: Reproduction in Animal Species",
+      "title": "Internal vs External Fertilization Strategies",
+      "resolved_diagram": "taxonomy_tree",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Internal vs External Fertilization Strategies\" [CAMBRIDGE-G8-BIOLOGY-REPRO-FERT]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-BIOLOGY-MICRO-PATH",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Microorganisms: Mutualists & Pathogens",
+      "title": "Pathogenic Transmission & Vaccine Immunology",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Pathogenic Transmission & Vaccine Immunology\" [CAMBRIDGE-G8-BIOLOGY-MICRO-PATH]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        },
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Pathogenic Transmission & Vaccine Immunology\" [CAMBRIDGE-G8-BIOLOGY-MICRO-PATH]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-PHYSICS-WORK-DEF",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Scientific Work Done (W = F * d * cos θ)",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Scientific Work Done (W = F * d * cos θ)\" [CAMBRIDGE-G9-PHYSICS-WORK-DEF]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-PHYSICS-ENG-CONSERV",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Gravitational Potential Energy & Energy Conservation",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Gravitational Potential Energy & Energy Conservation\" [CAMBRIDGE-G9-PHYSICS-ENG-CONSERV]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-PHYSICS-NEWT-LAW3",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 2: Forces & Newton's Laws of Motion",
+      "title": "Newton's Third Law & Momentum Conservation",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Newton's Third Law & Momentum Conservation\" [CAMBRIDGE-G9-PHYSICS-NEWT-LAW3]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-PHYSICS-GRAV-MASS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Gravitation & Orbital Motion",
+      "title": "Mass vs Weight & Gravitational Potential",
+      "resolved_diagram": "physics_vector",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Mass vs Weight & Gravitational Potential\" [CAMBRIDGE-G9-PHYSICS-GRAV-MASS]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-CHEMISTRY-MAT-EVAP",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Matter & Kinetic Particle Theory",
+      "title": "Evaporative Cooling Dynamics",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Evaporative Cooling Dynamics\" [CAMBRIDGE-G9-CHEMISTRY-MAT-EVAP]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-CHEMISTRY-ATOM-LAWS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "Laws of Chemical Combination (Mass & Proportions)",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Laws of Chemical Combination (Mass & Proportions)\" [CAMBRIDGE-G9-CHEMISTRY-ATOM-LAWS]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-PHYSICS-SOUND-ULTRASON",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 5: Sound Waves & Acoustic Propagation",
+      "title": "Echoes, Reverberation & SONAR Applications",
+      "resolved_diagram": "ray_optics",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Echoes, Reverberation & SONAR Applications\" [CAMBRIDGE-G9-PHYSICS-SOUND-ULTRASON]",
+          "details": {
+            "taxonomyKey": "SOUND_WAVES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "optics",
+              "lens"
+            ],
+            "hint": "Text contains forbidden keywords: [optics, lens] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-CHEMISTRY-MAT-LATENT",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Matter & Kinetic Particle Theory",
+      "title": "Latent Heat of Fusion & Vaporization",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Latent Heat of Fusion & Vaporization\" [CAMBRIDGE-G9-CHEMISTRY-MAT-LATENT]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": false,
+            "forbiddenKeywordsFound": [
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-CHEMISTRY-ATOM-BOHR",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Bohr Atomic Model & Quantized Energy Shells",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Bohr Atomic Model & Quantized Energy Shells\" [CAMBRIDGE-G9-CHEMISTRY-ATOM-BOHR]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-CHEMISTRY-ATOM-RUTH",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Rutherford Gold Foil Experiment & Nucleus",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Rutherford Gold Foil Experiment & Nucleus\" [CAMBRIDGE-G9-CHEMISTRY-ATOM-RUTH]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-BIOLOGY-TISS-PLANT",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant & Animal Tissues",
+      "title": "Meristematic vs Permanent Plant Tissues",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Meristematic vs Permanent Plant Tissues\" [CAMBRIDGE-G9-BIOLOGY-TISS-PLANT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-CHEMISTRY-ATOM-ISOTOPE",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Atomic Number, Mass Number, Isotopes & Isobars",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Atomic Number, Mass Number, Isotopes & Isobars\" [CAMBRIDGE-G9-CHEMISTRY-ATOM-ISOTOPE]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-CHEMISTRY-ATOM-DALTON",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "Dalton's Atomic Postulates & Modern Revisions",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Dalton's Atomic Postulates & Modern Revisions\" [CAMBRIDGE-G9-CHEMISTRY-ATOM-DALTON]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-BIOLOGY-CYCLE-NITRO",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 4: Biogeochemical Cycles & Sustainability",
+      "title": "The Nitrogen Cycle & Biological Fixation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"The Nitrogen Cycle & Biological Fixation\" [CAMBRIDGE-G9-BIOLOGY-CYCLE-NITRO]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-PHYSICS-ELEC-SERIES",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Circuit Analysis",
+      "title": "Resistors in Series & Parallel Networks",
+      "resolved_diagram": "circuit_diagram",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Resistors in Series & Parallel Networks\" [CAMBRIDGE-G10-PHYSICS-ELEC-SERIES]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "temperature",
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [temperature, ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-PHYSICS-ELEC-JOULE",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Circuit Analysis",
+      "title": "Electric Power & Joule Dissipation (P = V*I = I²*R)",
+      "resolved_diagram": "ray_optics",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Electric Power & Joule Dissipation (P = V*I = I²*R)\" [CAMBRIDGE-G10-PHYSICS-ELEC-JOULE]",
+          "details": {
+            "taxonomyKey": "ELECTRICITY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "lens"
+            ],
+            "hint": "Text contains forbidden keywords: [lens] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-REAC-TYPES",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Chemical Reactions & Equations",
+      "title": "Combination, Decomposition & Displacement",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Combination, Decomposition & Displacement\" [CAMBRIDGE-G10-CHEMISTRY-REAC-TYPES]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-ACID-SALTS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "Common Salts: NaCl, NaHCO3, Na2CO3 & CaSO4",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Common Salts: NaCl, NaHCO3, Na2CO3 & CaSO4\" [CAMBRIDGE-G10-CHEMISTRY-ACID-SALTS]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-MET-IONIC",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Metals, Non-Metals & Extractive Metallurgy",
+      "title": "Ionic Bonding & Lattice Enthalpy",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Ionic Bonding & Lattice Enthalpy\" [CAMBRIDGE-G10-CHEMISTRY-MET-IONIC]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-ACID-BUFFER",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "Water of Crystallization & Hydrate Salts",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Water of Crystallization & Hydrate Salts\" [CAMBRIDGE-G10-CHEMISTRY-ACID-BUFFER]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-ACID-PH",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "The Logarithmic pH Scale & Hydronium Concentration",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Logarithmic pH Scale & Hydronium Concentration\" [CAMBRIDGE-G10-CHEMISTRY-ACID-PH]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-PER-TRENDS",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 5: Periodic Classification of Elements",
+      "title": "Periodic Trends: Atomic Radii, Electronegativity & Ionization",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Periodic Trends: Atomic Radii, Electronegativity & Ionization\" [CAMBRIDGE-G10-CHEMISTRY-PER-TRENDS]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-CARB-HOMOL",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Carbon & Its Covalent Compounds",
+      "title": "Homologous Series & Functional Groups",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Homologous Series & Functional Groups\" [CAMBRIDGE-G10-CHEMISTRY-CARB-HOMOL]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-CARB-REAC",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Carbon & Its Covalent Compounds",
+      "title": "Esterification, Saponification & Combustion",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Esterification, Saponification & Combustion\" [CAMBRIDGE-G10-CHEMISTRY-CARB-REAC]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-CHEMISTRY-PER-MODERN",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 5: Periodic Classification of Elements",
+      "title": "Modern Periodic Law & Atomic Numbers",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Modern Periodic Law & Atomic Numbers\" [CAMBRIDGE-G10-CHEMISTRY-PER-MODERN]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-BIOLOGY-LIFE-EXCR",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Life Processes: Metabolic Physiology",
+      "title": "Renal Excretion & Nephron Ultrafiltration",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Renal Excretion & Nephron Ultrafiltration\" [CAMBRIDGE-G10-BIOLOGY-LIFE-EXCR]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-BIOLOGY-REPRO-HEALTH",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Reproductive Biology & Development",
+      "title": "Contraception, Barrier Methods & Reproductive Health",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Contraception, Barrier Methods & Reproductive Health\" [CAMBRIDGE-G10-BIOLOGY-REPRO-HEALTH]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-BIOLOGY-ENDO-HORMONES",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Control & Neuroendocrine Coordination",
+      "title": "Endocrine System & Hormonal Feedback Loops",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Endocrine System & Hormonal Feedback Loops\" [CAMBRIDGE-G10-BIOLOGY-ENDO-HORMONES]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-PHYSICS-ELEC-CELL",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Simple Circuits",
+      "title": "Electric Cells & Chemical Potential",
+      "resolved_diagram": "circuit_diagram",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Electric Cells & Chemical Potential\" [IB_MYP-G6-PHYSICS-ELEC-CELL]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-CHEMISTRY-MAT-DENSITY",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: States & Properties of Matter",
+      "title": "Mass, Volume & Density Floatation",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Mass, Volume & Density Floatation\" [IB_MYP-G6-CHEMISTRY-MAT-DENSITY]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": false,
+            "forbiddenKeywordsFound": [],
+            "hint": "None of expected keywords [solid, liquid, gas...] found in content."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-BIOLOGY-FOOD-NUTRI",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Carbohydrates, Lipids & Proteins",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Carbohydrates, Lipids & Proteins\" [IB_MYP-G6-BIOLOGY-FOOD-NUTRI]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-BIOLOGY-FOOD-DIET",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Food & Biological Macromolecules",
+      "title": "Balanced Diets & Calorific Equilibrium",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Balanced Diets & Calorific Equilibrium\" [IB_MYP-G6-BIOLOGY-FOOD-DIET]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-BIOLOGY-PLANT-FLOWER",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant Structure & Physiological Adaptation",
+      "title": "Floral Anatomy & Reproductive Parts",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Floral Anatomy & Reproductive Parts\" [IB_MYP-G6-BIOLOGY-PLANT-FLOWER]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-BIOLOGY-PLANT-VEN",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant Structure & Physiological Adaptation",
+      "title": "Venation Patterns & Root System Types",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Venation Patterns & Root System Types\" [IB_MYP-G6-BIOLOGY-PLANT-VEN]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-BIOLOGY-SKELET-INVERT",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Invertebrate Locomotion Mechanisms",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Invertebrate Locomotion Mechanisms\" [IB_MYP-G6-BIOLOGY-SKELET-INVERT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-BIOLOGY-SKELET-BONES",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Bones, Cartilage & Muscular Antagonism",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Bones, Cartilage & Muscular Antagonism\" [IB_MYP-G6-BIOLOGY-SKELET-BONES]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G7-PHYSICS-HEAT-THERM",
+      "board_id": "IB_MYP",
+      "grade_level": 7,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+      "title": "Temperature vs Heat Energy",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Temperature vs Heat Energy\" [IB_MYP-G7-PHYSICS-HEAT-THERM]",
+          "details": {
+            "taxonomyKey": "TEMPERATURE_HEAT",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "pendulum"
+            ],
+            "hint": "Text contains forbidden keywords: [pendulum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G7-PHYSICS-HEAT-COND",
+      "board_id": "IB_MYP",
+      "grade_level": 7,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 1: Heat, Temperature & Thermal Transfer",
+      "title": "Conduction in Solids & Lattice Vibrations",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Conduction in Solids & Lattice Vibrations\" [IB_MYP-G7-PHYSICS-HEAT-COND]",
+          "details": {
+            "taxonomyKey": "TEMPERATURE_HEAT",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "pendulum"
+            ],
+            "hint": "Text contains forbidden keywords: [pendulum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G9-CHEMISTRY-MAT-EVAP",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Matter & Kinetic Particle Theory",
+      "title": "Evaporative Cooling Dynamics",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Evaporative Cooling Dynamics\" [CBSE-G9-CHEMISTRY-MAT-EVAP]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G7-BIOLOGY-PHOTO-EQ",
+      "board_id": "IB_MYP",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Autotrophic & Heterotrophic Plant Nutrition",
+      "title": "Photosynthetic Chemistry & Chloroplasts",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Photosynthetic Chemistry & Chloroplasts\" [IB_MYP-G7-BIOLOGY-PHOTO-EQ]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G7-BIOLOGY-PLANT-PARASIT",
+      "board_id": "IB_MYP",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Autotrophic & Heterotrophic Plant Nutrition",
+      "title": "Parasitic, Saprophytic & Symbiotic Plants",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Parasitic, Saprophytic & Symbiotic Plants\" [IB_MYP-G7-BIOLOGY-PLANT-PARASIT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G7-BIOLOGY-TRANS-VASC",
+      "board_id": "IB_MYP",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 4: Circulation & Transportation Systems",
+      "title": "Plant Vascular Bundles: Xylem & Phloem",
+      "resolved_diagram": "heart_circulation",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Plant Vascular Bundles: Xylem & Phloem\" [IB_MYP-G7-BIOLOGY-TRANS-VASC]",
+          "details": {
+            "taxonomyKey": "XYLEM_PHLOEM",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "cardiac"
+            ],
+            "hint": "Text contains forbidden keywords: [cardiac] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G8-CHEMISTRY-MET-OXY",
+      "board_id": "IB_MYP",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+      "title": "Metal Reactions with Oxygen, Water & Acids",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Metal Reactions with Oxygen, Water & Acids\" [IB_MYP-G8-CHEMISTRY-MET-OXY]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "litmus",
+              "neutrali",
+              "antacid"
+            ],
+            "hint": "Text contains forbidden keywords: [litmus, neutrali, antacid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G8-CHEMISTRY-MET-DISP",
+      "board_id": "IB_MYP",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+      "title": "The Reactivity Series & Single Displacement Reactions",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Reactivity Series & Single Displacement Reactions\" [IB_MYP-G8-CHEMISTRY-MET-DISP]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "litmus",
+              "neutrali",
+              "antacid"
+            ],
+            "hint": "Text contains forbidden keywords: [litmus, neutrali, antacid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G8-BIOLOGY-AGRI-SOW",
+      "board_id": "IB_MYP",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Agricultural Management & Crop Production",
+      "title": "Seed Selection & Sowing Techniques",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Seed Selection & Sowing Techniques\" [IB_MYP-G8-BIOLOGY-AGRI-SOW]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G8-BIOLOGY-MICRO-PATH",
+      "board_id": "IB_MYP",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Microorganisms: Mutualists & Pathogens",
+      "title": "Pathogenic Transmission & Vaccine Immunology",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Pathogenic Transmission & Vaccine Immunology\" [IB_MYP-G8-BIOLOGY-MICRO-PATH]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G8-CHEMISTRY-COMB-COND",
+      "board_id": "IB_MYP",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Ignition Temperature & Fire Triangle",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Ignition Temperature & Fire Triangle\" [IB_MYP-G8-CHEMISTRY-COMB-COND]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G8-BIOLOGY-AGRI-NUTRI",
+      "board_id": "IB_MYP",
+      "grade_level": 8,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Agricultural Management & Crop Production",
+      "title": "Manure vs Chemical Fertilizers & Crop Rotation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Manure vs Chemical Fertilizers & Crop Rotation\" [IB_MYP-G8-BIOLOGY-AGRI-NUTRI]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G8-CHEMISTRY-COMB-CALOR",
+      "board_id": "IB_MYP",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Calorific Value & Enthalpy of Fuels",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Calorific Value & Enthalpy of Fuels\" [IB_MYP-G8-CHEMISTRY-COMB-CALOR]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-PHYSICS-ENG-CONSERV",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Gravitational Potential Energy & Energy Conservation",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Gravitational Potential Energy & Energy Conservation\" [IB_MYP-G9-PHYSICS-ENG-CONSERV]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-PHYSICS-ENG-KINETIC",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Kinetic Energy Derivation (KE = 1/2 m v²)",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Kinetic Energy Derivation (KE = 1/2 m v²)\" [IB_MYP-G9-PHYSICS-ENG-KINETIC]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-CHEMISTRY-REAC-TYPES",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Chemical Reactions & Equations",
+      "title": "Combination, Decomposition & Displacement",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Combination, Decomposition & Displacement\" [CBSE-G10-CHEMISTRY-REAC-TYPES]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-PHYSICS-GRAV-MASS",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Gravitation & Orbital Motion",
+      "title": "Mass vs Weight & Gravitational Potential",
+      "resolved_diagram": "physics_vector",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Mass vs Weight & Gravitational Potential\" [IB_MYP-G9-PHYSICS-GRAV-MASS]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-PHYSICS-WORK-DEF",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Scientific Work Done (W = F * d * cos θ)",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Scientific Work Done (W = F * d * cos θ)\" [IB_MYP-G9-PHYSICS-WORK-DEF]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-CHEMISTRY-MAT-EVAP",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Matter & Kinetic Particle Theory",
+      "title": "Evaporative Cooling Dynamics",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Evaporative Cooling Dynamics\" [IB_MYP-G9-CHEMISTRY-MAT-EVAP]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-BIOLOGY-ENDO-HORMONES",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Control & Neuroendocrine Coordination",
+      "title": "Endocrine System & Hormonal Feedback Loops",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Endocrine System & Hormonal Feedback Loops\" [CBSE-G10-BIOLOGY-ENDO-HORMONES]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-CHEMISTRY-ATOM-DALTON",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "Dalton's Atomic Postulates & Modern Revisions",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Dalton's Atomic Postulates & Modern Revisions\" [IB_MYP-G9-CHEMISTRY-ATOM-DALTON]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-CHEMISTRY-MAT-LATENT",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Matter & Kinetic Particle Theory",
+      "title": "Latent Heat of Fusion & Vaporization",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Latent Heat of Fusion & Vaporization\" [IB_MYP-G9-CHEMISTRY-MAT-LATENT]",
+          "details": {
+            "taxonomyKey": "STATES_OF_MATTER",
+            "expectedKeywordsFound": false,
+            "forbiddenKeywordsFound": [
+              "acid"
+            ],
+            "hint": "Text contains forbidden keywords: [acid] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-PHYSICS-SOUND-ULTRASON",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 5: Sound Waves & Acoustic Propagation",
+      "title": "Echoes, Reverberation & SONAR Applications",
+      "resolved_diagram": "ray_optics",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Echoes, Reverberation & SONAR Applications\" [IB_MYP-G9-PHYSICS-SOUND-ULTRASON]",
+          "details": {
+            "taxonomyKey": "SOUND_WAVES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "optics",
+              "lens"
+            ],
+            "hint": "Text contains forbidden keywords: [optics, lens] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-CHEMISTRY-ATOM-LAWS",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "Laws of Chemical Combination (Mass & Proportions)",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Laws of Chemical Combination (Mass & Proportions)\" [IB_MYP-G9-CHEMISTRY-ATOM-LAWS]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CBSE-G10-BIOLOGY-REPRO-HUMAN10",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Reproductive Biology & Development",
+      "title": "Human Reproductive Anatomy & Menstrual Cycle",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Human Reproductive Anatomy & Menstrual Cycle\" [CBSE-G10-BIOLOGY-REPRO-HUMAN10]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-CHEMISTRY-ATOM-RUTH",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Rutherford Gold Foil Experiment & Nucleus",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Rutherford Gold Foil Experiment & Nucleus\" [IB_MYP-G9-CHEMISTRY-ATOM-RUTH]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-CHEMISTRY-ATOM-MOLE",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "The Mole Concept & Avogadro's Number (N_A = 6.022e23)",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Mole Concept & Avogadro's Number (N_A = 6.022e23)\" [IB_MYP-G9-CHEMISTRY-ATOM-MOLE]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-CHEMISTRY-ATOM-BOHR",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Bohr Atomic Model & Quantized Energy Shells",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Bohr Atomic Model & Quantized Energy Shells\" [IB_MYP-G9-CHEMISTRY-ATOM-BOHR]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-BIOLOGY-TISS-PLANT",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Plant & Animal Tissues",
+      "title": "Meristematic vs Permanent Plant Tissues",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Meristematic vs Permanent Plant Tissues\" [IB_MYP-G9-BIOLOGY-TISS-PLANT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-CHEMISTRY-ATOM-ISOTOPE",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Atomic Structure & Subatomic Particles",
+      "title": "Atomic Number, Mass Number, Isotopes & Isobars",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Atomic Number, Mass Number, Isotopes & Isobars\" [IB_MYP-G9-CHEMISTRY-ATOM-ISOTOPE]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-BIOLOGY-CYCLE-NITRO",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 4: Biogeochemical Cycles & Sustainability",
+      "title": "The Nitrogen Cycle & Biological Fixation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"The Nitrogen Cycle & Biological Fixation\" [IB_MYP-G9-BIOLOGY-CYCLE-NITRO]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G6-MATH-ALG-EXPR",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "unit": "Unit 2: Algebraic Foundations & Patterns",
+      "title": "Forming & Evaluating Algebraic Expressions",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Forming & Evaluating Algebraic Expressions\" [CAMBRIDGE-G6-MATH-ALG-EXPR]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-PHYSICS-ELEC-SERIES",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Circuit Analysis",
+      "title": "Resistors in Series & Parallel Networks",
+      "resolved_diagram": "circuit_diagram",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Resistors in Series & Parallel Networks\" [IB_MYP-G10-PHYSICS-ELEC-SERIES]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "temperature",
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [temperature, ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-PHYSICS-ENG-WIND",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 5: Sustainable Energy Resources",
+      "title": "Wind, Hydroelectric & Geothermal Power Generation",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Wind, Hydroelectric & Geothermal Power Generation\" [IB_MYP-G10-PHYSICS-ENG-WIND]",
+          "details": {
+            "taxonomyKey": "TEMPERATURE_HEAT",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "pendulum"
+            ],
+            "hint": "Text contains forbidden keywords: [pendulum] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-CARB-HOMOL",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Carbon & Its Covalent Compounds",
+      "title": "Homologous Series & Functional Groups",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Homologous Series & Functional Groups\" [IB_MYP-G10-CHEMISTRY-CARB-HOMOL]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-REAC-TYPES",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Chemical Reactions & Equations",
+      "title": "Combination, Decomposition & Displacement",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Combination, Decomposition & Displacement\" [IB_MYP-G10-CHEMISTRY-REAC-TYPES]",
+          "details": {
+            "taxonomyKey": "REACTIVITY_SERIES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-ACID-PH",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "The Logarithmic pH Scale & Hydronium Concentration",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Logarithmic pH Scale & Hydronium Concentration\" [IB_MYP-G10-CHEMISTRY-ACID-PH]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-ACID-BUFFER",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "Water of Crystallization & Hydrate Salts",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Water of Crystallization & Hydrate Salts\" [IB_MYP-G10-CHEMISTRY-ACID-BUFFER]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-ACID-SALTS",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 2: Acids, Bases, Salts & The pH Scale",
+      "title": "Common Salts: NaCl, NaHCO3, Na2CO3 & CaSO4",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Common Salts: NaCl, NaHCO3, Na2CO3 & CaSO4\" [IB_MYP-G10-CHEMISTRY-ACID-SALTS]",
+          "details": {
+            "taxonomyKey": "ACIDS_BASES",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "displacement"
+            ],
+            "hint": "Text contains forbidden keywords: [displacement] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-PER-MODERN",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 5: Periodic Classification of Elements",
+      "title": "Modern Periodic Law & Atomic Numbers",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Modern Periodic Law & Atomic Numbers\" [IB_MYP-G10-CHEMISTRY-PER-MODERN]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-BIOLOGY-LIFE-EXCR",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Life Processes: Metabolic Physiology",
+      "title": "Renal Excretion & Nephron Ultrafiltration",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Renal Excretion & Nephron Ultrafiltration\" [IB_MYP-G10-BIOLOGY-LIFE-EXCR]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-BIOLOGY-ENDO-HORMONES",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 2: Control & Neuroendocrine Coordination",
+      "title": "Endocrine System & Hormonal Feedback Loops",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Endocrine System & Hormonal Feedback Loops\" [IB_MYP-G10-BIOLOGY-ENDO-HORMONES]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-PER-TRENDS",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 5: Periodic Classification of Elements",
+      "title": "Periodic Trends: Atomic Radii, Electronegativity & Ionization",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Periodic Trends: Atomic Radii, Electronegativity & Ionization\" [IB_MYP-G10-CHEMISTRY-PER-TRENDS]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-BIOLOGY-REPRO-HUMAN10",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Reproductive Biology & Development",
+      "title": "Human Reproductive Anatomy & Menstrual Cycle",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Human Reproductive Anatomy & Menstrual Cycle\" [IB_MYP-G10-BIOLOGY-REPRO-HUMAN10]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-BIOLOGY-REPRO-HEALTH",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Reproductive Biology & Development",
+      "title": "Contraception, Barrier Methods & Reproductive Health",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Contraception, Barrier Methods & Reproductive Health\" [IB_MYP-G10-BIOLOGY-REPRO-HEALTH]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G7-CHEMISTRY-WATER-IRRIG",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 7,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Water: Hydrological Depletion & Conservation",
+      "title": "Drip & Sprinkler Efficient Irrigation",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Drip & Sprinkler Efficient Irrigation\" [CAMBRIDGE-G7-CHEMISTRY-WATER-IRRIG]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G7-BIOLOGY-PLANT-PARASIT",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 7,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 1: Autotrophic & Heterotrophic Plant Nutrition",
+      "title": "Parasitic, Saprophytic & Symbiotic Plants",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Parasitic, Saprophytic & Symbiotic Plants\" [CAMBRIDGE-G7-BIOLOGY-PLANT-PARASIT]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-MATH-ID-STD",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "MATH",
+      "unit": "Unit 5: Algebraic Expressions & Polynomial Identities",
+      "title": "Standard Identities: (a+b)², (a-b)² & (a²-b²)",
+      "resolved_diagram": "number_line",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Standard Identities: (a+b)², (a-b)² & (a²-b²)\" [CAMBRIDGE-G8-MATH-ID-STD]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G8-CHEMISTRY-POLY-THERM",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 1: Synthetic Polymers & Plastics",
+      "title": "Thermoplastics vs Thermosetting Polymers",
+      "resolved_diagram": "reaction_energy",
+      "flags": [
+        {
+          "flagType": "TEMPLATED_TEXT",
+          "description": "Boilerplate text detected in \"Thermoplastics vs Thermosetting Polymers\" [CAMBRIDGE-G8-CHEMISTRY-POLY-THERM]",
+          "details": {
+            "matchedPatterns": [
+              "State the primary definition and rule governing",
+              "Calculate the result when standard numerical values are applied to"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-PHYSICS-ENG-KINETIC",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 4: Work, Energy & Power",
+      "title": "Kinetic Energy Derivation (KE = 1/2 m v²)",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Kinetic Energy Derivation (KE = 1/2 m v²)\" [CAMBRIDGE-G9-PHYSICS-ENG-KINETIC]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G9-CHEMISTRY-ATOM-MOLE",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 9,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Atoms, Molecules & Chemical Stoichiometry",
+      "title": "The Mole Concept & Avogadro's Number (N_A = 6.022e23)",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"The Mole Concept & Avogadro's Number (N_A = 6.022e23)\" [CAMBRIDGE-G9-CHEMISTRY-ATOM-MOLE]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph",
+              "reactivity"
+            ],
+            "hint": "Text contains forbidden keywords: [ph, reactivity] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "CAMBRIDGE-G10-BIOLOGY-REPRO-HUMAN10",
+      "board_id": "CAMBRIDGE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Reproductive Biology & Development",
+      "title": "Human Reproductive Anatomy & Menstrual Cycle",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Human Reproductive Anatomy & Menstrual Cycle\" [CAMBRIDGE-G10-BIOLOGY-REPRO-HUMAN10]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-CARB-REAC",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Carbon & Its Covalent Compounds",
+      "title": "Esterification, Saponification & Combustion",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Esterification, Saponification & Combustion\" [IB_MYP-G10-CHEMISTRY-CARB-REAC]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G6-BIOLOGY-SKELET-JOINTS",
+      "board_id": "IB_MYP",
+      "grade_level": 6,
+      "subject_id": "BIOLOGY",
+      "unit": "Unit 3: Animal Locomotion & Skeletal Systems",
+      "title": "Synovial Joints & Skeletal Articulation",
+      "resolved_diagram": "visual_model_pending",
+      "flags": [
+        {
+          "flagType": "VISUAL_FALLBACK",
+          "description": "No topic-specific diagram for \"Synovial Joints & Skeletal Articulation\" [IB_MYP-G6-BIOLOGY-SKELET-JOINTS]",
+          "details": {
+            "resolvedDiagram": "visual_model_pending",
+            "note": "Correctly showing pending - needs dedicated diagram asset."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-CHEMISTRY-MET-IONIC",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 3: Metals, Non-Metals & Extractive Metallurgy",
+      "title": "Ionic Bonding & Lattice Enthalpy",
+      "resolved_diagram": "ph_scale",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Ionic Bonding & Lattice Enthalpy\" [IB_MYP-G10-CHEMISTRY-MET-IONIC]",
+          "details": {
+            "taxonomyKey": "CHEMICAL_BONDING",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph scale"
+            ],
+            "hint": "Text contains forbidden keywords: [ph scale] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G8-CHEMISTRY-FLAME-ZONES",
+      "board_id": "IB_MYP",
+      "grade_level": 8,
+      "subject_id": "CHEMISTRY",
+      "unit": "Unit 4: Combustion, Calorimetry & Flame Anatomy",
+      "title": "Flame Structure: Outer, Middle & Innermost Zones",
+      "resolved_diagram": "bohr_atom",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Flame Structure: Outer, Middle & Innermost Zones\" [IB_MYP-G8-CHEMISTRY-FLAME-ZONES]",
+          "details": {
+            "taxonomyKey": "ATOMIC_STRUCTURE",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G9-PHYSICS-NEWT-LAW3",
+      "board_id": "IB_MYP",
+      "grade_level": 9,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 2: Forces & Newton's Laws of Motion",
+      "title": "Newton's Third Law & Momentum Conservation",
+      "resolved_diagram": "energy_transfer",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Newton's Third Law & Momentum Conservation\" [IB_MYP-G9-PHYSICS-NEWT-LAW3]",
+          "details": {
+            "taxonomyKey": "WORK_ENERGY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "ph"
+            ],
+            "hint": "Text contains forbidden keywords: [ph] - wrong topic content stored."
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "IB_MYP-G10-PHYSICS-ELEC-JOULE",
+      "board_id": "IB_MYP",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "unit": "Unit 3: Electricity & Circuit Analysis",
+      "title": "Electric Power & Joule Dissipation (P = V*I = I²*R)",
+      "resolved_diagram": "ray_optics",
+      "flags": [
+        {
+          "flagType": "CONTENT_ID_MISMATCH",
+          "description": "Content taxonomy mismatch for \"Electric Power & Joule Dissipation (P = V*I = I²*R)\" [IB_MYP-G10-PHYSICS-ELEC-JOULE]",
+          "details": {
+            "taxonomyKey": "ELECTRICITY",
+            "expectedKeywordsFound": true,
+            "forbiddenKeywordsFound": [
+              "lens"
+            ],
+            "hint": "Text contains forbidden keywords: [lens] - wrong topic content stored."
+          }
+        }
+      ]
+    }
+  ],
+  "clean_records_count": 633
+}

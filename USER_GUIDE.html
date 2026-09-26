@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainoro OS — Complete Visual Tutorial & Operations Guide</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --brand: #0284c7;
+      --accent: #10b981;
+      --bg: #0b0f19;
+      --card-bg: #131b2e;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(2, 132, 199, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(2, 132, 199, 0.4);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    h2 {
+      font-size: 20px;
+      color: #38bdf8;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h3 {
+      font-size: 15px;
+      color: #f8fafc;
+      margin: 16px 0 8px;
+    }
+    p, li {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 10px;
+    }
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 14px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    code {
+      font-family: Consolas, Monaco, monospace;
+      background: #1e293b;
+      color: #38bdf8;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    pre {
+      background: #090d16;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 14px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 13px;
+      color: #34d399;
+      margin: 12px 0 16px;
+    }
+    .img-box {
+      border: 1px solid #334155;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 16px 0 8px;
+      background: #000;
+    }
+    .img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .caption {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: #090d16;
+      color: #93c5fd;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .callout {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 14px;
+      border-radius: 0 10px 10px 0;
+      margin: 16px 0;
+    }
+    .callout p {
+      color: #6ee7b7;
+      margin: 0;
+    }
+    .pdf-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #0284c7, #4f46e5);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+      margin-bottom: 24px;
+      transition: transform 0.15s ease;
+    }
+    .pdf-btn:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">Brainoro OS v2.0 • User Tutorial</span>
+    <h1>Brainoro: Next-Gen K-12 Learning OS</h1>
+    <p class="subtitle">Complete Practical Manual to Mastering the 5-Pillar Decoupled Cognitive Architecture</p>
+
+    <a href="file:///C:/Users/pali0/Brainoro/Brainoro_Complete_User_Guide.pdf" target="_blank" class="pdf-btn">
+      📄 Open Downloaded PDF Version
+    </a>
+
+    <!-- Executive Overview -->
+    <div class="card">
+      <h2>🚀 What Problem Does Brainoro Solve?</h2>
+      <p>Traditional educational software suffers from two massive structural flaws:</p>
+      <ol>
+        <li><strong>Rigid Schema Constraints:</strong> Legacy platforms hardcode their subjects and boards, causing catastrophic rewrites whenever scaling from CBSE to Cambridge or IB MYP.</li>
+        <li><strong>Rote-Learning Burnout:</strong> Traditional tests award opaque percentages (e.g. <i>"72%"</i>) that measure short-term cramming rather than long-term conceptual retention.</li>
+      </ol>
+      <div class="callout">
+        <p><strong>The Brainoro Breakthrough:</strong> Brainoro decouples mathematical cognitive algorithms (Spaced Repetition, Item Response Theory, DAG Concept Lineage) from syllabus metadata. It delivers <strong>measurable cognitive acceleration</strong> across any national or international curriculum.</p>
+      </div>
+    </div>
+
+    <!-- Quickstart -->
+    <div class="card">
+      <h2>⚡ 1. How to Launch & Run Brainoro</h2>
+      <p>Brainoro consists of two decoupled components: a modern Next.js frontend and a high-performance Python FastAPI engine.</p>
+      
+      <h3>Start Frontend:</h3>
+      <pre>cd C:\Users\pali0\Brainoro\frontend
+npm run dev</pre>
+      <p>Or simply double-click: <code>C:\Users\pali0\Brainoro\start_frontend.bat</code><br/>
+      Accessible in your browser at: <strong>http://localhost:3000</strong></p>
+
+      <h3>Start Backend (FastAPI Engine):</h3>
+      <pre>cd C:\Users\pali0\Brainoro\backend
+.\venv\Scripts\python.exe -m uvicorn app.main:app --reload --port 8000</pre>
+      <p>Or simply double-click: <code>C:\Users\pali0\Brainoro\start_backend.bat</code><br/>
+      Interactive API Documentation (Swagger): <strong>http://localhost:8000/docs</strong></p>
+    </div>
+
+    <!-- The 5 Pillars -->
+    <div class="card">
+      <h2>🏛️ 2. The 5 Core Pillars Explained</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Pillar</th>
+            <th>Technology / Model</th>
+            <th>Practical Student Benefit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Cornell Note Layer</strong></td>
+            <td>3-Zone Format + Visual Diagrams</td>
+            <td>Learn concepts intuitively in 5 minutes with real-world analogies and worked derivations.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Adaptive Testing (IRT)</strong></td>
+            <td>Item Response Theory (1PL/2PL Rasch)</td>
+            <td>Questions automatically scale to student ability θ (-3 to +3) and adapt to CBSE/CIE/IB matrices.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Spaced Memory Hub</strong></td>
+            <td>SuperMemo-2 (SM-2) + 5-Box Leitner</td>
+            <td>Locks formulas into long-term memory permanently without last-minute exam cramming.</td>
+          </tr>
+          <tr>
+            <td><strong>4. Remediation Map (DAG)</strong></td>
+            <td>Adjacency List Tree Lineage</td>
+            <td>Struggled on a problem? The graph traces back to isolate the exact prerequisite knowledge gap.</td>
+          </tr>
+          <tr>
+            <td><strong>5. Parent Acceleration Portal</strong></td>
+            <td>Retention Stability (S) & Half-Life</td>
+            <td>Replaces useless school grades with auditable 30-day retention curves and cognitive velocity.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p><strong>💡 Quick Visual Navigation Guide:</strong></p>
+        <p style="margin-top: 6px;">• <strong>Pre-Loaded Curriculums:</strong> Located in the <em>"📚 Pre-Loaded Syllabus Topics"</em> bar right under the module navigation tabs. Click <strong>CBSE</strong>, <strong>Cambridge</strong>, or <strong>IB MYP</strong> in the top header to see their respective pre-loaded syllabus topics (Real Numbers, Polynomials, Linear Eq, Pythagoras for CBSE; Kinematics, Acceleration, Newton Forces for Cambridge; Cellular Energetics, Food Pyramids for IB MYP). Simply click any numbered topic button to switch!</p>
+        <p style="margin-top: 6px;">• <strong>"⚡ Quick Concept Check" Sub-Tab:</strong> Inside Tab 1 (Cornell Notes), look at the top sub-tabs directly above the notes: <code>📖 Cornell Study Notes</code> | <code>✏️ Worked Numerical Example</code> | <code>⚡ Quick Concept Check (2 Qs)</code>. Click the green button to take an interactive instant validation quiz with immediate explanations!</p>
+      </div>
+    </div>
+
+    <!-- Dynamic Board Adapters -->
+    <div class="card">
+      <h2>🎓 3. Dynamic Board Matrix (CBSE vs Cambridge vs IB MYP)</h2>
+      <p>When you switch boards at the top of the screen, the interface completely changes its rules:</p>
+      <ul>
+        <li><strong>CBSE Matrix:</strong> Calculation Locks active. Step-by-step sequential proofs required. Reflects CBSE examiner standards where final answers without derivations receive 0 marks.</li>
+        <li><strong>Cambridge (CIE) Matrix:</strong> Command Words active (<i>Calculate, Deduce, State, Explain</i>). Built-in Scientific Calculator window with 3 significant figures precision checks.</li>
+        <li><strong>IB MYP Matrix:</strong> Criteria A–D holistic rubrics (Knowing & Understanding, Inquiring & Designing, Processing & Evaluating, Reflecting on Impacts) mapped directly to official 1–7 scale bands.</li>
+      </ul>
+    </div>
+
+    <!-- OER Ingestion -->
+    <div class="card">
+      <h2>📥 4. Open Educational Resources (OER) Ingestion</h2>
+      <p>Brainoro lets you ingest open-source Creative Commons textbooks (<strong>OpenStax</strong> and <strong>CK-12 FlexBooks</strong>) to generate 100% original owned IP.</p>
+      <ol>
+        <li>Click <strong>"Ingest OER"</strong> in the top-right corner.</li>
+        <li>Set Target Board (e.g. <code>CBSE</code>), Subject (e.g. <code>Physics</code>), and Grade.</li>
+        <li>Enter your <strong>Topic Tracking Key</strong> (e.g. <code>LIGHT</code>).</li>
+        <li>Paste raw textbook markdown into the box.</li>
+        <li>Click <strong>"Execute Ingestion"</strong>.</li>
+        <li>The system dynamically maps the key as <code>CBSE-G9-PHYSICS-LIGHT</code>, registers the node, and generates the lesson blueprint!</li>
+      </ol>
+    </div>
+
+    <div class="card" style="text-align: center; color: var(--text-muted); font-size: 12px;">
+      Brainoro is an independent learning OS. CBSE, Cambridge IGCSE, and IB MYP are registered trademarks of their respective owners. Reference is strictly for educational alignment purposes.
+    </div>
+  </div>
+</body>
+</html>

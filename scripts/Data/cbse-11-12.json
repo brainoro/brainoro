@@ -1,0 +1,88 @@
+[
+  {
+    "gradeLevel": 11,
+    "boardId": "CBSE",
+    "subjectId": "biology",
+    "unitNumber": 1,
+    "unitTitle": "Diversity in the Living World",
+    "unitDescription": "Foundational unit covering living diversity",
+    "topics": [
+      {
+        "id": "TOP_CBSE_11_BIO_01",
+        "title": "The Living World",
+        "slug": "cbse-11-bio-the-living-world",
+        "orderIndex": 1,
+        "coreLogic": "What is living, biodiversity, taxonomical hierarchy, binomial nomenclature.",
+        "contentModules": [
+          {
+            "id": "MOD_11_BIO_01_SUMMARY",
+            "moduleType": "concept_summary",
+            "content": {
+              "overview": "Defines life criteria, metabolism, and taxonomic hierarchy.",
+              "keyConcepts": [
+                "Growth and reproduction as defining vs non-defining characteristics",
+                "Metabolism and cellular organization",
+                "Binomial nomenclature rules by Linnaeus",
+                "Taxonomic categories from Species to Kingdom"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "TOP_CBSE_11_BIO_02",
+        "title": "Biological Classification",
+        "slug": "cbse-11-bio-biological-classification",
+        "orderIndex": 2,
+        "coreLogic": "Five Kingdom Classification: Monera, Protista, Fungi, Plantae, Animalia.",
+        "contentModules": [
+          {
+            "id": "MOD_11_BIO_02_SUMMARY",
+            "moduleType": "concept_summary",
+            "content": {
+              "overview": "Whittaker 5 Kingdom classification details.",
+              "keyConcepts": [
+                "Kingdom Monera - Archaebacteria and Eubacteria",
+                "Kingdom Protista - Chrysophytes, Dinoflagellates, Euglenoids, Protozoans",
+                "Kingdom Fungi - Phycomycetes, Ascomycetes, Basidiomycetes",
+                "Viruses, Viroids, Prions and Lichens"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "gradeLevel": 11,
+    "boardId": "CBSE",
+    "subjectId": "mathematics",
+    "unitNumber": 1,
+    "unitTitle": "Sets and Functions",
+    "unitDescription": "Core algebra foundations",
+    "topics": [
+      {
+        "id": "TOP_CBSE_11_MATH_01",
+        "title": "Sets",
+        "slug": "cbse-11-math-sets",
+        "orderIndex": 1,
+        "coreLogic": "Sets representation, empty/finite sets, subsets, operations.",
+        "contentModules": [
+          {
+            "id": "MOD_11_MATH_01_SUMMARY",
+            "moduleType": "concept_summary",
+            "content": {
+              "overview": "Set theory definitions and Venn diagram representations.",
+              "keyConcepts": [
+                "Roster form and Set-builder form",
+                "Subsets, Proper subsets, Power Set",
+                "Venn diagrams: Union and Intersection of sets",
+                "Complement of a set and De Morgan laws"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

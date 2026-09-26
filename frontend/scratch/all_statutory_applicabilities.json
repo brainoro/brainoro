@@ -1,0 +1,1222 @@
+[
+  {
+    "family_name": "Ganita Prakash",
+    "grade_level": 6,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Ganita Prakash",
+        "official_code": "femh1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (femh1)",
+      "https://ncert.nic.in/textbook.php?femh1=0-1"
+    ]
+  },
+  {
+    "family_name": "Curiosity",
+    "grade_level": 6,
+    "subject_id": "CBSE-SUB-SCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Curiosity",
+        "official_code": "fecu1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (fecu1)",
+      "https://ncert.nic.in/textbook.php?fecu1=0-1"
+    ]
+  },
+  {
+    "family_name": "Poorvi",
+    "grade_level": 6,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Poorvi",
+        "official_code": "feen1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (feen1)",
+      "https://ncert.nic.in/textbook.php?feen1=0-1"
+    ]
+  },
+  {
+    "family_name": "Exploring Society: India and Beyond",
+    "grade_level": 6,
+    "subject_id": "CBSE-SUB-SOCSCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Exploring Society: India and Beyond",
+        "official_code": "fess1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (fess1)",
+      "https://ncert.nic.in/textbook.php?fess1=0-1"
+    ]
+  },
+  {
+    "family_name": "Malhar",
+    "grade_level": 6,
+    "subject_id": "CBSE-SUB-HIN",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Malhar",
+        "official_code": "fehn1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (fehn1)",
+      "https://ncert.nic.in/textbook.php?fehn1=0-1"
+    ]
+  },
+  {
+    "family_name": "Deepakam",
+    "grade_level": 6,
+    "subject_id": "CBSE-SUB-SANSKRIT",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Deepakam",
+        "official_code": "fsk1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (fsk1)",
+      "https://ncert.nic.in/textbook.php?fsk1=0-1"
+    ]
+  },
+  {
+    "family_name": "Mathematics - Textbook for Class VII",
+    "grade_level": 7,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Mathematics - Textbook for Class VII",
+        "official_code": "gemh1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (gemh1)",
+      "https://ncert.nic.in/textbook.php?gemh1=0-1"
+    ]
+  },
+  {
+    "family_name": "Science - Textbook for Class VII",
+    "grade_level": 7,
+    "subject_id": "CBSE-SUB-SCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Science - Textbook for Class VII",
+        "official_code": "gesc1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (gesc1)",
+      "https://ncert.nic.in/textbook.php?gesc1=0-1"
+    ]
+  },
+  {
+    "family_name": "Honeycomb",
+    "grade_level": 7,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Honeycomb",
+        "official_code": "geen1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (geen1)",
+      "https://ncert.nic.in/textbook.php?geen1=0-1"
+    ]
+  },
+  {
+    "family_name": "Our Pasts - II",
+    "grade_level": 7,
+    "subject_id": "CBSE-SUB-SOCSCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Our Pasts - II",
+        "official_code": "gess1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (gess1)",
+      "https://ncert.nic.in/textbook.php?gess1=0-1"
+    ]
+  },
+  {
+    "family_name": "Ganita Prakash Part-I",
+    "grade_level": 8,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Ganita Prakash Part-I",
+        "official_code": "hegp1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (hegp1)",
+      "https://ncert.nic.in/textbook.php?hegp1=0-1"
+    ]
+  },
+  {
+    "family_name": "Ganita Prakash Part-II",
+    "grade_level": 8,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Ganita Prakash Part-II",
+        "official_code": "hegp2"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (hegp2)",
+      "https://ncert.nic.in/textbook.php?hegp2=0-1"
+    ]
+  },
+  {
+    "family_name": "Curiosity",
+    "grade_level": 8,
+    "subject_id": "CBSE-SUB-SCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2024-NCF-SE",
+    "academic_year": "2024-25",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Curiosity",
+        "official_code": "hecu1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (hecu1)",
+      "https://ncert.nic.in/textbook.php?hecu1=0-1"
+    ]
+  },
+  {
+    "family_name": "Honeydew",
+    "grade_level": 8,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Honeydew",
+        "official_code": "heen1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (heen1)",
+      "https://ncert.nic.in/textbook.php?heen1=0-1"
+    ]
+  },
+  {
+    "family_name": "Our Pasts - III",
+    "grade_level": 8,
+    "subject_id": "CBSE-SUB-SOCSCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Our Pasts - III",
+        "official_code": "hess1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (hess1)",
+      "https://ncert.nic.in/textbook.php?hess1=0-1"
+    ]
+  },
+  {
+    "family_name": "Ganita Manjari (Mathematics IX)",
+    "grade_level": 9,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Ganita Manjari (Mathematics IX)",
+        "official_code": "iemh1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (iemh1)",
+      "https://ncert.nic.in/textbook.php?iemh1=0-1"
+    ]
+  },
+  {
+    "family_name": "Exploration (Science IX)",
+    "grade_level": 9,
+    "subject_id": "CBSE-SUB-SCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Exploration (Science IX)",
+        "official_code": "iesc1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (iesc1)",
+      "https://ncert.nic.in/textbook.php?iesc1=0-1"
+    ]
+  },
+  {
+    "family_name": "Kaveri",
+    "grade_level": 9,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Kaveri",
+        "official_code": "iebe1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (iebe1)",
+      "https://ncert.nic.in/textbook.php?iebe1=0-1"
+    ]
+  },
+  {
+    "family_name": "India and the Contemporary World - I",
+    "grade_level": 9,
+    "subject_id": "CBSE-SUB-SOCSCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "India and the Contemporary World - I",
+        "official_code": "iess1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (iess1)",
+      "https://ncert.nic.in/textbook.php?iess1=0-1"
+    ]
+  },
+  {
+    "family_name": "Kshitij Part 1",
+    "grade_level": 9,
+    "subject_id": "CBSE-SUB-HIN",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Kshitij Part 1",
+        "official_code": "ieks1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (ieks1)",
+      "https://ncert.nic.in/textbook.php?ieks1=0-1"
+    ]
+  },
+  {
+    "family_name": "Mathematics - Textbook for Class X",
+    "grade_level": 10,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Mathematics - Textbook for Class X",
+        "official_code": "jemh1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (jemh1)",
+      "https://ncert.nic.in/textbook.php?jemh1=0-1"
+    ]
+  },
+  {
+    "family_name": "Science - Textbook for Class X",
+    "grade_level": 10,
+    "subject_id": "CBSE-SUB-SCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Science - Textbook for Class X",
+        "official_code": "jesc1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (jesc1)",
+      "https://ncert.nic.in/textbook.php?jesc1=0-1"
+    ]
+  },
+  {
+    "family_name": "India and the Contemporary World - II",
+    "grade_level": 10,
+    "subject_id": "CBSE-SUB-SOCSCI",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "India and the Contemporary World - II",
+        "official_code": "jess1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (jess1)",
+      "https://ncert.nic.in/textbook.php?jess1=0-1"
+    ]
+  },
+  {
+    "family_name": "First Flight",
+    "grade_level": 10,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "First Flight",
+        "official_code": "jeff1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (jeff1)",
+      "https://ncert.nic.in/textbook.php?jeff1=0-1"
+    ]
+  },
+  {
+    "family_name": "Kshitij Part 2",
+    "grade_level": 10,
+    "subject_id": "CBSE-SUB-HIN",
+    "stream_id": "GENERAL",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Kshitij Part 2",
+        "official_code": "jeks1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (jeks1)",
+      "https://ncert.nic.in/textbook.php?jeks1=0-1"
+    ]
+  },
+  {
+    "family_name": "Physics - Textbook for Class XI (Parts I & II)",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-PHY",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Physics - Textbook for Class XI (Parts I & II)",
+        "official_code": "keph1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (keph1)",
+      "https://ncert.nic.in/textbook.php?keph1=0-1"
+    ]
+  },
+  {
+    "family_name": "Chemistry - Textbook for Class XI (Parts I & II)",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-CHEM",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Chemistry - Textbook for Class XI (Parts I & II)",
+        "official_code": "kech1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kech1)",
+      "https://ncert.nic.in/textbook.php?kech1=0-1"
+    ]
+  },
+  {
+    "family_name": "Mathematics - Textbook for Class XI",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Mathematics - Textbook for Class XI",
+        "official_code": "kemh1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kemh1)",
+      "https://ncert.nic.in/textbook.php?kemh1=0-1"
+    ]
+  },
+  {
+    "family_name": "Biology - Textbook for Class XI",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-BIO",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Biology - Textbook for Class XI",
+        "official_code": "kebo1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kebo1)",
+      "https://ncert.nic.in/textbook.php?kebo1=0-1"
+    ]
+  },
+  {
+    "family_name": "Computer Science with Python - Class XI",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-CS",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Computer Science with Python - Class XI",
+        "official_code": "kecs1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kecs1)",
+      "https://ncert.nic.in/textbook.php?kecs1=0-1"
+    ]
+  },
+  {
+    "family_name": "Hornbill",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Hornbill",
+        "official_code": "kehb1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kehb1)",
+      "https://ncert.nic.in/textbook.php?kehb1=0-1"
+    ]
+  },
+  {
+    "family_name": "Financial Accounting - Class XI",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-ACC",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Financial Accounting - Class XI",
+        "official_code": "keac1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (keac1)",
+      "https://ncert.nic.in/textbook.php?keac1=0-1"
+    ]
+  },
+  {
+    "family_name": "Business Studies - Class XI",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-BST",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Business Studies - Class XI",
+        "official_code": "kebs1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kebs1)",
+      "https://ncert.nic.in/textbook.php?kebs1=0-1"
+    ]
+  },
+  {
+    "family_name": "Introductory Microeconomics & Statistics",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-ECON",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Introductory Microeconomics & Statistics",
+        "official_code": "keec1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (keec1)",
+      "https://ncert.nic.in/textbook.php?keec1=0-1"
+    ]
+  },
+  {
+    "family_name": "Themes in World History",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-HIST",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Themes in World History",
+        "official_code": "kest1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kest1)",
+      "https://ncert.nic.in/textbook.php?kest1=0-1"
+    ]
+  },
+  {
+    "family_name": "Indian Constitution at Work",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-POLSCI",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Indian Constitution at Work",
+        "official_code": "keps1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (keps1)",
+      "https://ncert.nic.in/textbook.php?keps1=0-1"
+    ]
+  },
+  {
+    "family_name": "Fundamentals of Physical Geography",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-GEOG",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Fundamentals of Physical Geography",
+        "official_code": "kegy1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kegy1)",
+      "https://ncert.nic.in/textbook.php?kegy1=0-1"
+    ]
+  },
+  {
+    "family_name": "Physics - Textbook for Class XII (Parts I & II)",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-PHY",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Physics - Textbook for Class XII (Parts I & II)",
+        "official_code": "leph1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (leph1)",
+      "https://ncert.nic.in/textbook.php?leph1=0-1"
+    ]
+  },
+  {
+    "family_name": "Chemistry - Textbook for Class XII (Parts I & II)",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-CHEM",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Chemistry - Textbook for Class XII (Parts I & II)",
+        "official_code": "lech1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lech1)",
+      "https://ncert.nic.in/textbook.php?lech1=0-1"
+    ]
+  },
+  {
+    "family_name": "Mathematics - Textbook for Class XII",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Mathematics - Textbook for Class XII",
+        "official_code": "lemh1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lemh1)",
+      "https://ncert.nic.in/textbook.php?lemh1=0-1"
+    ]
+  },
+  {
+    "family_name": "Biology - Textbook for Class XII",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-BIO",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Biology - Textbook for Class XII",
+        "official_code": "lebo1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lebo1)",
+      "https://ncert.nic.in/textbook.php?lebo1=0-1"
+    ]
+  },
+  {
+    "family_name": "Computer Science with Python - Class XII",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-CS",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Computer Science with Python - Class XII",
+        "official_code": "lecs1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lecs1)",
+      "https://ncert.nic.in/textbook.php?lecs1=0-1"
+    ]
+  },
+  {
+    "family_name": "Flamingo",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "SCIENCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Flamingo",
+        "official_code": "lefl1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lefl1)",
+      "https://ncert.nic.in/textbook.php?lefl1=0-1"
+    ]
+  },
+  {
+    "family_name": "Accounting for Partnership Firms & Analysis",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-ACC",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Accounting for Partnership Firms & Analysis",
+        "official_code": "leac1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (leac1)",
+      "https://ncert.nic.in/textbook.php?leac1=0-1"
+    ]
+  },
+  {
+    "family_name": "Principles and Functions of Management",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-BST",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Principles and Functions of Management",
+        "official_code": "lebs1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lebs1)",
+      "https://ncert.nic.in/textbook.php?lebs1=0-1"
+    ]
+  },
+  {
+    "family_name": "Introductory Macroeconomics & Development",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-ECON",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Introductory Macroeconomics & Development",
+        "official_code": "leec1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (leec1)",
+      "https://ncert.nic.in/textbook.php?leec1=0-1"
+    ]
+  },
+  {
+    "family_name": "Themes in Indian History",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-HIST",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Themes in Indian History",
+        "official_code": "lest1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lest1)",
+      "https://ncert.nic.in/textbook.php?lest1=0-1"
+    ]
+  },
+  {
+    "family_name": "Contemporary World Politics",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-POLSCI",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Contemporary World Politics",
+        "official_code": "leps1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (leps1)",
+      "https://ncert.nic.in/textbook.php?leps1=0-1"
+    ]
+  },
+  {
+    "family_name": "Fundamentals of Human Geography",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-GEOG",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Fundamentals of Human Geography",
+        "official_code": "legy1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (legy1)",
+      "https://ncert.nic.in/textbook.php?legy1=0-1"
+    ]
+  },
+  {
+    "family_name": "Hornbill",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Hornbill",
+        "official_code": "kehb1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kehb1)",
+      "https://ncert.nic.in/textbook.php?kehb1=0-1"
+    ]
+  },
+  {
+    "family_name": "Hornbill",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Hornbill",
+        "official_code": "kehb1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kehb1)",
+      "https://ncert.nic.in/textbook.php?kehb1=0-1"
+    ]
+  },
+  {
+    "family_name": "Flamingo",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Flamingo",
+        "official_code": "lefl1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lefl1)",
+      "https://ncert.nic.in/textbook.php?lefl1=0-1"
+    ]
+  },
+  {
+    "family_name": "Flamingo",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-ENG",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Flamingo",
+        "official_code": "lefl1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lefl1)",
+      "https://ncert.nic.in/textbook.php?lefl1=0-1"
+    ]
+  },
+  {
+    "family_name": "Mathematics - Textbook for Class XI",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Mathematics - Textbook for Class XI",
+        "official_code": "kemh1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kemh1)",
+      "https://ncert.nic.in/textbook.php?kemh1=0-1"
+    ]
+  },
+  {
+    "family_name": "Introducing Sociology",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-SOCIO",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Introducing Sociology",
+        "official_code": "keso1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (keso1)",
+      "https://ncert.nic.in/textbook.php?keso1=0-1"
+    ]
+  },
+  {
+    "family_name": "Introduction to Psychology",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-PSYCH",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Introduction to Psychology",
+        "official_code": "kepy1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (kepy1)",
+      "https://ncert.nic.in/textbook.php?kepy1=0-1"
+    ]
+  },
+  {
+    "family_name": "Introductory Microeconomics & Statistics",
+    "grade_level": 11,
+    "subject_id": "CBSE-SUB-ECON",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Introductory Microeconomics & Statistics",
+        "official_code": "keec1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (keec1)",
+      "https://ncert.nic.in/textbook.php?keec1=0-1"
+    ]
+  },
+  {
+    "family_name": "Mathematics - Textbook for Class XII",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-MATH",
+    "stream_id": "COMMERCE",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Mathematics - Textbook for Class XII",
+        "official_code": "lemh1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lemh1)",
+      "https://ncert.nic.in/textbook.php?lemh1=0-1"
+    ]
+  },
+  {
+    "family_name": "Indian Society",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-SOCIO",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Indian Society",
+        "official_code": "leso1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (leso1)",
+      "https://ncert.nic.in/textbook.php?leso1=0-1"
+    ]
+  },
+  {
+    "family_name": "Psychology Class XII",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-PSYCH",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Psychology Class XII",
+        "official_code": "lepy1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (lepy1)",
+      "https://ncert.nic.in/textbook.php?lepy1=0-1"
+    ]
+  },
+  {
+    "family_name": "Introductory Macroeconomics & Development",
+    "grade_level": 12,
+    "subject_id": "CBSE-SUB-ECON",
+    "stream_id": "HUMANITIES",
+    "curriculum_version": "CBSE-NCERT-2026-27",
+    "academic_year": "2026-27",
+    "role": "CORE_REQUIRED",
+    "parts": [
+      {
+        "part_number": 1,
+        "part_title": "Introductory Macroeconomics & Development",
+        "official_code": "leec1"
+      }
+    ],
+    "evidence_references": [
+      "NCERT Official Catalogue (leec1)",
+      "https://ncert.nic.in/textbook.php?leec1=0-1"
+    ]
+  }
+]

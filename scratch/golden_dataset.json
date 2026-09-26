@@ -1,0 +1,275 @@
+{
+  "version": "1.0.1",
+  "generated_at": "2026-09-19T10:40:00.000Z",
+  "description": "Golden reference dataset for Brainoro Cognitive OS isolation and regression testing",
+  "concepts": [
+    {
+      "conceptId": "IB_MYP-G6-MATH-DATA-TABLES",
+      "boardId": "IB_MYP",
+      "gradeLevel": 6,
+      "subjectId": "MATH",
+      "title": "Tally Marks & Frequency Tables",
+      "expectedDiagram": "visual_model_pending",
+      "forbiddenDiagrams": ["number_line", "real_continuum", "probability_curve", "motion_graph", "trophic_pyramid"],
+      "forbiddenKeywords": [
+        "LHS = RHS",
+        "x + a = b",
+        "BODMAS",
+        "PEMDAS",
+        "Angle Sum Property",
+        "Discrete Number Line",
+        "transposition"
+      ],
+      "requiredKeywords": [
+        "Frequency Representation",
+        "tally",
+        "N"
+      ],
+      "requiredStructuralRulePattern": "Frequency Representation.*sum.*tally.*N"
+    },
+    {
+      "conceptId": "CBSE-G6-MATH-DATA-TABLES",
+      "boardId": "CBSE",
+      "gradeLevel": 6,
+      "subjectId": "MATH",
+      "title": "Tally Marks & Frequency Tables",
+      "expectedDiagram": "visual_model_pending",
+      "forbiddenDiagrams": ["number_line", "real_continuum", "probability_curve"],
+      "forbiddenKeywords": [
+        "LHS = RHS",
+        "x + a = b",
+        "BODMAS",
+        "Angle Sum Property",
+        "Discrete Number Line"
+      ],
+      "requiredKeywords": [
+        "Frequency Representation",
+        "tally",
+        "N"
+      ],
+      "requiredStructuralRulePattern": "Frequency Representation.*sum.*tally.*N"
+    },
+    {
+      "conceptId": "CAMBRIDGE-G6-MATH-DATA-TABLES",
+      "boardId": "CAMBRIDGE",
+      "gradeLevel": 6,
+      "subjectId": "MATH",
+      "title": "Tally Marks & Frequency Tables",
+      "expectedDiagram": "visual_model_pending",
+      "forbiddenDiagrams": ["number_line", "real_continuum", "probability_curve"],
+      "forbiddenKeywords": [
+        "LHS = RHS",
+        "x + a = b",
+        "BODMAS",
+        "Angle Sum Property"
+      ],
+      "requiredKeywords": [
+        "Frequency Representation",
+        "tally",
+        "N"
+      ],
+      "requiredStructuralRulePattern": "Frequency Representation.*sum.*tally.*N"
+    },
+    {
+      "conceptId": "CBSE-G9-MATH-GEO-CONG",
+      "boardId": "CBSE",
+      "gradeLevel": 9,
+      "subjectId": "MATH",
+      "title": "Triangle Congruence Criteria (SAS, ASA, SSS, RHS)",
+      "expectedDiagram": "triangle",
+      "forbiddenDiagrams": ["number_line", "ray_optics", "motion_graph"],
+      "forbiddenKeywords": [
+        "hypotenuse"
+      ],
+      "requiredKeywords": [
+        "Congruence",
+        "Triangle"
+      ],
+      "requiredStructuralRulePattern": "f\\(x\\)|LHS|cong"
+    },
+    {
+      "conceptId": "CBSE-G10-PHYSICS-OPT-LENS",
+      "boardId": "CBSE",
+      "gradeLevel": 10,
+      "subjectId": "PHYSICS",
+      "title": "Thin Lens Formula & Optical Power (P = 1/f)",
+      "expectedDiagram": "ray_optics",
+      "forbiddenDiagrams": ["trophic_pyramid", "heart_circulation", "coordinate_grid"],
+      "forbiddenKeywords": [
+        "fission",
+        "fusion",
+        "mass defect",
+        "radioactive"
+      ],
+      "requiredKeywords": [
+        "Lens",
+        "Optical"
+      ],
+      "requiredStructuralRulePattern": "f|1/f"
+    },
+    {
+      "conceptId": "CBSE-G10-PHYSICS-ENG-NUCLEAR",
+      "boardId": "CBSE",
+      "gradeLevel": 10,
+      "subjectId": "PHYSICS",
+      "title": "Nuclear Fission & Binding Energy Release",
+      "expectedDiagram": "visual_model_pending",
+      "forbiddenDiagrams": ["ray_optics", "triangle", "heart_circulation"],
+      "forbiddenKeywords": [
+        "snell",
+        "refraction",
+        "reflection",
+        "convex mirror",
+        "concave mirror"
+      ],
+      "requiredKeywords": [
+        "Nuclear",
+        "Energy"
+      ],
+      "requiredStructuralRulePattern": "Energy|E =|mc"
+    },
+    {
+      "conceptId": "CBSE-G8-PHYSICS-SOUND-FREQ",
+      "boardId": "CBSE",
+      "gradeLevel": 8,
+      "subjectId": "PHYSICS",
+      "title": "Frequency, Amplitude, Pitch & Loudness",
+      "expectedDiagram": "wave_frequency",
+      "forbiddenDiagrams": ["trophic_pyramid", "number_line", "triangle"],
+      "forbiddenKeywords": [
+        "v = u + at",
+        "snell",
+        "lens formula"
+      ],
+      "requiredKeywords": [
+        "Frequency",
+        "Sound"
+      ],
+      "requiredStructuralRulePattern": "Speed of Sound|Frequency"
+    },
+    {
+      "conceptId": "CBSE-G6-MATH-NUMSYS-INT",
+      "boardId": "CBSE",
+      "gradeLevel": 6,
+      "subjectId": "MATH",
+      "title": "Integers & The Number Line",
+      "expectedDiagram": "number_line",
+      "forbiddenDiagrams": ["ray_optics", "wave_frequency", "trophic_pyramid"],
+      "forbiddenKeywords": [
+        "\\mathbb{Z}",
+        "Dedekind",
+        "vector space",
+        "closed discrete group"
+      ],
+      "requiredKeywords": [
+        "Integers",
+        "Number Line"
+      ],
+      "requiredStructuralRulePattern": "a \\+ \\(-b\\)|Distance from 0|Integers"
+    },
+    {
+      "conceptId": "CBSE-G7-BIOLOGY-CIRC-HEART",
+      "boardId": "CBSE",
+      "gradeLevel": 7,
+      "subjectId": "BIOLOGY",
+      "title": "The Human Heart & Double Circulation",
+      "expectedDiagram": "heart_circulation",
+      "forbiddenDiagrams": ["number_line", "ray_optics", "circuit_diagram"],
+      "forbiddenKeywords": [
+        "v = u + at",
+        "Ohm",
+        "resistor",
+        "ammeter",
+        "voltmeter",
+        "electrical circuit"
+      ],
+      "requiredKeywords": [
+        "Heart",
+        "Circulation"
+      ],
+      "requiredStructuralRulePattern": "Atrium|Ventricle|Aorta|Blood"
+    },
+    {
+      "conceptId": "CBSE-G7-CHEMISTRY-ACID-PROP",
+      "boardId": "CBSE",
+      "gradeLevel": 7,
+      "subjectId": "CHEMISTRY",
+      "title": "Arrhenius Acids & Hydrogen Ion Liberation",
+      "expectedDiagram": "ph_scale",
+      "forbiddenDiagrams": ["heart_circulation", "wave_frequency", "motion_graph"],
+      "forbiddenKeywords": [
+        "trophic",
+        "heart",
+        "momentum",
+        "velocity"
+      ],
+      "requiredKeywords": [
+        "Acid",
+        "Hydrogen"
+      ],
+      "requiredStructuralRulePattern": "Acid.*Base|Salt.*Water|Litmus"
+    },
+    {
+      "conceptId": "CAMBRIDGE-G7-MATH-FRAC-MULT",
+      "boardId": "CAMBRIDGE",
+      "gradeLevel": 7,
+      "subjectId": "MATH",
+      "title": "Multiplication & Division of Rational Fractions",
+      "expectedDiagram": "number_line",
+      "forbiddenDiagrams": ["ray_optics", "heart_circulation"],
+      "forbiddenKeywords": [
+        "LHS = RHS"
+      ],
+      "requiredKeywords": [
+        "Fraction"
+      ],
+      "requiredStructuralRulePattern": "a/b|frac"
+    },
+    {
+      "conceptId": "IB_MYP-G8-PHYSICS-SOUND-FREQ",
+      "boardId": "IB_MYP",
+      "gradeLevel": 8,
+      "subjectId": "PHYSICS",
+      "title": "Frequency, Amplitude, Pitch & Loudness",
+      "expectedDiagram": "wave_frequency",
+      "forbiddenDiagrams": ["trophic_pyramid", "number_line"],
+      "forbiddenKeywords": [
+        "v = u + at"
+      ],
+      "requiredKeywords": [
+        "Sound",
+        "Frequency"
+      ],
+      "requiredStructuralRulePattern": "Speed of Sound|Frequency"
+    }
+  ],
+  "negativeIsolationCases": [
+    {
+      "name": "Cross-Board Isolation Test",
+      "conceptId": "IB_MYP-G6-MATH-DATA-TABLES",
+      "boardId": "CBSE",
+      "gradeLevel": 6,
+      "subjectId": "MATH",
+      "expectFailure": true,
+      "reason": "Querying IB_MYP concept with boardId CBSE must fail under 4-column isolation"
+    },
+    {
+      "name": "Cross-Grade Isolation Test",
+      "conceptId": "IB_MYP-G6-MATH-DATA-TABLES",
+      "boardId": "IB_MYP",
+      "gradeLevel": 10,
+      "subjectId": "MATH",
+      "expectFailure": true,
+      "reason": "Querying Grade 6 concept with gradeLevel 10 must fail under 4-column isolation"
+    },
+    {
+      "name": "Cross-Subject Isolation Test",
+      "conceptId": "IB_MYP-G6-MATH-DATA-TABLES",
+      "boardId": "IB_MYP",
+      "gradeLevel": 6,
+      "subjectId": "PHYSICS",
+      "expectFailure": true,
+      "reason": "Querying Math concept with subjectId PHYSICS must fail under 4-column isolation"
+    }
+  ]
+}

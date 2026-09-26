@@ -1,0 +1,1423 @@
+{
+  "sources": [
+    {
+      "id": "SRC-NCERT-OFFICIAL",
+      "source_type": "OFFICIAL_TEXTBOOK_PORTAL",
+      "source_name": "National Council of Educational Research and Training (NCERT)",
+      "publisher_authority": "NCERT / Ministry of Education, Government of India",
+      "official_url": "https://ncert.nic.in/textbook.php",
+      "license_or_copyright_notes": "NCERT Official Curriculum / Educational Non-Commercial Standard",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:43.694175+00:00"
+    },
+    {
+      "id": "SRC-CBSE-ACADEMIC",
+      "source_type": "OFFICIAL_BOARD_PORTAL",
+      "source_name": "Central Board of Secondary Education - Academic Directorate",
+      "publisher_authority": "CBSE / Ministry of Education, Government of India",
+      "official_url": "https://cbseacademic.nic.in/",
+      "license_or_copyright_notes": "CBSE Official Secondary and Senior Secondary Curriculum Standard",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:43.694175+00:00"
+    }
+  ],
+  "docs": [
+    {
+      "id": "DOC-CBSE-SEC-2026",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "document_title": "CBSE Secondary School Curriculum (Classes IX-X) 2026-27",
+      "document_identifier": "CBSE/ACAD/CURR/2026-27",
+      "document_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "publication_date": "2026-03-15",
+      "created_at": "2026-09-19T19:27:43.894385+00:00"
+    },
+    {
+      "id": "DOC-NCERT-SYLLABUS-MS",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "document_title": "NCERT Learning Outcomes and Curriculum Framework at Elementary & Secondary Stages",
+      "document_identifier": "NCERT/LO-CURR/2026-27",
+      "document_url": "https://ncert.nic.in/learning-outcomes.php",
+      "publication_date": "2026-03-01",
+      "created_at": "2026-09-19T19:27:43.894385+00:00"
+    }
+  ],
+  "versions": [
+    {
+      "id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "academic_year_id": "2026-27",
+      "version_tag": "CBSE-NCERT-2026.1",
+      "status": "OFFICIAL_ADOPTED",
+      "effective_from": "2026-04-01",
+      "effective_to": "2027-03-31",
+      "description": "Official CBSE/NCERT Curriculum Framework and Learning Outcomes for Academic Year 2026-27",
+      "created_at": "2026-09-19T19:27:43.187798+00:00"
+    },
+    {
+      "id": "CBSE-NCERT-2023-RATIONALISED",
+      "board_id": "CBSE",
+      "academic_year_id": "2026-27",
+      "version_tag": "NCERT-RATIONALISED-2023-24",
+      "status": "OFFICIAL_ADOPTED",
+      "effective_from": "2023-04-01",
+      "effective_to": "2027-03-31",
+      "description": "NCERT Rationalised Curriculum Edition (Pre-NCF-SE Middle & Secondary Stage)",
+      "created_at": "2026-09-19T19:42:39.59105+00:00"
+    },
+    {
+      "id": "CBSE-NCERT-2024-NCF-SE",
+      "board_id": "CBSE",
+      "academic_year_id": "2026-27",
+      "version_tag": "NCERT-NCF-SE-2024",
+      "status": "OFFICIAL_ADOPTED",
+      "effective_from": "2024-04-01",
+      "effective_to": "2027-03-31",
+      "description": "National Curriculum Framework for School Education (NCF-SE 2024 Edition: Ganita Prakash & Curiosity)",
+      "created_at": "2026-09-19T19:42:39.59105+00:00"
+    }
+  ],
+  "textbooks": [
+    {
+      "id": "TB-NCERT-G6-MATH",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Mathematics - Textbook for Class VI",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?femh1=0-14",
+      "isbn_or_code": "femh1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G6-SCIENCE",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "SCIENCE",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Science - Textbook for Class VI",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?fesc1=0-16",
+      "isbn_or_code": "fesc1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G7-MATH",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "MATH",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Mathematics - Textbook for Class VII",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?gemh1=0-13",
+      "isbn_or_code": "gemh1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G7-SCIENCE",
+      "board_id": "CBSE",
+      "grade_level": 7,
+      "subject_id": "SCIENCE",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Science - Textbook for Class VII",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?gesc1=0-13",
+      "isbn_or_code": "gesc1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G8-MATH",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "MATH",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Mathematics - Textbook for Class VIII",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?hemh1=0-13",
+      "isbn_or_code": "hemh1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G8-SCIENCE",
+      "board_id": "CBSE",
+      "grade_level": 8,
+      "subject_id": "SCIENCE",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Science - Textbook for Class VIII",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?hesc1=0-13",
+      "isbn_or_code": "hesc1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G9-MATH",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "MATH",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Mathematics - Textbook for Class IX",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?iemh1=0-12",
+      "isbn_or_code": "iemh1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G9-SCIENCE",
+      "board_id": "CBSE",
+      "grade_level": 9,
+      "subject_id": "SCIENCE",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Science - Textbook for Class IX",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?iesc1=0-12",
+      "isbn_or_code": "iesc1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G10-MATH",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Mathematics - Textbook for Class X",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "isbn_or_code": "jemh1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G10-SCIENCE",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "SCIENCE",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Science - Textbook for Class X",
+      "publisher": "NCERT",
+      "edition_or_version": "2026-27 Revised Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?jesc1=0-13",
+      "isbn_or_code": "jesc1",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:27:44.415033+00:00"
+    },
+    {
+      "id": "TB-NCERT-G6-MATH-2024",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "curriculum_version_id": "CBSE-NCERT-2024-NCF-SE",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Ganita Prakash — Mathematics for Class 6",
+      "publisher": "NCERT",
+      "edition_or_version": "2024 NCF-SE Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?femh1=0-10",
+      "isbn_or_code": "ganita_prakash_6",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:42:39.902598+00:00"
+    },
+    {
+      "id": "TB-NCERT-G6-SCIENCE-2024",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "SCIENCE",
+      "curriculum_version_id": "CBSE-NCERT-2024-NCF-SE",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "title": "Curiosity — Science for Class 6",
+      "publisher": "NCERT",
+      "edition_or_version": "2024 NCF-SE Edition",
+      "official_url": "https://ncert.nic.in/textbook.php?fesc1=0-12",
+      "isbn_or_code": "curiosity_6",
+      "verification_status": "VERIFIED",
+      "created_at": "2026-09-19T19:42:39.902598+00:00"
+    }
+  ],
+  "chaptersByTb": {
+    "TB-NCERT-G10-SCIENCE": [
+      {
+        "id": "CH-NCERT-G10-SCI-01",
+        "num": 1,
+        "title": "Chemical Reactions and Equations"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-02",
+        "num": 2,
+        "title": "Acids, Bases and Salts"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-03",
+        "num": 3,
+        "title": "Metals and Non-metals"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-04",
+        "num": 4,
+        "title": "Carbon and its Compounds"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-05",
+        "num": 5,
+        "title": "Life Processes"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-06",
+        "num": 6,
+        "title": "Control and Coordination"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-07",
+        "num": 7,
+        "title": "How do Organisms Reproduce?"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-08",
+        "num": 8,
+        "title": "Heredity and Evolution"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-09",
+        "num": 9,
+        "title": "Light – Reflection and Refraction"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-10",
+        "num": 10,
+        "title": "The Human Eye and the Colorful World"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-11",
+        "num": 11,
+        "title": "Electricity"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-12",
+        "num": 12,
+        "title": "Magnetic Effects of Electric Current"
+      },
+      {
+        "id": "CH-NCERT-G10-SCI-13",
+        "num": 13,
+        "title": "Our Environment"
+      }
+    ],
+    "TB-NCERT-G7-MATH": [
+      {
+        "id": "CH-NCERT-G7-MATH-01",
+        "num": 1,
+        "title": "Integers"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-02",
+        "num": 2,
+        "title": "Fractions and Decimals"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-03",
+        "num": 3,
+        "title": "Data Handling"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-04",
+        "num": 4,
+        "title": "Simple Equations"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-05",
+        "num": 5,
+        "title": "Lines and Angles"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-06",
+        "num": 6,
+        "title": "The Triangle and its Properties"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-07",
+        "num": 7,
+        "title": "Comparing Quantities"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-08",
+        "num": 8,
+        "title": "Rational Numbers"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-09",
+        "num": 9,
+        "title": "Perimeter and Area"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-10",
+        "num": 10,
+        "title": "Algebraic Expressions"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-11",
+        "num": 11,
+        "title": "Exponents and Powers"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-12",
+        "num": 12,
+        "title": "Symmetry"
+      },
+      {
+        "id": "CH-NCERT-G7-MATH-13",
+        "num": 13,
+        "title": "Visualising Solid Shapes"
+      }
+    ],
+    "TB-NCERT-G9-MATH": [
+      {
+        "id": "CH-NCERT-G9-MATH-01",
+        "num": 1,
+        "title": "Number Systems"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-02",
+        "num": 2,
+        "title": "Polynomials"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-03",
+        "num": 3,
+        "title": "Coordinate Geometry"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-04",
+        "num": 4,
+        "title": "Linear Equations in Two Variables"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-05",
+        "num": 5,
+        "title": "Introduction to Euclid's Geometry"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-06",
+        "num": 6,
+        "title": "Lines and Angles"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-07",
+        "num": 7,
+        "title": "Triangles"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-08",
+        "num": 8,
+        "title": "Quadrilaterals"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-09",
+        "num": 9,
+        "title": "Circles"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-10",
+        "num": 10,
+        "title": "Heron's Formula"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-11",
+        "num": 11,
+        "title": "Surface Areas and Volumes"
+      },
+      {
+        "id": "CH-NCERT-G9-MATH-12",
+        "num": 12,
+        "title": "Statistics"
+      }
+    ],
+    "TB-NCERT-G6-MATH": [
+      {
+        "id": "CH-NCERT-G6-MATH-01",
+        "num": 1,
+        "title": "Knowing Our Numbers"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-02",
+        "num": 2,
+        "title": "Whole Numbers"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-03",
+        "num": 3,
+        "title": "Playing with Numbers"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-04",
+        "num": 4,
+        "title": "Basic Geometrical Ideas"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-05",
+        "num": 5,
+        "title": "Understanding Elementary Shapes"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-06",
+        "num": 6,
+        "title": "Integers"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-07",
+        "num": 7,
+        "title": "Fractions"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-08",
+        "num": 8,
+        "title": "Decimals"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-09",
+        "num": 9,
+        "title": "Data Handling"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-10",
+        "num": 10,
+        "title": "Mensuration"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-11",
+        "num": 11,
+        "title": "Algebra"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-12",
+        "num": 12,
+        "title": "Ratio and Proportion"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-13",
+        "num": 13,
+        "title": "Symmetry"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-14",
+        "num": 14,
+        "title": "Practical Geometry"
+      }
+    ],
+    "TB-NCERT-G7-SCIENCE": [
+      {
+        "id": "CH-NCERT-G7-SCI-01",
+        "num": 1,
+        "title": "Nutrition in Plants"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-02",
+        "num": 2,
+        "title": "Nutrition in Animals"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-03",
+        "num": 3,
+        "title": "Heat"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-04",
+        "num": 4,
+        "title": "Acids, Bases and Salts"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-05",
+        "num": 5,
+        "title": "Physical and Chemical Changes"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-06",
+        "num": 6,
+        "title": "Respiration in Organisms"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-07",
+        "num": 7,
+        "title": "Transportation in Animals and Plants"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-08",
+        "num": 8,
+        "title": "Reproduction in Plants"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-09",
+        "num": 9,
+        "title": "Motion and Time"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-10",
+        "num": 10,
+        "title": "Electric Current and its Effects"
+      },
+      {
+        "id": "CH-NCERT-G7-SCI-11",
+        "num": 11,
+        "title": "Light"
+      }
+    ],
+    "TB-NCERT-G6-SCIENCE": [
+      {
+        "id": "CH-NCERT-G6-SCI-01",
+        "num": 1,
+        "title": "Components of Food"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-02",
+        "num": 2,
+        "title": "Sorting Materials into Groups"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-03",
+        "num": 3,
+        "title": "Separation of Substances"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-04",
+        "num": 4,
+        "title": "Getting to Know Plants"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-05",
+        "num": 5,
+        "title": "Body Movements"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-06",
+        "num": 6,
+        "title": "The Living Organisms: Characteristics and Habitats"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-07",
+        "num": 7,
+        "title": "Motion and Measurement of Distances"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-08",
+        "num": 8,
+        "title": "Light, Shadows and Reflections"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-09",
+        "num": 9,
+        "title": "Electricity and Circuits"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-10",
+        "num": 10,
+        "title": "Fun with Magnets"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-11",
+        "num": 11,
+        "title": "Air Around Us"
+      }
+    ],
+    "TB-NCERT-G6-MATH-2024": [
+      {
+        "id": "CH-NCERT-G6-MATH-2024-01",
+        "num": 1,
+        "title": "Patterns in Mathematics"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-02",
+        "num": 2,
+        "title": "Lines and Angles"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-03",
+        "num": 3,
+        "title": "Number Play"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-04",
+        "num": 4,
+        "title": "Data Handling and Presentation"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-05",
+        "num": 5,
+        "title": "Prime Time"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-06",
+        "num": 6,
+        "title": "Perimeter and Area"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-07",
+        "num": 7,
+        "title": "Fractions"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-08",
+        "num": 8,
+        "title": "Playing with Constructions"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-09",
+        "num": 9,
+        "title": "Symmetry"
+      },
+      {
+        "id": "CH-NCERT-G6-MATH-2024-10",
+        "num": 10,
+        "title": "The Other Side of Zero"
+      }
+    ],
+    "TB-NCERT-G9-SCIENCE": [
+      {
+        "id": "CH-NCERT-G9-SCI-01",
+        "num": 1,
+        "title": "Matter in Our Surroundings"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-02",
+        "num": 2,
+        "title": "Is Matter Around Us Pure"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-03",
+        "num": 3,
+        "title": "Atoms and Molecules"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-04",
+        "num": 4,
+        "title": "Structure of the Atom"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-05",
+        "num": 5,
+        "title": "The Fundamental Unit of Life"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-06",
+        "num": 6,
+        "title": "Tissues"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-07",
+        "num": 7,
+        "title": "Motion"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-08",
+        "num": 8,
+        "title": "Force and Laws of Motion"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-09",
+        "num": 9,
+        "title": "Gravitation"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-10",
+        "num": 10,
+        "title": "Work and Energy"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-11",
+        "num": 11,
+        "title": "Sound"
+      },
+      {
+        "id": "CH-NCERT-G9-SCI-12",
+        "num": 12,
+        "title": "Improvement in Food Resources"
+      }
+    ],
+    "TB-NCERT-G10-MATH": [
+      {
+        "id": "CH-NCERT-G10-MATH-01",
+        "num": 1,
+        "title": "Real Numbers"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-02",
+        "num": 2,
+        "title": "Polynomials"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-03",
+        "num": 3,
+        "title": "Pair of Linear Equations in Two Variables"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-04",
+        "num": 4,
+        "title": "Quadratic Equations"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-05",
+        "num": 5,
+        "title": "Arithmetic Progressions"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-06",
+        "num": 6,
+        "title": "Triangles"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-07",
+        "num": 7,
+        "title": "Coordinate Geometry"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-08",
+        "num": 8,
+        "title": "Introduction to Trigonometry"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-09",
+        "num": 9,
+        "title": "Some Applications of Trigonometry"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-10",
+        "num": 10,
+        "title": "Circles"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-11",
+        "num": 11,
+        "title": "Areas Related to Circles"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-12",
+        "num": 12,
+        "title": "Surface Areas and Volumes"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-13",
+        "num": 13,
+        "title": "Statistics"
+      },
+      {
+        "id": "CH-NCERT-G10-MATH-14",
+        "num": 14,
+        "title": "Probability"
+      }
+    ],
+    "TB-NCERT-G8-MATH": [
+      {
+        "id": "CH-NCERT-G8-MATH-01",
+        "num": 1,
+        "title": "Rational Numbers"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-02",
+        "num": 2,
+        "title": "Linear Equations in One Variable"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-03",
+        "num": 3,
+        "title": "Understanding Quadrilaterals"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-04",
+        "num": 4,
+        "title": "Data Handling"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-05",
+        "num": 5,
+        "title": "Squares and Square Roots"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-06",
+        "num": 6,
+        "title": "Cubes and Cube Roots"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-07",
+        "num": 7,
+        "title": "Comparing Quantities"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-08",
+        "num": 8,
+        "title": "Algebraic Expressions and Identities"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-09",
+        "num": 9,
+        "title": "Mensuration"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-10",
+        "num": 10,
+        "title": "Exponents and Powers"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-11",
+        "num": 11,
+        "title": "Direct and Inverse Proportions"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-12",
+        "num": 12,
+        "title": "Factorisation"
+      },
+      {
+        "id": "CH-NCERT-G8-MATH-13",
+        "num": 13,
+        "title": "Introduction to Graphs"
+      }
+    ],
+    "TB-NCERT-G6-SCIENCE-2024": [
+      {
+        "id": "CH-NCERT-G6-SCI-2024-01",
+        "num": 1,
+        "title": "The Wonderful World of Science"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-02",
+        "num": 2,
+        "title": "Diversity in the Living World"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-03",
+        "num": 3,
+        "title": "Mindful Eating: A Path to a Healthy Body"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-04",
+        "num": 4,
+        "title": "Exploring Magnets"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-05",
+        "num": 5,
+        "title": "Measurement of Length and Motion"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-06",
+        "num": 6,
+        "title": "Materials Around Us"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-07",
+        "num": 7,
+        "title": "Temperature and its Measurement"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-08",
+        "num": 8,
+        "title": "A Journey through States of Water"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-09",
+        "num": 9,
+        "title": "Methods of Separation in Everyday Life"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-10",
+        "num": 10,
+        "title": "Living Creatures: Exploring their Characteristics"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-11",
+        "num": 11,
+        "title": "Nature's Treasures"
+      },
+      {
+        "id": "CH-NCERT-G6-SCI-2024-12",
+        "num": 12,
+        "title": "Beyond Earth"
+      }
+    ],
+    "TB-NCERT-G8-SCIENCE": [
+      {
+        "id": "CH-NCERT-G8-SCI-01",
+        "num": 1,
+        "title": "Crop Production and Management"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-02",
+        "num": 2,
+        "title": "Microorganisms: Friend and Foe"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-03",
+        "num": 3,
+        "title": "Coal and Petroleum"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-04",
+        "num": 4,
+        "title": "Combustion and Flame"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-05",
+        "num": 5,
+        "title": "Conservation of Plants and Animals"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-06",
+        "num": 6,
+        "title": "Reproduction in Animals"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-07",
+        "num": 7,
+        "title": "Reaching the Age of Adolescence"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-08",
+        "num": 8,
+        "title": "Force and Pressure"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-09",
+        "num": 9,
+        "title": "Friction"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-10",
+        "num": 10,
+        "title": "Sound"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-11",
+        "num": 11,
+        "title": "Chemical Effects of Electric Current"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-12",
+        "num": 12,
+        "title": "Some Natural Phenomena"
+      },
+      {
+        "id": "CH-NCERT-G8-SCI-13",
+        "num": 13,
+        "title": "Light"
+      }
+    ]
+  },
+  "sectionsCount": 126,
+  "authConcepts": [
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH01-FTA",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-01",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Fundamental Theorem of Arithmetic",
+      "official_description": "Fundamental Theorem of Arithmetic - statements after reviewing work done earlier and after illustrating and motivating through examples. Finding HCF and LCM of positive integers using prime factorisation.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit I: Number Systems",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27 (Subject Code 041), Unit I: Real Numbers.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH01-IRR",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-01",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Proofs of Irrationality of Real Numbers",
+      "official_description": "Proofs of irrationality of √2, √3, √5 using method of contradiction.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit I: Number Systems",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit I: Real Numbers.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH02-POLY-ZERO",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-02",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Zeroes of a Polynomial & Coefficients Relationship",
+      "official_description": "Zeroes of a polynomial. Relationship between zeroes and coefficients of quadratic polynomials.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit II: Algebra",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit II: Polynomials.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH03-LINEAR-PAIR",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-03",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Pair of Linear Equations in Two Variables (Graphical & Algebraic)",
+      "official_description": "Pair of linear equations in two variables and graphical method of their solution, consistency/inconsistency. Algebraic conditions for number of solutions. Solution by substitution and by elimination.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit II: Algebra",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit II: Pair of Linear Equations in Two Variables.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH04-QUAD-EQN",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-04",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Quadratic Equations & Discriminant Nature of Roots",
+      "official_description": "Standard form of a quadratic equation ax² + bx + c = 0, (a ≠ 0). Solutions of quadratic equations (only real roots) by factorisation, and by using quadratic formula. Relationship between discriminant and nature of roots.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit II: Algebra",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit II: Quadratic Equations.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH05-AP-NTH",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-05",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Arithmetic Progression: nth Term & Sum of n Terms",
+      "official_description": "Motivation for studying Arithmetic Progression. Derivation of the nth term and sum of the first n terms of A.P. and their application in solving daily life problems.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit II: Algebra",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit II: Arithmetic Progressions.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH06-TRI-BPT",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-06",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Similar Triangles & Basic Proportionality Theorem",
+      "official_description": "Definitions, examples, counter examples of similar triangles. (Prove) If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit IV: Geometry",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit IV: Triangles.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH07-COORD-GEO",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-07",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Coordinate Geometry: Distance & Section Formulae",
+      "official_description": "Concepts of coordinate geometry, graphs of linear equations. Distance formula. Section formula (internal division).",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit III: Coordinate Geometry",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit III: Coordinate Geometry.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH08-TRIG-RATIOS",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-08",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Trigonometric Ratios & Identities",
+      "official_description": "Trigonometric ratios of an acute angle of a right-angled triangle. Proof of their existence (well defined); values of the trigonometric ratios of 30°, 45° and 60°. Proof and applications of the identity sin²A + cos²A = 1.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit V: Trigonometry",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit V: Introduction to Trigonometry & Trigonometric Identities.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-MATH-CH10-CIRCLES-TANGENT",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G10-MATH",
+      "chapter_id": "CH-NCERT-G10-MATH-10",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Tangents to a Circle (Theorems & Proofs)",
+      "official_description": "Tangent to a circle at point of contact. (Prove) The tangent at any point of a circle is perpendicular to the radius through the point of contact. (Prove) The lengths of tangents drawn from an external point to a circle are equal.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Mathematics, Unit IV: Geometry",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit IV: Circles.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-SCI-CH01-CHEM-RXN",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "textbook_id": "TB-NCERT-G10-SCIENCE",
+      "chapter_id": "CH-NCERT-G10-SCI-01",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Chemical Reactions and Balanced Chemical Equations",
+      "official_description": "Chemical equation, Balanced chemical equation, implications of a balanced chemical equation, types of chemical reactions: combination, decomposition, displacement, double displacement, precipitation, endothermic exothermic reactions, oxidation and reduction.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Science, Unit I: Chemical Substances - Nature and Behaviour",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27 (Code 086), Unit I: Chemical Reactions.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-SCI-CH02-ACID-BASE",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "CHEMISTRY",
+      "textbook_id": "TB-NCERT-G10-SCIENCE",
+      "chapter_id": "CH-NCERT-G10-SCI-02",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Acids, Bases and Salts & pH Scale",
+      "official_description": "Their definitions in terms of furnishing of H+ and OH- ions, General properties, examples and uses, neutralization, concept of pH scale (Definition relating to logarithm not required), importance of pH in everyday life; preparation and uses of Sodium Hydroxide, Bleaching powder, Baking soda, Washing soda and Plaster of Paris.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Science, Unit I: Chemical Substances - Nature and Behaviour",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit I: Acids, Bases and Salts.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-SCI-CH05-LIFE-PROC",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "BIOLOGY",
+      "textbook_id": "TB-NCERT-G10-SCIENCE",
+      "chapter_id": "CH-NCERT-G10-SCI-05",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Life Processes (Nutrition, Respiration, Transport, Excretion)",
+      "official_description": "\"Living Being\". Basic concept of nutrition, respiration, transport and excretion in plants and animals.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Science, Unit II: World of Living",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit II: Life Processes.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-SCI-CH09-LIGHT-OPTICS",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "textbook_id": "TB-NCERT-G10-SCIENCE",
+      "chapter_id": "CH-NCERT-G10-SCI-09",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Reflection and Refraction of Light (Mirrors & Lenses)",
+      "official_description": "Reflection of light by curved surfaces; Images formed by spherical mirrors, centre of curvature, principal axis, principal focus, focal length, mirror formula, magnification. Refraction; Laws of refraction, refractive index. Refraction of light by spherical lens; Image formed by spherical lenses; Lens formula; Magnification. Power of a lens.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Science, Unit III: Natural Phenomena",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit III: Light - Reflection and Refraction.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G10-SCI-CH11-ELECTRICITY",
+      "curriculum_version_id": "CBSE-2026-27-OFFICIAL",
+      "board_id": "CBSE",
+      "grade_level": 10,
+      "subject_id": "PHYSICS",
+      "textbook_id": "TB-NCERT-G10-SCIENCE",
+      "chapter_id": "CH-NCERT-G10-SCI-11",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Electricity: Ohm's Law, Resistance & Joule Heating",
+      "official_description": "Electric current, potential difference and electric current. Ohm's law; Resistance, Resistivity, Factors on which the resistance of a conductor depends. Series combination of resistors, parallel combination of resistors and its applications in daily life. Heating effect of electric current and its applications in daily life. Electric power, Interrelation between P, V, I and R.",
+      "source_id": "SRC-CBSE-ACADEMIC",
+      "source_document_id": "DOC-CBSE-SEC-2026",
+      "source_url": "https://cbseacademic.nic.in/curriculum_2027.html",
+      "source_page": "CBSE Curriculum 2026-27, Class X Science, Unit IV: Effects of Current",
+      "verification_status": "VERIFIED",
+      "evidence": "Verbatim syllabus statement from CBSE Secondary School Curriculum 2026-27, Unit IV: Electricity.",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G6-MATH-2024-CH01-PATTERNS",
+      "curriculum_version_id": "CBSE-NCERT-2024-NCF-SE",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "MATH",
+      "textbook_id": "TB-NCERT-G6-MATH-2024",
+      "chapter_id": "CH-NCERT-G6-MATH-2024-01",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "Patterns in Mathematics",
+      "official_description": "Exploration of geometric and numerical patterns, sequences, and rule formation under NCF-SE Middle Stage mathematics.",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "source_document_id": "DOC-NCERT-SYLLABUS-MS",
+      "source_url": "https://ncert.nic.in/textbook.php?femh1=0-10",
+      "source_page": "Ganita Prakash Class 6, Chapter 1: Patterns in Mathematics",
+      "verification_status": "VERIFIED",
+      "evidence": "Official chapter locus in NCERT Ganita Prakash (Class 6 Mathematics, NCF-SE 2024 Edition).",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    },
+    {
+      "id": "AUTH-CBSE-G6-SCI-2024-CH01-WONDER",
+      "curriculum_version_id": "CBSE-NCERT-2024-NCF-SE",
+      "board_id": "CBSE",
+      "grade_level": 6,
+      "subject_id": "SCIENCE",
+      "textbook_id": "TB-NCERT-G6-SCIENCE-2024",
+      "chapter_id": "CH-NCERT-G6-SCI-2024-01",
+      "section_id": null,
+      "official_concept_code": null,
+      "official_title": "The Wonderful World of Science",
+      "official_description": "Introduction to scientific inquiry, observation, experimentation, and discovery in the living and physical world.",
+      "source_id": "SRC-NCERT-OFFICIAL",
+      "source_document_id": "DOC-NCERT-SYLLABUS-MS",
+      "source_url": "https://ncert.nic.in/textbook.php?fesc1=0-12",
+      "source_page": "Curiosity Class 6, Chapter 1: The Wonderful World of Science",
+      "verification_status": "VERIFIED",
+      "evidence": "Official chapter locus in NCERT Curiosity (Class 6 Science, NCF-SE 2024 Edition).",
+      "created_at": "2026-09-19T19:57:32.102905+00:00",
+      "updated_at": "2026-09-19T19:57:32.102905+00:00",
+      "statutory_title": null,
+      "normalized_title": null
+    }
+  ]
+}

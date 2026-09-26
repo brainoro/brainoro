@@ -1,0 +1,72 @@
+[
+  {
+    "id": "CAMBRIDGE-G8-CHEMISTRY-MET-DISP",
+    "board_id": "CAMBRIDGE",
+    "subject_id": "CHEMISTRY",
+    "grade_level": 8,
+    "unit": "Unit 2: Metals, Non-Metals & Chemical Reactivity",
+    "title": "The Reactivity Series & Single Displacement Reactions",
+    "core_logic_essence": "More electropositive metals displacing less electropositive cations from aqueous salt solutions. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.",
+    "parent_node_id": "CAMBRIDGE-G8-CHEMISTRY-MET-OXY",
+    "prerequisites": [
+      "CAMBRIDGE-G8-CHEMISTRY-MET-OXY"
+    ],
+    "metadata": {
+      "source": "OpenStax / OER Commons / Creative Commons",
+      "license": "CC-BY-4.0",
+      "version": "2.0",
+      "last_synced": "2026-09-18T20:27:31.924Z",
+      "diagram_type": "ph_scale",
+      "cornell_notes": {
+        "title": "The Reactivity Series & Single Displacement Reactions",
+        "summary": "[CAMBRIDGE-G8-CHEMISTRY-MET-DISP] The Reactivity Series & Single Displacement Reactions: Chemical changes create new substances. Acids turn blue litmus red; bases turn red litmus blue. Acid plus base yields salt and water.",
+        "conceptId": "CAMBRIDGE-G8-CHEMISTRY-MET-DISP",
+        "gradeTier": "MIDDLE_SCHOOL",
+        "mainNotes": "### The Reactivity Series & Single Displacement Reactions\n**Core Principle**: More electropositive metals displacing less electropositive cations from aqueous salt solutions. Requires precise application of Cambridge command words (Calculate, Deduce, Explain) and SI metric standards.\n\n**1. Physical vs Chemical Changes**:\n• **Physical Change**: Only physical properties (shape, size, state) change; no new substance is formed (e.g. melting ice, boiling water).\n• **Chemical Change**: One or more new substances with completely different chemical properties are formed (e.g. rusting of iron, burning wood).\n\n**2. Acids and Bases**:\n• **Acids**: Sour in taste; turn blue litmus paper red (e.g. lemon juice, vinegar, curd).\n• **Bases**: Bitter in taste and feel soapy to the touch; turn red litmus paper blue (e.g. baking soda, soap, lime water).\n\n**3. Neutralization**:\n• The reaction between an acid and a base is called **neutralization**, forming salt, water, and releasing heat:\n  $$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} + \\text{Heat}$$\n• Everyday examples: Taking antacid tablets (mild base) for stomach acidity; treating ant stings (formic acid) with calamine (zinc carbonate).",
+        "gradeLevel": 8,
+        "coreAnalogy": "Intuition for The Reactivity Series & Single Displacement Reactions: Think of chemical change like baking a cake: once flour, sugar, and eggs react in the oven, you have a completely new substance that cannot be separated back.",
+        "diagramType": "ph_scale",
+        "cueQuestions": [
+          "What are physical changes and chemical changes, and how do they differ?",
+          "State the observable properties of acids and bases.",
+          "How do natural indicators like litmus and turmeric test for acids and bases?",
+          "What is neutralization and give an everyday practical example.",
+          "Calculate the expected system response when the primary parameter of The Reactivity Series & Single Displacement Reactions is modified by a factor of 2."
+        ],
+        "practiceQuiz": [
+          {
+            "options": [
+              "They neutralize each other to produce sodium chloride salt and water",
+              "They produce pure hydrogen gas explosively",
+              "They form a stronger acid",
+              "Nothing happens"
+            ],
+            "question": "What happens when hydrochloric acid reacts with sodium hydroxide?",
+            "answerIndex": 0,
+            "explanation": "Acid + Base forms Salt + Water via neutralization: HCl + NaOH ➔ NaCl + H₂O."
+          }
+        ],
+        "realWorldUse": "Soil chemistry, water treatment plants, pharmaceutical antacids, and industrial neutralization.",
+        "workedExample": {
+          "steps": [
+            "Step 1: Excessive use of chemical fertilizers often makes agricultural soil too acidic for crops.",
+            "Step 2: Quicklime and slaked lime are basic substances.",
+            "Step 3: When added to the soil, the base neutralizes the excess acid, restoring ideal soil pH for plant growth."
+          ],
+          "result": "Neutralization restores balanced soil pH.",
+          "problem": "[CAMBRIDGE-G8-CHEMISTRY-MET-DISP] Apply principles of The Reactivity Series & Single Displacement Reactions: Explain why farmers treat acidic soil with quicklime (calcium oxide) or slaked lime."
+        },
+        "curriculumTrap": "Key exam trap for The Reactivity Series & Single Displacement Reactions: Cambridge Mark Scheme Guidance:\nA) Common Mark-Loss Pitfalls:\n• Forgetting state symbols (s), (l), (g), (aq) in balanced equations.\n• Confusing physical changes with chemical reactions.\n\nB) Command Word Precision:\n• STATE: Quote chemical rule, substance name, or balanced equation.\n    • EXPLAIN: Detail particulate interactions or reaction mechanisms.\n    • CALCULATE: State proportions or formula masses with correct units.\n    • DESCRIBE: Detail visible observations (effervescence, color changes, precipitate).\n\nC) Mark Tier Allocation Guidance:\n• 1–2 Marks: Identify chemical substances or name reaction types.\n• 2–4 Marks: Explain chemical observations or balance reactions.\n• 4–6 Marks: Experimental analysis and quantitative investigation.\n\nD) Calculation Tips:\n• Maintain 3 significant figures and show all working steps.",
+        "structuralRule": "$$\\text{Acid} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{Water} \\quad | \\quad \\text{Litmus: Acid (Red), Base (Blue)}$$",
+        "payloadFingerprint": "FPT-CAMBRIDGE-G8-CHEMISTRY-MET-DISP-32237b6c",
+        "verificationProblem": "Verify The Reactivity Series & Single Displacement Reactions: What color does blue litmus paper turn when dipped into lemon juice? (Answer: Red, because lemon juice is acidic)."
+      },
+      "pedagogical_focus": "Cambridge Lower Secondary / IGCSE Command Words & Empirical Precision",
+      "ocaverse_watermark": "Protected by OcaVerse Guardrail",
+      "payload_fingerprint": "FPT-CAMBRIDGE-G8-CHEMISTRY-MET-DISP-32237b6c",
+      "copyright_compliance": "Non-proprietary OER Synthesized"
+    },
+    "created_at": "2026-09-15T09:27:53.974948+00:00",
+    "updated_at": "2026-09-18T20:27:32.509867+00:00"
+  }
+]
