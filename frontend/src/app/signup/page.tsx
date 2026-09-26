@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { UserPlus, AlertCircle, Sparkles, Mail, Lock, User, Building, MapPin, Loader2, CheckCircle2 } from 'lucide-react';
+import { UserPlus, AlertCircle, Sparkles, Mail, Lock, User, Building, MapPin, Loader2, CheckCircle2, GraduationCap, BookOpen } from 'lucide-react';
 
 export default function SignUpPage() {
   const router = useRouter();
@@ -13,6 +13,8 @@ export default function SignUpPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
+  const [curriculum, setCurriculum] = useState('CBSE');
+  const [grade, setGrade] = useState<number>(6);
   const [institutionName, setInstitutionName] = useState('');
   const [location, setLocation] = useState('');
 
@@ -28,6 +30,10 @@ export default function SignUpPage() {
     try {
       const { error, data } = await signUp(email.trim(), password, {
         full_name: fullName.trim() || undefined,
+        curriculum,
+        grade: Number(grade),
+        board_id: curriculum,
+        grade_level: Number(grade),
         institution_name: institutionName.trim() || undefined,
         location: location.trim() || undefined,
       });
@@ -42,7 +48,7 @@ export default function SignUpPage() {
       if (data?.user && !data.session) {
         setIsSuccess(true);
       } else {
-        router.push('/onboarding');
+        router.push('/');
       }
     } catch (err: any) {
       setErrorMsg(err?.message || 'An unexpected error occurred during signup.');
@@ -148,6 +154,43 @@ export default function SignUpPage() {
                       placeholder="••••••••"
                       className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition"
                     />
+                  </div>
+                </div>
+
+                {/* Curriculum & Grade Selection Dropdowns */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                      <BookOpen className="w-3.5 h-3.5 text-sky-600" />
+                      <span>Curriculum / Board</span>
+                    </label>
+                    <select
+                      value={curriculum}
+                      onChange={(e) => setCurriculum(e.target.value)}
+                      className="block w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition shadow-sm"
+                    >
+                      <option value="CBSE">CBSE (NCERT)</option>
+                      <option value="CAMBRIDGE">Cambridge (IGCSE)</option>
+                      <option value="IB_MYP">IB MYP (Inquiry)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                      <GraduationCap className="w-3.5 h-3.5 text-sky-600" />
+                      <span>Class / Grade</span>
+                    </label>
+                    <select
+                      value={grade}
+                      onChange={(e) => setGrade(Number(e.target.value))}
+                      className="block w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition shadow-sm"
+                    >
+                      <option value={6}>Class 6</option>
+                      <option value={7}>Class 7</option>
+                      <option value={8}>Class 8</option>
+                      <option value={9}>Class 9</option>
+                      <option value={10}>Class 10</option>
+                    </select>
                   </div>
                 </div>
 

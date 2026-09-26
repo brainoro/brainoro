@@ -16,11 +16,25 @@ export interface UserProfile {
   location: string | null;
   role: UserRole;
   account_status: AccountStatus;
+  curriculum?: string | null;
+  grade?: number | null;
   board_id: string | null;
   grade_level: number | null;
   onboarding_completed: boolean;
+  trial_ends_at?: string | null;
+  subscription_status?: string | null;
   created_at: string;
   updated_at: string;
+}
+
+export interface SignUpMetadata {
+  full_name?: string;
+  institution_name?: string;
+  location?: string;
+  curriculum?: string;
+  grade?: number;
+  board_id?: string;
+  grade_level?: number;
 }
 
 export interface AuthContextType {
@@ -32,8 +46,10 @@ export interface AuthContextType {
   isSuperAdmin: boolean;
   onboardingCompleted: boolean;
   accountStatus: AccountStatus | null;
+  isTrialExpired: boolean;
+  daysLeftInTrial: number | null;
   signIn: (email: string, password: string) => Promise<{ error: AuthError | null }>;
-  signUp: (email: string, password: string, metadata?: { full_name?: string; institution_name?: string; location?: string }) => Promise<{ error: AuthError | null; data?: any }>;
+  signUp: (email: string, password: string, metadata?: SignUpMetadata) => Promise<{ error: AuthError | null; data?: any }>;
   signOut: () => Promise<{ error: AuthError | null }>;
   refreshProfile: () => Promise<void>;
 }
@@ -158,7 +174,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signUp = async (
     email: string,
     password: string,
-    metadata?: { full_name?: string; institution_name?: string; location?: string }
+    metadata?: SignUpMetadata
   ) => {
     setIsLoading(true);
     const result = await supabase.auth.signUp({
@@ -169,6 +185,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           full_name: metadata?.full_name,
           institution_name: metadata?.institution_name,
           location: metadata?.location,
+          curriculum: metadata?.curriculum || metadata?.board_id || 'CBSE',
+          grade: metadata?.grade || metadata?.grade_level || 6,
+          board_id: metadata?.board_id || metadata?.curriculum || 'CBSE',
+          grade_level: metadata?.grade_level || metadata?.grade || 6,
         },
       },
     });
@@ -197,6 +217,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const onboardingCompleted = Boolean(profile?.onboarding_completed);
   const accountStatus = profile?.account_status ?? null;
 
+  // 7-Day Trial Status Evaluation
+  const isTrialExpired = Boolean(
+    profile?.trial_ends_at &&
+    new Date() > new Date(profile.trial_ends_at) &&
+    profile.subscription_status !== 'active'
+  );
+
+  const daysLeftInTrial = profile?.trial_ends_at
+    ? Math.max(0, Math.ceil((new Date(profile.trial_ends_at).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)))
+    : null;
+
   return (
     <AuthContext.Provider
       value={{
@@ -208,6 +239,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         isSuperAdmin,
         onboardingCompleted,
         accountStatus,
+        isTrialExpired,
+        daysLeftInTrial,
         signIn,
         signUp,
         signOut,

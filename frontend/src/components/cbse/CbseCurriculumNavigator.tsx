@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useAuth } from '@/context/AuthContext';
 import {
   CbseGrade,
   CbseStream,
@@ -59,6 +60,11 @@ export const CbseCurriculumNavigator: React.FC<Props> = ({
   onContextChange,
   onSelectPart,
 }) => {
+  const { isCustomerAdmin, isSuperAdmin, profile } = useAuth();
+  const isPrivileged = Boolean(
+    profile?.role !== 'STUDENT' && (isCustomerAdmin || isSuperAdmin || profile?.role === 'EDUCATOR' || profile?.role === 'SUPER_ADMIN')
+  );
+
   const [grades, setGrades] = useState<CbseGrade[]>([]);
   const [selectedGrade, setSelectedGrade] = useState<number>(initialGrade);
 
@@ -466,12 +472,12 @@ export const CbseCurriculumNavigator: React.FC<Props> = ({
             <span>Select Class / Grade Level:</span>
           </label>
           <div className="flex flex-wrap gap-2" data-testid="cbse-grade-selector">
-            {grades.map((g) => {
+            {(isPrivileged ? grades : grades.filter((g) => g.grade_level === selectedGrade)).map((g) => {
               const isSelected = g.grade_level === selectedGrade;
               return (
                 <button
                   key={g.id}
-                  onClick={() => handleSelectGrade(g.grade_level)}
+                  onClick={() => isPrivileged && handleSelectGrade(g.grade_level)}
                   className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
                     isSelected
                       ? 'bg-sky-600 text-white shadow-xs font-bold ring-2 ring-sky-300'

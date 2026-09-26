@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { useAuth } from '@/context/AuthContext';
 import { BoardId, BoardRegistry } from '../../lib/types';
 import { GraduationCap, Sparkles, Settings2, Check, HeartHandshake } from 'lucide-react';
 
@@ -32,6 +33,10 @@ export const BoardSwitchHeader: React.FC<Props> = ({
   onSelectCheatSheet,
   onSelectParentPortal,
 }) => {
+  const { isCustomerAdmin, isSuperAdmin, profile } = useAuth();
+  const isPrivileged = Boolean(
+    profile?.role !== 'STUDENT' && (isCustomerAdmin || isSuperAdmin || profile?.role === 'EDUCATOR' || profile?.role === 'SUPER_ADMIN')
+  );
   const [showEducatorSwitcher, setShowEducatorSwitcher] = useState(false);
   const currentBoard = boards.find((b) => b.id === selectedBoardId);
 
@@ -91,22 +96,24 @@ export const BoardSwitchHeader: React.FC<Props> = ({
             )}
           </div>
 
-          {/* Educator / Admin Mode Switcher Toggle */}
-          <button
-            onClick={() => setShowEducatorSwitcher(!showEducatorSwitcher)}
-            className={`p-1.5 rounded-xl border text-xs font-medium transition flex items-center gap-1 ${
-              showEducatorSwitcher
-                ? 'bg-sky-50 border-sky-300 text-sky-700'
-                : 'bg-white border-slate-200 hover:border-slate-300 text-slate-600 hover:text-slate-900'
-            }`}
-            title="Educator / Admin: Switch Educational Board"
-            aria-label="Toggle Board Switcher"
-          >
-            <Settings2 className="w-3.5 h-3.5" />
-            <span className="text-[11px] font-semibold hidden sm:inline">
-              {showEducatorSwitcher ? 'Close' : 'Switch Board'}
-            </span>
-          </button>
+          {/* Educator / Admin Mode Switcher Toggle (Locked/Hidden for Students) */}
+          {isPrivileged && (
+            <button
+              onClick={() => setShowEducatorSwitcher(!showEducatorSwitcher)}
+              className={`p-1.5 rounded-xl border text-xs font-medium transition flex items-center gap-1 ${
+                showEducatorSwitcher
+                  ? 'bg-sky-50 border-sky-300 text-sky-700'
+                  : 'bg-white border-slate-200 hover:border-slate-300 text-slate-600 hover:text-slate-900'
+              }`}
+              title="Educator / Admin: Switch Educational Board"
+              aria-label="Toggle Board Switcher"
+            >
+              <Settings2 className="w-3.5 h-3.5" />
+              <span className="text-[11px] font-semibold hidden sm:inline">
+                {showEducatorSwitcher ? 'Close' : 'Switch Board'}
+              </span>
+            </button>
+          )}
         </div>
 
         {/* Active Learning Mode Badge: Visual Cheat Sheet & Parents Portal */}
@@ -160,14 +167,17 @@ export const BoardSwitchHeader: React.FC<Props> = ({
             <option value="BIOLOGY">Biology</option>
           </select>
 
-          {/* Grade Level Selector */}
+          {/* Grade Level Selector: Locked to onboarded grade for students */}
           <select
             value={selectedGrade}
-            onChange={(e) => onSelectGrade(Number(e.target.value))}
+            onChange={(e) => isPrivileged && onSelectGrade(Number(e.target.value))}
+            disabled={!isPrivileged}
             aria-label="Filter curriculum by grade level"
-            className="bg-white border border-slate-200 text-slate-800 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-sky-500 font-medium shadow-xs"
+            className={`bg-white border border-slate-200 text-slate-800 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-sky-500 font-medium shadow-xs ${
+              !isPrivileged ? 'cursor-default opacity-95 bg-slate-50' : ''
+            }`}
           >
-            {[6, 7, 8, 9, 10].map((g) => (
+            {(isPrivileged ? [6, 7, 8, 9, 10] : [selectedGrade]).map((g) => (
               <option key={g} value={g}>
                 Class {g}
               </option>
@@ -186,7 +196,7 @@ export const BoardSwitchHeader: React.FC<Props> = ({
       </div>
 
       {/* Educator / Admin Multi-Board Switcher Dropdown (Revealed on Demand) */}
-      {showEducatorSwitcher && (
+      {isPrivileged && showEducatorSwitcher && (
         <div className="max-w-7xl mx-auto mt-3 pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-fadeIn">
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold text-slate-700">Educator Mode: Switch Active Board:</span>

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useMemo, useEffect } from 'react';
+import { useAuth } from '@/context/AuthContext';
 import { BoardId, BoardRegistry, CurriculumConcept, SubjectRegistry, AuthoritativeTextbookPart } from '../../lib/types';
 import {
   getAvailableGrades,
@@ -63,6 +64,11 @@ export const HierarchicalCurriculumSelector: React.FC<Props> = ({
   onSelectPart,
   children,
 }) => {
+  const { isCustomerAdmin, isSuperAdmin, profile } = useAuth();
+  const isPrivileged = Boolean(
+    profile?.role !== 'STUDENT' && (isCustomerAdmin || isSuperAdmin || profile?.role === 'EDUCATOR' || profile?.role === 'SUPER_ADMIN')
+  );
+
   // Available Grades for this Board
   const availableGrades = useMemo(() => {
     const list = getAvailableGrades(concepts, selectedBoardId);
@@ -221,13 +227,13 @@ export const HierarchicalCurriculumSelector: React.FC<Props> = ({
             <span>Select Class / Grade Level:</span>
           </label>
           <div className="flex flex-wrap gap-2">
-            {availableGrades.map((g) => {
+            {(isPrivileged ? availableGrades : availableGrades.filter((g) => g === selectedGrade)).map((g) => {
               const isSelected = g === selectedGrade;
               return (
                 <button
                   key={`grade-${g}`}
                   type="button"
-                  onClick={() => handleGradeChange(g)}
+                  onClick={() => isPrivileged && handleGradeChange(g)}
                   className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
                     isSelected
                       ? 'bg-sky-600 text-white shadow-xs font-bold ring-2 ring-sky-300'

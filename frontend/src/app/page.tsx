@@ -77,6 +77,7 @@ export default function Home() {
     isLoading: authLoading,
     isCustomerAdmin,
     isSuperAdmin,
+    isTrialExpired,
     signOut,
   } = useAuth();
 
@@ -97,25 +98,39 @@ export default function Home() {
   // Gating & Profile-driven Initialization
   const profileInitializedRef = useRef(false);
 
+  const isPrivileged = Boolean(
+    profile?.role !== 'STUDENT' && (isCustomerAdmin || isSuperAdmin || profile?.role === 'EDUCATOR' || profile?.role === 'SUPER_ADMIN')
+  );
+
   useEffect(() => {
     if (!authLoading) {
       if (!user) {
         router.push('/login');
-      } else if (profile && !profile.onboarding_completed) {
+      } else if (
+        !profile ||
+        !profile.onboarding_completed ||
+        (!profile.board_id && !profile.curriculum) ||
+        (!profile.grade_level && !profile.grade)
+      ) {
         router.push('/onboarding');
+      } else if (isTrialExpired) {
+        router.push('/billing');
       }
     }
-  }, [user, profile, authLoading, router]);
+  }, [user, profile, isTrialExpired, authLoading, router]);
 
   useEffect(() => {
-    if (profile && profile.onboarding_completed && !profileInitializedRef.current) {
+    if (profile) {
+      const targetBoard = (profile.board_id || profile.curriculum || 'CBSE') as BoardId;
+      const targetGrade = Number(profile.grade_level || profile.grade || 6);
+
+      if (targetBoard && (!isPrivileged || !profileInitializedRef.current)) {
+        setSelectedBoardId(targetBoard);
+      }
+      if (targetGrade && (!isPrivileged || !profileInitializedRef.current)) {
+        setSelectedGrade(targetGrade);
+      }
       profileInitializedRef.current = true;
-      if (profile.board_id) {
-        setSelectedBoardId(profile.board_id as BoardId);
-      }
-      if (profile.grade_level) {
-        setSelectedGrade(profile.grade_level);
-      }
 
       // Query primary subject enrolled by user
       supabase
@@ -130,7 +145,7 @@ export default function Home() {
           }
         });
     }
-  }, [profile]);
+  }, [profile, isPrivileged]);
 
 
   // Student Learning Progression & Navigation Tabs
@@ -453,6 +468,7 @@ export default function Home() {
 
   // Atomic Context Handlers (Strict Board Isolation & Stale State Protection)
   const handleSelectBoard = (newBoard: BoardId) => {
+    if (!isPrivileged) return;
     setSelectedBoardId(newBoard);
     // Atomically reset all downstream dependent state
     setAuthResolution(null);
@@ -477,6 +493,7 @@ export default function Home() {
   };
 
   const handleSelectGrade = (newGrade: number) => {
+    if (!isPrivileged) return;
     setSelectedGrade(newGrade);
     // Atomically reset downstream state
     setAuthResolution(null);
@@ -753,7 +770,7 @@ export default function Home() {
       {/* Top Header & Multi-Board Switcher */}
       <div className="print:hidden">
         <BoardSwitchHeader
-          boards={BOARDS_DATA}
+          boards={isPrivileged ? BOARDS_DATA : BOARDS_DATA.filter((b) => b.id === selectedBoardId)}
           selectedBoardId={selectedBoardId}
           onSelectBoard={handleSelectBoard}
           selectedGrade={selectedGrade}
@@ -988,7 +1005,7 @@ export default function Home() {
                 <div className="space-y-6">
                   <HierarchicalCurriculumSelector
                     concepts={legacyConcepts}
-                    boards={BOARDS_DATA}
+                    boards={isPrivileged ? BOARDS_DATA : BOARDS_DATA.filter((b) => b.id === selectedBoardId)}
                     selectedBoardId={selectedBoardId}
                     onSelectBoard={handleSelectBoard}
                     selectedGrade={selectedGrade}

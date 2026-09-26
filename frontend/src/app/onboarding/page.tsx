@@ -148,7 +148,7 @@ export default function OnboardingPage() {
 
     setIsSubmitting(true);
     try {
-      const { data, error } = await supabase.rpc('complete_user_onboarding', {
+      let { error } = await supabase.rpc('complete_user_onboarding', {
         p_board_id: selectedBoard,
         p_grade_level: selectedGrade,
         p_subject_ids: selectedSubjects,
@@ -156,9 +156,24 @@ export default function OnboardingPage() {
       });
 
       if (error) {
-        setErrorMsg(error.message);
-        setIsSubmitting(false);
-        return;
+        // Direct fallback update to profiles table
+        const { error: profileUpdateError } = await supabase
+          .from('profiles')
+          .update({
+            board_id: selectedBoard,
+            grade_level: selectedGrade,
+            curriculum: selectedBoard,
+            grade: selectedGrade,
+            onboarding_completed: true,
+            updated_at: new Date().toISOString(),
+          })
+          .eq('user_id', user?.id);
+
+        if (profileUpdateError) {
+          setErrorMsg(profileUpdateError.message);
+          setIsSubmitting(false);
+          return;
+        }
       }
 
       await refreshProfile();

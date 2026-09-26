@@ -1,15 +1,36 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 import { CbseCurriculumNavigator } from '../../components/cbse/CbseCurriculumNavigator';
 import { CbseAuthoritativeConcept, CbseSection, CbseCurriculumContext } from '../../lib/types/cbseCurriculum';
 import { ArrowLeft, Layers, GraduationCap, Sparkles } from 'lucide-react';
 
 export default function CbseCurriculumPage() {
+  const router = useRouter();
+  const { user, profile, isTrialExpired, isLoading: authLoading } = useAuth();
   const [activeConcept, setActiveConcept] = useState<CbseAuthoritativeConcept | null>(null);
   const [activeSection, setActiveSection] = useState<CbseSection | null>(null);
+
+  useEffect(() => {
+    if (!authLoading) {
+      if (!user) {
+        router.push('/login');
+      } else if (
+        !profile ||
+        !profile.onboarding_completed ||
+        (!profile.board_id && !profile.curriculum) ||
+        (!profile.grade_level && !profile.grade)
+      ) {
+        router.push('/onboarding');
+      } else if (isTrialExpired) {
+        router.push('/billing');
+      }
+    }
+  }, [user, profile, isTrialExpired, authLoading, router]);
 
   const handleSelectConcept = (concept: CbseAuthoritativeConcept, section?: CbseSection) => {
     setActiveConcept(concept);
