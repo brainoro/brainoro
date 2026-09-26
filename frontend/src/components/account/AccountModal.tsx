@@ -208,7 +208,7 @@ export const AccountModal: React.FC<Props> = ({ isOpen, onClose }) => {
               <div className="space-y-1">
                 <div className="text-sm font-bold text-slate-900">Brainoro OS Pro Plan (₹999/mo)</div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Your Pro subscription is active with full statutory textbook access, psychometric question bank, and AI Twin personal tutor.
+                  Your Pro subscription is active with complete statutory textbook access, psychometric question bank, and AI Twin personal tutor for your selected board and grade.
                 </p>
               </div>
             ) : (

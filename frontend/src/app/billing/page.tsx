@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -160,11 +160,11 @@ export default function BillingPage() {
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             {isTrialExpired
               ? 'Your 7-Day Free Trial Has Expired'
-              : 'Upgrade to Unlimited Brainoro OS Access'}
+              : 'Upgrade to Brainoro OS Pro Monthly'}
           </h1>
 
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            Unlock uninterrupted cognitive mastery with verified textbooks, AI Twin personal tutor, and adaptive psychometric exam simulations across all boards.
+            Unlock complete, uninterrupted monthly access to your enrolled curriculum and grade with verified statutory textbooks, AI Twin tutor, and adaptive psychometric simulations.
           </p>
         </div>
 
@@ -179,7 +179,7 @@ export default function BillingPage() {
             <div className="md:col-span-2 space-y-4 border-b md:border-b-0 md:border-r border-slate-700/60 pb-6 md:pb-0 md:pr-6">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-400/10 text-amber-300 border border-amber-400/20 text-xs font-bold">
                 <Zap className="w-3.5 h-3.5" />
-                <span>All-Inclusive Pro Plan</span>
+                <span>Monthly Pro Plan</span>
               </div>
 
               <div>
@@ -233,13 +233,13 @@ export default function BillingPage() {
             {/* Right Col: Features Checklist */}
             <div className="md:col-span-3 space-y-3">
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                Everything Included in Brainoro OS Pro:
+                Everything Included in Your Pro Course Access:
               </h3>
 
               <ul className="space-y-2.5">
                 {[
-                  'Full access to all 564+ Chapters (Grades 6–10 Math, Physics, Chemistry, Biology)',
-                  'Complete board alignment: CBSE, Cambridge (IGCSE), and IB MYP Inquiry Frameworks',
+                  `Complete monthly access to all chapters & authoritative concepts for your selected Board & Grade (${profile?.board_id || profile?.curriculum || 'Selected Board'} Class ${profile?.grade_level || profile?.grade || 'Grade'})`,
+                  'Full statutory syllabus coverage with official textbook sections, worked examples & chapter breakdowns',
                   'AI Twin 24/7 Cognitive Tutor with Socratic hints and step-by-step proof validation',
                   'Interactive Visual Cheat Sheets, Cornell Note-taking System, & 5-Second Mind Hacks',
                   'IRT-Powered Adaptive Testing Engine with real Previous Year Exam Questions (PYQs)',
