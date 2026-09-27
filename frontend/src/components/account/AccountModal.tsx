@@ -28,15 +28,30 @@ interface Props {
 
 export const AccountModal: React.FC<Props> = ({ isOpen, onClose }) => {
   const router = useRouter();
-  const { user, profile, daysLeftInTrial, refreshProfile } = useAuth();
+  const { user, profile, daysLeftInTrial, isSubscribed, refreshProfile, activateSubscription } = useAuth();
   const [isProcessing, setIsProcessing] = useState(false);
+  const [isSyncing, setIsSyncing] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   if (!isOpen) return null;
 
-  const isSubscribed = profile?.subscription_status === 'active';
   const boardName = profile?.board_id || profile?.curriculum || 'CBSE';
   const gradeLevel = profile?.grade_level || profile?.grade || 6;
+
+  const handleSyncPayment = async () => {
+    setIsSyncing(true);
+    setErrorMsg(null);
+    try {
+      const result = await activateSubscription();
+      if (!result.success) {
+        setErrorMsg('Could not verify subscription automatically. Please ensure payment completed.');
+      }
+    } catch (err: any) {
+      setErrorMsg(err?.message || 'Sync failed.');
+    } finally {
+      setIsSyncing(false);
+    }
+  };
 
   const handleSubscribeNow = async () => {
     setIsProcessing(true);
@@ -321,6 +336,24 @@ export const AccountModal: React.FC<Props> = ({ isOpen, onClose }) => {
                     className="w-full sm:w-auto px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-semibold text-xs transition"
                   >
                     View Plans
+                  </button>
+                </div>
+
+                <div className="pt-1 text-center">
+                  <button
+                    type="button"
+                    onClick={handleSyncPayment}
+                    disabled={isSyncing}
+                    className="text-[11px] text-sky-600 hover:text-sky-700 font-semibold hover:underline cursor-pointer disabled:opacity-50 inline-flex items-center gap-1"
+                  >
+                    {isSyncing ? (
+                      <>
+                        <Loader2 className="w-3 h-3 animate-spin" />
+                        <span>Verifying payment with gateway...</span>
+                      </>
+                    ) : (
+                      <span>Already paid? Click here to verify &amp; activate</span>
+                    )}
                   </button>
                 </div>
               </div>

@@ -44,6 +44,7 @@ export interface AuthContextType {
   isLoading: boolean;
   isCustomerAdmin: boolean;
   isSuperAdmin: boolean;
+  isSubscribed: boolean;
   onboardingCompleted: boolean;
   accountStatus: AccountStatus | null;
   isTrialExpired: boolean;
@@ -52,6 +53,7 @@ export interface AuthContextType {
   signUp: (email: string, password: string, metadata?: SignUpMetadata) => Promise<{ error: AuthError | null; data?: any }>;
   signOut: () => Promise<{ error: AuthError | null }>;
   refreshProfile: () => Promise<void>;
+  activateSubscription: () => Promise<{ success: boolean }>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -213,18 +215,63 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return { error: result.error };
   };
 
+  const activateSubscription = useCallback(async () => {
+    if (!user?.id) return { success: false };
+    try {
+      // 1. Backend verification API route
+      await fetch('/api/billing/verify-payment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: user.id,
+          email: user.email,
+        }),
+      });
+
+      // 2. Direct client update
+      await supabase
+        .from('profiles')
+        .update({
+          subscription_status: 'active',
+          updated_at: new Date().toISOString(),
+        })
+        .eq('user_id', user.id);
+
+      // 3. User metadata update
+      await supabase.auth.updateUser({
+        data: { subscription_status: 'active' },
+      });
+
+      // 4. Refresh local profile state
+      await fetchProfileAndAdminStatus(user.id);
+      return { success: true };
+    } catch (err) {
+      console.warn('activateSubscription error:', err);
+      return { success: false };
+    }
+  }, [user, fetchProfileAndAdminStatus]);
+
   const isSuperAdmin = profile?.role === 'SUPER_ADMIN' && profile?.account_status === 'ACTIVE';
   const onboardingCompleted = Boolean(profile?.onboarding_completed);
   const accountStatus = profile?.account_status ?? null;
 
-  // 7-Day Trial Status Evaluation
-  const isTrialExpired = Boolean(
-    profile?.trial_ends_at &&
-    new Date() > new Date(profile.trial_ends_at) &&
-    profile.subscription_status !== 'active'
+  const isSubscribed = Boolean(
+    profile?.subscription_status?.toLowerCase() === 'active' ||
+    profile?.subscription_status?.toLowerCase() === 'paid' ||
+    profile?.subscription_status?.toLowerCase() === 'subscribed' ||
+    user?.user_metadata?.subscription_status?.toLowerCase() === 'active'
   );
 
-  const daysLeftInTrial = profile?.trial_ends_at
+  // 7-Day Trial Status Evaluation
+  const isTrialExpired = Boolean(
+    !isSubscribed &&
+    profile?.trial_ends_at &&
+    new Date() > new Date(profile.trial_ends_at)
+  );
+
+  const daysLeftInTrial = isSubscribed
+    ? null
+    : profile?.trial_ends_at
     ? Math.max(0, Math.ceil((new Date(profile.trial_ends_at).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)))
     : null;
 
@@ -237,6 +284,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         isLoading,
         isCustomerAdmin,
         isSuperAdmin,
+        isSubscribed,
         onboardingCompleted,
         accountStatus,
         isTrialExpired,
@@ -245,6 +293,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         signUp,
         signOut,
         refreshProfile,
+        activateSubscription,
       }}
     >
       {children}

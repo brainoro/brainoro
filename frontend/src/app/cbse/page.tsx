@@ -12,7 +12,7 @@ import { ArrowLeft, Layers, GraduationCap, Sparkles, User as UserIcon, Clock, Ch
 
 export default function CbseCurriculumPage() {
   const router = useRouter();
-  const { user, profile, isTrialExpired, daysLeftInTrial, isLoading: authLoading } = useAuth();
+  const { user, profile, isTrialExpired, daysLeftInTrial, isSubscribed, isLoading: authLoading } = useAuth();
   const [activeConcept, setActiveConcept] = useState<CbseAuthoritativeConcept | null>(null);
   const [activeSection, setActiveSection] = useState<CbseSection | null>(null);
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
@@ -94,7 +94,7 @@ export default function CbseCurriculumPage() {
             >
               <UserIcon className="w-3.5 h-3.5 text-sky-400" />
               <span>Account</span>
-              {profile?.subscription_status === 'active' ? (
+              {isSubscribed ? (
                 <span className="px-1.5 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                   PRO
                 </span>

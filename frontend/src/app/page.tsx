@@ -83,6 +83,7 @@ export default function Home() {
     isSuperAdmin,
     isTrialExpired,
     daysLeftInTrial,
+    isSubscribed,
     signOut,
   } = useAuth();
 
@@ -745,7 +746,7 @@ export default function Home() {
             <span className="px-1.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-slate-900 text-sky-300 border border-sky-500/30">
               {profile?.role || 'STUDENT'}
             </span>
-            {profile?.subscription_status === 'active' ? (
+            {isSubscribed ? (
               <span className="px-1.5 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
                 <CheckCircle2 className="w-2.5 h-2.5" /> PRO
               </span>
@@ -764,7 +765,7 @@ export default function Home() {
           )}
         </div>
         <div className="flex items-center gap-3">
-          {profile?.subscription_status !== 'active' && (
+          {!isSubscribed && (
             <button
               onClick={() => setIsAccountModalOpen(true)}
               className="flex items-center gap-1 px-3 py-1 rounded-xl bg-gradient-to-r from-amber-500/20 to-amber-600/20 hover:from-amber-500/30 hover:to-amber-600/30 border border-amber-500/40 text-amber-300 font-bold text-xs transition cursor-pointer shadow-xs"
