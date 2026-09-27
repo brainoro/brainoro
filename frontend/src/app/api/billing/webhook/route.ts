@@ -73,8 +73,59 @@ export async function POST(request: Request) {
         if (supabaseUrl && supabaseKey) {
           const supabase = createClient(supabaseUrl, supabaseKey);
 
-          let query = supabase.from('profiles').update({
+          let updateData: Record<string, any> = {
             subscription_status: 'active',
+            updated_at: new Date().toISOString(),
+          };
+
+          if (subscriptionEntity?.current_end) {
+            updateData.current_period_end = new Date(subscriptionEntity.current_end * 1000).toISOString();
+          }
+
+          let query = supabase.from('profiles').update(updateData);
+
+          if (userId && userId !== 'anonymous') {
+            query = query.eq('user_id', userId);
+          } else if (userEmail) {
+            query = query.eq('email', userEmail);
+          }
+
+          const { error: dbError } = await query;
+          if (dbError) {
+            console.error('Failed to update user subscription status in Supabase:', dbError);
+          }
+        }
+      }
+    }
+
+    // Handle subscription cancellation / failure events
+    if (
+      event === 'subscription.halted' ||
+      event === 'subscription.cancelled'
+    ) {
+      const subscriptionEntity = payload?.payload?.subscription?.entity;
+      const paymentEntity = payload?.payload?.payment?.entity;
+      
+      const userId =
+        subscriptionEntity?.notes?.user_id ||
+        paymentEntity?.notes?.user_id ||
+        null;
+      
+      const userEmail =
+        subscriptionEntity?.notes?.email ||
+        paymentEntity?.email ||
+        null;
+
+      if (userId || userEmail) {
+        const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+        const supabaseUrl = rawUrl.replace(/\/rest\/v1\/?/, '').replace(/\/+$/, '');
+        const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+        
+        if (supabaseUrl && supabaseKey) {
+          const supabase = createClient(supabaseUrl, supabaseKey);
+
+          let query = supabase.from('profiles').update({
+            subscription_status: 'inactive',
             updated_at: new Date().toISOString(),
           });
 
@@ -86,7 +137,7 @@ export async function POST(request: Request) {
 
           const { error: dbError } = await query;
           if (dbError) {
-            console.error('Failed to update user subscription status in Supabase:', dbError);
+            console.error('Failed to update inactive subscription status in Supabase:', dbError);
           }
         }
       }

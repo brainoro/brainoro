@@ -23,6 +23,7 @@ export interface UserProfile {
   onboarding_completed: boolean;
   trial_ends_at?: string | null;
   subscription_status?: string | null;
+  current_period_end?: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -255,18 +256,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const onboardingCompleted = Boolean(profile?.onboarding_completed);
   const accountStatus = profile?.account_status ?? null;
 
-  const isSubscribed = Boolean(
-    profile?.subscription_status?.toLowerCase() === 'active' ||
-    profile?.subscription_status?.toLowerCase() === 'paid' ||
-    profile?.subscription_status?.toLowerCase() === 'subscribed' ||
-    user?.user_metadata?.subscription_status?.toLowerCase() === 'active'
+  const isPeriodExpired = Boolean(
+    profile?.current_period_end && new Date() > new Date(profile.current_period_end)
   );
 
-  // 7-Day Trial Status Evaluation
+  const isSubscribed = Boolean(
+    !isPeriodExpired &&
+    (profile?.subscription_status?.toLowerCase() === 'active' ||
+     profile?.subscription_status?.toLowerCase() === 'paid' ||
+     profile?.subscription_status?.toLowerCase() === 'subscribed' ||
+     user?.user_metadata?.subscription_status?.toLowerCase() === 'active')
+  );
+
+  // 7-Day Trial & Subscription Period Expiration Evaluation
   const isTrialExpired = Boolean(
     !isSubscribed &&
-    profile?.trial_ends_at &&
-    new Date() > new Date(profile.trial_ends_at)
+    ((profile?.trial_ends_at && new Date() > new Date(profile.trial_ends_at)) || isPeriodExpired)
   );
 
   const daysLeftInTrial = isSubscribed

@@ -121,7 +121,10 @@ export default function Home() {
         (!profile.grade_level && !profile.grade)
       ) {
         router.push('/onboarding');
-      } else if (isTrialExpired) {
+      } else if (
+        isTrialExpired ||
+        (profile.current_period_end && new Date() > new Date(profile.current_period_end))
+      ) {
         router.push('/billing');
       }
     }
