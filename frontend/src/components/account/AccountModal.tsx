@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { supabase } from '@/lib/supabase/client';
 import {
   User as UserIcon,
   Mail,
@@ -17,6 +18,7 @@ import {
   School,
   Loader2,
   AlertCircle,
+  BookOpen,
 } from 'lucide-react';
 
 interface Props {
@@ -84,7 +86,35 @@ export const AccountModal: React.FC<Props> = ({ isOpen, onClose }) => {
         theme: {
           color: '#0284c7',
         },
-        handler: async function () {
+        handler: async function (response: any) {
+          try {
+            // Instant verification & DB update
+            await fetch('/api/billing/verify-payment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_subscription_id: response.razorpay_subscription_id,
+                razorpay_signature: response.razorpay_signature,
+                userId: user?.id,
+                email: user?.email,
+              }),
+            });
+
+            // Fallback direct update to profiles table
+            if (user?.id) {
+              await supabase
+                .from('profiles')
+                .update({
+                  subscription_status: 'active',
+                  updated_at: new Date().toISOString(),
+                })
+                .eq('user_id', user.id);
+            }
+          } catch (verifErr) {
+            console.warn('Verification call warning:', verifErr);
+          }
+
           if (refreshProfile) {
             await refreshProfile();
           }
@@ -205,11 +235,29 @@ export const AccountModal: React.FC<Props> = ({ isOpen, onClose }) => {
             </div>
 
             {isSubscribed ? (
-              <div className="space-y-1">
-                <div className="text-sm font-bold text-slate-900">Brainoro OS Pro Plan (₹999/mo)</div>
+              <div className="space-y-2">
+                <div className="text-sm font-bold text-slate-900 flex items-center justify-between">
+                  <span>Brainoro OS Pro Membership</span>
+                  <span className="text-xs text-emerald-700 font-bold">₹999 / mo</span>
+                </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Your Pro subscription is active with complete statutory textbook access, psychometric question bank, and AI Twin personal tutor for your selected board and grade.
+                  Your Pro monthly membership is active with unlimited statutory textbook access, worked examples, AI Twin tutor, and psychometric practice for <strong>{boardName} Class {gradeLevel}</strong>.
                 </p>
+                <div className="pt-2 flex items-center justify-between border-t border-slate-200/60 text-[11px] text-slate-500">
+                  <span className="flex items-center gap-1 text-emerald-700 font-semibold">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    Auto-renewing active membership
+                  </span>
+                  <button
+                    onClick={() => {
+                      onClose();
+                      router.push('/billing');
+                    }}
+                    className="text-sky-600 hover:text-sky-700 font-bold hover:underline"
+                  >
+                    View Plan Details
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="space-y-3">
