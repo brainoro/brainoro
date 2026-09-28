@@ -860,8 +860,23 @@ export const HandwrittenCheatSheetView: React.FC<Props> = ({ concept, boardId })
   const [notes, setNotes] = useState<CornellNotes | null>(null);
   const [refreshIndex, setRefreshIndex] = useState(0);
 
+  const isInternationalBoard =
+    (boardId as string) === 'CAMBRIDGE' ||
+    (boardId as string) === 'IB_MYP' ||
+    (boardId as string) === 'IB' ||
+    String(boardId).toUpperCase().includes('CAMBRIDGE') ||
+    String(boardId).toUpperCase().includes('IB');
+
   // Student Persona & 5-Min Revision Mode State
-  const [revisionMode, setRevisionMode] = useState<StudentRevisionMode>('rapid');
+  const [revisionMode, setRevisionMode] = useState<StudentRevisionMode>(() =>
+    (boardId as string) === 'CAMBRIDGE' ||
+    (boardId as string) === 'IB_MYP' ||
+    (boardId as string) === 'IB' ||
+    String(boardId).toUpperCase().includes('CAMBRIDGE') ||
+    String(boardId).toUpperCase().includes('IB')
+      ? 'cornell'
+      : 'rapid'
+  );
   const [showFiveMinRevision, setShowFiveMinRevision] = useState(false);
   const [showProvenanceDetails, setShowProvenanceDetails] = useState(false);
   const [checkedSteps, setCheckedSteps] = useState<Record<number, boolean>>({});
@@ -1151,6 +1166,25 @@ export const HandwrittenCheatSheetView: React.FC<Props> = ({ concept, boardId })
           {/* Bottom Row: Student Persona Segmented Control */}
           <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-sky-200 print:hidden">
             <div className="flex items-center bg-white p-1 rounded-xl border border-slate-200 shadow-sm">
+              {/* Conditional Cornell Notes Tab (Only for Cambridge & IB, placed BEFORE Rapid Review) */}
+              {isInternationalBoard && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setRevisionMode('cornell');
+                    setSelectedCardIdx(null);
+                  }}
+                  className={`px-3 py-1 text-xs font-semibold rounded-lg transition-all flex items-center gap-1.5 ${
+                    revisionMode === 'cornell'
+                      ? 'bg-emerald-600 text-white shadow-md font-bold'
+                      : 'text-slate-500 hover:text-slate-800'
+                  }`}
+                >
+                  <FileCheck2 className="w-3.5 h-3.5" />
+                  <span>📝 Cornell Notes</span>
+                </button>
+              )}
+
               <button
                 type="button"
                 onClick={() => {
@@ -1202,7 +1236,9 @@ export const HandwrittenCheatSheetView: React.FC<Props> = ({ concept, boardId })
 
             <span className="text-[11px] font-mono text-slate-500 hidden md:inline-block">
               Mode:{' '}
-              {revisionMode === 'rapid'
+              {revisionMode === 'cornell'
+                ? 'Structured Cornell Note Matrix'
+                : revisionMode === 'rapid'
                 ? 'High-Yield Exam Focus'
                 : revisionMode === 'easy_first'
                 ? 'Foundational Intuition'
@@ -1889,6 +1925,270 @@ export const HandwrittenCheatSheetView: React.FC<Props> = ({ concept, boardId })
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* MODE: CORNELL NOTES VIEW (High School Cornell Format for Cambridge & IB)   */}
+      {/* ========================================================================= */}
+      {revisionMode === 'cornell' && (
+        <div className="space-y-6 animate-fadeIn">
+          {/* Cornell Paper Container */}
+          <div className="bg-[#fbfbf9] border-2 border-slate-300 rounded-3xl p-6 sm:p-8 shadow-sm relative overflow-hidden font-sans">
+            {/* 1. STRUCTURED HEADER (Date, Class, Topic, Objectives) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pb-6 border-b-2 border-slate-300 text-xs">
+              <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-xs">
+                <span className="text-[10px] uppercase font-mono font-bold text-teal-800 tracking-wider block mb-1">
+                  📅 Date
+                </span>
+                <span className="font-semibold text-slate-800">
+                  {new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                </span>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-xs">
+                <span className="text-[10px] uppercase font-mono font-bold text-teal-800 tracking-wider block mb-1">
+                  🎓 Class / Grade
+                </span>
+                <span className="font-semibold text-slate-800">
+                  {concept.boardId || boardId} • Grade {concept.gradeLevel || 8} ({concept.subjectId || 'Core'})
+                </span>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-xs md:col-span-2">
+                <span className="text-[10px] uppercase font-mono font-bold text-teal-800 tracking-wider block mb-1">
+                  📖 Topic
+                </span>
+                <span className="font-bold text-slate-900 truncate block">
+                  {notes.title || concept.title}
+                </span>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3.5 shadow-xs sm:col-span-2 md:col-span-4">
+                <span className="text-[10px] uppercase font-mono font-bold text-teal-800 tracking-wider block mb-1">
+                  🎯 Learning Objectives
+                </span>
+                <p className="text-slate-700 leading-relaxed font-medium">
+                  {notes.coreAnalogy ||
+                    `Master foundational principles of ${concept.title}, deduce key mathematical/scientific relationships, and apply analytical problem-solving methodologies.`}
+                </p>
+              </div>
+            </div>
+
+            {/* 2. TWO-COLUMN MAIN AREA (Cue Column ~28% | Note-Taking Area ~72%) */}
+            <div className="grid grid-cols-1 md:grid-cols-12 min-h-[420px] border-b-2 border-slate-300">
+              {/* Cue Column (Left: ~28%) */}
+              <div className="md:col-span-4 lg:col-span-3 py-6 md:pr-6 border-b-2 md:border-b-0 md:border-r-2 border-slate-300 space-y-6">
+                <div className="flex items-center gap-2 pb-2 border-b border-teal-200">
+                  <div className="w-6 h-6 rounded-lg bg-teal-100 border border-teal-200 flex items-center justify-center">
+                    <Compass className="w-3.5 h-3.5 text-teal-700" />
+                  </div>
+                  <h3 className="font-mono text-sm sm:text-base font-bold text-teal-900 tracking-wide">
+                    Cue Column
+                  </h3>
+                </div>
+
+                <div className="space-y-4 text-xs">
+                  {/* Dynamic Cues */}
+                  <div className="bg-white border border-teal-100 rounded-xl p-3 shadow-xs space-y-1">
+                    <span className="text-[10px] uppercase font-mono font-bold text-teal-700">
+                      Essential Question:
+                    </span>
+                    <p className="font-medium text-slate-800">
+                      How does {concept.title} govern physical/mathematical systems under statutory conditions?
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-teal-100 rounded-xl p-3 shadow-xs space-y-1">
+                    <span className="text-[10px] uppercase font-mono font-bold text-teal-700">
+                      Key Terminology:
+                    </span>
+                    <ul className="list-disc list-inside text-slate-700 space-y-1">
+                      <li>Invariant principles</li>
+                      <li>Standard units &amp; dimensional consistency</li>
+                      <li>Governing equations &amp; boundary rules</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white border border-teal-100 rounded-xl p-3 shadow-xs space-y-1">
+                    <span className="text-[10px] uppercase font-mono font-bold text-teal-700">
+                      Exam Cue &amp; Traps:
+                    </span>
+                    <p className="font-medium text-slate-800">
+                      {notes.curriculumTrap || 'Watch for unit conversion mismatches and non-standard notation.'}
+                    </p>
+                  </div>
+
+                  {notes.cueQuestions && notes.cueQuestions.length > 0 && (
+                    <div className="bg-white border border-teal-100 rounded-xl p-3 shadow-xs space-y-1">
+                      <span className="text-[10px] uppercase font-mono font-bold text-teal-700">
+                        Recall Check:
+                      </span>
+                      <p className="font-medium text-slate-800">
+                        {notes.cueQuestions[0]}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Note-Taking Area (Right: ~72%) */}
+              <div className="md:col-span-8 lg:col-span-9 py-6 md:pl-6 space-y-5">
+                <div className="flex items-center justify-between pb-2 border-b border-teal-200">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-lg bg-teal-100 border border-teal-200 flex items-center justify-center">
+                      <BookOpen className="w-3.5 h-3.5 text-teal-700" />
+                    </div>
+                    <h3 className="font-mono text-sm sm:text-base font-bold text-teal-900 tracking-wide">
+                      Note-Taking Area
+                    </h3>
+                  </div>
+                  <span className="text-[11px] font-mono text-slate-500">
+                    Syllabus-Aligned Direct Notes
+                  </span>
+                </div>
+
+                {/* Key Law / Equation Box */}
+                <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold font-mono text-slate-700 uppercase">
+                      Formulaic Invariant &amp; Governing Rule:
+                    </span>
+                    <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-teal-50 text-teal-700 border border-teal-200">
+                      Statutory Rule
+                    </span>
+                  </div>
+                  <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center overflow-x-auto">
+                    <MathFormula formula={effectiveRule} />
+                  </div>
+                </div>
+
+                {/* Detailed Cornell Notes & Cards */}
+                <div className="space-y-4 text-xs text-slate-800 leading-relaxed">
+                  {conceptCards && conceptCards.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      {conceptCards.map((card, idx) => (
+                        <div
+                          key={`cornell-card-${idx}`}
+                          className="bg-white border border-slate-200 rounded-xl p-3.5 shadow-xs space-y-2"
+                        >
+                          <div className="flex items-center gap-2 font-bold text-slate-900 text-xs border-b border-slate-100 pb-1.5">
+                            <span className="w-4 h-4 rounded-full bg-teal-100 text-teal-800 text-[10px] font-bold flex items-center justify-center">
+                              {idx + 1}
+                            </span>
+                            <span>{card.title}</span>
+                          </div>
+                          <ul className="space-y-1.5 pl-1">
+                            {card.bullets.map((bullet, bIdx) => (
+                              <li key={bIdx} className="flex items-start gap-1.5 text-slate-700 text-xs">
+                                <span className="text-teal-600 font-bold">•</span>
+                                <MathText text={bullet} />
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-2 font-mono">
+                      <p className="font-semibold text-slate-900">1. Core Concept Overview:</p>
+                      <p className="text-slate-700 pl-4">{notes.mainNotes || concept.coreLogicEssence}</p>
+                    </div>
+                  )}
+
+                  {/* Worked Points / Steps */}
+                  {notes.workedExample && (
+                    <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs space-y-2">
+                      <span className="font-bold text-teal-900 text-xs uppercase tracking-wider block">
+                        💡 Worked Problem-Solving Model:
+                      </span>
+                      <p className="font-medium text-slate-800">{notes.workedExample.problem}</p>
+                      <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-[11px] font-mono text-slate-700">
+                        {notes.workedExample.steps.map((st, i) => (
+                          <div key={i} className="py-0.5">
+                            <strong>Step {i + 1}:</strong> {st}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* 3. FULL-WIDTH SUMMARY SECTION */}
+            <div className="py-6 border-b-2 border-slate-300 space-y-2">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 rounded-lg bg-teal-100 border border-teal-200 flex items-center justify-center">
+                  <Layers className="w-3.5 h-3.5 text-teal-700" />
+                </div>
+                <h3 className="font-mono text-sm sm:text-base font-bold text-teal-900 tracking-wide">
+                  Summary
+                </h3>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs">
+                <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
+                  {notes.summary ||
+                    `In summary, ${concept.title} establishes core mathematical and scientific relationships. Mastery requires understanding the governing invariants, following disciplined multi-step derivations, and validating units.`}
+                </p>
+              </div>
+            </div>
+
+            {/* 4. FULL-WIDTH REFLECTION / SELF-ASSESSMENT SECTION */}
+            <div className="pt-6 space-y-3">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 rounded-lg bg-teal-100 border border-teal-200 flex items-center justify-center">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-teal-700" />
+                </div>
+                <h3 className="font-mono text-sm sm:text-base font-bold text-teal-900 tracking-wide">
+                  Reflection / Self-Assessment
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs space-y-2">
+                  <span className="font-bold text-slate-800 block text-[11px] uppercase tracking-wider text-teal-800">
+                    1. Confidence Check
+                  </span>
+                  <p className="text-slate-600 text-xs">
+                    Can I solve an examination problem on this concept without reviewing the notes?
+                  </p>
+                  <div className="flex gap-2 pt-1">
+                    <span className="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold text-[11px]">
+                      Mastered
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-700 border border-amber-200 font-semibold text-[11px]">
+                      Needs Practice
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs space-y-2">
+                  <span className="font-bold text-slate-800 block text-[11px] uppercase tracking-wider text-teal-800">
+                    2. Cognitive Reflection
+                  </span>
+                  <p className="text-slate-600 text-xs">
+                    What was the single most challenging aspect of this topic? Formulate one question to clarify.
+                  </p>
+                  <div className="p-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-400 italic text-[11px]">
+                    e.g., Understanding boundary conditions or multi-variable dependencies...
+                  </div>
+                </div>
+
+                <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs space-y-2">
+                  <span className="font-bold text-slate-800 block text-[11px] uppercase tracking-wider text-teal-800">
+                    3. Actionable Next Step
+                  </span>
+                  <p className="text-slate-600 text-xs">
+                    Proceed to the <strong>Adaptive Practice Simulator</strong> to reinforce retention and test psychometric mastery.
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-teal-700 font-bold text-[11px]">
+                    Step 2: Practice Ready <ArrowRight className="w-3 h-3" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
 

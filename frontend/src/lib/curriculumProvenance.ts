@@ -2,7 +2,7 @@ import { CurriculumConcept, BoardId } from './types';
 
 export type MappingState = 'VERIFIED' | 'PENDING_REVIEW' | 'UNMAPPED' | 'CONFLICT' | 'DEPRECATED';
 
-export type StudentRevisionMode = 'rapid' | 'easy_first' | 'deep_dive';
+export type StudentRevisionMode = 'cornell' | 'rapid' | 'easy_first' | 'deep_dive';
 
 export interface CurriculumSource {
   sourceType: 'OFFICIAL_TEXTBOOK' | 'OFFICIAL_SYLLABUS' | 'OER_SYNTHESIZED';
