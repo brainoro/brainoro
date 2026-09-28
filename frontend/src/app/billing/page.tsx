@@ -14,6 +14,7 @@ import {
   CheckCircle2,
   Sparkles,
   ArrowRight,
+  ArrowLeft,
   LogOut,
   Zap,
   AlertCircle,
@@ -174,6 +175,14 @@ export default function BillingPage() {
                 Signed in as <strong className="text-slate-200">{user.email}</strong>
               </span>
             )}
+            <Link
+              href="/"
+              className="flex items-center gap-1.5 text-xs text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-800 px-3.5 py-1.5 rounded-lg border border-slate-700 hover:border-slate-600 transition cursor-pointer font-medium"
+              title="Return to Dashboard"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 text-slate-400" />
+              <span>Exit to Learning OS</span>
+            </Link>
             <button
               onClick={handleSignOut}
               className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-rose-400 px-3 py-1.5 rounded-lg border border-slate-800 hover:border-rose-500/30 transition cursor-pointer"
@@ -187,7 +196,18 @@ export default function BillingPage() {
       </header>
 
       {/* Main Billing Container */}
-      <main className="flex-1 max-w-4xl w-full mx-auto px-6 py-12 flex flex-col justify-center">
+      <main className="flex-1 max-w-4xl w-full mx-auto px-6 py-10 flex flex-col justify-center">
+        {/* Return Button */}
+        <div className="mb-6 -mt-2">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-800 px-3.5 py-2 rounded-xl border border-slate-700/80 hover:border-slate-600 transition shadow-sm w-fit"
+            title="Return to Learning Dashboard"
+          >
+            <ArrowLeft className="w-4 h-4 text-slate-400" />
+            <span>Return to Learning OS</span>
+          </Link>
+        </div>
         {isSubscribed ? (
           /* 1. Active Pro Membership State (General Portal Best Practice) */
           <div className="space-y-8 animate-fadeIn">

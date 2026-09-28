@@ -162,8 +162,6 @@ export default function OnboardingPage() {
           .update({
             board_id: selectedBoard,
             grade_level: selectedGrade,
-            curriculum: selectedBoard,
-            grade: selectedGrade,
             onboarding_completed: true,
             updated_at: new Date().toISOString(),
           })

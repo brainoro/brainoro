@@ -788,11 +788,11 @@ export default function AdminDashboardPage() {
                   <select
                     value={newStatus}
                     onChange={(e) => setNewStatus(e.target.value)}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs"
+                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                   >
-                    <option value="ACTIVE">ACTIVE</option>
-                    <option value="SUSPENDED">SUSPENDED</option>
-                    <option value="DEACTIVATED">DEACTIVATED</option>
+                    <option value="ACTIVE" className="text-slate-900 bg-white">ACTIVE</option>
+                    <option value="SUSPENDED" className="text-slate-900 bg-white">SUSPENDED</option>
+                    <option value="DEACTIVATED" className="text-slate-900 bg-white">DEACTIVATED</option>
                   </select>
                 </div>
               )}
@@ -804,11 +804,11 @@ export default function AdminDashboardPage() {
                   <select
                     value={newRole}
                     onChange={(e) => setNewRole(e.target.value)}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs"
+                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                   >
-                    <option value="STUDENT">STUDENT</option>
-                    <option value="EDUCATOR">EDUCATOR</option>
-                    {isSuperAdmin && <option value="SUPER_ADMIN">SUPER_ADMIN</option>}
+                    <option value="STUDENT" className="text-slate-900 bg-white">STUDENT</option>
+                    <option value="EDUCATOR" className="text-slate-900 bg-white">EDUCATOR</option>
+                    {isSuperAdmin && <option value="SUPER_ADMIN" className="text-slate-900 bg-white">SUPER_ADMIN</option>}
                   </select>
                 </div>
               )}
@@ -820,8 +820,8 @@ export default function AdminDashboardPage() {
                     <button
                       type="button"
                       onClick={() => setReassignMode('MODE_A')}
-                      className={`flex-1 py-1.5 rounded-lg border text-xs font-bold ${
-                        reassignMode === 'MODE_A' ? 'bg-sky-50 border-sky-400 text-sky-700' : 'bg-slate-50'
+                      className={`flex-1 py-1.5 rounded-lg border text-xs font-bold transition ${
+                        reassignMode === 'MODE_A' ? 'bg-sky-50 border-sky-400 text-sky-700' : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
                       }`}
                     >
                       Mode A (Reset/Re-onboard)
@@ -829,8 +829,8 @@ export default function AdminDashboardPage() {
                     <button
                       type="button"
                       onClick={() => setReassignMode('MODE_B')}
-                      className={`flex-1 py-1.5 rounded-lg border text-xs font-bold ${
-                        reassignMode === 'MODE_B' ? 'bg-sky-50 border-sky-400 text-sky-700' : 'bg-slate-50'
+                      className={`flex-1 py-1.5 rounded-lg border text-xs font-bold transition ${
+                        reassignMode === 'MODE_B' ? 'bg-sky-50 border-sky-400 text-sky-700' : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
                       }`}
                     >
                       Mode B (Immediate Assign)
@@ -839,26 +839,26 @@ export default function AdminDashboardPage() {
 
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <label className="text-[10px] font-bold text-slate-500 uppercase">Board</label>
+                      <label className="text-[10px] font-bold text-slate-700 uppercase">Board</label>
                       <select
                         value={reassignBoard}
                         onChange={(e) => setReassignBoard(e.target.value)}
-                        className="w-full p-2 bg-slate-50 border border-slate-200 rounded-xl text-xs"
+                        className="w-full p-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                       >
-                        <option value="CBSE">CBSE</option>
-                        <option value="CAMBRIDGE">CAMBRIDGE</option>
-                        <option value="IB_MYP">IB_MYP</option>
+                        <option value="CBSE" className="text-slate-900 bg-white">CBSE</option>
+                        <option value="CAMBRIDGE" className="text-slate-900 bg-white">CAMBRIDGE</option>
+                        <option value="IB_MYP" className="text-slate-900 bg-white">IB_MYP</option>
                       </select>
                     </div>
                     <div>
-                      <label className="text-[10px] font-bold text-slate-500 uppercase">Grade</label>
+                      <label className="text-[10px] font-bold text-slate-700 uppercase">Grade</label>
                       <select
                         value={reassignGrade}
                         onChange={(e) => setReassignGrade(Number(e.target.value))}
-                        className="w-full p-2 bg-slate-50 border border-slate-200 rounded-xl text-xs"
+                        className="w-full p-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                       >
                         {[6, 7, 8, 9, 10].map((g) => (
-                          <option key={g} value={g}>Class {g}</option>
+                          <option key={g} value={g} className="text-slate-900 bg-white">Class {g}</option>
                         ))}
                       </select>
                     </div>
@@ -873,11 +873,11 @@ export default function AdminDashboardPage() {
                   <select
                     value={subPlanId}
                     onChange={(e) => setSubPlanId(e.target.value)}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs"
+                    className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                   >
-                    <option value="FREE">FREE (Starter)</option>
-                    <option value="STANDARD">STANDARD (Learner)</option>
-                    <option value="PREMIUM">PREMIUM (Cognitive Mastery)</option>
+                    <option value="FREE" className="text-slate-900 bg-white">FREE (Starter)</option>
+                    <option value="STANDARD" className="text-slate-900 bg-white">STANDARD (Learner)</option>
+                    <option value="PREMIUM" className="text-slate-900 bg-white">PREMIUM (Cognitive Mastery)</option>
                   </select>
                 </div>
               )}
