@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AssessmentItem } from '../../lib/types';
 import { CheckCircle2, XCircle, AlertCircle, FileText, ArrowRight, Sparkles, Award, RotateCcw } from 'lucide-react';
 import { MathText } from '../common/MathRenderer';
+import { cleanPromptText } from '../../lib/interactive/chapterPracticeEngine';
 
 interface Props {
   item: AssessmentItem;
@@ -106,7 +107,7 @@ export const CBSEAdapter: React.FC<Props> = ({ item, onVerifyProof }) => {
           <span>Problem Prompt:</span>
         </h4>
         <div className="text-slate-900 text-sm sm:text-base bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed font-sans font-medium">
-          <MathText text={item.prompt} />
+          <MathText text={cleanPromptText(item.prompt)} />
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { AssessmentItem, BoardId } from '../../lib/types';
 import { DiagnosticReport } from '../../lib/engine/diagnosticEngine';
 import { OcaverseWatermarkContainer } from '../common/OcaverseWatermarkContainer';
@@ -18,7 +18,9 @@ import {
   Zap,
   Target,
   History,
-  RotateCcw
+  RotateCcw,
+  Flame,
+  ShieldCheck
 } from 'lucide-react';
 
 interface Props {
@@ -35,6 +37,19 @@ interface Props {
   onNavigateToLearn?: () => void;
 }
 
+export interface GapCluster {
+  id: string;
+  grade: number;
+  subject: string;
+  chapterTitle: string;
+  conceptTitle: string;
+  reports: DiagnosticReport[];
+  affectedQuestionsCount: number;
+  severity: 'CRITICAL' | 'MODERATE' | 'MINOR';
+  isResolved: boolean;
+  representativeReport: DiagnosticReport;
+}
+
 export const PsychometricAssessmentHub: React.FC<Props> = ({
   selectedBoardId,
   selectedGrade = 9,
@@ -48,32 +63,105 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
   onNavigateToPractice,
   onNavigateToLearn,
 }) => {
-  const [selectedReportId, setSelectedReportId] = useState<string | null>(
-    diagnosticReports.length > 0 ? diagnosticReports[0].id : null
+  // 1. Smart Gap Clustering Engine
+  const gapClusters = useMemo<GapCluster[]>(() => {
+    const map = new Map<string, GapCluster>();
+
+    diagnosticReports.forEach((report) => {
+      const key = `${report.prerequisite.grade}-${report.prerequisite.subject}-${report.prerequisite.chapterTitle}-${report.prerequisite.conceptTitle}`
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '-');
+
+      if (!map.has(key)) {
+        map.set(key, {
+          id: key,
+          grade: report.prerequisite.grade,
+          subject: report.prerequisite.subject,
+          chapterTitle: report.prerequisite.chapterTitle,
+          conceptTitle: report.prerequisite.conceptTitle,
+          reports: [report],
+          affectedQuestionsCount: 1,
+          severity: 'MINOR',
+          isResolved: report.isResolved,
+          representativeReport: report,
+        });
+      } else {
+        const cluster = map.get(key)!;
+        cluster.reports.push(report);
+        cluster.affectedQuestionsCount += 1;
+        if (!report.isResolved) {
+          cluster.isResolved = false;
+        }
+      }
+    });
+
+    const clusters = Array.from(map.values());
+    clusters.forEach((c) => {
+      if (c.affectedQuestionsCount >= 3) {
+        c.severity = 'CRITICAL';
+      } else if (c.affectedQuestionsCount >= 2) {
+        c.severity = 'MODERATE';
+      } else {
+        c.severity = 'MINOR';
+      }
+    });
+
+    return clusters;
+  }, [diagnosticReports]);
+
+  // Selected Cluster Management
+  const [selectedClusterId, setSelectedClusterId] = useState<string | null>(
+    gapClusters.length > 0 ? gapClusters[0].id : null
   );
 
-  // Probe testing state for the selected report
-  const [probeAnswerSelected, setProbeAnswerSelected] = useState<number | null>(null);
-  const [probeEvaluated, setProbeEvaluated] = useState(false);
-  const [probeSuccess, setProbeSuccess] = useState(false);
+  useEffect(() => {
+    if (gapClusters.length > 0) {
+      if (!selectedClusterId || !gapClusters.some((c) => c.id === selectedClusterId)) {
+        setSelectedClusterId(gapClusters[0].id);
+      }
+    } else {
+      setSelectedClusterId(null);
+    }
+  }, [gapClusters, selectedClusterId]);
 
-  const activeReport = diagnosticReports.find((r) => r.id === selectedReportId) || diagnosticReports[0];
+  // Per-cluster probe testing state dictionary
+  const [probeResults, setProbeResults] = useState<Record<string, { selectedIndex: number; isCorrect: boolean }>>({});
+
+  const activeCluster = gapClusters.find((c) => c.id === selectedClusterId) || gapClusters[0];
+  const activeClusterIndex = gapClusters.findIndex((c) => c.id === activeCluster?.id);
+  const activeReport = activeCluster?.representativeReport;
+
+  const currentProbeResult = activeCluster ? probeResults[activeCluster.id] : undefined;
+  const probeAnswerSelected = currentProbeResult ? currentProbeResult.selectedIndex : null;
+  const probeEvaluated = currentProbeResult !== undefined;
+  const probeSuccess = currentProbeResult?.isCorrect || false;
 
   const handleSelectProbeOption = (idx: number) => {
-    if (probeEvaluated || !activeReport) return;
-    setProbeAnswerSelected(idx);
-    setProbeEvaluated(true);
+    if (probeEvaluated || !activeCluster || !activeReport) return;
     const isCorrect = idx === activeReport.prerequisite.probeQuestion.correctIndex;
-    setProbeSuccess(isCorrect);
+    setProbeResults((prev) => ({
+      ...prev,
+      [activeCluster.id]: {
+        selectedIndex: idx,
+        isCorrect,
+      },
+    }));
+
     if (isCorrect && onResolveReport) {
-      onResolveReport(activeReport.id);
+      // Resolve all reports grouped under this cluster
+      activeCluster.reports.forEach((r) => {
+        onResolveReport(r.id);
+      });
     }
   };
 
   const handleResetProbe = () => {
-    setProbeAnswerSelected(null);
-    setProbeEvaluated(false);
-    setProbeSuccess(false);
+    if (!activeCluster) return;
+    setProbeResults((prev) => {
+      const next = { ...prev };
+      delete next[activeCluster.id];
+      return next;
+    });
   };
 
   return (
@@ -136,7 +224,7 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
       </div>
 
       {/* 3. Main Diagnostic Content Area */}
-      {diagnosticReports.length > 0 ? (
+      {gapClusters.length > 0 ? (
         <div className="space-y-6">
           {/* Diagnostic Summary Alert Banner */}
           <div className="bg-rose-50/80 border border-rose-200 rounded-2xl p-5 shadow-xs">
@@ -147,10 +235,10 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-rose-950">
-                    {diagnosticReports.length} Root-Cause Knowledge Gap{diagnosticReports.length > 1 ? 's' : ''} Identified
+                    {gapClusters.length} Prerequisite Knowledge Gap Cluster{gapClusters.length > 1 ? 's' : ''} Identified ({diagnosticReports.length} Missed Question{diagnosticReports.length > 1 ? 's' : ''})
                   </h4>
                   <p className="text-xs text-rose-800 mt-0.5">
-                    Triggered from incorrect responses in your Practice session. Our psychometric algorithm traced the gaps to foundational concepts from past grades.
+                    Our psychometric algorithm grouped your incorrect practice responses into {gapClusters.length} core foundational topic clusters from earlier grades.
                   </p>
                 </div>
               </div>
@@ -166,46 +254,74 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
             </div>
           </div>
 
-          {/* Root-Cause Report Selector & Deep-Dive View */}
+          {/* Root-Cause Cluster Selector & Deep-Dive View */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {/* Left: Report List / Gap Radar */}
+            {/* Left: Smart Gap Clusters List */}
             <div className="lg:col-span-4 space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                <Compass className="w-4 h-4 text-indigo-600" />
-                <span>Detected Gaps Lineage</span>
+              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <Compass className="w-4 h-4 text-indigo-600" />
+                  <span>Prerequisite Clusters</span>
+                </span>
+                <span className="text-[10px] font-mono text-slate-400 font-normal">
+                  {gapClusters.length} distinct {gapClusters.length === 1 ? 'area' : 'areas'}
+                </span>
               </h4>
 
-              <div className="space-y-2">
-                {diagnosticReports.map((report, idx) => {
-                  const isSelected = activeReport?.id === report.id;
+              <div className="space-y-2.5">
+                {gapClusters.map((cluster, idx) => {
+                  const isSelected = activeCluster?.id === cluster.id;
+                  
+                  let severityBadge = (
+                    <span className="text-[10px] font-bold uppercase font-mono px-2 py-0.5 rounded bg-blue-100 text-blue-800 border border-blue-200">
+                      1 Question
+                    </span>
+                  );
+                  if (cluster.severity === 'CRITICAL') {
+                    severityBadge = (
+                      <span className="text-[10px] font-bold uppercase font-mono px-2 py-0.5 rounded bg-rose-100 text-rose-800 border border-rose-200 flex items-center gap-1">
+                        <Flame className="w-3 h-3 text-rose-600" /> Critical • {cluster.affectedQuestionsCount} Qs
+                      </span>
+                    );
+                  } else if (cluster.severity === 'MODERATE') {
+                    severityBadge = (
+                      <span className="text-[10px] font-bold uppercase font-mono px-2 py-0.5 rounded bg-amber-100 text-amber-800 border border-amber-200">
+                        Moderate • {cluster.affectedQuestionsCount} Qs
+                      </span>
+                    );
+                  }
+
                   return (
                     <button
-                      key={report.id}
+                      key={cluster.id}
                       onClick={() => {
-                        setSelectedReportId(report.id);
-                        handleResetProbe();
+                        setSelectedClusterId(cluster.id);
                       }}
                       className={`w-full text-left p-3.5 rounded-xl border transition-all cursor-pointer flex flex-col gap-1.5 shadow-xs ${
                         isSelected
-                          ? 'bg-indigo-50/90 border-indigo-300 ring-2 ring-indigo-400/30 text-indigo-950'
+                          ? 'bg-indigo-50/90 border-indigo-300 ring-2 ring-indigo-400/30 text-indigo-950 shadow-sm'
                           : 'bg-white border-slate-200 hover:border-indigo-200 text-slate-700'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-bold uppercase font-mono px-2 py-0.5 rounded bg-rose-100 text-rose-800 border border-rose-200">
-                          Gap #{idx + 1}
+                        <span className="text-[10px] font-bold text-slate-400 font-mono">
+                          GAP CLUSTER #{idx + 1}
                         </span>
-                        <span className="text-[10px] text-slate-500">{report.timestamp}</span>
+                        {severityBadge}
                       </div>
-                      <span className="text-xs font-bold leading-snug line-clamp-1">
-                        Prerequisite: Class {report.prerequisite.grade} {report.prerequisite.chapterTitle}
+                      <span className="text-xs font-bold leading-snug line-clamp-1 text-slate-900">
+                        Class {cluster.grade} {cluster.chapterTitle}
                       </span>
                       <span className="text-[11px] text-slate-500 line-clamp-1">
-                        {report.prerequisite.conceptTitle}
+                        {cluster.conceptTitle}
                       </span>
-                      {report.isResolved && (
+                      {cluster.isResolved ? (
                         <span className="text-[10px] text-emerald-700 font-bold flex items-center gap-1 mt-1">
-                          <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Mastery Restored
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Mastery Restored
+                        </span>
+                      ) : (
+                        <span className="text-[10px] text-indigo-600 font-medium flex items-center gap-1 mt-0.5">
+                          Tap to view bridge &amp; probe <ArrowRight className="w-3 h-3" />
                         </span>
                       )}
                     </button>
@@ -215,7 +331,7 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
             </div>
 
             {/* Right: Prerequisite Knowledge Bridge & Interactive Remediation Probe */}
-            {activeReport && (
+            {activeCluster && activeReport && (
               <div className="lg:col-span-8 space-y-5">
                 {/* Visual Prerequisite Knowledge Bridge Card */}
                 <div className="bg-gradient-to-br from-indigo-50/50 via-white to-sky-50/40 border border-indigo-200/90 rounded-2xl p-5 shadow-xs space-y-4">
@@ -223,11 +339,11 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
                     <div className="flex items-center gap-2">
                       <BrainCircuit className="w-4 h-4 text-indigo-600" />
                       <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-950">
-                        Prerequisite Curriculum Knowledge Bridge
+                        Prerequisite Curriculum Knowledge Bridge (Cluster #{activeClusterIndex + 1})
                       </h4>
                     </div>
                     <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200">
-                      Lineage Trace
+                      Affects {activeCluster.affectedQuestionsCount} Question{activeCluster.affectedQuestionsCount > 1 ? 's' : ''}
                     </span>
                   </div>
 
@@ -236,13 +352,13 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
                     {/* Source Prerequisite (Past Grade) */}
                     <div className="flex-1 p-3 rounded-xl bg-amber-50/80 border border-amber-200">
                       <span className="text-[10px] font-bold uppercase text-amber-800 block">
-                        Root Prerequisite (Class {activeReport.prerequisite.grade})
+                        Root Prerequisite (Class {activeCluster.grade})
                       </span>
                       <span className="text-sm font-bold text-amber-950 block mt-0.5">
-                        {activeReport.prerequisite.chapterTitle}
+                        {activeCluster.chapterTitle}
                       </span>
                       <span className="text-xs text-amber-800 block mt-0.5">
-                        {activeReport.prerequisite.conceptTitle}
+                        {activeCluster.conceptTitle}
                       </span>
                     </div>
 
@@ -309,7 +425,7 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
                   </div>
 
                   <p className="text-xs text-slate-600">
-                    Solve this quick diagnostic check from <strong>Class {activeReport.prerequisite.grade} ({activeReport.prerequisite.chapterTitle})</strong> to certify that you have restored foundational mastery:
+                    Solve this quick diagnostic check from <strong>Class {activeCluster.grade} ({activeCluster.chapterTitle})</strong> to certify that you have restored foundational mastery for all {activeCluster.affectedQuestionsCount} affected question{activeCluster.affectedQuestionsCount > 1 ? 's' : ''}:
                   </p>
 
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-900">
@@ -405,16 +521,17 @@ export const PsychometricAssessmentHub: React.FC<Props> = ({
                 onClick={onNavigateToPractice}
                 className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-xl shadow-xs transition cursor-pointer flex items-center gap-1.5"
               >
-                <span>Continue Adaptive Practice</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <Target className="w-4 h-4" />
+                <span>Launch Practice Test</span>
               </button>
             )}
             {onNavigateToLearn && (
               <button
                 onClick={onNavigateToLearn}
-                className="px-4 py-2.5 bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-semibold rounded-xl transition cursor-pointer"
+                className="px-5 py-2.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-bold rounded-xl shadow-xs transition cursor-pointer flex items-center gap-1.5"
               >
-                Review Visual Notes
+                <BookOpen className="w-4 h-4 text-indigo-600" />
+                <span>Review Cornell Notes</span>
               </button>
             )}
           </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AssessmentItem } from '../../lib/types';
 import { Award, Compass, BarChart3, CheckCircle2, ArrowRight } from 'lucide-react';
+import { cleanPromptText } from '../../lib/interactive/chapterPracticeEngine';
 
 interface Props {
   item: AssessmentItem;
@@ -53,8 +54,9 @@ export const IBMYPAdapter: React.FC<Props> = ({ item, onGradeAssessed }) => {
       {/* IB Header Ribbon */}
       <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200">
         <div className="flex items-center gap-2">
-          <div className="px-2.5 py-1 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-800 font-semibold text-xs tracking-wider uppercase">
-            IB MYP Holistic Inquiry Matrix
+          <div className="px-2.5 py-1 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-800 font-semibold text-xs tracking-wider uppercase flex items-center gap-1.5">
+            <Award className="w-3.5 h-3.5 text-emerald-600" />
+            <span>{item.sourceTag || 'IB MYP Inquiry Prompt'}</span>
           </div>
           <span className="text-xs text-slate-500">Year 4/5 Sciences</span>
         </div>
@@ -73,7 +75,7 @@ export const IBMYPAdapter: React.FC<Props> = ({ item, onGradeAssessed }) => {
           <span>Global Context & Interdisciplinary Inquiry Prompt:</span>
         </div>
         <p className="text-slate-800 text-sm leading-relaxed">
-          {item.prompt}
+          {cleanPromptText(item.prompt)}
         </p>
       </div>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AssessmentItem } from '../../lib/types';
-import { Calculator, Compass, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Calculator, Compass, ArrowRight, CheckCircle2, Award } from 'lucide-react';
+import { cleanPromptText } from '../../lib/interactive/chapterPracticeEngine';
 
 interface Props {
   item: AssessmentItem;
@@ -58,8 +59,9 @@ export const CambridgeAdapter: React.FC<Props> = ({ item, onSubmitAnswer }) => {
       {/* Cambridge Header Ribbon */}
       <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200">
         <div className="flex items-center gap-2">
-          <div className="px-2.5 py-1 bg-sky-50 border border-sky-200 rounded-lg text-sky-800 font-semibold text-xs tracking-wider uppercase">
-            Cambridge IGCSE Matrix
+          <div className="px-2.5 py-1 bg-sky-50 border border-sky-200 rounded-lg text-sky-800 font-semibold text-xs tracking-wider uppercase flex items-center gap-1.5">
+            <Award className="w-3.5 h-3.5 text-sky-600" />
+            <span>{item.sourceTag || 'Cambridge Past Paper Question'}</span>
           </div>
           <span className="text-xs text-slate-500">Scientific Rigor & Command Taxonomy</span>
         </div>
@@ -77,7 +79,7 @@ export const CambridgeAdapter: React.FC<Props> = ({ item, onSubmitAnswer }) => {
           <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
             <div className="text-xs uppercase font-bold text-slate-500 mb-2">Examination Inquiry:</div>
             <p className="text-slate-800 text-sm leading-relaxed font-sans">
-              {item.prompt}
+              {cleanPromptText(item.prompt)}
             </p>
           </div>
 

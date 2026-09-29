@@ -65,6 +65,22 @@ function shuffleOptions(
 }
 
 /**
+ * Strips hardcoded prefix strings (e.g. [CBSE Board Exam PYQ], Cambridge Past Paper Question Question X:,
+ * IB MYP Inquiry Prompt Question X:, [Foundational Standard], etc.) so that question text displays cleanly and natively.
+ */
+export function cleanPromptText(prompt: string): string {
+  if (!prompt || typeof prompt !== 'string') return '';
+  return prompt
+    // Strip leading [Tag] or (Tag) like [CBSE Board Exam PYQ], [Competency Question Bank • HOTS], etc.
+    .replace(/^\[[^\]]+\]\s*/g, '')
+    // Strip prefixes like "Cambridge Past Paper Question Question 1:", "IB MYP Inquiry Prompt Question 1:", "CBSE Board Exam PYQ Question 1:", etc.
+    .replace(/^(?:Cambridge Past Paper Question|IB MYP Inquiry Prompt|IB MYP Question|CBSE Board Exam PYQ|CBSE Competency Question|CBSE 3-Mark Analytical Question|Foundational Standard|Exemplar Standard|Competency Question Bank\s*•\s*HOTS)\s*(?:Question\s*\d+\s*:|\s*:)?\s*/gi, '')
+    // Strip standalone "Question X:" prefix if present at start
+    .replace(/^Question\s*\d+\s*:\s*/gi, '')
+    .trim();
+}
+
+/**
  * Dynamic Board Metadata resolver for Practice Engine labels & tags
  */
 export function getBoardMeta(boardType: BoardId, grade: number = 9) {
@@ -72,17 +88,17 @@ export function getBoardMeta(boardType: BoardId, grade: number = 9) {
     return {
       defaultTag: 'IB MYP Inquiry Prompt',
       foundationalTag: 'IB MYP Inquiry Prompt',
-      foundationalPromptPrefix: '[IB MYP Inquiry Prompt]',
+      foundationalPromptPrefix: '',
       pyqTag: 'IB MYP Question',
-      pyqPromptPrefix: '[IB MYP Question]',
+      pyqPromptPrefix: '',
       trapTag: 'IB MYP Inquiry Prompt',
-      trapPromptPrefix: '[IB MYP Inquiry Prompt]',
+      trapPromptPrefix: '',
       cueTag: 'IB MYP Inquiry Prompt',
-      cuePromptPrefix: '[IB MYP Inquiry Prompt]',
+      cuePromptPrefix: '',
       subjTag: 'IB MYP Inquiry Prompt',
-      subjPromptPrefix: '[IB MYP Inquiry Prompt]',
+      subjPromptPrefix: '',
       fallbackTag: 'IB MYP Inquiry Prompt',
-      fallbackPromptPrefix: '[IB MYP Inquiry Prompt]',
+      fallbackPromptPrefix: '',
       boardName: 'IB MYP',
       gradeText: `IB MYP Year ${grade >= 9 ? grade - 5 : grade}`,
       markingScheme: 'IB MYP Assessment Criteria',
@@ -92,17 +108,17 @@ export function getBoardMeta(boardType: BoardId, grade: number = 9) {
     return {
       defaultTag: 'Cambridge Past Paper Question',
       foundationalTag: 'Cambridge Past Paper Question',
-      foundationalPromptPrefix: '[Cambridge Past Paper Question]',
+      foundationalPromptPrefix: '',
       pyqTag: 'Cambridge Past Paper Question',
-      pyqPromptPrefix: '[Cambridge Past Paper Question]',
+      pyqPromptPrefix: '',
       trapTag: 'Cambridge Past Paper Question',
-      trapPromptPrefix: '[Cambridge Past Paper Question]',
+      trapPromptPrefix: '',
       cueTag: 'Cambridge Past Paper Question',
-      cuePromptPrefix: '[Cambridge Past Paper Question]',
+      cuePromptPrefix: '',
       subjTag: 'Cambridge Past Paper Question',
-      subjPromptPrefix: '[Cambridge Past Paper Question]',
+      subjPromptPrefix: '',
       fallbackTag: 'Cambridge Past Paper Question',
-      fallbackPromptPrefix: '[Cambridge Past Paper Question]',
+      fallbackPromptPrefix: '',
       boardName: 'Cambridge',
       gradeText: `Cambridge Grade ${grade}`,
       markingScheme: 'Official Cambridge Marking Scheme',
@@ -111,17 +127,17 @@ export function getBoardMeta(boardType: BoardId, grade: number = 9) {
   return {
     defaultTag: 'CBSE Competency Question',
     foundationalTag: 'Foundational Standard',
-    foundationalPromptPrefix: '[Foundational Standard]',
+    foundationalPromptPrefix: '',
     pyqTag: 'CBSE Board Exam PYQ',
-    pyqPromptPrefix: '[CBSE Board Exam PYQ]',
+    pyqPromptPrefix: '',
     trapTag: 'CBSE Competency Question',
-    trapPromptPrefix: '[Competency Question Bank • HOTS]',
+    trapPromptPrefix: '',
     cueTag: 'Exemplar Standard',
-    cuePromptPrefix: '[Exemplar Standard]',
+    cuePromptPrefix: '',
     subjTag: 'CBSE 3-Mark Board Standard',
-    subjPromptPrefix: '[CBSE 3-Mark Analytical Question]',
+    subjPromptPrefix: '',
     fallbackTag: 'CBSE Competency Question',
-    fallbackPromptPrefix: '[CBSE Competency Question]',
+    fallbackPromptPrefix: '',
     boardName: 'CBSE',
     gradeText: `Class ${grade}`,
     markingScheme: 'Official CBSE Marking Scheme',
@@ -152,7 +168,7 @@ export function generateChapterPracticeItems(context: PracticeContext): Assessme
   // ITEM 1: Foundation Question (b = -1.5) - Core Principle / Definition PYQ
   // =========================================================================
   if (chapterData?.essentialLaw) {
-    const promptText = `${meta.foundationalPromptPrefix} What is the core governing principle or definition of ${officialChapterTitle}?`;
+    const promptText = `What is the core governing principle or definition of ${officialChapterTitle}?`;
     const correctAns = cleanLatexForDisplay(chapterData.essentialLaw);
     const distractors = [
       `Properties hold only for isolated symmetrical transformations without scale conservation.`,
@@ -184,7 +200,7 @@ export function generateChapterPracticeItems(context: PracticeContext): Assessme
   // =========================================================================
   if (chapterData?.workedExample) {
     const ex = chapterData.workedExample;
-    const promptText = `${meta.pyqPromptPrefix} ${cleanLatexForDisplay(ex.problem)}`;
+    const promptText = cleanLatexForDisplay(ex.problem);
     const correctAns = cleanLatexForDisplay(ex.result);
     
     // Generate intelligent numerical / analytical distractors based on result
@@ -230,7 +246,7 @@ export function generateChapterPracticeItems(context: PracticeContext): Assessme
   // =========================================================================
   if (chapterData?.examTraps && chapterData.examTraps.length > 0) {
     const trap = chapterData.examTraps[0];
-    const promptText = `${meta.trapPromptPrefix} Which of the following statements correctly addresses the most common exam trap in ${officialChapterTitle}?`;
+    const promptText = `Which of the following statements correctly addresses the most common exam trap in ${officialChapterTitle}?`;
     const correctAns = cleanLatexForDisplay(trap);
     const distractors = [
       `Assuming boundary conditions can be neglected in multi-step deductive proofs.`,
@@ -262,7 +278,7 @@ export function generateChapterPracticeItems(context: PracticeContext): Assessme
   // =========================================================================
   if (chapterData?.cueQuestions && chapterData.cueQuestions.length > 0) {
     const cue = chapterData.cueQuestions[0];
-    const promptText = `${meta.cuePromptPrefix} ${cleanLatexForDisplay(cue)}`;
+    const promptText = cleanLatexForDisplay(cue);
     const correctAns = chapterData.coreConcepts && chapterData.coreConcepts.length > 0 && chapterData.coreConcepts[0].bullets.length > 0
       ? cleanLatexForDisplay(chapterData.coreConcepts[0].bullets[0])
       : cleanLatexForDisplay(chapterData.essentialLaw || 'Core relationship verified.');
@@ -297,8 +313,8 @@ export function generateChapterPracticeItems(context: PracticeContext): Assessme
   // =========================================================================
   if (!isMath) {
     const subjectivePrompt = chapterData?.cueQuestions && chapterData.cueQuestions.length > 1
-      ? `${meta.subjPromptPrefix} ${cleanLatexForDisplay(chapterData.cueQuestions[1])}`
-      : `${meta.subjPromptPrefix} Explain the significance and working mechanism of ${officialChapterTitle}. Justify with points.`;
+      ? cleanLatexForDisplay(chapterData.cueQuestions[1])
+      : `Explain the significance and working mechanism of ${officialChapterTitle}. Justify with points.`;
 
     const modelPoints = [
       chapterData?.essentialLaw ? `1. Core Principle: ${cleanLatexForDisplay(chapterData.essentialLaw)}` : `1. Fundamental Definition & Scientific Basis`,
@@ -326,30 +342,175 @@ export function generateChapterPracticeItems(context: PracticeContext): Assessme
     });
   }
 
-  // If for some reason we have fewer than 3 items, provide fallback item from chapter story
-  if (items.length < 3) {
-    const promptText = `${meta.fallbackPromptPrefix} What is the essential takeaway from ${officialChapterTitle}?`;
-    const correctAns = cleanLatexForDisplay(chapterData?.essentialLaw || 'Core principles form the foundation of this chapter.');
-    const { options, correctIndex } = shuffleOptions(correctAns, [
-      'Empirical measurements without theoretical validation.',
-      'Arbitrary numerical substitutions without dimensional balance.',
-      'Properties change randomly across different physical states.',
-    ]);
+    // =========================================================================
+    // ITEM 6: Real-World Context & Technology Application (b = -0.3)
+    // =========================================================================
+    if (chapterData?.realWorldUse) {
+      const promptText = `How is the governing principle of ${officialChapterTitle} applied in modern science or technology?`;
+      const correctAns = cleanLatexForDisplay(chapterData.realWorldUse);
+      const distractors = [
+        `Used exclusively in static thermodynamic equilibrium without energy transfer.`,
+        `Applicable only to historical systems before quantum mechanics.`,
+        `Requires infinite magnetic flux density across non-conducting materials.`,
+      ];
+      const { options, correctIndex } = shuffleOptions(correctAns, distractors);
+      items.push({
+        id: `PRAC-${conceptId}-RW1`,
+        conceptId,
+        boardType,
+        difficultyB: -0.3,
+        discriminationA: 1.3,
+        guessingC: 0.25,
+        questionType: 'OBJECTIVE',
+        prompt: promptText,
+        options,
+        correctOptionIndex: correctIndex,
+        sampleSolution: `Practical Context: ${correctAns}`,
+        explanation: `Curriculum real-world application: ${correctAns}`,
+        sourceTag: meta.defaultTag,
+      });
+    }
 
+    // =========================================================================
+    // ITEM 7: Formula Deduction & Core Law Validation (b = 0.4)
+    // =========================================================================
+    if (chapterData?.essentialLaw) {
+      const promptText = `Which equation or mathematical formulation strictly governs ${officialChapterTitle}?`;
+      const correctAns = cleanLatexForDisplay(chapterData.essentialLaw);
+      const distractors = [
+        `Invariant ratio holds only under zero gravitational potential.`,
+        `Differential change is directly proportional to uncalibrated flux.`,
+        `Independent of mass conservation laws across continuous mediums.`,
+      ];
+      const { options, correctIndex } = shuffleOptions(correctAns, distractors);
+      items.push({
+        id: `PRAC-${conceptId}-FORM1`,
+        conceptId,
+        boardType,
+        difficultyB: 0.4,
+        discriminationA: 1.5,
+        guessingC: 0.25,
+        questionType: 'OBJECTIVE',
+        prompt: promptText,
+        options,
+        correctOptionIndex: correctIndex,
+        sampleSolution: `Governing Law: ${correctAns}`,
+        explanation: `Theoretical foundation for ${officialChapterTitle}: ${correctAns}`,
+        sourceTag: meta.foundationalTag,
+      });
+    }
+
+    // =========================================================================
+    // ITEM 8: Multi-Step Analytical Reasoning (b = 0.8)
+    // =========================================================================
+    if (chapterData?.coreConcepts && chapterData.coreConcepts.length > 1) {
+      const secondConcept = chapterData.coreConcepts[1];
+      const promptText = `Regarding ${secondConcept.heading || officialChapterTitle}, which of the following is correct?`;
+      const correctAns = cleanLatexForDisplay(secondConcept.bullets[0] || chapterData.essentialLaw || 'Key relationship holds.');
+      const distractors = [
+        `Reverses direction when coordinates are normalized across unit dimensions.`,
+        `Assumes adiabatic expansion without thermodynamic balance.`,
+        `Constant across all non-inertial reference systems.`,
+      ];
+      const { options, correctIndex } = shuffleOptions(correctAns, distractors);
+      items.push({
+        id: `PRAC-${conceptId}-ANALYTIC1`,
+        conceptId,
+        boardType,
+        difficultyB: 0.8,
+        discriminationA: 1.6,
+        guessingC: 0.25,
+        questionType: 'OBJECTIVE',
+        prompt: promptText,
+        options,
+        correctOptionIndex: correctIndex,
+        sampleSolution: `Analytical Rule: ${correctAns}`,
+        explanation: `Concept analysis: ${correctAns}`,
+        sourceTag: meta.defaultTag,
+      });
+    }
+
+    // =========================================================================
+    // ITEM 9: Assertion & Reasoning / Comparative Synthesis (b = 1.1)
+    // =========================================================================
+    if (chapterData?.examTraps && chapterData.examTraps.length > 0) {
+      const trap = chapterData.examTraps[0];
+      const promptText = `Assertion: Systematic analysis is required for ${officialChapterTitle}. Reason: ${cleanLatexForDisplay(trap)}.`;
+      const correctAns = `Both Assertion and Reason are true, and Reason is the correct conceptual justification.`;
+      const distractors = [
+        `Assertion is true but Reason is a false statutory fallacy.`,
+        `Assertion is false because boundary conditions are always negligible.`,
+        `Both Assertion and Reason are false under standard syllabus premises.`,
+      ];
+      const { options, correctIndex } = shuffleOptions(correctAns, distractors);
+      items.push({
+        id: `PRAC-${conceptId}-AR1`,
+        conceptId,
+        boardType,
+        difficultyB: 1.1,
+        discriminationA: 1.7,
+        guessingC: 0.25,
+        questionType: 'OBJECTIVE',
+        prompt: promptText,
+        options,
+        correctOptionIndex: correctIndex,
+        sampleSolution: correctAns,
+        explanation: `CBSE/Cambridge Competency Standard: Verified conceptual connection with syllabus trap: ${trap}`,
+        sourceTag: meta.trapTag,
+      });
+    }
+
+    // =========================================================================
+    // ITEM 10: High-Yield Mastery & Synthesis Check (b = 0.0)
+    // =========================================================================
+    const promptText10 = `In summary review of ${officialChapterTitle}, what guarantees full marks in examination questions?`;
+    const correctAns10 = cleanLatexForDisplay(chapterData?.essentialLaw || chapterData?.examTraps?.[0] || 'Clear step-by-step reasoning with accurate formulas.');
+    const distractors10 = [
+      `Skipping intermediate formula steps in multi-mark questions.`,
+      `Writing final numeric answers without units or algebraic justification.`,
+      `Ignoring standard SI units and coordinate sign conventions.`,
+    ];
+    const { options: options10, correctIndex: correctIndex10 } = shuffleOptions(correctAns10, distractors10);
     items.push({
-      id: `PRAC-${conceptId}-F2`,
+      id: `PRAC-${conceptId}-MASTERY10`,
       conceptId,
       boardType,
-      difficultyB: -0.5,
-      discriminationA: 1.1,
+      difficultyB: 0.0,
+      discriminationA: 1.4,
+      guessingC: 0.25,
+      questionType: 'OBJECTIVE',
+      prompt: promptText10,
+      options: options10,
+      correctOptionIndex: correctIndex10,
+      sampleSolution: `Mastery Standard: ${correctAns10}`,
+      explanation: `Board marking guideline: Always write definitions, formulas, and SI units explicitly.`,
+      sourceTag: meta.defaultTag,
+    });
+
+  // Ensure minimum 10 items in the suite
+  while (items.length < 10) {
+    const idx = items.length + 1;
+    const promptText = `What is an essential principle in ${officialChapterTitle}?`;
+    const correctAns = cleanLatexForDisplay(chapterData?.essentialLaw || 'Fundamental conservation and symmetry rules.');
+    const { options, correctIndex } = shuffleOptions(correctAns, [
+      'Arbitrary numerical substitutions without dimensional balance.',
+      'Properties change randomly across different physical states.',
+      'Magnitudes vary inversely with dimensional coordinates.',
+    ]);
+    items.push({
+      id: `PRAC-${conceptId}-SUPP-${idx}`,
+      conceptId,
+      boardType,
+      difficultyB: (idx - 5) * 0.2,
+      discriminationA: 1.3,
       guessingC: 0.25,
       questionType: 'OBJECTIVE',
       prompt: promptText,
       options,
       correctOptionIndex: correctIndex,
       sampleSolution: correctAns,
-      explanation: `Summary understanding for ${officialChapterTitle}.`,
-      sourceTag: meta.fallbackTag,
+      explanation: `Core understanding of ${officialChapterTitle}.`,
+      sourceTag: meta.defaultTag,
     });
   }
 

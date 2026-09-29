@@ -321,7 +321,7 @@ export const AdaptiveTestSimulator: React.FC<Props> = ({
             </h3>
           </div>
           <p className="text-xs text-slate-500">
-            Dynamically adjusting problem difficulty $b$ from{' '}
+            Dynamically adjusting problem difficulty (b) from{' '}
             {selectedBoardId === 'IB_MYP'
               ? 'IB MYP Criterion Inquiries & Question Bank'
               : selectedBoardId === 'CAMBRIDGE'
@@ -444,7 +444,7 @@ export const AdaptiveTestSimulator: React.FC<Props> = ({
             <span className="text-xs font-semibold text-slate-700 flex items-center gap-1.5">
               <Target className="w-4 h-4 text-sky-600" />
               <span>
-                Item Difficulty $b$: <strong className="text-sky-700">{activeItem.difficultyB > 0 ? '+' + activeItem.difficultyB : activeItem.difficultyB}</strong> | Discrimination $a$: <strong className="text-sky-700">{activeItem.discriminationA}</strong>
+                Item Difficulty (b): <strong className="text-sky-700">{activeItem.difficultyB > 0 ? '+' + activeItem.difficultyB : activeItem.difficultyB}</strong> | Discrimination (a): <strong className="text-sky-700">{activeItem.discriminationA}</strong>
               </span>
             </span>
             <span className="text-xs text-slate-500 font-mono">
