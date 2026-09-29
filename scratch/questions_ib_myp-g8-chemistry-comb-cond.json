@@ -1,0 +1,652 @@
+[
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the next number in the arithmetic sequence: $3, 7, 11, 15, \\dots$?",
+    "options": [
+      "19",
+      "18",
+      "20",
+      "21"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The common difference $d = 7 - 3 = 4$. Next term = $15 + 4 = 19$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] Which of the following numbers is a triangular number?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Triangular numbers follow $T_n = \\frac{n(n+1)}{2}$. For $n=3$, $T_3 = \\frac{3 \\times 4}{2} = 6$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the 5th square number in the sequence of perfect squares ($1, 4, 9, \\dots$)?",
+    "options": [
+      "25",
+      "20",
+      "30",
+      "16"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The $n$-th square number is $n^2$. For $n=5$, $5^2 = 25$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] In a pattern formed by making regular triangles using matchsticks, how many matchsticks are needed for $1$ triangle?",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "6"
+    ],
+    "correct_option_index": 0,
+    "explanation": "A single triangle has 3 equal sides, requiring 3 matchsticks.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the common rule for the sequence of even numbers: $2, 4, 6, 8, \\dots$ where $n$ is the term position?",
+    "options": [
+      "$2n$",
+      "$2n + 1$",
+      "$n + 2$",
+      "$n^2$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Even numbers are multiples of 2, expressed by the algebraic rule $2n$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the general algebraic rule for odd numbers: $1, 3, 5, 7, \\dots$ for $n = 1, 2, 3, \\dots$?",
+    "options": [
+      "$2n - 1$",
+      "$2n$",
+      "$2n + 2$",
+      "$n + 1$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "For $n=1$, $2(1)-1=1$; for $n=2$, $2(2)-1=3$. The formula is $2n - 1$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] In a repeating geometric pattern: Square, Circle, Triangle, Square, Circle, Triangle, ..., what is the 10th shape?",
+    "options": [
+      "Square",
+      "Circle",
+      "Triangle",
+      "Hexagon"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The pattern cycle length is 3. $10 \\div 3 = 3$ remainder 1. The 1st shape in the cycle is a Square.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the sum of the first two odd numbers: $1 + 3$?",
+    "options": [
+      "4 ($2^2$)",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The sum of the first $n$ consecutive odd numbers is always equal to $n^2$. For $n=2$, $2^2 = 4$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the sum of the first three consecutive odd numbers ($1 + 3 + 5$)?",
+    "options": [
+      "9 ($3^2$)",
+      "8",
+      "10",
+      "12"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Sum of first 3 odd numbers $= 3^2 = 9$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] In the Fibonacci-type additive pattern $1, 1, 2, 3, 5, 8, \\dots$, what is the next term?",
+    "options": [
+      "13",
+      "11",
+      "12",
+      "15"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Each term is the sum of the preceding two terms: $5 + 8 = 13$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] How many matchsticks are needed to build a single square?",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "correct_option_index": 0,
+    "explanation": "A single square has 4 distinct edges, needing 4 matchsticks.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the 4th triangular number ($T_4$)?",
+    "options": [
+      "10",
+      "12",
+      "8",
+      "15"
+    ],
+    "correct_option_index": 0,
+    "explanation": "$T_4 = 1 + 2 + 3 + 4 = 10$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the common difference in the descending sequence: $50, 45, 40, 35, \\dots$?",
+    "options": [
+      "$-5$",
+      "$+5$",
+      "$-10$",
+      "$+10$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Common difference $d = 45 - 50 = -5$.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] Which mathematical operation is used to find successive terms in an arithmetic number pattern?",
+    "options": [
+      "Repeated addition / subtraction of a constant",
+      "Repeated division by $n$",
+      "Random exponentiation",
+      "Square root"
+    ],
+    "correct_option_index": 0,
+    "explanation": "An arithmetic pattern grows or diminishes by adding or subtracting a fixed constant (common difference).",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Foundation] What is the 1st triangular number ($T_1$)?",
+    "options": [
+      "1",
+      "0",
+      "3",
+      "2"
+    ],
+    "correct_option_index": 0,
+    "explanation": "$T_1 = 1$ dot forming the simplest triangular base.",
+    "difficulty": "EASY",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $2$ with common difference $3$ ($2, 5, 8, \\dots$), find the 4-th term.",
+    "options": [
+      "11",
+      "14",
+      "8",
+      "17"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 2 + (4-1)(3) = 2 + 3\\times3 = 11$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $3$ with common difference $4$ ($3, 7, 11, \\dots$), find the 5-th term.",
+    "options": [
+      "19",
+      "23",
+      "15",
+      "27"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 3 + (5-1)(4) = 3 + 4\\times4 = 19$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $4$ with common difference $5$ ($4, 9, 14, \\dots$), find the 6-th term.",
+    "options": [
+      "29",
+      "34",
+      "24",
+      "39"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 4 + (6-1)(5) = 4 + 5\\times5 = 29$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $5$ with common difference $2$ ($5, 7, 9, \\dots$), find the 7-th term.",
+    "options": [
+      "17",
+      "19",
+      "15",
+      "21"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 5 + (7-1)(2) = 5 + 6\\times2 = 17$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $1$ with common difference $3$ ($1, 4, 7, \\dots$), find the 8-th term.",
+    "options": [
+      "22",
+      "25",
+      "19",
+      "28"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 1 + (8-1)(3) = 1 + 7\\times3 = 22$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $2$ with common difference $4$ ($2, 6, 10, \\dots$), find the 9-th term.",
+    "options": [
+      "34",
+      "38",
+      "30",
+      "42"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 2 + (9-1)(4) = 2 + 8\\times4 = 34$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $3$ with common difference $5$ ($3, 8, 13, \\dots$), find the 10-th term.",
+    "options": [
+      "48",
+      "53",
+      "43",
+      "58"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 3 + (10-1)(5) = 3 + 9\\times5 = 48$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $4$ with common difference $2$ ($4, 6, 8, \\dots$), find the 11-th term.",
+    "options": [
+      "24",
+      "26",
+      "22",
+      "28"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 4 + (11-1)(2) = 4 + 10\\times2 = 24$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $5$ with common difference $3$ ($5, 8, 11, \\dots$), find the 12-th term.",
+    "options": [
+      "38",
+      "41",
+      "35",
+      "44"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 5 + (12-1)(3) = 5 + 11\\times3 = 38$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $1$ with common difference $4$ ($1, 5, 9, \\dots$), find the 13-th term.",
+    "options": [
+      "49",
+      "53",
+      "45",
+      "57"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 1 + (13-1)(4) = 1 + 12\\times4 = 49$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $2$ with common difference $5$ ($2, 7, 12, \\dots$), find the 14-th term.",
+    "options": [
+      "67",
+      "72",
+      "62",
+      "77"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 2 + (14-1)(5) = 2 + 13\\times5 = 67$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $3$ with common difference $2$ ($3, 5, 7, \\dots$), find the 15-th term.",
+    "options": [
+      "31",
+      "33",
+      "29",
+      "35"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 3 + (15-1)(2) = 3 + 14\\times2 = 31$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $4$ with common difference $3$ ($4, 7, 10, \\dots$), find the 16-th term.",
+    "options": [
+      "49",
+      "52",
+      "46",
+      "55"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 4 + (16-1)(3) = 4 + 15\\times3 = 49$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $5$ with common difference $4$ ($5, 9, 13, \\dots$), find the 17-th term.",
+    "options": [
+      "69",
+      "73",
+      "65",
+      "77"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 5 + (17-1)(4) = 5 + 16\\times4 = 69$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $1$ with common difference $5$ ($1, 6, 11, \\dots$), find the 18-th term.",
+    "options": [
+      "86",
+      "91",
+      "81",
+      "96"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 1 + (18-1)(5) = 1 + 17\\times5 = 86$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $2$ with common difference $2$ ($2, 4, 6, \\dots$), find the 19-th term.",
+    "options": [
+      "38",
+      "40",
+      "36",
+      "42"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 2 + (19-1)(2) = 2 + 18\\times2 = 38$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $3$ with common difference $3$ ($3, 6, 9, \\dots$), find the 20-th term.",
+    "options": [
+      "60",
+      "63",
+      "57",
+      "66"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 3 + (20-1)(3) = 3 + 19\\times3 = 60$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $4$ with common difference $4$ ($4, 8, 12, \\dots$), find the 21-th term.",
+    "options": [
+      "84",
+      "88",
+      "80",
+      "92"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 4 + (21-1)(4) = 4 + 20\\times4 = 84$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $5$ with common difference $5$ ($5, 10, 15, \\dots$), find the 22-th term.",
+    "options": [
+      "110",
+      "115",
+      "105",
+      "120"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 5 + (22-1)(5) = 5 + 21\\times5 = 110$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Application] For the pattern starting at $1$ with common difference $2$ ($1, 3, 5, \\dots$), find the 23-th term.",
+    "options": [
+      "45",
+      "47",
+      "43",
+      "49"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Using the $n$-th term formula: $a_n = a + (n-1)d = 1 + (23-1)(2) = 1 + 22\\times2 = 45$.",
+    "difficulty": "MEDIUM",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] A student creates a row of connected squares using matchsticks. 1 square takes 4 sticks, 2 connected squares take 7 sticks, 3 take 10 sticks. What is the general rule for $n$ connected squares?",
+    "options": [
+      "$3n + 1$",
+      "$4n$",
+      "$3n - 1$",
+      "$4n - 1$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The first square takes 4 sticks. Each additional adjacent square shares 1 edge and adds 3 sticks. Formula = $4 + 3(n-1) = 3n + 1$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] How many matchsticks are required to make a row of $25$ connected squares using the rule $3n + 1$?",
+    "options": [
+      "76",
+      "100",
+      "75",
+      "80"
+    ],
+    "correct_option_index": 0,
+    "explanation": "For $n = 25$: Sticks $= 3(25) + 1 = 75 + 1 = 76$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] A row of connected triangles is built with matchsticks: 1 triangle = 3 sticks, 2 triangles = 5 sticks, 3 triangles = 7 sticks. What is the rule for $n$ triangles?",
+    "options": [
+      "$2n + 1$",
+      "$3n$",
+      "$2n - 1$",
+      "$3n - 1$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Initial triangle takes 3 sticks. Each next connected triangle adds 2 sticks. Rule = $3 + 2(n-1) = 2n + 1$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] If you have 51 matchsticks, how many connected triangles can you construct using the rule $2n + 1 = 51$?",
+    "options": [
+      "25 triangles",
+      "26 triangles",
+      "24 triangles",
+      "50 triangles"
+    ],
+    "correct_option_index": 0,
+    "explanation": "$2n + 1 = 51 \\implies 2n = 50 \\implies n = 25$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] What is the sum of the first 10 consecutive odd numbers ($1 + 3 + 5 + \\dots + 19$)?",
+    "options": [
+      "100 ($10^2$)",
+      "90",
+      "110",
+      "81"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Sum of first $n$ odd numbers is $n^2$. For $n=10$, $10^2 = 100$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] If the $n$-th term of a sequence is given by $T_n = n^2 + 1$, what is the 7th term?",
+    "options": [
+      "50",
+      "49",
+      "51",
+      "48"
+    ],
+    "correct_option_index": 0,
+    "explanation": "$T_7 = 7^2 + 1 = 49 + 1 = 50$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] In a calendar month, the dates of four days forming a $2 \\times 2$ square block are $\\begin{pmatrix} d & d+1 \\\\ d+7 & d+8 \\end{pmatrix}$. What is the difference between the diagonal sums: $(d + (d+8)) - ((d+1) + (d+7))$?",
+    "options": [
+      "0 (Always equal)",
+      "1",
+      "7",
+      "14"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Diagonal sum 1 = $2d + 8$. Diagonal sum 2 = $2d + 8$. Difference = $0$. The cross-diagonal sums in a calendar square are always invariant!",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] What is the 10th triangular number ($T_{10}$)?",
+    "options": [
+      "55",
+      "50",
+      "45",
+      "60"
+    ],
+    "correct_option_index": 0,
+    "explanation": "$T_{10} = \\frac{10(11)}{2} = 55$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] Which formula represents the relationship between any two consecutive triangular numbers $T_n$ and $T_{n-1}$?",
+    "options": [
+      "$T_n + T_{n-1} = n^2$ (Forms a Square Number)",
+      "$T_n - T_{n-1} = n^2$",
+      "$T_n + T_{n-1} = 2n$",
+      "$T_n \\times T_{n-1} = n^3$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "The sum of two consecutive triangular numbers always yields a perfect square number: $\\frac{n(n+1)}{2} + \\frac{(n-1)n}{2} = n^2$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] If $T_3 = 6$ and $T_4 = 10$, what square number is formed by their sum $T_3 + T_4$?",
+    "options": [
+      "16 ($4^2$)",
+      "25",
+      "9",
+      "36"
+    ],
+    "correct_option_index": 0,
+    "explanation": "$6 + 10 = 16 = 4^2$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] A sequence starts as $2, 6, 12, 20, 30, \\dots$. What is the algebraic rule for the $n$-th term?",
+    "options": [
+      "$n(n+1)$ or $n^2 + n$",
+      "$n^2$",
+      "$2n^2$",
+      "$3n - 1$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "For $n=1$: $1(2)=2$; for $n=2$: $2(3)=6$; for $n=3$: $3(4)=12$. Rule is $n(n+1)$ (oblong / rectangular numbers).",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] What is the 6th term of the oblong number pattern $n(n+1)$?",
+    "options": [
+      "42",
+      "36",
+      "40",
+      "48"
+    ],
+    "correct_option_index": 0,
+    "explanation": "For $n=6$, $6 \\times (6+1) = 6 \\times 7 = 42$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] In a hexagon pattern made with matchsticks where adjacent hexagons share a side: 1 hexagon = 6 sticks, 2 connected hexagons = 11 sticks. What is the rule for $n$ hexagons?",
+    "options": [
+      "$5n + 1$",
+      "$6n$",
+      "$5n - 1$",
+      "$6n - 1$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Initial hexagon requires 6 sticks. Each connected hexagon adds 5 sticks. Rule = $6 + 5(n-1) = 5n + 1$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] How many matchsticks are needed to construct 12 connected hexagons using the rule $5n + 1$?",
+    "options": [
+      "61",
+      "72",
+      "60",
+      "65"
+    ],
+    "correct_option_index": 0,
+    "explanation": "For $n = 12$: Sticks $= 5(12) + 1 = 60 + 1 = 61$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  },
+  {
+    "prompt": "[NCERT Ganita Prakash • Competency & HOTS] If a pattern has the rule $T_n = 4n - 3$, what is the position $n$ of the number 77 in this sequence?",
+    "options": [
+      "$n = 20$",
+      "$n = 19$",
+      "$n = 21$",
+      "$n = 22$"
+    ],
+    "correct_option_index": 0,
+    "explanation": "$4n - 3 = 77 \\implies 4n = 80 \\implies n = 20$.",
+    "difficulty": "HARD",
+    "question_type": "OBJECTIVE"
+  }
+]
