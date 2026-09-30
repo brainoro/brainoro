@@ -24,7 +24,18 @@ import {
   School,
   MapPin,
   Calendar,
+  LifeBuoy,
+  MessageSquare,
+  Send,
+  Mail,
 } from 'lucide-react';
+import {
+  fetchAllSupportTickets,
+  updateSupportTicketStatus,
+  SupportTicket,
+  TicketStatus,
+  OFFICIAL_SUPPORT_EMAIL,
+} from '@/lib/services/supportService';
 
 interface MetricsData {
   total_users: number;
@@ -74,7 +85,7 @@ export default function AdminDashboardPage() {
   const router = useRouter();
   const { user, isCustomerAdmin, isSuperAdmin, isLoading: authLoading } = useAuth();
 
-  const [activeTab, setActiveTab] = useState<'metrics' | 'users' | 'plans' | 'audit'>('metrics');
+  const [activeTab, setActiveTab] = useState<'metrics' | 'users' | 'plans' | 'audit' | 'tickets'>('metrics');
   const [metrics, setMetrics] = useState<MetricsData | null>(null);
   const [isLoadingMetrics, setIsLoadingMetrics] = useState(false);
 
@@ -88,6 +99,16 @@ export default function AdminDashboardPage() {
   const [roleFilter, setRoleFilter] = useState('');
   const [boardFilter, setBoardFilter] = useState('');
   const [isLoadingUsers, setIsLoadingUsers] = useState(false);
+
+  // Support Tickets State
+  const [tickets, setTickets] = useState<SupportTicket[]>([]);
+  const [isLoadingTickets, setIsLoadingTickets] = useState(false);
+  const [ticketStatusFilter, setTicketStatusFilter] = useState('');
+  const [ticketSearch, setTicketSearch] = useState('');
+  const [emailAlertToast, setEmailAlertToast] = useState<string | null>(null);
+  const [expandedTicketId, setExpandedTicketId] = useState<string | null>(null);
+  const [ticketAdminNotes, setTicketAdminNotes] = useState<Record<string, string>>({});
+  const [updatingTicketId, setUpdatingTicketId] = useState<string | null>(null);
 
   // Action Modals State
   const [selectedUser, setSelectedUser] = useState<UserRow | null>(null);
@@ -103,6 +124,43 @@ export default function AdminDashboardPage() {
   const [subPlanId, setSubPlanId] = useState('STANDARD');
   const [actionError, setActionError] = useState<string | null>(null);
   const [isProcessingAction, setIsProcessingAction] = useState(false);
+
+  // Load Support Tickets
+  const loadTickets = useCallback(async () => {
+    setIsLoadingTickets(true);
+    try {
+      const data = await fetchAllSupportTickets();
+      setTickets(data);
+    } catch (err) {
+      console.error('Failed to load support tickets:', err);
+    } finally {
+      setIsLoadingTickets(false);
+    }
+  }, []);
+
+  const handleUpdateTicketStatus = async (ticket: SupportTicket, newStatus: TicketStatus) => {
+    setUpdatingTicketId(ticket.id);
+    const note = ticketAdminNotes[ticket.id] ?? ticket.admin_notes ?? '';
+    const res = await updateSupportTicketStatus({
+      ticketId: ticket.id,
+      status: newStatus,
+      adminNotes: note,
+      ticketNumber: ticket.ticket_number,
+      userEmail: ticket.user_email,
+      userName: ticket.user_name,
+      subject: ticket.subject,
+    });
+    setUpdatingTicketId(null);
+    if (res.success) {
+      if (res.emailAlertTriggered) {
+        setEmailAlertToast(
+          `Automated Email Alert Dispatched: Notification sent to ${ticket.user_email} for Ticket #${ticket.ticket_number} (${newStatus})`
+        );
+        setTimeout(() => setEmailAlertToast(null), 7000);
+      }
+      loadTickets();
+    }
+  };
 
   // Route protection
   useEffect(() => {
@@ -154,8 +212,9 @@ export default function AdminDashboardPage() {
     if (isCustomerAdmin || isSuperAdmin) {
       loadMetrics();
       loadUsers();
+      loadTickets();
     }
-  }, [isCustomerAdmin, isSuperAdmin, loadMetrics, loadUsers]);
+  }, [isCustomerAdmin, isSuperAdmin, loadMetrics, loadUsers, loadTickets]);
 
   // Handle User Status Update
   const handleUpdateStatus = async () => {
@@ -314,8 +373,9 @@ export default function AdminDashboardPage() {
               onClick={() => {
                 loadMetrics();
                 loadUsers();
+                loadTickets();
               }}
-              className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs border border-slate-700 transition"
+              className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs border border-slate-700 transition cursor-pointer"
               title="Refresh Data"
             >
               <RefreshCw className="w-4 h-4" />
@@ -324,7 +384,7 @@ export default function AdminDashboardPage() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="max-w-7xl mx-auto mt-6 flex items-center gap-2 border-t border-slate-800/80 pt-4 text-xs font-bold">
+        <div className="max-w-7xl mx-auto mt-6 flex items-center gap-2 border-t border-slate-800/80 pt-4 text-xs font-bold flex-wrap">
           <button
             onClick={() => setActiveTab('metrics')}
             className={`px-3 py-2 rounded-xl transition flex items-center gap-2 ${
@@ -346,6 +406,16 @@ export default function AdminDashboardPage() {
             <Users className="w-4 h-4" /> User Management ({totalUsers})
           </button>
           <button
+            onClick={() => setActiveTab('tickets')}
+            className={`px-3 py-2 rounded-xl transition flex items-center gap-2 ${
+              activeTab === 'tickets'
+                ? 'bg-sky-500/10 text-sky-400 border border-sky-500/20'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <LifeBuoy className="w-4 h-4" /> Support Tickets ({tickets.length})
+          </button>
+          <button
             onClick={() => setActiveTab('audit')}
             className={`px-3 py-2 rounded-xl transition flex items-center gap-2 ${
               activeTab === 'audit'
@@ -358,7 +428,24 @@ export default function AdminDashboardPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 py-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 py-8 space-y-6">
+        {/* Automated Email Alert Dispatch Toast */}
+        {emailAlertToast && (
+          <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-950 flex items-center justify-between gap-3 shadow-xs animate-fadeIn">
+            <div className="flex items-center gap-2.5">
+              <div className="p-1.5 bg-emerald-600 text-white rounded-xl">
+                <CheckCircle2 className="w-4 h-4" />
+              </div>
+              <span className="text-xs font-bold">{emailAlertToast}</span>
+            </div>
+            <button
+              onClick={() => setEmailAlertToast(null)}
+              className="text-xs font-semibold text-emerald-800 hover:text-emerald-950 underline cursor-pointer"
+            >
+              Dismiss
+            </button>
+          </div>
+        )}
         {/* =================================================================== */}
         {/* TAB 1: METRICS & REPORTING (Zero Fabrication) */}
         {/* =================================================================== */}
@@ -742,6 +829,219 @@ export default function AdminDashboardPage() {
               {(metrics?.recent_admin_activity || []).length === 0 && (
                 <div className="py-8 text-center text-slate-400 italic">No audit records found.</div>
               )}
+            </div>
+          </div>
+        )}
+
+        {/* =================================================================== */}
+        {/* TAB 4: SUPPORT TICKETS & HELPDESK MANAGEMENT */}
+        {/* =================================================================== */}
+        {activeTab === 'tickets' && (
+          <div className="space-y-6 animate-fadeIn">
+            {/* KPI Cards */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Total Tickets</div>
+                <div className="text-xl font-black text-slate-900 mt-1">{tickets.length}</div>
+              </div>
+              <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                <div className="text-[10px] font-bold text-amber-600 uppercase tracking-wider">Open / Pending</div>
+                <div className="text-xl font-black text-amber-700 mt-1">
+                  {tickets.filter((t) => t.status === 'OPEN').length}
+                </div>
+              </div>
+              <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                <div className="text-[10px] font-bold text-sky-600 uppercase tracking-wider">In Progress</div>
+                <div className="text-xl font-black text-sky-700 mt-1">
+                  {tickets.filter((t) => t.status === 'IN_PROGRESS').length}
+                </div>
+              </div>
+              <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                <div className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Resolved / Closed</div>
+                <div className="text-xl font-black text-emerald-700 mt-1">
+                  {tickets.filter((t) => t.status === 'RESOLVED' || t.status === 'CLOSED').length}
+                </div>
+              </div>
+            </div>
+
+            {/* Filter & Search Toolbar */}
+            <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div className="relative flex-1">
+                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <input
+                  type="text"
+                  placeholder="Search tickets by tracking #, email, or subject..."
+                  value={ticketSearch}
+                  onChange={(e) => setTicketSearch(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                />
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Filter className="w-4 h-4 text-slate-400" />
+                <select
+                  value={ticketStatusFilter}
+                  onChange={(e) => setTicketStatusFilter(e.target.value)}
+                  className="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700 font-semibold focus:outline-none focus:ring-2 focus:ring-sky-500/20 cursor-pointer"
+                >
+                  <option value="">All Statuses</option>
+                  <option value="OPEN">Open</option>
+                  <option value="IN_PROGRESS">In Progress</option>
+                  <option value="RESOLVED">Resolved</option>
+                  <option value="CLOSED">Closed</option>
+                </select>
+                <button
+                  onClick={loadTickets}
+                  className="p-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-600 transition cursor-pointer"
+                  title="Refresh Tickets"
+                >
+                  <RefreshCw className={`w-4 h-4 ${isLoadingTickets ? 'animate-spin text-sky-600' : ''}`} />
+                </button>
+              </div>
+            </div>
+
+            {/* Support Tickets Table */}
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase tracking-wider text-[10px]">
+                      <th className="py-3 px-4">Ticket Info</th>
+                      <th className="py-3 px-4">User Details</th>
+                      <th className="py-3 px-4">Category / Priority</th>
+                      <th className="py-3 px-4">Subject &amp; Message</th>
+                      <th className="py-3 px-4">Status &amp; Action</th>
+                      <th className="py-3 px-4">Admin Resolution Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 font-sans">
+                    {tickets
+                      .filter((t) => {
+                        const matchesStatus = !ticketStatusFilter || t.status === ticketStatusFilter;
+                        const q = ticketSearch.toLowerCase();
+                        const matchesSearch =
+                          !q ||
+                          t.ticket_number.toLowerCase().includes(q) ||
+                          t.user_email.toLowerCase().includes(q) ||
+                          t.subject.toLowerCase().includes(q) ||
+                          t.message.toLowerCase().includes(q);
+                        return matchesStatus && matchesSearch;
+                      })
+                      .map((t) => {
+                        const isExpanded = expandedTicketId === t.id;
+                        const isUpdating = updatingTicketId === t.id;
+
+                        let statusBadge = 'bg-amber-50 text-amber-800 border-amber-200';
+                        if (t.status === 'IN_PROGRESS') statusBadge = 'bg-sky-50 text-sky-800 border-sky-200';
+                        if (t.status === 'RESOLVED') statusBadge = 'bg-emerald-50 text-emerald-800 border-emerald-200';
+                        if (t.status === 'CLOSED') statusBadge = 'bg-slate-100 text-slate-600 border-slate-200';
+
+                        let priorityBadge = 'bg-slate-100 text-slate-700';
+                        if (t.priority === 'HIGH') priorityBadge = 'bg-orange-100 text-orange-800';
+                        if (t.priority === 'URGENT') priorityBadge = 'bg-rose-100 text-rose-800 font-bold';
+
+                        return (
+                          <tr key={t.id} className="hover:bg-slate-50/70 transition">
+                            <td className="py-3 px-4 align-top">
+                              <span className="font-mono font-bold text-slate-900 block">
+                                #{t.ticket_number}
+                              </span>
+                              <span className="text-[10px] text-slate-400 block mt-0.5">
+                                {new Date(t.created_at).toLocaleDateString()}
+                              </span>
+                            </td>
+
+                            <td className="py-3 px-4 align-top">
+                              <span className="font-semibold text-slate-800 block">{t.user_name}</span>
+                              <span className="text-[11px] text-slate-500 font-mono block">{t.user_email}</span>
+                            </td>
+
+                            <td className="py-3 px-4 align-top">
+                              <div className="space-y-1">
+                                <span className="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700 border border-slate-200">
+                                  {t.category}
+                                </span>
+                                <div>
+                                  <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-semibold ${priorityBadge}`}>
+                                    {t.priority}
+                                  </span>
+                                </div>
+                              </div>
+                            </td>
+
+                            <td className="py-3 px-4 align-top max-w-xs">
+                              <div className="font-semibold text-slate-900">{t.subject}</div>
+                              <p className={`text-slate-600 mt-1 leading-relaxed ${isExpanded ? 'whitespace-pre-wrap' : 'line-clamp-2'}`}>
+                                {t.message}
+                              </p>
+                              {t.message.length > 80 && (
+                                <button
+                                  onClick={() => setExpandedTicketId(isExpanded ? null : t.id)}
+                                  className="text-[11px] font-bold text-sky-600 hover:text-sky-700 mt-1 cursor-pointer"
+                                >
+                                  {isExpanded ? 'Show less' : 'Read full message'}
+                                </button>
+                              )}
+                            </td>
+
+                            <td className="py-3 px-4 align-top">
+                              <div className="space-y-2">
+                                <select
+                                  value={t.status}
+                                  disabled={isUpdating}
+                                  onChange={(e) => handleUpdateTicketStatus(t, e.target.value as TicketStatus)}
+                                  className={`w-full px-2.5 py-1.5 rounded-lg border font-bold text-xs cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500/20 ${statusBadge}`}
+                                >
+                                  <option value="OPEN">OPEN</option>
+                                  <option value="IN_PROGRESS">IN_PROGRESS</option>
+                                  <option value="RESOLVED">RESOLVED (Auto Alert)</option>
+                                  <option value="CLOSED">CLOSED (Auto Alert)</option>
+                                </select>
+                                {isUpdating && (
+                                  <span className="text-[10px] text-sky-600 font-semibold flex items-center gap-1">
+                                    <RefreshCw className="w-3 h-3 animate-spin" /> Syncing...
+                                  </span>
+                                )}
+                              </div>
+                            </td>
+
+                            <td className="py-3 px-4 align-top">
+                              <div className="space-y-1.5">
+                                <textarea
+                                  rows={2}
+                                  placeholder="Resolution notes (included in email alert)..."
+                                  value={
+                                    ticketAdminNotes[t.id] !== undefined
+                                      ? ticketAdminNotes[t.id]
+                                      : t.admin_notes || ''
+                                  }
+                                  onChange={(e) =>
+                                    setTicketAdminNotes({ ...ticketAdminNotes, [t.id]: e.target.value })
+                                  }
+                                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                                />
+                                <button
+                                  onClick={() => handleUpdateTicketStatus(t, t.status)}
+                                  className="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-white rounded-md text-[10px] font-semibold transition cursor-pointer"
+                                >
+                                  Save Note
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+
+                    {tickets.length === 0 && (
+                      <tr>
+                        <td colSpan={6} className="py-10 text-center text-slate-400 italic">
+                          No support tickets logged yet.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         )}

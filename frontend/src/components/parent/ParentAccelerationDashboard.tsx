@@ -14,7 +14,13 @@ import {
   GraduationCap,
   Sparkles,
   RefreshCw,
-  AlertCircle
+  AlertCircle,
+  Bell,
+  Award,
+  CheckCircle2,
+  Calendar,
+  AlertTriangle,
+  ChevronRight,
 } from 'lucide-react';
 
 interface Props {
@@ -23,8 +29,9 @@ interface Props {
 }
 
 export const ParentAccelerationDashboard: React.FC<Props> = ({ studentId, metrics: initialMetrics }) => {
-  const { user, profile } = useAuth();
+  const { user, profile, daysLeftInTrial, isTrialExpired, isSubscribed } = useAuth();
   const [metrics, setMetrics] = useState<ParentMetrics | null>(initialMetrics || null);
+  const [dismissedAlerts, setDismissedAlerts] = useState<Record<string, boolean>>({});
   const [studentInfo, setStudentInfo] = useState<{
     displayName: string;
     email: string;
@@ -161,6 +168,51 @@ export const ParentAccelerationDashboard: React.FC<Props> = ({ studentId, metric
     ebbinghausDecayForecast: SpacedRepetitionClientEngine.generateDecayCurve(18.5, 30),
   };
 
+  // Generate Automated Parent Portal Alerts
+  const automatedAlerts = [
+    // 1. Mastery Milestone Alert
+    {
+      id: 'alert-mastery-milestone',
+      type: 'MILESTONE',
+      title: 'Cognitive Mastery Milestone Unlocked',
+      description: `${studentInfo?.displayName || 'Student'} has permanently consolidated ${currentMetrics.activeMasteryQueues.box5Mastered} curriculum concepts into Box 5 (Permanent Long-Term Memory) with >90-day retention stability.`,
+      icon: <Award className="w-4 h-4 text-amber-500" />,
+      badge: 'Mastery Achievement 🏆',
+      badgeClass: 'bg-amber-50 text-amber-800 border-amber-200',
+      bgClass: 'bg-amber-50/50 border-amber-200/80',
+    },
+    // 2. Trial Period & Subscription Status Alert
+    {
+      id: 'alert-trial-status',
+      type: 'SUBSCRIPTION',
+      title: isSubscribed
+        ? 'Active Family Plan Subscription'
+        : isTrialExpired
+        ? 'Academic Trial Period Expired'
+        : 'Active 7-Day Academic Trial Tracking',
+      description: isSubscribed
+        ? 'Full unmetered access to multi-board practice engines, diagnostic root-cause reports, and Leitner automated schedules.'
+        : isTrialExpired
+        ? 'The 7-day academic trial period has concluded. Upgrade to maintain live pedagogical tracking and psychometric calibration.'
+        : `${daysLeftInTrial !== null ? `${daysLeftInTrial} day(s) remaining` : 'Active'} in the complimentary academic trial. All diagnostic and adaptive modules are fully unlocked.`,
+      icon: isTrialExpired ? <AlertTriangle className="w-4 h-4 text-rose-500" /> : <Calendar className="w-4 h-4 text-sky-500" />,
+      badge: isSubscribed ? 'Subscribed ⭐' : isTrialExpired ? 'Trial Expired ⚠️' : `Trial Active ⏳ (${daysLeftInTrial ?? 7}d left)`,
+      badgeClass: isSubscribed ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : isTrialExpired ? 'bg-rose-50 text-rose-800 border-rose-200' : 'bg-sky-50 text-sky-800 border-sky-200',
+      bgClass: isTrialExpired ? 'bg-rose-50/50 border-rose-200/80' : 'bg-sky-50/50 border-sky-200/80',
+    },
+    // 3. Daily Revision Queue Alert
+    {
+      id: 'alert-daily-queue',
+      type: 'REVISION',
+      title: 'Daily Spaced Repetition Queue',
+      description: `${currentMetrics.activeMasteryQueues.box1Daily} concept(s) are scheduled for today's active retrieval session in Box 1 to counteract Ebbinghaus forgetting decay.`,
+      icon: <Bell className="w-4 h-4 text-emerald-500" />,
+      badge: 'Daily Recall Alert 🔔',
+      badgeClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+      bgClass: 'bg-emerald-50/50 border-emerald-200/80',
+    },
+  ];
+
   return (
     <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-6 text-slate-900 font-sans">
       {/* Header */}
@@ -202,6 +254,55 @@ export const ParentAccelerationDashboard: React.FC<Props> = ({ studentId, metric
               {currentMetrics.cognitiveAccelerationIndex}x Baseline
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Automated Parent Notification & Milestone Center */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-700">
+            <Bell className="w-4 h-4 text-sky-600" />
+            <span>Automated Parent Alerts &amp; Milestone Tracking</span>
+          </div>
+          <span className="text-[11px] text-slate-400 font-mono">
+            {automatedAlerts.filter(a => !dismissedAlerts[a.id]).length} Active Notifications
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {automatedAlerts.map((alert) => {
+            if (dismissedAlerts[alert.id]) return null;
+            return (
+              <div
+                key={alert.id}
+                className={`p-4 rounded-xl border flex flex-col justify-between space-y-2.5 shadow-xs transition ${alert.bgClass}`}
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex items-center gap-1.5">
+                    {alert.icon}
+                    <span className="text-xs font-bold text-slate-800">{alert.title}</span>
+                  </div>
+                  <button
+                    onClick={() => setDismissedAlerts({ ...dismissedAlerts, [alert.id]: true })}
+                    className="text-slate-400 hover:text-slate-600 text-xs px-1"
+                    title="Dismiss alert"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <p className="text-[11px] text-slate-600 leading-relaxed">
+                  {alert.description}
+                </p>
+
+                <div className="pt-1 flex items-center justify-between">
+                  <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold border ${alert.badgeClass}`}>
+                    {alert.badge}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 

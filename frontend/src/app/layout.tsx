@@ -20,8 +20,16 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Brainoro | Next-Gen K-12 Learning OS",
+  title: "Brainoro | Own your Prep.",
   description: "Extensible Multi-Board Pedagogical Engine decoupling cognitive algorithms from curriculum metadata.",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico" }
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

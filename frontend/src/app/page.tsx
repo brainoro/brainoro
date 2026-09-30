@@ -53,6 +53,7 @@ import {
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { HandwrittenCheatSheetView } from '@/components/views/HandwrittenCheatSheetView';
 import { AccountModal } from '@/components/account/AccountModal';
+import { SupportTicketModal } from '@/components/support/SupportTicketModal';
 import {
   BookOpen,
   BrainCircuit,
@@ -71,6 +72,7 @@ import {
   Clock,
   Zap,
   CheckCircle2,
+  LifeBuoy,
 } from 'lucide-react';
 
 export default function Home() {
@@ -88,6 +90,7 @@ export default function Home() {
   } = useAuth();
 
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+  const [isSupportModalOpen, setIsSupportModalOpen] = useState(false);
 
   // Curriculum Context Parameters (Default: CBSE Class 6 Mathematics Ganita Prakash)
   const [selectedBoardId, setSelectedBoardId] = useState<BoardId>('CBSE');
@@ -779,6 +782,14 @@ export default function Home() {
             </button>
           )}
           <button
+            onClick={() => setIsSupportModalOpen(true)}
+            className="flex items-center gap-1 text-sky-400 hover:text-sky-300 font-medium transition cursor-pointer"
+            title="Need Help? Open Helpdesk & Raise Support Ticket"
+          >
+            <LifeBuoy className="w-3.5 h-3.5" />
+            <span>Helpdesk</span>
+          </button>
+          <button
             onClick={() => setActiveTab('parent')}
             className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-medium transition cursor-pointer"
             title="Open Parents Cognitive Acceleration Portal"
@@ -1292,6 +1303,24 @@ export default function Home() {
         isOpen={isAccountModalOpen}
         onClose={() => setIsAccountModalOpen(false)}
       />
+
+      {/* User Helpdesk & Support Ticket Raising Modal */}
+      <SupportTicketModal
+        isOpen={isSupportModalOpen}
+        onClose={() => setIsSupportModalOpen(false)}
+      />
+
+      {/* Floating Quick Helpdesk Trigger */}
+      <div className="fixed bottom-5 right-5 z-40 print:hidden">
+        <button
+          onClick={() => setIsSupportModalOpen(true)}
+          className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-lg shadow-sky-600/30 hover:scale-105 transition-all cursor-pointer border border-sky-400/30"
+          title="Need Help? Raise a Support Ticket"
+        >
+          <LifeBuoy className="w-4 h-4" />
+          <span className="hidden sm:inline">Help & Support</span>
+        </button>
+      </div>
     </div>
   );
 }
