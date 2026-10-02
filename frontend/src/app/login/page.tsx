@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { LogIn, AlertCircle, Sparkles, Mail, Lock, Loader2, LifeBuoy } from 'lucide-react';
@@ -61,6 +62,12 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 font-sans relative">
+      {/* Google Identity Services (GIS) Client SDK */}
+      <Script
+        src="https://accounts.google.com/gsi/client"
+        strategy="afterInteractive"
+      />
+
       {/* Top Left OcaVerse Logo */}
       <div className="absolute top-5 left-5 sm:top-7 sm:left-8 z-10">
         <a
