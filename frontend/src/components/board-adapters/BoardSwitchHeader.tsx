@@ -116,8 +116,8 @@ export const BoardSwitchHeader: React.FC<Props> = ({
           )}
         </div>
 
-        {/* Active Learning Mode Badge: Visual Cheat Sheet & Parents Portal */}
-        <div className="flex items-center gap-2">
+        {/* Active Learning Mode Badge: Visual Cheat Sheet, Parents Portal, and Ingestion */}
+        <div className="flex items-center gap-2.5">
           <button
             type="button"
             onClick={() => {
@@ -148,50 +148,17 @@ export const BoardSwitchHeader: React.FC<Props> = ({
               <span>Parents Portal</span>
             </div>
           </button>
-        </div>
 
-        {/* Subject, Grade and Ingestion Trigger */}
-        <div className="flex items-center gap-2.5">
-          {/* Subject Filter */}
-          <select
-            value={selectedSubject}
-            onChange={(e) => onSelectSubject(e.target.value)}
-            aria-label="Filter curriculum by subject"
-            className="bg-white border border-slate-200 text-slate-800 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-sky-500 font-medium shadow-xs"
-          >
-            <option value="ALL">All Subjects</option>
-            <option value="MATH">Mathematics</option>
-            <option value="SCIENCE">Science</option>
-            <option value="PHYSICS">Physics</option>
-            <option value="CHEMISTRY">Chemistry</option>
-            <option value="BIOLOGY">Biology</option>
-          </select>
-
-          {/* Grade Level Selector: Locked to onboarded grade for students */}
-          <select
-            value={selectedGrade}
-            onChange={(e) => isPrivileged && onSelectGrade(Number(e.target.value))}
-            disabled={!isPrivileged}
-            aria-label="Filter curriculum by grade level"
-            className={`bg-white border border-slate-200 text-slate-800 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-sky-500 font-medium shadow-xs ${
-              !isPrivileged ? 'cursor-default opacity-95 bg-slate-50' : ''
-            }`}
-          >
-            {(isPrivileged ? [6, 7, 8, 9, 10] : [selectedGrade]).map((g) => (
-              <option key={g} value={g}>
-                Class {g}
-              </option>
-            ))}
-          </select>
-
-          {/* Ingest OER Button */}
-          <button
-            onClick={onOpenIngestion}
-            className="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-xs transition-all"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Ingest OER</span>
-          </button>
+          {/* Ingest OER Button: Reserved exclusively for Admin / Educator roles */}
+          {isPrivileged && (
+            <button
+              onClick={onOpenIngestion}
+              className="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-xs transition-all"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Ingest OER</span>
+            </button>
+          )}
         </div>
       </div>
 

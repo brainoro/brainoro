@@ -166,6 +166,29 @@ export default function Home() {
   const [learningStep, setLearningStep] = useState<LearningProgressionStep>('learn');
   const [activeTab, setActiveTab] = useState<'learn' | 'practice' | 'revise' | 'test' | 'graph' | 'parent'>('learn');
 
+  // Smooth Auto-Scroll to the relevant active tab section when activeTab changes
+  useEffect(() => {
+    const tabSectionMap: Record<string, string> = {
+      learn: 'cheatsheet-section',
+      practice: 'practice-section',
+      revise: 'revise-section',
+      test: 'test-section',
+      parent: 'parent-portal-section',
+      graph: 'graph-section',
+    };
+
+    const targetId = tabSectionMap[activeTab];
+    if (targetId) {
+      const timer = setTimeout(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 70);
+      return () => clearTimeout(timer);
+    }
+  }, [activeTab]);
+
   // Authoritative Context Resolution State
   const [authResolution, setAuthResolution] = useState<CurriculumResolutionResult | null>(null);
   const [isResolvingAuth, setIsResolvingAuth] = useState<boolean>(true);
@@ -790,7 +813,13 @@ export default function Home() {
             <span>Helpdesk</span>
           </button>
           <button
-            onClick={() => setActiveTab('parent')}
+            onClick={() => {
+              setActiveTab('parent');
+              setTimeout(() => {
+                const el = document.getElementById('parent-portal-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 60);
+            }}
             className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-medium transition cursor-pointer"
             title="Open Parents Cognitive Acceleration Portal"
           >
@@ -840,7 +869,13 @@ export default function Home() {
             setLearningStep('learn');
             setActiveTab('learn');
           }}
-          onSelectParentPortal={() => setActiveTab('parent')}
+          onSelectParentPortal={() => {
+            setActiveTab('parent');
+            setTimeout(() => {
+              const el = document.getElementById('parent-portal-section');
+              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 60);
+          }}
         />
       </div>
 
@@ -868,6 +903,10 @@ export default function Home() {
                 onClick={() => {
                   setLearningStep('learn');
                   setActiveTab('learn');
+                  setTimeout(() => {
+                    const el = document.getElementById('cheatsheet-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 60);
                 }}
                 className={`p-3 rounded-xl border cursor-pointer transition ${
                   activeTab === 'learn'
@@ -887,6 +926,10 @@ export default function Home() {
                 onClick={() => {
                   setLearningStep('practice');
                   setActiveTab('practice');
+                  setTimeout(() => {
+                    const el = document.getElementById('practice-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 60);
                 }}
                 className={`p-3 rounded-xl border cursor-pointer transition ${
                   activeTab === 'practice'
@@ -906,6 +949,10 @@ export default function Home() {
                 onClick={() => {
                   setLearningStep('revise');
                   setActiveTab('revise');
+                  setTimeout(() => {
+                    const el = document.getElementById('revise-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 60);
                 }}
                 className={`p-3 rounded-xl border cursor-pointer transition ${
                   activeTab === 'revise'
@@ -925,6 +972,10 @@ export default function Home() {
                 onClick={() => {
                   setLearningStep('test');
                   setActiveTab('test');
+                  setTimeout(() => {
+                    const el = document.getElementById('test-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 60);
                 }}
                 className={`p-3 rounded-xl border cursor-pointer transition ${
                   activeTab === 'test'
@@ -943,6 +994,10 @@ export default function Home() {
               <div
                 onClick={() => {
                   setActiveTab('parent');
+                  setTimeout(() => {
+                    const el = document.getElementById('parent-portal-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 60);
                 }}
                 className={`p-3 rounded-xl border cursor-pointer transition ${
                   activeTab === 'parent'
@@ -1146,7 +1201,7 @@ export default function Home() {
 
         {/* View: Adaptive Practice Simulator (Section 2) */}
         {activeTab === 'practice' && (
-          <div className="print:hidden">
+          <div id="practice-section" className="print:hidden scroll-mt-6">
             <AdaptiveTestSimulator
               selectedBoardId={selectedBoardId}
               selectedGrade={selectedGrade}
@@ -1225,7 +1280,7 @@ export default function Home() {
 
         {/* View: Psychometric Assessment & Root-Cause Knowledge Gap Engine (Section 4) */}
         {activeTab === 'test' && (
-          <div className="print:hidden">
+          <div id="test-section" className="print:hidden scroll-mt-6">
             <PsychometricAssessmentHub
               selectedBoardId={selectedBoardId}
               selectedGrade={selectedGrade}
@@ -1254,7 +1309,7 @@ export default function Home() {
 
         {/* View: Spaced Repetition Cognitive Hub (Leitner / SM-2) */}
         {activeTab === 'revise' && (
-          <div className="print:hidden">
+          <div id="revise-section" className="print:hidden scroll-mt-6">
             <SpacedRepetitionHub
               cards={memoryCards}
               onUpdateCard={handleUpdateCard}
@@ -1264,7 +1319,7 @@ export default function Home() {
 
         {/* View: Knowledge Graph & Remediation Visualizer */}
         {activeTab === 'graph' && (
-          <div className="print:hidden">
+          <div id="graph-section" className="print:hidden scroll-mt-6">
             <DependencyGraphVisualizer
               concepts={
                 authResolution?.isAuthoritative && authResolution.concepts.length > 0
@@ -1284,7 +1339,7 @@ export default function Home() {
 
         {/* View: Parent Cognitive Acceleration Dashboard */}
         {activeTab === 'parent' && (
-          <div className="print:hidden">
+          <div id="parent-portal-section" className="print:hidden scroll-mt-6">
             <ParentAccelerationDashboard />
           </div>
         )}
