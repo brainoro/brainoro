@@ -1,74 +1,231 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { UserPlus, AlertCircle, Sparkles, Mail, Lock, User, Building, MapPin, Loader2, CheckCircle2, GraduationCap, BookOpen, LifeBuoy } from 'lucide-react';
+import { supabase } from '@/lib/supabase/client';
+import {
+  Mail,
+  Loader2,
+  AlertCircle,
+  CheckCircle2,
+  ArrowRight,
+  ShieldCheck,
+  Edit2,
+  RefreshCw,
+} from 'lucide-react';
 import { GoogleSignInButton } from '@/components/auth/GoogleSignInButton';
 
 export default function SignUpPage() {
   const router = useRouter();
-  const { signUp } = useAuth();
+  const { signInWithOtp, verifyOtp, user, profile } = useAuth();
 
+  const [step, setStep] = useState<'EMAIL' | 'OTP'>('EMAIL');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [fullName, setFullName] = useState('');
-  const [curriculum, setCurriculum] = useState('CBSE');
-  const [grade, setGrade] = useState<number>(6);
-  const [institutionName, setInstitutionName] = useState('');
-  const [location, setLocation] = useState('');
-
+  const [otpCode, setOtpCode] = useState(['', '', '', '', '', '']);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [successMsg, setSuccessMsg] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [resendCooldown, setResendCooldown] = useState(0);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+
+  // Pre-fill email from URL search params if provided
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const emailParam = urlParams.get('email');
+      if (emailParam) {
+        setEmail(emailParam.trim());
+      }
+    }
+  }, []);
+
+  // If already authenticated with active profile, redirect immediately
+  useEffect(() => {
+    if (user && profile?.account_status === 'ACTIVE') {
+      if (profile.onboarding_completed) {
+        router.replace('/');
+      } else {
+        router.replace('/onboarding');
+      }
+    }
+  }, [user, profile, router]);
+
+  // Resend countdown timer
+  useEffect(() => {
+    if (resendCooldown <= 0) return;
+    const interval = setInterval(() => {
+      setResendCooldown((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [resendCooldown]);
+
+  // Step 1: Request 6-Digit OTP Code
+  const handleRequestOtp = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     setErrorMsg(null);
-    setIsSubmitting(true);
+    setSuccessMsg(null);
 
+    const trimmedEmail = email.trim().toLowerCase();
+    if (!trimmedEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
+      setErrorMsg('Please enter a valid email address.');
+      return;
+    }
+
+    setIsSubmitting(true);
     try {
-      const { error, data } = await signUp(email.trim(), password, {
-        full_name: fullName.trim() || undefined,
-        curriculum,
-        grade: Number(grade),
-        board_id: curriculum,
-        grade_level: Number(grade),
-        institution_name: institutionName.trim() || undefined,
-        location: location.trim() || undefined,
-      });
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('brainoro_signup_email', trimmedEmail);
+      }
+
+      const { error } = await signInWithOtp(trimmedEmail);
 
       if (error) {
-        setErrorMsg(error.message);
+        if (error.message?.toLowerCase().includes('rate limit') || error.status === 429) {
+          setErrorMsg('Verification code was recently requested. Please check your inbox or wait 30s.');
+        } else {
+          setErrorMsg(error.message || 'Could not send verification code. Please try again.');
+        }
         setIsSubmitting(false);
         return;
       }
 
-      // Check if email confirmation is required
-      if (data?.user && !data.session) {
-        setIsSuccess(true);
-      } else {
-        router.push('/');
-      }
+      setStep('OTP');
+      setResendCooldown(45);
+      setSuccessMsg(`We have sent a 6-digit verification code to ${trimmedEmail}. Please check your inbox (and spam folder).`);
+      
+      setTimeout(() => {
+        inputRefs.current[0]?.focus();
+      }, 100);
     } catch (err: any) {
-      setErrorMsg(err?.message || 'An unexpected error occurred during signup.');
+      setErrorMsg(err?.message || 'An unexpected error occurred while requesting OTP.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  // Step 2: Handle OTP input changes across 6 boxes
+  const handleOtpChange = (index: number, value: string) => {
+    if (value.length > 1) {
+      const pastedCode = value.replace(/\D/g, '').slice(0, 6);
+      if (pastedCode.length > 0) {
+        const newOtp = [...otpCode];
+        for (let i = 0; i < 6; i++) {
+          newOtp[i] = pastedCode[i] || '';
+        }
+        setOtpCode(newOtp);
+        const focusIndex = Math.min(pastedCode.length, 5);
+        inputRefs.current[focusIndex]?.focus();
+
+        if (pastedCode.length === 6) {
+          submitOtp(newOtp.join(''));
+        }
+      }
+      return;
+    }
+
+    const digit = value.replace(/\D/g, '');
+    const newOtp = [...otpCode];
+    newOtp[index] = digit;
+    setOtpCode(newOtp);
+
+    if (digit && index < 5) {
+      inputRefs.current[index + 1]?.focus();
+    }
+
+    const completeCode = newOtp.join('');
+    if (completeCode.length === 6) {
+      submitOtp(completeCode);
+    }
+  };
+
+  const handleKeyDown = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Backspace' && !otpCode[index] && index > 0) {
+      inputRefs.current[index - 1]?.focus();
+    }
+  };
+
+  // Verify OTP and complete instant session login
+  const submitOtp = async (codeToVerify?: string) => {
+    setErrorMsg(null);
+    const finalCode = (codeToVerify || otpCode.join('')).trim();
+
+    if (finalCode.length !== 6) {
+      setErrorMsg('Please enter all 6 digits of your verification code.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const trimmedEmail = email.trim().toLowerCase();
+      const { data, error } = await verifyOtp(trimmedEmail, finalCode);
+
+      if (error) {
+        setErrorMsg('Invalid or expired verification code. Please check and try again.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      const verifiedUser = data?.user;
+      if (!verifiedUser) {
+        throw new Error('Verification completed, but session could not be established.');
+      }
+
+      const { data: existingProfile } = await supabase
+        .from('profiles')
+        .select('user_id, onboarding_completed')
+        .eq('user_id', verifiedUser.id)
+        .maybeSingle();
+
+      if (!existingProfile) {
+        const trialEnd = new Date();
+        trialEnd.setDate(trialEnd.getDate() + 7);
+
+        await supabase.from('profiles').upsert(
+          {
+            user_id: verifiedUser.id,
+            email: verifiedUser.email || trimmedEmail,
+            display_name: verifiedUser.email?.split('@')[0] || 'Learner',
+            role: 'STUDENT',
+            account_status: 'ACTIVE',
+            onboarding_completed: false,
+            trial_ends_at: trialEnd.toISOString(),
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+          },
+          { onConflict: 'user_id' }
+        );
+      }
+
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('brainoro_email_verified', 'true');
+        localStorage.setItem(`brainoro_verified_${trimmedEmail}`, 'true');
+      }
+
+      if (!existingProfile || !existingProfile.onboarding_completed) {
+        router.replace('/onboarding');
+      } else {
+        router.replace('/');
+      }
+    } catch (err: any) {
+      setErrorMsg(err?.message || 'Verification failed. Please try again.');
+      setIsSubmitting(false);
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 font-sans relative">
-      {/* Google Identity Services (GIS) Client SDK */}
+    <div className="fixed inset-0 z-50 w-full h-full min-h-[100dvh] max-h-[100dvh] overflow-hidden bg-slate-50 flex flex-col justify-center items-center px-3 sm:px-4 font-sans select-none">
+      {/* Google Identity Services SDK */}
       <Script
         src="https://accounts.google.com/gsi/client"
         strategy="afterInteractive"
       />
 
-      {/* Top Left OcaVerse Logo */}
-      <div className="absolute top-5 left-5 sm:top-7 sm:left-8 z-10">
+      {/* Top Left OcaVerse Watermark */}
+      <div className="absolute top-3 left-4 sm:top-4 sm:left-6 z-10">
         <a
           href="https://ocaverse.com"
           target="_blank"
@@ -79,87 +236,85 @@ export default function SignUpPage() {
           <img
             src="/ocaverse-logo.png"
             alt="OcaVerse - Own Complete Automation"
-            className="h-9 sm:h-11 w-auto object-contain"
+            className="h-5 sm:h-7 w-auto object-contain"
           />
         </a>
       </div>
 
-      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <div className="flex flex-row items-center justify-center gap-3.5">
-          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden shadow-md border border-slate-200/80 bg-slate-900 flex items-center justify-center p-1 flex-shrink-0">
+      {/* Header / Logo */}
+      <div className="text-center mb-2 sm:mb-2.5">
+        <div className="flex flex-row items-center justify-center gap-2">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden shadow-xs border border-slate-200/80 bg-slate-900 flex items-center justify-center p-0.5 flex-shrink-0">
             <img
               src="/brainoro-logo.jpg"
               alt="Brainoro Logo"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
           <div className="text-left">
-            <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
+            <h1 className="text-base sm:text-lg font-black tracking-tight text-slate-900 leading-none">
               Brainoro
             </h1>
-            <p className="text-base font-bold text-sky-600 tracking-wide font-caveat -mt-0.5">
+            <p className="text-[11px] sm:text-xs font-bold text-sky-600 tracking-wide font-caveat">
               Own your Prep.
             </p>
           </div>
         </div>
-        <h2 className="mt-3 text-center text-xs sm:text-sm font-medium text-slate-500">
+        <h2 className="mt-0.5 text-center text-[10px] sm:text-[11px] font-medium text-slate-500">
           Create your authoritative cognitive learner account
         </h2>
       </div>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-6 shadow-sm border border-slate-200 rounded-2xl sm:px-10">
-          {isSuccess ? (
-            <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-4 animate-fadeIn">
-              <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
-              <h3 className="text-base font-bold text-slate-900">Verification Link Sent</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                We have sent a verification link to <span className="font-semibold text-slate-800">{email}</span>.
-                Please confirm your email to activate your account and proceed to onboarding.
-              </p>
-              <Link
-                href="/login"
-                className="inline-block mt-4 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-sm transition"
-              >
-                Return to Login
-              </Link>
+      {/* Main Authentication Card */}
+      <div className="w-full max-w-[360px] sm:max-w-[380px]">
+        <div className="bg-white py-3.5 px-4 sm:py-4.5 sm:px-5 shadow-sm border border-slate-200 rounded-2xl">
+          {errorMsg && (
+            <div className="mb-2 p-2 rounded-lg bg-rose-50 border border-rose-200 flex items-start gap-1.5 text-rose-800 text-[11px] leading-snug animate-fadeIn">
+              <AlertCircle className="w-3.5 h-3.5 text-rose-600 flex-shrink-0 mt-0.5" />
+              <div>{errorMsg}</div>
             </div>
-          ) : (
-            <>
-              {errorMsg && (
-                <div className="mb-6 p-4 rounded-xl bg-rose-50 border border-rose-200 flex items-start gap-3 text-rose-800 text-xs leading-relaxed animate-fadeIn">
-                  <AlertCircle className="w-4 h-4 text-rose-600 flex-shrink-0 mt-0.5" />
-                  <div>{errorMsg}</div>
-                </div>
-              )}
+          )}
 
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                    Full Name
-                  </label>
-                  <div className="relative rounded-xl shadow-sm">
-                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                      <User className="w-4 h-4" />
-                    </div>
-                    <input
-                      type="text"
-                      required
-                      value={fullName}
-                      onChange={(e) => setFullName(e.target.value)}
-                      placeholder="Aryabhata Sharma"
-                      className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition"
-                    />
-                  </div>
-                </div>
+          {successMsg && step === 'OTP' && (
+            <div className="mb-2 p-2 rounded-lg bg-emerald-50 border border-emerald-200 flex items-start gap-1.5 text-emerald-800 text-[11px] leading-snug animate-fadeIn">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <div>{successMsg}</div>
+            </div>
+          )}
 
+          {step === 'EMAIL' ? (
+            <div className="space-y-2.5">
+              {/* 1. VISUAL HIERARCHY: Primary Google Action at Top */}
+              <div>
+                <GoogleSignInButton
+                  buttonText="Continue with Google"
+                  text="continue_with"
+                  size="large"
+                  redirectTo="/onboarding"
+                />
+              </div>
+
+              {/* Clean Divider Line */}
+              <div className="relative my-1.5">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-slate-200" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-white px-2 text-slate-400 font-bold tracking-wider text-[9px]">
+                    — OR SIGN UP WITH EMAIL —
+                  </span>
+                </div>
+              </div>
+
+              {/* 2. TWO-STEP PASSWORDLESS MANUAL FORM */}
+              <form className="space-y-2.5" onSubmit={handleRequestOtp}>
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">
                     Email Address
                   </label>
-                  <div className="relative rounded-xl shadow-sm">
-                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                      <Mail className="w-4 h-4" />
+                  <div className="relative rounded-xl shadow-2xs">
+                    <div className="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none text-slate-400">
+                      <Mail className="w-3.5 h-3.5" />
                     </div>
                     <input
                       type="email"
@@ -167,174 +322,133 @@ export default function SignUpPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="student@school.edu"
-                      className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition"
+                      className="block w-full pl-8 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition"
+                      autoFocus
                     />
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                    Password
-                  </label>
-                  <div className="relative rounded-xl shadow-sm">
-                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                      <Lock className="w-4 h-4" />
-                    </div>
-                    <input
-                      type="password"
-                      required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="••••••••"
-                      className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition"
-                    />
-                  </div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting || !email.trim()}
+                  className="w-full py-2.5 px-4 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl shadow-xs transition flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-60"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                      <span>Sending Code...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Get 6-Digit Verification Code</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </>
+                  )}
+                </button>
+              </form>
+            </div>
+          ) : (
+            /* STEP 2: ENTER 6-DIGIT OTP CODE */
+            <div className="space-y-2.5 animate-fadeIn">
+              <div className="text-center space-y-0.5">
+                <div className="w-8 h-8 rounded-xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center mx-auto mb-0.5">
+                  <ShieldCheck className="w-4 h-4" />
                 </div>
-
-                {/* Curriculum & Grade Selection Dropdowns */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-                      <BookOpen className="w-3.5 h-3.5 text-sky-600" />
-                      <span>Curriculum / Board</span>
-                    </label>
-                    <select
-                      value={curriculum}
-                      onChange={(e) => setCurriculum(e.target.value)}
-                      className="block w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition shadow-sm"
-                    >
-                      <option value="CBSE">CBSE (NCERT)</option>
-                      <option value="CAMBRIDGE">Cambridge (IGCSE)</option>
-                      <option value="IB_MYP">IB MYP (Inquiry)</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-                      <GraduationCap className="w-3.5 h-3.5 text-sky-600" />
-                      <span>Class / Grade</span>
-                    </label>
-                    <select
-                      value={grade}
-                      onChange={(e) => setGrade(Number(e.target.value))}
-                      className="block w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition shadow-sm"
-                    >
-                      <option value={6}>Class 6</option>
-                      <option value={7}>Class 7</option>
-                      <option value={8}>Class 8</option>
-                      <option value={9}>Class 9</option>
-                      <option value={10}>Class 10</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      School / Institution (Optional)
-                    </label>
-                    <div className="relative rounded-xl shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                        <Building className="w-4 h-4" />
-                      </div>
-                      <input
-                        type="text"
-                        value={institutionName}
-                        onChange={(e) => setInstitutionName(e.target.value)}
-                        placeholder="Delhi Public School"
-                        className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Location / City (Optional)
-                    </label>
-                    <div className="relative rounded-xl shadow-sm">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                        <MapPin className="w-4 h-4" />
-                      </div>
-                      <input
-                        type="text"
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
-                        placeholder="New Delhi, India"
-                        className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-3">
+                <h3 className="text-xs font-bold text-slate-900">Enter Verification Code</h3>
+                <div className="flex items-center justify-center gap-1 text-[10px] text-slate-500">
+                  <span>Sent to</span>
+                  <span className="font-bold text-slate-800">{email}</span>
                   <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-sm text-xs font-bold text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                    type="button"
+                    onClick={() => setStep('EMAIL')}
+                    className="text-sky-600 hover:text-sky-700 p-0.5 rounded ml-0.5 inline-flex items-center"
+                    title="Change Email"
                   >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        Creating account...
-                      </>
-                    ) : (
-                      <>
-                        <UserPlus className="w-4 h-4" />
-                        Create Account
-                      </>
-                    )}
+                    <Edit2 className="w-2.5 h-2.5" />
                   </button>
                 </div>
-              </form>
-
-              {/* Social Sign-up Divider */}
-              <div className="relative my-6">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-slate-200" />
-                </div>
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-white px-3 text-slate-400 font-bold tracking-wider">
-                    Or sign up with
-                  </span>
-                </div>
               </div>
 
-              {/* Google OAuth Button */}
-              <GoogleSignInButton buttonText="Sign up with Google" />
+              {/* 6-Box OTP Input */}
+              <div className="flex justify-center items-center gap-1.5 my-1">
+                {otpCode.map((digit, idx) => (
+                  <input
+                    key={idx}
+                    ref={(el) => {
+                      inputRefs.current[idx] = el;
+                    }}
+                    type="text"
+                    inputMode="numeric"
+                    maxLength={1}
+                    value={digit}
+                    onChange={(e) => handleOtpChange(idx, e.target.value)}
+                    onKeyDown={(e) => handleKeyDown(idx, e)}
+                    className="w-9 h-11 sm:w-10 sm:h-12 text-center text-sm font-black font-mono bg-slate-50 border-2 border-slate-200 focus:border-sky-500 focus:bg-white rounded-lg text-slate-900 outline-none transition"
+                  />
+                ))}
+              </div>
 
-              <div className="mt-6 pt-6 border-t border-slate-100 flex flex-col items-center gap-3 text-center">
-                <p className="text-xs text-slate-500">
-                  Already have an account?{' '}
-                  <Link href="/login" className="font-bold text-sky-600 hover:text-sky-700 transition">
-                    Sign in instead
-                  </Link>
-                </p>
-                <Link
-                  href="/support"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-sky-600 transition bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200/80"
+              <button
+                type="button"
+                onClick={() => submitOtp()}
+                disabled={isSubmitting || otpCode.join('').length !== 6}
+                className="w-full py-2 px-3 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl shadow-xs transition flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-60"
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    <span>Verifying Code...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Verify & Continue to Dashboard</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </>
+                )}
+              </button>
+
+              {/* Resend OTP button */}
+              <div className="text-center flex items-center justify-center gap-1 text-[10px] text-slate-500">
+                <span>Didn&apos;t receive code?</span>
+                <button
+                  type="button"
+                  onClick={() => handleRequestOtp()}
+                  disabled={isSubmitting || resendCooldown > 0}
+                  className="font-bold text-sky-600 hover:text-sky-700 disabled:opacity-50 inline-flex items-center gap-0.5 cursor-pointer"
                 >
-                  <LifeBuoy className="w-3.5 h-3.5 text-sky-500" />
-                  <span>Need help? Visit Helpdesk & Raise Ticket</span>
-                </Link>
+                  {resendCooldown > 0 ? (
+                    <span>Resend in {resendCooldown}s</span>
+                  ) : (
+                    <>
+                      <RefreshCw className="w-2.5 h-2.5" />
+                      <span>Resend Code</span>
+                    </>
+                  )}
+                </button>
               </div>
-            </>
+            </div>
           )}
-        </div>
 
-        {/* Footer Copyright & OcaVerse Hyperlink */}
-        <footer className="mt-6 text-center text-xs text-slate-400">
-          <p>
-            © {new Date().getFullYear()} Brainoro - Own your Prep — Powered by{' '}
-            <a
-              href="https://ocaverse.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sky-600 hover:text-sky-700 font-semibold transition hover:underline"
-            >
-              OcaVerse.com
-            </a>
-          </p>
-        </footer>
+          {/* Clean Footer Link - Consistent Naming */}
+          <div className="mt-2.5 pt-2 border-t border-slate-100 text-center text-[11px] text-slate-500">
+            {step === 'EMAIL' ? (
+              <p>
+                Already have an account?{' '}
+                <Link href={`/login${email ? `?email=${encodeURIComponent(email)}` : ''}`} className="font-bold text-sky-600 hover:text-sky-700">
+                  Log in here
+                </Link>
+              </p>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setStep('EMAIL')}
+                className="font-bold text-slate-600 hover:text-slate-800 transition text-[10px]"
+              >
+                ← Use a different email address
+              </button>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

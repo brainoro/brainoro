@@ -52,6 +52,8 @@ export interface AuthContextType {
   daysLeftInTrial: number | null;
   signIn: (email: string, password: string) => Promise<{ error: AuthError | null }>;
   signUp: (email: string, password: string, metadata?: SignUpMetadata) => Promise<{ error: AuthError | null; data?: any }>;
+  signInWithOtp: (email: string) => Promise<{ error: AuthError | null; data?: any }>;
+  verifyOtp: (email: string, token: string) => Promise<{ error: AuthError | null; data?: any }>;
   signOut: () => Promise<{ error: AuthError | null }>;
   refreshProfile: () => Promise<void>;
   activateSubscription: () => Promise<{ success: boolean }>;
@@ -205,6 +207,41 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return { error: result.error, data: result.data };
   };
 
+  const signInWithOtp = async (email: string) => {
+    setIsLoading(true);
+    const redirectUrl =
+      typeof window !== 'undefined'
+        ? `${window.location.origin}/auth/callback`
+        : undefined;
+
+    const result = await supabase.auth.signInWithOtp({
+      email,
+      options: {
+        shouldCreateUser: true,
+        emailRedirectTo: redirectUrl,
+      },
+    });
+    setIsLoading(false);
+    return { error: result.error, data: result.data };
+  };
+
+  const verifyOtp = async (email: string, token: string) => {
+    setIsLoading(true);
+    const result = await supabase.auth.verifyOtp({
+      email,
+      token,
+      type: 'email',
+    });
+
+    if (result.data?.user) {
+      setUser(result.data.user);
+      setSession(result.data.session);
+      await fetchProfileAndAdminStatus(result.data.user.id);
+    }
+    setIsLoading(false);
+    return { error: result.error, data: result.data };
+  };
+
   const signOut = async () => {
     setIsLoading(true);
     const result = await supabase.auth.signOut();
@@ -296,6 +333,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         daysLeftInTrial,
         signIn,
         signUp,
+        signInWithOtp,
+        verifyOtp,
         signOut,
         refreshProfile,
         activateSubscription,

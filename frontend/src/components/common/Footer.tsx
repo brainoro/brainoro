@@ -1,6 +1,16 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function LegalFooter() {
+  const pathname = usePathname();
+
+  // Hide the global dark footer on dedicated full-screen auth pages (login / signup)
+  if (pathname === '/login' || pathname === '/signup') {
+    return null;
+  }
+
   return (
     <footer className="w-full border-t border-slate-800 bg-slate-950 py-4 px-6 text-center text-xs text-slate-400 print:hidden">
       <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mb-1">
@@ -30,3 +40,4 @@ export default function LegalFooter() {
     </footer>
   );
 }
+
