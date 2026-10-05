@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase/client';
 import { Loader2, AlertCircle } from 'lucide-react';
+import { trackLeadOnce } from '@/lib/metaPixel';
 
 interface GoogleSignInButtonProps {
   className?: string;
@@ -118,6 +119,9 @@ export const GoogleSignInButton: React.FC<GoogleSignInButtonProps> = ({
         if (onSuccess) {
           onSuccess();
         }
+
+        // Fire Meta Pixel Lead event on successful Google auth
+        trackLeadOnce();
 
         // Determine destination route
         if (redirectTo) {

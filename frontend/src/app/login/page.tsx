@@ -19,6 +19,7 @@ import {
   KeyRound,
 } from 'lucide-react';
 import { GoogleSignInButton } from '@/components/auth/GoogleSignInButton';
+import { trackLeadOnce } from '@/lib/metaPixel';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -206,6 +207,7 @@ export default function LoginPage() {
       if (typeof window !== 'undefined') {
         localStorage.setItem('brainoro_email_verified', 'true');
         localStorage.setItem(`brainoro_verified_${trimmedEmail}`, 'true');
+        trackLeadOnce();
       }
 
       if (!existingProfile || !existingProfile.onboarding_completed) {

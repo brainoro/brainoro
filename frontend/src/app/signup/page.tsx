@@ -17,6 +17,7 @@ import {
   RefreshCw,
 } from 'lucide-react';
 import { GoogleSignInButton } from '@/components/auth/GoogleSignInButton';
+import { trackLeadOnce } from '@/lib/metaPixel';
 
 export default function SignUpPage() {
   const router = useRouter();
@@ -31,20 +32,6 @@ export default function SignUpPage() {
   const [resendCooldown, setResendCooldown] = useState(0);
 
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-  const hasFiredLeadRef = useRef(false);
-
-  // Strictly fire Meta Pixel Lead event once upon successful registration
-  const fireLeadEventOnce = () => {
-    if (hasFiredLeadRef.current) return;
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      try {
-        hasFiredLeadRef.current = true;
-        (window as any).fbq('track', 'Lead');
-      } catch (e) {
-        console.warn('[Meta Pixel Track Lead Error]:', e);
-      }
-    }
-  };
 
   // Pre-fill email from URL search params if provided
   useEffect(() => {
@@ -217,7 +204,7 @@ export default function SignUpPage() {
       if (typeof window !== 'undefined') {
         localStorage.setItem('brainoro_email_verified', 'true');
         localStorage.setItem(`brainoro_verified_${trimmedEmail}`, 'true');
-        fireLeadEventOnce();
+        trackLeadOnce();
       }
 
       if (!existingProfile || !existingProfile.onboarding_completed) {
@@ -307,7 +294,7 @@ export default function SignUpPage() {
                   size="large"
                   redirectTo="/onboarding"
                   onSuccess={() => {
-                    fireLeadEventOnce();
+                    trackLeadOnce();
                   }}
                 />
               </div>
