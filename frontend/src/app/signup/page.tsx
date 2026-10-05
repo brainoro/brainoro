@@ -203,6 +203,15 @@ export default function SignUpPage() {
       if (typeof window !== 'undefined') {
         localStorage.setItem('brainoro_email_verified', 'true');
         localStorage.setItem(`brainoro_verified_${trimmedEmail}`, 'true');
+
+        // Fire Meta Pixel Lead event on successful registration
+        if ((window as any).fbq) {
+          try {
+            (window as any).fbq('track', 'Lead');
+          } catch (e) {
+            console.warn('[Meta Pixel Track Lead Error]:', e);
+          }
+        }
       }
 
       if (!existingProfile || !existingProfile.onboarding_completed) {
@@ -291,6 +300,15 @@ export default function SignUpPage() {
                   text="continue_with"
                   size="large"
                   redirectTo="/onboarding"
+                  onSuccess={() => {
+                    if (typeof window !== 'undefined' && (window as any).fbq) {
+                      try {
+                        (window as any).fbq('track', 'Lead');
+                      } catch (e) {
+                        console.warn('[Meta Pixel Track Lead Error]:', e);
+                      }
+                    }
+                  }}
                 />
               </div>
 
