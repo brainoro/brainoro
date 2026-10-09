@@ -71,11 +71,11 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="text-sm text-slate-300 leading-relaxed flex flex-wrap items-center gap-2">
               <span>Contact:</span>
-              <a href="mailto:support@brainoro.com" className="text-sky-400 hover:underline font-medium inline-flex items-center gap-1">
-                <Mail className="w-3.5 h-3.5" /> support@brainoro.com
+              <a href="mailto:support.brainoro@ocaverse.com" className="text-sky-400 hover:underline font-medium inline-flex items-center gap-1">
+                <Mail className="w-3.5 h-3.5" /> support.brainoro@ocaverse.com
               </a>
               <span className="text-slate-600">•</span>
-              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline font-medium">
+              <a href="https://wa.me/+918796363097" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline font-medium">
                 WhatsApp Support
               </a>
             </p>
@@ -147,8 +147,8 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p className="text-sm text-slate-300 leading-relaxed">
               You can ask us to access, correct or delete your data, or withdraw your consent, at any time by writing to{' '}
-              <a href="mailto:support@brainoro.com" className="text-sky-400 hover:underline font-semibold">
-                support@brainoro.com
+              <a href="mailto:support.brainoro@ocaverse.com" className="text-sky-400 hover:underline font-semibold">
+                support.brainoro@ocaverse.com
               </a>.
             </p>
           </section>
