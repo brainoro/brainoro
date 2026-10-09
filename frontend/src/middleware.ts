@@ -11,6 +11,8 @@ export function middleware(request: NextRequest) {
     pathname.startsWith('/billing') ||
     pathname.startsWith('/login') ||
     pathname.startsWith('/signup') ||
+    pathname.startsWith('/start') ||
+    pathname.startsWith('/privacy') ||
     pathname.startsWith('/onboarding') ||
     pathname.includes('.') // static files like favicon.ico, images, logos
   ) {

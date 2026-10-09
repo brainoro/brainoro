@@ -206,7 +206,13 @@ export default function StartPage() {
 
       {/* Clean Minimalist Sub-Footer */}
       <footer className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-xs text-slate-700 font-medium border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-2">
-        <p>© {new Date().getFullYear()} Brainoro. All rights reserved.</p>
+        <div className="flex items-center gap-3">
+          <p>© {new Date().getFullYear()} Brainoro. All rights reserved.</p>
+          <span className="text-slate-300">•</span>
+          <Link href="/privacy" className="text-slate-600 hover:text-slate-900 font-medium underline transition">
+            Privacy Policy
+          </Link>
+        </div>
         <p className="text-xs text-slate-600 font-medium">
           CBSE, Cambridge, and IB MYP curricula referenced strictly for syllabus alignment.
         </p>

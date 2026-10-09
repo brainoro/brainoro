@@ -32,6 +32,13 @@ export default function LegalFooter() {
         >
           <span>Need Help? Helpdesk & Support Ticket</span>
         </Link>
+        <span className="text-slate-600">•</span>
+        <Link
+          href="/privacy"
+          className="text-sky-400 hover:text-sky-300 font-semibold transition inline-flex items-center gap-1"
+        >
+          <span>Privacy Policy</span>
+        </Link>
       </div>
       <p className="mt-1 text-slate-500">
         All course content, notes, and modules are dynamically generated via Open Educational Resources (OER) frameworks. 

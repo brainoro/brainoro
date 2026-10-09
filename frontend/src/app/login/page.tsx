@@ -546,6 +546,11 @@ export default function LoginPage() {
                 ← Use a different email address
               </button>
             )}
+            <div className="mt-1 pt-1 border-t border-slate-50 text-[10px] text-slate-400">
+              <Link href="/privacy" className="hover:text-slate-600 hover:underline">
+                Privacy Policy
+              </Link>
+            </div>
           </div>
         </div>
       </div>
